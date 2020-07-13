@@ -26,10 +26,6 @@ For example:
 
 - the method `getAll(Class type)` produces the list of machines based on the input param.
 - the method `startWorking()` should be able to accept a list containing any Machine.
-MachineService has method `List<Object> getAll(Class type);`.
-This method will produce the list of machines based on input param. Replace `Object` with right option.
-
-This method should be able to accept List of Bulldozers as well as List of Tracks. Use PECS here.
 
 1. Create a class implementing MachineService and realize these methods:
 - getAll(Class type): based on the input class type, choose the right MachineProducer implementation from those you created earlier, and return the result of its `get()` method.
