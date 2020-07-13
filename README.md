@@ -29,7 +29,6 @@ For example:
 MachineService has method `List<Object> getAll(Class type);`.
 This method will produce the list of machines based on input param. Replace `Object` with right option.
 
-1. Replace `Object` with right option in method `void startWorking(List<Object> machines);`;
 This method should be able to accept List of Bulldozers as well as List of Tracks. Use PECS here.
 
 1. Add implementation of MachineService. Override method `List<Object> getAll(Class type);`.
