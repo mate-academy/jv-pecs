@@ -24,10 +24,13 @@ For example:
 
 1. There is also MachineService interface created. You need to parameterize it as well and replace `Object` in method signature with the right option (use PECS):
 
+    - the method `getAll(Class type)` produces the list of machines based on the input param.
     - the method `startWorking()` should be able to accept a list containing any Machine.
-    
+
 1. Create a class implementing MachineService and realize these methods:
-- getAll(Class type): based on the input class type, choose the right MachineProducer implementation from those you created earlier, and return the result of its `get()` method.
+- `getAll(Class type)`: based on the input class type, choose the right MachineProducer implementation from those you created earlier, and return the result of its `get()` method.
+
+HINT: You can use local variable in the `getAll(Class type)` method implementation.
 
 For example: `if (type == Bulldozer.class)` - we should call the `get()` method from right implementation of MachineProducer (the one that will return `List<Bulldozer>`) and return these machines.
 
