@@ -8,7 +8,7 @@ Please parameterize it and replace `Object` with the right option.
     ```java
     public interface MachineProducer<PARAMETRIZE ME>{ ... }
     ```
-1. Add three implementations for MachineProducer interface. As a result in these implementations you method `get` should return the list of specific machines. 
+1. Create three classes implementing MachineProducer interface. As a result, in these implementations your method `get()` should return the list of specific machines. 
 For example: 
     ```java
     List<Bulldozer> get();
