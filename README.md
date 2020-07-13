@@ -33,9 +33,3 @@ For example:
 For example: `if (type == Bulldozer.class)` - we should call the `get()` method from right implementation of MachineProducer (the one that will return `List<Bulldozer>`) and return these machines.
 
 - `startWorking()` - call `doWork` on every Machine in the list.
-Remember: This method will produce the list of machines based on input param.
-For example: 
-- `if (type == Bulldozer.class)` - we should call the `get` method from right implementation of MachineProducer
- (which one will return `List<Bulldozer> get();`) and return these machines.
-- `if (type == Track.class)` - we should call `List<Track> get();` 
-method and return these machines.
