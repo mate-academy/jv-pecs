@@ -31,7 +31,12 @@ This method will produce the list of machines based on input param. Replace `Obj
 
 This method should be able to accept List of Bulldozers as well as List of Tracks. Use PECS here.
 
-1. Add implementation of MachineService. Override method `List<Object> getAll(Class type);`.
+1. Create a class implementing MachineService and realize these methods:
+- getAll(Class type): based on the input class type, choose the right MachineProducer implementation from those you created earlier, and return the result of its `get()` method.
+
+For example: `if (type == Bulldozer.class)` - we should call the `get()` method from right implementation of MachineProducer (the one that will return `List<Bulldozer>`) and return these machines.
+
+- `startWorking()` - call `doWork` on every Machine in the list.
 Remember: This method will produce the list of machines based on input param.
 For example: 
 - `if (type == Bulldozer.class)` - we should call the `get` method from right implementation of MachineProducer
