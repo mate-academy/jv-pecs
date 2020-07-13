@@ -2,7 +2,7 @@
 
 1. You have abstract class `Machine` and three sub-classes: `Bulldozer`, `Excavator` and `Track`.
 1. Each machine has the ability to start working.
-1. There is created MachineProducer interface. 
+1. There is MachineProducer interface created.
 The goal of this interface is to create a list of specific machines (`Bulldozer`, `Excavator` and `Track`). 
 Please parametrize it with the correct type. As well replace `Object` with right option.
     ```java
