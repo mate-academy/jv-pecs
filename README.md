@@ -22,7 +22,10 @@ For example:
     List<Excavator> get();
     ```
 
-1. There is created MachineService interface.
+1. There is also MachineService interface created. You need to parameterize it as well and replace `Object` in method signatures with the right option (use PECS):
+
+- the method `getAll(Class type)` produces the list of machines based on the input param.
+- the method `startWorking()` should be able to accept a list containing any Machine.
 MachineService has method `List<Object> getAll(Class type);`.
 This method will produce the list of machines based on input param. Replace `Object` with right option.
 
