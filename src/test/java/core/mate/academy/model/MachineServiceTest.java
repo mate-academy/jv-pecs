@@ -40,27 +40,27 @@ public class MachineServiceTest {
 
     @Test
     public void fill_bulldozerValue() {
-        List<Object> machines = new ArrayList<>();
+        List<Object> machines = new ArrayList<>(List.of(new Object(), new Object(), new Object()));
         machineService.fill(machines, new Bulldozer());
-        assertEquals("The list should grow in size", 1, machines.size());
+        assertEquals("The list initial size should double", 6, machines.size());
         assertEquals("The list should contain elements of type Bulldozer",
                 Bulldozer.class, machines.get(0).getClass());
     }
 
     @Test
     public void fill_excavatorValue() {
-        List<Object> machines = new ArrayList<>();
+        List<Object> machines = new ArrayList<>(List.of(new Object(), new Object(), new Object()));
         machineService.fill(machines, new Excavator());
-        assertEquals("The list should grow in size", 1, machines.size());
+        assertEquals("The list initial size should double", 6, machines.size());
         assertEquals("The list should contain elements of type Excavator",
                 Excavator.class, machines.get(0).getClass());
     }
 
     @Test
     public void fill_trackValue() {
-        List<Object> machines = new ArrayList<>();
+        List<Object> machines = new ArrayList<>(List.of(new Object(), new Object(), new Object()));
         machineService.fill(machines, new Track());
-        assertEquals("The list should grow in size", 1, machines.size());
+        assertEquals("The list initial size should double", 6, machines.size());
         assertEquals("The list should contain elements of type Track",
                 Track.class, machines.get(0).getClass());
     }
