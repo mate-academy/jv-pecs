@@ -1,7 +1,7 @@
 package core.mate.academy.service;
 
-import java.util.List;
 import core.mate.academy.model.Machine;
+import java.util.List;
 
 /**
  * Add only one implementation of this service
@@ -12,7 +12,7 @@ public interface MachineService {
      * Return the list of machines.
      * In the implementation of this method please use your MachineProducer implementations
      * See that 'Class type' is not parametrized.
-     * Consider to parametrize this Class<PARAMETRIZE_ME> with specific wildcard bounding
+     * Consider to parametrize this Class< PARAMETRIZE_ME > with specific wildcard bounding
      *
      * @param type - any class of Machine sub class. For example: Track.class or Bulldozer.class
      * @return the list of machines
