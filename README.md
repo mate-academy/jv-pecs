@@ -25,7 +25,7 @@ For example:
 1. There is also MachineService interface created. You need to parameterize it as well and replace `Object` in method signature with the right option (use PECS):
 
     - the method `getAll(Class type)` produces the list of machines based on the input param.
-    - the method `fill(List<Object> machines, Object value)` fill the machines list with passed value.
+    - the method `fill(List<Object> machines, Object value)` fills the machines list with passed value.
     - the method `startWorking()` should be able to accept a list containing any Machine.
 
 1. Create a class implementing MachineService and realize these methods:
