@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Parameterize this service and add its implementation in a separate class.
  */
-public interface MachineService <Machine> {
+public interface MachineService<Machine> {
 
     /**
      * Return the list of machines.
