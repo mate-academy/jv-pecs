@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * My implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService<Machine> {
+public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
@@ -28,7 +28,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Machine value) {
+    public void fill(List<? super Machine> machines, T value) {
         int size = machines.size();
         for (int i = 0; i < size; i++) {
             machines.add(i, value);

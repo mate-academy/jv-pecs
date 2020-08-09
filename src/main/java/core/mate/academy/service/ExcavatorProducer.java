@@ -12,9 +12,6 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
         excavators.add(new Excavator());
         excavators.add(new Excavator());
         excavators.add(new Excavator());
-        /*excavators.add(new Excavator("fast", "Yellow"));
-        excavators.add(new Excavator("old", "Black"));
-        excavators.add(new Excavator("compact", "Red"));*/
         return excavators;
     }
 }

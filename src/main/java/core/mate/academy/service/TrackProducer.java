@@ -5,16 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TrackProducer implements MachineProducer<Track> {
+
+    @Override
     public List<Track> get() {
         List<Track> tracks = new ArrayList<>();
-
         tracks.add(new Track());
         tracks.add(new Track());
         tracks.add(new Track());
-        /*tracks.add(new Track("fast", "Yellow"));
-        tracks.add(new Track("old", "Black"));
-        tracks.add(new Track("compact", "Red"));*/
         return tracks;
-
     }
 }
