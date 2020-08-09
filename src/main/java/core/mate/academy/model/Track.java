@@ -5,8 +5,7 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
-    public Track() {
-    }
+
 
     @Override
     public void doWork() {
