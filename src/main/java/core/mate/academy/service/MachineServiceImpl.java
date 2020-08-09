@@ -9,20 +9,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Your implementation of MachineService.
+ * My implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService <Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-
-        MachineProducer machineProducer = null;
+        final MachineProducer<? extends Machine> machineProducer;
         if (type == Bulldozer.class) {
             machineProducer = new BulldozerProducer();
         } else if (type == Excavator.class) {
-            machineProducer = new BulldozerProducer();
+            machineProducer = new ExcavatorProducer();
         } else if (type == Track.class) {
             machineProducer = new TrackProducer();
+        } else {
+            throw new IllegalArgumentException("Type not supported: " + type);
         }
         return new ArrayList<>(machineProducer.get());
     }
