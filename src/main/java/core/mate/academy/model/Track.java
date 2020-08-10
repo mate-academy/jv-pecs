@@ -17,7 +17,13 @@ public class Track extends Machine {
     }
 
     @Override
-    public List<Track> get() {
-        return new ArrayList<>();
+    public List<? extends Machine> get() {
+        Track track1 = new Track();
+        Track track2 = new Track();
+
+        List<Track> tracks = new ArrayList<>();
+        tracks.add(track1);
+        tracks.add(track2);
+        return tracks;
     }
 }

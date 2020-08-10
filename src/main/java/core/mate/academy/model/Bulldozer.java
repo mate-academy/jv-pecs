@@ -17,7 +17,13 @@ public class Bulldozer extends Machine {
     }
 
     @Override
-    public List<Bulldozer> get() {
-        return new ArrayList<>();
+    public List<? extends Machine> get() {
+        Machine bulldozer1 = new Bulldozer();
+        Machine bulldozer2 = new Bulldozer();
+
+        List<Machine> bulldozers = new ArrayList<>();
+        bulldozers.add(bulldozer1);
+        bulldozers.add(bulldozer2);
+        return bulldozers;
     }
 }

@@ -17,7 +17,13 @@ public class Excavator extends Machine {
     }
 
     @Override
-    public List<Excavator> get() {
-        return new ArrayList<>();
+    public List<? extends Machine> get() {
+        Excavator excavator1 = new Excavator();
+        Excavator excavator2 = new Excavator();
+
+        List<Excavator> excavators = new ArrayList<>();
+        excavators.add(excavator1);
+        excavators.add(excavator2);
+        return excavators;
     }
 }
