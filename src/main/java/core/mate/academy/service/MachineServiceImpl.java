@@ -9,9 +9,9 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService {
+public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
     @Override
-    public List<Machine> getAll(Class type) {
+    public List<Machine> getAll(Class<? extends T> type) {
         List<? extends Machine> machines = null;
         if (type.equals(Bulldozer.class)) {
             BulldozerProducer bulldozerProducer = new BulldozerProducer();
@@ -32,16 +32,16 @@ public class MachineServiceImpl implements MachineService {
     }
 
     @Override
-    public void fill(List machines, Machine value) {
+    public void fill(List<? super T> machines, T value) {
         for (int i = 0, n = machines.size(); i < n; i++) {
             machines.add(i, value);
         }
     }
 
     @Override
-    public void startWorking(List machines) {
-        for (Object machine : machines) {
-            ((Machine) machine).doWork();
+    public void startWorking(List<? extends T> machines) {
+        for (Machine machine : machines) {
+            machine.doWork();
         }
     }
 }
