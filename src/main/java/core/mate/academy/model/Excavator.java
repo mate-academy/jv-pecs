@@ -1,11 +1,31 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
 public class Excavator extends Machine {
+    private int integrityOfManipulator;
+    private int maxLiftingWeight;
+
     public Excavator() {
+    }
+
+    public Excavator(int integrityOfManipulator, int maxLiftingWeight) {
+        this.integrityOfManipulator = integrityOfManipulator;
+        this.maxLiftingWeight = maxLiftingWeight;
+    }
+
+    public int getIntegrityOfManipulator() {
+        return integrityOfManipulator;
+    }
+
+    public void setIntegrityOfManipulator(int integrityOfManipulator) {
+        this.integrityOfManipulator = integrityOfManipulator;
+    }
+
+    public int getMaxLiftingWeight() {
+        return maxLiftingWeight;
+    }
+
+    public void setMaxLiftingWeight(int maxLiftingWeight) {
+        this.maxLiftingWeight = maxLiftingWeight;
     }
 
     @Override
