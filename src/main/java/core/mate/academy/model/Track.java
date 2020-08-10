@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
+    private int id;
+
     public Track() {
+    }
+
+    public Track(String name, int id) {
+        super.setName(name);
+        super.setColor("RED");
+        this.id = id;
     }
 
     @Override
