@@ -27,8 +27,8 @@ public class Track extends Machine {
         this.productionYear = productionYear;
     }
 
-    public Track(String name, int productionYear) {
-        this.name = name;
+    public Track(String brand, int productionYear) {
+        this.brand = brand;
         this.productionYear = productionYear;
     }
 
