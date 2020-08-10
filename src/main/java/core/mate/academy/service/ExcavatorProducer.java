@@ -13,4 +13,3 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
         return listOfExcavators;
     }
 }
-
