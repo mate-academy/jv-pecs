@@ -5,7 +5,6 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -17,13 +16,14 @@ public class MachineServiceImpl implements MachineService<Machine> {
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type.equals(Bulldozer.class)) {
             return new ArrayList<>(new BulldozerProducer().get());
-        } else if (type.equals(Excavator.class)) {
-            return new ArrayList<>(new ExcavatorProducer().get());
-        } else if (type.equals(Track.class)) {
-            return new ArrayList<>(new TrackProducer().get());
-        } else {
-            throw new ClassCastException("This class is not supported");
         }
+        if (type.equals(Excavator.class)) {
+            return new ArrayList<>(new ExcavatorProducer().get());
+        }
+        if (type.equals(Track.class)) {
+            return new ArrayList<>(new TrackProducer().get());
+        }
+        throw new ClassCastException("This class is not supported");
 
     }
 
