@@ -5,11 +5,18 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
+    private int numberWheels;
+
     public Track() {
+    }
+
+    public Track(int numberWheels) {
+        this.numberWheels = numberWheels;
     }
 
     @Override
     public void doWork() {
         System.out.println("Track started to work");
     }
+
 }
