@@ -18,6 +18,6 @@ public class Excavator extends Machine {
 
     @Override
     public List<Excavator> get() {
-        return new ArrayList<Excavator>();
+        return new ArrayList<>();
     }
 }

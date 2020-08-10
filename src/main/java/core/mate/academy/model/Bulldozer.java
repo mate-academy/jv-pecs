@@ -18,6 +18,6 @@ public class Bulldozer extends Machine {
 
     @Override
     public List<Bulldozer> get() {
-        return new ArrayList<Bulldozer>();
+        return new ArrayList<>();
     }
 }

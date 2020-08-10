@@ -18,6 +18,6 @@ public class Track extends Machine {
 
     @Override
     public List<Track> get() {
-        return new ArrayList<Track>();
+        return new ArrayList<>();
     }
 }
