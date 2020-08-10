@@ -33,7 +33,12 @@ public class MachineServiceImpl implements MachineService {
 
     @Override
     public void startWorking(List list) {
-
+        Bulldozer bulldozer = new Bulldozer();
+        bulldozer.doWork();
+        Excavator excavator = new Excavator();
+        excavator.doWork();
+        Track track = new Track();
+        track.doWork();
     }
 
     @Override
