@@ -8,8 +8,8 @@ public class BulldozerProduce implements MachineProducer<Bulldozer> {
     @Override
     public List<Bulldozer> get() {
         List<Bulldozer> bulldozers = new ArrayList<>();
-        bulldozers.add(new Bulldozer());
-        bulldozers.add(new Bulldozer());
+        bulldozers.add(new Bulldozer("Lukashenko","Belarus"));
+        bulldozers.add(new Bulldozer("Tihanovskaya","Belarus"));
         return bulldozers;
     }
 }
