@@ -5,12 +5,13 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<Machine> {
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type.equals(Bulldozer.class)) {
@@ -20,7 +21,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<Mac
         } else if (type.equals(Track.class)) {
             return new ArrayList<>(new TrackMachineProducer().get());
         } else {
-            return null;
+            return Collections.emptyList();
         }
     }
 
@@ -28,7 +29,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<Mac
     public void fill(List<? super Machine> machines, Machine value) {
         int listSize = machines.size();
         for (int i = 0; i < listSize; i++) {
-            machines.add(0, value);
+            machines.add(i, value);
         }
     }
 
