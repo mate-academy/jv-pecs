@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
+    private String series;
+    private int wheelSum;
+
     public Track() {
+    }
+
+    public Track(String series, int wheelSum) {
+        this.series = series;
+        this.wheelSum = wheelSum;
     }
 
     @Override
