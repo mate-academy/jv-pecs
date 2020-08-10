@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
+    private int howLong;
+    private int maxSpeed;
+
     public Track() {
+    }
+
+    public Track(int howLong, int maxSpeed) {
+        this.howLong = howLong;
+        this.maxSpeed = maxSpeed;
     }
 
     @Override
