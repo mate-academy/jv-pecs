@@ -5,7 +5,23 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
+    private String manufacturer;
+    private int manufacturingYear;
+
+    public Track(String manufacturer, int manufacturingYear) {
+        this.manufacturer = manufacturer;
+        this.manufacturingYear = manufacturingYear;
+    }
+
     public Track() {
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public int getManufacturingYear() {
+        return manufacturingYear;
     }
 
     @Override
