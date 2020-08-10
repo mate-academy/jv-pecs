@@ -11,6 +11,11 @@ public class Track extends Machine {
     public Track() {
     }
 
+    public Track(String brand, int productionYear) {
+        this.brand = brand;
+        this.productionYear = productionYear;
+    }
+
     public String getBrand() {
         return brand;
     }
@@ -24,11 +29,6 @@ public class Track extends Machine {
     }
 
     public void setProductionYear(int productionYear) {
-        this.productionYear = productionYear;
-    }
-
-    public Track(String brand, int productionYear) {
-        this.brand = brand;
         this.productionYear = productionYear;
     }
 

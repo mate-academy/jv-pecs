@@ -11,6 +11,11 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String brand, int price) {
+        this.brand = brand;
+        this.price = price;
+    }
+
     public String getBrand() {
         return brand;
     }
@@ -24,11 +29,6 @@ public class Excavator extends Machine {
     }
 
     public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public Excavator(String brand, int price) {
-        this.brand = brand;
         this.price = price;
     }
 
