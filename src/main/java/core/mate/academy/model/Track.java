@@ -5,6 +5,19 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
+    private int loadCapacity;
+    private int numberOfGears;
+    private boolean isElectric;
+
+    public Track(String name, String colour,
+                 int loadCapacity, int numberOfGears, boolean isElectric) {
+        setName(name);
+        setColor(colour);
+        this.loadCapacity = loadCapacity;
+        this.numberOfGears = numberOfGears;
+        this.isElectric = isElectric;
+    }
+
     public Track() {
     }
 
