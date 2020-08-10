@@ -5,8 +5,8 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
-    int capacity;
-    int speed;
+    private int capacity;
+    private int speed;
 
     public Track() {
     }
