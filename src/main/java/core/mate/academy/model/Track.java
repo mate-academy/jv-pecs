@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
+    private String typeOfTrack;
+    private int capacity;
+
     public Track() {
+    }
+
+    public Track(String typeOfTrack, int capacity) {
+        this.typeOfTrack = typeOfTrack;
+        this.capacity = capacity;
     }
 
     @Override

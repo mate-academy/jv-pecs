@@ -8,6 +8,7 @@ import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
