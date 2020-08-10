@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private String producer;
+    private int maxDiggingDepth;
+
     public Excavator() {
+    }
+
+    public Excavator(String producer, int maxDiggingDepth) {
+        this.producer = producer;
+        this.maxDiggingDepth = maxDiggingDepth;
     }
 
     @Override
@@ -13,3 +21,4 @@ public class Excavator extends Machine {
         System.out.println("Excavator started to work");
     }
 }
+
