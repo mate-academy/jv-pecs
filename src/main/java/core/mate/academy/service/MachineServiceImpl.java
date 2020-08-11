@@ -25,7 +25,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
             List<Track> trackList = new TrackProducer().get();
             return new ArrayList<>(trackList);
         }
-        return Collections.emptyList();
+        List<Machine> emptyList = Collections.emptyList();
+        return emptyList;
     }
 
     @Override
