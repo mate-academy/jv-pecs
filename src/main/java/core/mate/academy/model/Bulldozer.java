@@ -8,12 +8,12 @@ public class Bulldozer extends Machine {
     private String model;
     private int horsePower;
 
+    public Bulldozer() {
+    }
+
     public Bulldozer(String model, int horsePower) {
         this.model = model;
         this.horsePower = horsePower;
-    }
-
-    public Bulldozer() {
     }
 
     @Override

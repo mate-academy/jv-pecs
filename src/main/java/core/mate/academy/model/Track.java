@@ -9,13 +9,13 @@ public class Track extends Machine {
     private String typeOfFuel;
     private int weight;
 
+    public Track() {
+    }
+
     public Track(String model, String typeOfFuel, int weight) {
         this.model = model;
         this.typeOfFuel = typeOfFuel;
         this.weight = weight;
-    }
-
-    public Track() {
     }
 
     @Override

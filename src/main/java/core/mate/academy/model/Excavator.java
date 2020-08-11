@@ -9,13 +9,13 @@ public class Excavator extends Machine {
     private String operationalPurpose;
     private String typeOfChassis;
 
+    public Excavator() {
+    }
+
     public Excavator(String powerEquipment, String operationalPurpose, String typeOfChassis) {
         this.powerEquipment = powerEquipment;
         this.operationalPurpose = operationalPurpose;
         this.typeOfChassis = typeOfChassis;
-    }
-
-    public Excavator() {
     }
 
     @Override
