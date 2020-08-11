@@ -22,7 +22,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (Track.class.equals(type)) {
             return new ArrayList<>(new TrackProducer().get());
         }
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

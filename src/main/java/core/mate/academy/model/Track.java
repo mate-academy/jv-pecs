@@ -8,12 +8,12 @@ public class Track extends Machine {
     private int capacity;
     private int speed;
 
+    public Track() {
+    }
+
     public Track(int capacity, int speed) {
         this.capacity = capacity;
         this.speed = speed;
-    }
-
-    public Track() {
     }
 
     @Override
