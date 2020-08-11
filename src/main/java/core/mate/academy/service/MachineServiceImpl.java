@@ -18,12 +18,12 @@ public class MachineServiceImpl implements MachineService<Machine> {
             return new ArrayList<>(new BulldozerProducer().get());
         }
         if (type.equals(Track.class)) {
-            return new ArrayList<>(new TrackProducer<>().get());
+            return new ArrayList<>(new TrackProducer().get());
         }
         if (type.equals(Excavator.class)) {
-            return new ArrayList<>(new ExcavatorProducer<>().get());
+            return new ArrayList<>(new ExcavatorProducer().get());
         }
-        throw new ClassCastException("Wrong class");
+        throw new IllegalArgumentException("Wrong class");
     }
 
     @Override

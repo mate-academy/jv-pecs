@@ -1,11 +1,10 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrackProducer<T extends Machine> implements MachineProducer {
+public class TrackProducer implements MachineProducer<Track> {
     @Override
     public List<Track> get() {
         List<Track> listOfTracks = new ArrayList<>();
