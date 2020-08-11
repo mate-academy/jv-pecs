@@ -8,11 +8,9 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
 
     @Override
     public List<Bulldozer> get() {
-        Bulldozer first = new Bulldozer(22, true);
-        Bulldozer second = new Bulldozer(28, false);
         List<Bulldozer> list = new ArrayList<>();
-        list.add(first);
-        list.add(second);
+        list.add(new Bulldozer(22, true));
+        list.add(new Bulldozer(28, false));
         return list;
     }
 }
