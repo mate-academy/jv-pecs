@@ -30,7 +30,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
             TrackProducer trackProducer = new TrackProducer();
             return new ArrayList<>(trackProducer.get());
         }
-        return null;
+        return new ArrayList<>(0);
     }
 
     @Override
