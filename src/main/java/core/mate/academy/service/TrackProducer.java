@@ -1,6 +1,5 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,15 +7,15 @@ import java.util.List;
 public class TrackProducer implements MachineProducer<Track> {
 
     @Override
-    public List<Machine> get() {
-        Machine volvoTruck = new Track();
+    public List<Track> get() {
+        Track volvoTruck = new Track();
         volvoTruck.setName("Volvo");
-        Machine mercTruck = new Track();
+        Track mercTruck = new Track();
         mercTruck.setName("Mercedes");
-        Machine renoTruck = new Track();
+        Track renoTruck = new Track();
         renoTruck.setName("Reno");
 
-        List<Machine> truckList = new ArrayList<>();
+        List<Track> truckList = new ArrayList<>();
         truckList.add(volvoTruck);
         truckList.add(mercTruck);
         truckList.add(renoTruck);

@@ -4,15 +4,13 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
-
-    public static void main(String[] args) {
-    }
 
     /**
      * Return the list of machines.
@@ -26,13 +24,13 @@ public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (Track.class.equals(type)) {
-            return new TrackProducer().get();
+            return new ArrayList<>(new TrackProducer().get());
         }
         if (Bulldozer.class.equals(type)) {
-            return new BulldozerProducer().get();
+            return new ArrayList<>(new BulldozerProducer().get());
         }
         if (Excavator.class.equals(type)) {
-            return new ExcavatorProducer().get();
+            return new ArrayList<>(new ExcavatorProducer().get());
         }
         throw new IllegalArgumentException("Wrong class");
     }
@@ -50,8 +48,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         int size = list.size();
 
         for (int i = 0; i < size; i++) {
-            list.set(i, value);
-            list.add(value);
+            list.add(i, value);
         }
     }
 
