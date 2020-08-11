@@ -1,11 +1,23 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Track
- * Do not remove no-field constructor
- */
 public class Track extends Machine {
-    public Track() {
+    private int power;
+    private String producer;
+
+    public int getPower() {
+        return power;
+    }
+
+    public String getProducer() {
+        return producer;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public void setProducer(String producer) {
+        this.producer = producer;
     }
 
     @Override
