@@ -11,6 +11,11 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String undercarriage, int bucketCapacity) {
+        this.undercarriage = undercarriage;
+        this.bucketCapacity = bucketCapacity;
+    }
+
     public String getUndercarriage() {
         return undercarriage;
     }

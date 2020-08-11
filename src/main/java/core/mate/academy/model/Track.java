@@ -11,6 +11,11 @@ public class Track extends Machine {
     public Track() {
     }
 
+    public Track(String typeOfFuel, String size) {
+        this.typeOfFuel = typeOfFuel;
+        this.size = size;
+    }
+
     public String getTypeOfFuel() {
         return typeOfFuel;
     }

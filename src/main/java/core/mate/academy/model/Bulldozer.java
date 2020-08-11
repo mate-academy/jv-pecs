@@ -11,6 +11,11 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String frontTool, String size) {
+        this.frontTool = frontTool;
+        this.size = size;
+    }
+
     public String getFrontTool() {
         return frontTool;
     }
