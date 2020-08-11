@@ -33,7 +33,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
         for (int i = 0; i < size; i++) {
             machines.add(i, value);
         }
-
     }
 
     @Override
