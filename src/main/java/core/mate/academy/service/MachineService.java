@@ -23,8 +23,9 @@ public interface MachineService<T> {
      * Fill the machines list with passed value
      * Replace the Object with parametrized value.
      * This method should be able to work well with any type of machine passed as 'value'
+     *
      * @param machines - list of machines to be filled with value
-     * @param value - any object of machine sub class
+     * @param value    - any object of machine sub class
      */
     void fill(List<? super T> machines, T value);//? super Machine
 

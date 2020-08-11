@@ -52,8 +52,6 @@ public class Track extends Machine {
         this.mathcesWon = mathcesWon;
     }
 
-
-
     @Override
     public void doWork() {
         System.out.println("Track started to work");

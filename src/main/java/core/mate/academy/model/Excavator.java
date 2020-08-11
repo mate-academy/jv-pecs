@@ -9,11 +9,12 @@ public class Excavator extends Machine {
     private int numberOfBooms;
     private String typeOfBoom;
     private boolean isStationarable;
-    
+
     public Excavator() {
     }
 
-    public Excavator(double oilInSytem, int numberOfBooms, String typeOfBoom, boolean isStationarable) {
+    public Excavator(double oilInSytem, int numberOfBooms,
+                     String typeOfBoom, boolean isStationarable) {
         this.isStationarable = isStationarable;
         this.typeOfBoom = typeOfBoom;
         this.numberOfBooms = numberOfBooms;
