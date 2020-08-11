@@ -14,21 +14,15 @@ public class MachineServiceImpl implements MachineService<Machine> {
         List<Machine> machines = new ArrayList<>();
         if (type.equals(Bulldozer.class)) {
             List<Bulldozer> bulldozers = new BulldozerProducer().get();
-            for (int i = 0; i < bulldozers.size(); i++) {
-                machines.add(bulldozers.get(i));
-            }
+            machines.addAll(bulldozers);
         }
         if (type.equals(Track.class)) {
             List<Track> tracks = new TrackProducer().get();
-            for (int i = 0; i < tracks.size(); i++) {
-                machines.add(tracks.get(i));
-            }
+            machines.addAll(tracks);
         }
         if (type.equals(Excavator.class)) {
             List<Excavator> excavators = new ExcavatorProducer().get();
-            for (int i = 0; i < excavators.size(); i++) {
-                machines.add(excavators.get(i));
-            }
+            machines.addAll(excavators);
         }
         return machines;
     }
