@@ -5,6 +5,7 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -27,12 +28,12 @@ public class MachineServiceImpl implements MachineService<Machine> {
             List<Excavator> excavators = new ExcavatorProducer().get();
             return new ArrayList<>(excavators);
         }
-        return null;
+        return Collections.emptyList();
     }
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        int size = (machines.size() * 3) / 2 - 1;
+        int size = machines.size();
         for (int i = 0; i < size; i++) {
             machines.add(i, value);
         }
