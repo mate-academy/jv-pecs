@@ -5,6 +5,9 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
+
+    private int trailerVolume;
+
     public Track() {
     }
 
