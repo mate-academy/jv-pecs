@@ -5,7 +5,31 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
+    private int enginePower;
+    private int brakingDistances;
+
     public Track() {
+    }
+
+    public Track(int enginePower, int brakingDistances) {
+        this.enginePower = enginePower;
+        this.brakingDistances = brakingDistances;
+    }
+
+    public int getEnginePower() {
+        return enginePower;
+    }
+
+    public void setEnginePower(int enginePower) {
+        this.enginePower = enginePower;
+    }
+
+    public int getBrakingDistances() {
+        return brakingDistances;
+    }
+
+    public void setBrakingDistances(int brakingDistances) {
+        this.brakingDistances = brakingDistances;
     }
 
     @Override
