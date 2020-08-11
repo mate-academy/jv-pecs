@@ -11,7 +11,7 @@ public class TrackFactory implements MachineProducer<Track> {
         List<Track> list = new ArrayList<>();
         list.add(new Track(1000, 10, "blue"));
         list.add(new Track(1800, 6, "red"));
-        list.add(new Track(55000, 8, "yelou"));
+        list.add(new Track(55000, 8, "yellow"));
         return list;
     }
 }
