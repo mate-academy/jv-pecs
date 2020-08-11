@@ -40,7 +40,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
                 List<Excavator> excavators = new ExcavatorProducer().get();
                 return new ArrayList<>(excavators);
             default:
-                return null;
+                return new ArrayList<>();
         }
     }
 }
