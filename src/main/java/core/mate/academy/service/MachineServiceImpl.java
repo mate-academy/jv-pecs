@@ -28,7 +28,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
             List<Excavator> excavatorList = new ExcavatorMachineProducerImpl().get();
             return new ArrayList<>(excavatorList);
         }
-        return null;
+        throw new IllegalArgumentException("Wrong class");
     }
 
     @Override
