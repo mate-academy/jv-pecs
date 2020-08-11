@@ -9,6 +9,9 @@ public class Bulldozer extends Machine {
     private int horsePower;
     private String bladeType;
 
+    public Bulldozer() {
+    }
+
     public int getHorsePower() {
         return horsePower;
     }
@@ -23,9 +26,6 @@ public class Bulldozer extends Machine {
 
     public void setBladeType(String bladeType) {
         this.bladeType = bladeType;
-    }
-
-    public Bulldozer() {
     }
 
     @Override

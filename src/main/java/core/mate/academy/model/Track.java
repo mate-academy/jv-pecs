@@ -9,6 +9,9 @@ public class Track extends Machine {
     private int numberOfWheels;
     private int maxSpeed;
 
+    public Track() {
+    }
+
     public int getNumberOfWheels() {
         return numberOfWheels;
     }
@@ -23,9 +26,6 @@ public class Track extends Machine {
 
     public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed;
-    }
-
-    public Track() {
     }
 
     @Override

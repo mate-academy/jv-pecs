@@ -1,8 +1,6 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Track;
-
 import java.util.ArrayList;
 import java.util.List;
 

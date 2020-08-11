@@ -9,6 +9,9 @@ public class Excavator extends Machine {
     private int bucketVolume;
     private int fuelTankVolume;
 
+    public Excavator() {
+    }
+
     public int getBucketVolume() {
         return bucketVolume;
     }
@@ -23,9 +26,6 @@ public class Excavator extends Machine {
 
     public void setFuelTankVolume(int fuelTankVolume) {
         this.fuelTankVolume = fuelTankVolume;
-    }
-
-    public Excavator() {
     }
 
     @Override
