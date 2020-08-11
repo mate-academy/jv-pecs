@@ -22,18 +22,18 @@ public class MachineServiceImpl implements MachineService<Machine> {
             List<Track> trackList = new TrackProducer().get();
             return new ArrayList<>(trackList);
         }
-        return null;
+        throw new IllegalArgumentException("There's no such class");
     }
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
         int size = machines.size();
-        for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, value);
-        }
-        while (size > 0) {
-            machines.add(value);
-            size--;
+        for (int i = 0; i < size * 2; i++) {
+            if (i < size) {
+                machines.set(i, value);
+            } else {
+                machines.add(value);
+            }
         }
     }
 
