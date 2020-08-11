@@ -1,11 +1,33 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Track
- * Do not remove no-field constructor
- */
 public class Track extends Machine {
+    private double avgPressureInWheels;
+    private int maxTransportationWeight;
+
     public Track() {
+    }
+
+    public Track(String name, String color, double avgPressureInWheels,
+                 int maxTransportationWeight) {
+        super(name, color);
+        this.avgPressureInWheels = avgPressureInWheels;
+        this.maxTransportationWeight = maxTransportationWeight;
+    }
+
+    public double getAvgPressureInWheels() {
+        return avgPressureInWheels;
+    }
+
+    public void setAvgPressureInWheels(int avgPressureInWheels) {
+        this.avgPressureInWheels = avgPressureInWheels;
+    }
+
+    public int getMaxTransportationWeight() {
+        return maxTransportationWeight;
+    }
+
+    public void setMaxTransportationWeight(int maxTransportationWeight) {
+        this.maxTransportationWeight = maxTransportationWeight;
     }
 
     @Override
