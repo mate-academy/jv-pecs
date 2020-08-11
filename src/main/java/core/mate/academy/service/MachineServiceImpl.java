@@ -26,7 +26,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
             List<Track> tracks = new TrackProducer().get();
             return new ArrayList<>(tracks);
         }
-        throw new NullPointerException("type can't be null");
+        throw new IllegalArgumentException("type can't be null");
     }
 
     @Override
