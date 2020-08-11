@@ -36,7 +36,7 @@ public class Track extends Machine {
         this.team = team;
     }
 
-    public double get() {
+    public double getMaxSpeed() {
         return maxSpeed;
     }
 

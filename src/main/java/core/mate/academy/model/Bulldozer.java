@@ -36,7 +36,7 @@ public class Bulldozer extends Machine {
         this.plateType = plateType;
     }
 
-    public double get() {
+    public double getMaxMassPushed() {
         return maxMassPushed;
     }
 

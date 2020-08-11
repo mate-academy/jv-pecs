@@ -29,7 +29,7 @@ public class Excavator extends Machine {
         this.numberOfBooms = numberOfBooms;
     }
 
-    public double get() {
+    public double getOilInSytem() {
         return oilInSytem;
     }
 
