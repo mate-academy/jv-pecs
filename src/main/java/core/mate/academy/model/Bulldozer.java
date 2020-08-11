@@ -6,8 +6,8 @@ package core.mate.academy.model;
  */
 public class Bulldozer extends Machine {
 
-    int ladleCapacity;
-    boolean hasCaterpillar;
+    private int ladleCapacity;
+    private boolean hasCaterpillar;
 
     public Bulldozer() {
     }

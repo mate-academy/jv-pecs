@@ -6,8 +6,8 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
 
-    int remainingCapacity;
-    int trailerHeight;
+    private int remainingCapacity;
+    private int trailerHeight;
 
     public Truck() {
     }

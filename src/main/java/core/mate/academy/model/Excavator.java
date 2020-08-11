@@ -6,8 +6,8 @@ package core.mate.academy.model;
  */
 public class Excavator extends Machine {
 
-    int diggingDepth;
-    int dischargeHeight;
+    private int diggingDepth;
+    private int dischargeHeight;
 
     public Excavator() {
     }
