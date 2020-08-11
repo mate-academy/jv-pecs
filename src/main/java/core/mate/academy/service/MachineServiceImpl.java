@@ -35,6 +35,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         int size = list.size();
         for (int i = 0; i < size; i++) {
             list.add(i, value);
+
         }
     }
 
