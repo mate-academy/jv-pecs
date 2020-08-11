@@ -3,6 +3,8 @@ package core.mate.academy.service;
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
+import core.mate.academy.model.Track;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,10 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Excavator.class) {
             return new ArrayList<>(new ExcavatorProducer().get());
         }
-        return new ArrayList<>(new TrackProducer().get());
+        if (type == Track.class) {
+            return new ArrayList<>(new TrackProducer().get());
+        }
+        throw new RuntimeException("Wrong class");
     }
 
     @Override
