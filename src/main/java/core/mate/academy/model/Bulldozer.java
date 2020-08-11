@@ -20,6 +20,18 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public int getPower() {
+        return power;
+    }
+
+    public double getBladeVolume() {
+        return bladeVolume;
+    }
+
+    public boolean isCrawler() {
+        return isCrawler;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");

@@ -21,6 +21,18 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public int getPower() {
+        return power;
+    }
+
+    public double getBucketVolume() {
+        return bucketVolume;
+    }
+
+    public boolean isEngineElectric() {
+        return isEngineElectric;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

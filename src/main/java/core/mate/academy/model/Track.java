@@ -21,6 +21,18 @@ public class Track extends Machine {
     public Track() {
     }
 
+    public int getLoadCapacity() {
+        return loadCapacity;
+    }
+
+    public int getNumberOfGears() {
+        return numberOfGears;
+    }
+
+    public boolean isElectric() {
+        return isElectric;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Track started to work");
