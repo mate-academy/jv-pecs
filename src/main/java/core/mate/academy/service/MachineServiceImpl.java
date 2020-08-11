@@ -5,7 +5,6 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -33,9 +32,9 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void fill(List<? super Machine> list, Machine value) {
-        Collections.fill(list, value);
-        for (int i = list.size(); i > 0; i--) {
-            list.add(value);
+        int size = list.size();
+        for (int i = 0; i < size; i++) {
+            list.add(i, value);
         }
     }
 
