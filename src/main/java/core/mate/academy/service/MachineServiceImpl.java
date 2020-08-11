@@ -3,7 +3,6 @@ package core.mate.academy.service;
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
-import core.mate.academy.model.Track;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,11 +15,11 @@ public class MachineServiceImpl implements MachineService<Machine> {
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<Machine> list;
         if (Bulldozer.class == type) {
-            list = new ArrayList<>(new Bulldozer().get());
+            list = new ArrayList<>(new BulldozerProducer().get());
         } else if (Excavator.class == type) {
-            list = new ArrayList<>(new Excavator().get());
+            list = new ArrayList<>(new ExcavatorProducer().get());
         } else {
-            list = new ArrayList<>(new Track().get());
+            list = new ArrayList<>(new TrackProducer().get());
         }
         return list;
     }
