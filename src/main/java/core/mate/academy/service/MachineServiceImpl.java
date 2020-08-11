@@ -25,7 +25,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
             MachineProducer producer = new ExcavatorProducer();
             return producer.get();
         }
-        return null;
+        throw new IllegalArgumentException("Wrong input parameter!!!");
     }
 
     @Override
