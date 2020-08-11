@@ -15,15 +15,4 @@ public class Track extends Machine {
     public void doWork() {
         System.out.println("Track started to work");
     }
-
-    @Override
-    public List<? extends Machine> get() {
-        Track track1 = new Track();
-        Track track2 = new Track();
-
-        List<Track> tracks = new ArrayList<>();
-        tracks.add(track1);
-        tracks.add(track2);
-        return tracks;
-    }
 }

@@ -15,15 +15,4 @@ public class Bulldozer extends Machine {
     public void doWork() {
         System.out.println("Bulldozer started to work");
     }
-
-    @Override
-    public List<? extends Machine> get() {
-        Machine bulldozer1 = new Bulldozer();
-        Machine bulldozer2 = new Bulldozer();
-
-        List<Machine> bulldozers = new ArrayList<>();
-        bulldozers.add(bulldozer1);
-        bulldozers.add(bulldozer2);
-        return bulldozers;
-    }
 }
