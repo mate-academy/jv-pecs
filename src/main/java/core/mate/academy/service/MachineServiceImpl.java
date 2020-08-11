@@ -30,11 +30,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     public void fill(List<? super Machine> machines, Machine value) {
         int size = machines.size();
         for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, value);
-        }
-        while (size > 0) {
-            machines.add(value);
-            size--;
+          machines.add(i, value);
         }
     }
 
