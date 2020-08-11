@@ -2,18 +2,19 @@ package core.mate.academy.service;
 
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
-import core.mate.academy.model.Machine;
+import core.mate.academy.model.T;
 import core.mate.academy.model.Track;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService<Machine> {
+public class MachineServiceImpl implements MachineService<T> {
 
     @Override
-    public List<Machine> getAll(Class<? extends Machine> type) {
+    public List<T> getAll(Class<? extends T> type) {
         if (Bulldozer.class.equals(type)) {
             return new ArrayList<>(new BulldozerProducer().get());
         }
@@ -23,11 +24,12 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (Track.class.equals(type)) {
             return new ArrayList<>(new TrackProducer().get());
         }
-        return null;
+        throw new NoSuchElementException("Sorry, looks like "
+                + type + " is not a Machine");
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Machine value) {
+    public void fill(List<? super T> machines, T value) {
         int size = machines.size();
         for (int i = 0; i < size; i++) {
             machines.add(i, value);
@@ -35,8 +37,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void startWorking(List<? extends Machine> machines) {
-        for (Machine machine:machines) {
+    public void startWorking(List<? extends T> machines) {
+        for (T machine : machines) {
             machine.doWork();
         }
     }

@@ -4,7 +4,7 @@ package core.mate.academy.model;
  * Add some custom fields that could be only in Track
  * Do not remove no-field constructor
  */
-public class Track extends Machine {
+public class Track extends T {
     private String tireType;
     private String team;
     private double maxSpeed;
