@@ -15,12 +15,10 @@ public class MachineServiceImpl implements MachineService<Machine> {
         List<? extends Machine> machines = null;
         if (type.equals(Bulldozer.class)) {
             machines = new BulldozerProducer().get();
-        }
-        else {
+        } else {
             if (type.equals(Excavator.class)) {
                 machines = new ExcavatorProducer().get();
-            }
-            else {
+            } else {
                 if (type.equals(Track.class)) {
                     machines = new TrackProducer().get();
                 }
