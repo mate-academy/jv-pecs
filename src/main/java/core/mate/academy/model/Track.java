@@ -12,6 +12,22 @@ public class Track extends Machine {
     public Track() {
     }
 
+    public int getNumberOfWheels() {
+        return numberOfWheels;
+    }
+
+    public void setNumberOfWheels(int numberOfWheels) {
+        this.numberOfWheels = numberOfWheels;
+    }
+
+    public int getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Track started to work");

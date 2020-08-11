@@ -12,6 +12,22 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getMaxScoopWeight() {
+        return maxScoopWeight;
+    }
+
+    public void setMaxScoopWeight(int maxScoopWeight) {
+        this.maxScoopWeight = maxScoopWeight;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");

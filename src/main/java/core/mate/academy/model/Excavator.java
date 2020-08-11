@@ -12,6 +12,22 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getLiftHeight() {
+        return liftHeight;
+    }
+
+    public void setLiftHeight(int liftHeight) {
+        this.liftHeight = liftHeight;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
