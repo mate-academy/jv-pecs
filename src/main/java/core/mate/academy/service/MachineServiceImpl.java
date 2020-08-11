@@ -1,7 +1,5 @@
 package core.mate.academy.service;
 
-import static java.util.Collections.emptyList;
-
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
@@ -28,7 +26,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
             List<Track> trackList = new TrackProducer().get();
             return new ArrayList<>(trackList);
         }
-        return emptyList();
+        return new ArrayList<>();
     }
 
     @Override
