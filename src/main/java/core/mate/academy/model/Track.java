@@ -7,7 +7,9 @@ public class Track extends Machine {
     public Track() {
     }
 
-    public Track(double avgPressureInWheels, int maxTransportationWeight) {
+    public Track(String name, String color, double avgPressureInWheels,
+                 int maxTransportationWeight) {
+        super(name, color);
         this.avgPressureInWheels = avgPressureInWheels;
         this.maxTransportationWeight = maxTransportationWeight;
     }

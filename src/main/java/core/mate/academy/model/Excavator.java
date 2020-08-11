@@ -7,7 +7,8 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(int integrityOfManipulator, int maxLiftingWeight) {
+    public Excavator(String name, String color, int integrityOfManipulator, int maxLiftingWeight) {
+        super(name, color);
         this.integrityOfManipulator = integrityOfManipulator;
         this.maxLiftingWeight = maxLiftingWeight;
     }
