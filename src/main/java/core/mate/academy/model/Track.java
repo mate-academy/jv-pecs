@@ -5,6 +5,14 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
+    private int liftingCapacity;
+    private int maxSpeed;
+
+    public Track(int liftingCapacity, int maxSpeed) {
+        this.liftingCapacity = liftingCapacity;
+        this.maxSpeed = maxSpeed;
+    }
+
     public Track() {
     }
 
