@@ -5,6 +5,7 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -22,7 +23,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (Track.class.equals(type)) {
             return new ArrayList<>(new TrackProducer().get());
         }
-        return null;
+        return Collections.emptyList();
     }
 
     @Override
