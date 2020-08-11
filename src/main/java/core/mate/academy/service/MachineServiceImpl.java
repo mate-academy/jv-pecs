@@ -6,6 +6,7 @@ import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * Your implementation of MachineService.
@@ -22,7 +23,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Track.class) {
             return new ArrayList<>(new TrackProducer().get());
         }
-        return null;
+        throw new NoSuchElementException("No any elements with correct class!");
     }
 
     @Override
