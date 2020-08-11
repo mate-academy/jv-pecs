@@ -4,7 +4,7 @@ import core.mate.academy.model.Track;
 import core.mate.academy.service.MachineProducer;
 import java.util.List;
 
-public class TrackProducer implements MachineProducer {
+public class TrackProducer implements MachineProducer<Track> {
     @Override
     public List<Track> get() {
         Track track1 = new Track(11);

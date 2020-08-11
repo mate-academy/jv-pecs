@@ -7,42 +7,37 @@ import core.mate.academy.model.Track;
 import core.mate.academy.producer.BulldozerProducer;
 import core.mate.academy.producer.ExcavatorProducer;
 import core.mate.academy.producer.TrackProducer;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService {
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
-    public List<? extends Machine> getAll(Class type) {
-        if (type == Bulldozer.class) {
-            BulldozerProducer bulldozer = new BulldozerProducer();
-            return bulldozer.get();
+    public List<Machine> getAll(Class<? extends Machine> type) {
+        if (type.equals(Bulldozer.class)) {
+            return new ArrayList<>(new BulldozerProducer().get());
         }
-        if (type == Excavator.class) {
-            ExcavatorProducer excavator = new ExcavatorProducer();
-            return excavator.get();
+        if (type.equals(Excavator.class)) {
+            return new ArrayList<>(new ExcavatorProducer().get());
         }
-        if (type == Track.class) {
-            TrackProducer track = new TrackProducer();
-            return track.get();
+        if (type.equals(Track.class)) {
+            return new ArrayList<>(new TrackProducer().get());
         }
-        return null;
+        throw new IllegalArgumentException();
     }
 
     @Override
-    public void startWorking(List list) {
-        Bulldozer bulldozer = new Bulldozer();
-        bulldozer.doWork();
-        Excavator excavator = new Excavator();
-        excavator.doWork();
-        Track track = new Track();
-        track.doWork();
+    public void startWorking(List<? extends Machine> list) {
+        for (Machine machine : list) {
+            machine.doWork();
+        }
     }
 
     @Override
-    public void fill(List machines, Machine value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         int size = machines.size();
         for (int i = 0; i < size; i++) {
             machines.add(i, value);
