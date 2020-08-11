@@ -12,8 +12,8 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String size, String type) {
-        size = size;
-        type = type;
+        this.size = size;
+        this.type = type;
     }
 
     public String getSize() {

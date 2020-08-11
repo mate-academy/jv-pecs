@@ -12,8 +12,8 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String size, String type) {
-        size = size;
-        type = type;
+        this.size = size;
+        this.type = type;
     }
 
     public String getSize() {

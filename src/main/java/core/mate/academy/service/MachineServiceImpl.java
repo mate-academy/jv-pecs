@@ -6,7 +6,6 @@ import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 /**
  * Your implementation of MachineService.
@@ -18,12 +17,12 @@ public class MachineServiceImpl implements MachineService<Machine> {
             return new ArrayList<>(new BuldozerProducer().get());
         }
         if (type == Excavator.class) {
-            return new ArrayList<>(new ExcavatorProducer<Excavator>().get());
+            return new ArrayList<>(new ExcavatorProducer().get());
         }
         if (type == Track.class) {
             return new ArrayList<>(new TrackProducer().get());
         }
-        throw new NoSuchElementException("No any elements with correct class!");
+        throw new IllegalArgumentException("No any elements with correct class!");
     }
 
     @Override

@@ -12,8 +12,8 @@ public class Track extends Machine {
     }
 
     public Track(String size, String type) {
-        size = size;
-        type = type;
+        this.size = size;
+        this.type = type;
     }
 
     public String getSize() {
