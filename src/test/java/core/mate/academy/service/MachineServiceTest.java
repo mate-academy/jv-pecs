@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
-import core.mate.academy.model.T;
+import core.mate.academy.model.Machine;
 import core.mate.academy.model.Track;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceTest {
-    private static MachineService<T> machineService;
+    private static MachineService<Machine> machineService;
 
     @BeforeClass
     public static void beforeClass() {
@@ -21,21 +21,21 @@ public class MachineServiceTest {
 
     @Test
     public void getAll_bulldozerType() {
-        List<T> actual = machineService.getAll(Bulldozer.class);
+        List<Machine> actual = machineService.getAll(Bulldozer.class);
         assertEquals("The list should contain elements of type Bulldozer",
                 Bulldozer.class, actual.get(0).getClass());
     }
 
     @Test
     public void getAll_excavatorType() {
-        List<T> actual = machineService.getAll(Excavator.class);
+        List<Machine> actual = machineService.getAll(Excavator.class);
         assertEquals("The list should contain elements of type Excavator",
                 Excavator.class, actual.get(0).getClass());
     }
 
     @Test
     public void getAll_trackType() {
-        List<T> actual = machineService.getAll(Track.class);
+        List<Machine> actual = machineService.getAll(Track.class);
         assertEquals("The list should contain elements of type Track",
                 Track.class, actual.get(0).getClass());
     }
