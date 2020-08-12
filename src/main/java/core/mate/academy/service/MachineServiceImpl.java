@@ -22,7 +22,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Track.class) {
             return new ArrayList<>(new TrackProducer().get());
         }
-        throw new ClassCastException("Unknown class [" + type + "]");
+        throw new RuntimeException("Unknown class [" + type + "]");
     }
 
     @Override
