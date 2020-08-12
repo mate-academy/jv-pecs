@@ -6,7 +6,7 @@ import java.util.List;
 
 public class TrackProducer implements MachineProducer<Track> {
     @Override
-    public List get() {
+    public List<Track> get() {
         List<Track> tracks = new ArrayList<>();
         tracks.add(new Track());
         tracks.add(new Track(20, "Auto", "Track", "Blue"));
