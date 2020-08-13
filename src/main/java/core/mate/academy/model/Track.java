@@ -5,25 +5,28 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Track extends Machine {
-    private int id;
-    private String name;
+    private int trackId;
+    private String trackName;
+
+    public Track() {
+    }
 
     public int getId() {
-        return id;
+        return trackId;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.trackId = id;
     }
 
     @Override
     public String getName() {
-        return name;
+        return trackName;
     }
 
     @Override
     public void setName(String name) {
-        this.name = name;
+        this.trackName = name;
     }
 
     @Override

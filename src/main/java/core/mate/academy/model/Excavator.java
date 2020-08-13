@@ -5,25 +5,28 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    private int id;
-    private String name;
+    private int excavatorId;
+    private String excavatorName;
+
+    public Excavator() {
+    }
 
     public int getId() {
-        return id;
+        return excavatorId;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.excavatorId = id;
     }
 
     @Override
     public String getName() {
-        return name;
+        return excavatorName;
     }
 
     @Override
     public void setName(String name) {
-        this.name = name;
+        this.excavatorName = name;
     }
 
     @Override
