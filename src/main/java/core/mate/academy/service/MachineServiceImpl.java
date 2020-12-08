@@ -4,17 +4,15 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService <Machine> {
+public class MachineServiceImpl implements MachineService<Machine> {
 
-
-    public List<Machine> getAll(Class type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
             BulldozerProducer producer = new BulldozerProducer();
             List<? extends Machine> list = producer.get();
