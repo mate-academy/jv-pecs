@@ -1,11 +1,12 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private final String bulldozerModel;
+    private final String countryOfProduction;
+
     public Bulldozer() {
+        this.bulldozerModel = "Model Two";
+        this.countryOfProduction = "Belarus";
     }
 
     @Override
