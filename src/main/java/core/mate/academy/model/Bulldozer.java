@@ -1,12 +1,16 @@
 package core.mate.academy.model;
 
 public class Bulldozer extends Machine {
-    private final String bulldozerModel;
-    private final String countryOfProduction;
+    private String model;
+    private String countryOfProduction;
 
     public Bulldozer() {
-        this.bulldozerModel = "Model Two";
-        this.countryOfProduction = "Belarus";
+
+    }
+
+    public Bulldozer(String model, String countryOfProduction) {
+        this.model = model;
+        this.countryOfProduction = countryOfProduction;
     }
 
     @Override

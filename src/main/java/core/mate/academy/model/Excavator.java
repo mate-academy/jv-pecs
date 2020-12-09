@@ -1,12 +1,16 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
-    private final String excavatorModel;
-    private final int yearOfProduction;
+    private String model;
+    private int yearOfProduction;
 
     public Excavator() {
-        this.excavatorModel = "Model One";
-        this.yearOfProduction = 1970;
+
+    }
+
+    public Excavator(String model, int yearOfProduction) {
+        this.model = model;
+        this.yearOfProduction = yearOfProduction;
     }
 
     @Override
