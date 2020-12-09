@@ -7,9 +7,6 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl implements MachineService<Machine> {
 
     public List<Machine> getAll(Class<? extends Machine> type) {
@@ -31,10 +28,9 @@ public class MachineServiceImpl implements MachineService<Machine> {
         return null;
     }
 
-    public void fill(List<? super Machine> machines, Object value) {
-        int times = machines.size();
-        for (int i = 0; i < times; i++) {
-            machines.set(i,(Machine) value);
+    public void fill(List<? super Machine> machines, Machine value) {
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(i, value);
         }
     }
 
