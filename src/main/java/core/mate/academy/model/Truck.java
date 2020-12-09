@@ -1,15 +1,14 @@
 package core.mate.academy.model;
 
 public class Truck extends Machine {
-    private String model;
     private int maxCargoWeight;
 
     public Truck() {
 
     }
 
-    public Truck(String model, int maxCargoWeight) {
-        this.model = model;
+    public Truck(String model, String name, String color, int maxCargoWeight) {
+        super(model, name, color);
         this.maxCargoWeight = maxCargoWeight;
     }
 
