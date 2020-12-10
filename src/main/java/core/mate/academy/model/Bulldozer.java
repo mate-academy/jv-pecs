@@ -1,11 +1,19 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
+import core.mate.academy.model.enums.Blade;
+
 public class Bulldozer extends Machine {
+    private Blade blade;
+
     public Bulldozer() {
+    }
+
+    public Blade getBlade() {
+        return blade;
+    }
+
+    public void setBlade(Blade blade) {
+        this.blade = blade;
     }
 
     @Override
