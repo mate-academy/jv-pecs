@@ -11,6 +11,12 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String color, String name, int year, String logo) {
+        super(color, name);
+        this.year = year;
+        this.logo = logo;
+    }
+
     public int getYear() {
         return year;
     }
