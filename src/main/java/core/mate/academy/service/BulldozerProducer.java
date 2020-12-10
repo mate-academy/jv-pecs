@@ -30,7 +30,7 @@ public class BulldozerProducer implements MachineProducer {
         bulldozer3.setDumpDeepening(3);
         bulldozer3.setHeight(4);
 
-        List<Bulldozer> bulldozerList = new ArrayList<Bulldozer>();
+        List<Bulldozer> bulldozerList = new ArrayList<>();
 
         bulldozerList.add(bulldozer1);
         bulldozerList.add(bulldozer2);
