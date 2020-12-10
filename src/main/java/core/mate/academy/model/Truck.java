@@ -11,8 +11,8 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(String color, String name, int year, String logo) {
-        super(color, name);
+    public Truck(String name, String color, int year, String logo) {
+        super(name, color);
         this.year = year;
         this.logo = logo;
     }
