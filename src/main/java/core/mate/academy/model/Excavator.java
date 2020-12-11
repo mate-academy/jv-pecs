@@ -7,6 +7,7 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
     private String type;
     private String appointment;
+
     public Excavator() {
     }
 
