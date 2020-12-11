@@ -5,16 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-    private static final Bulldozer FIRST = new Bulldozer();
-    private static final Bulldozer SECOND = new Bulldozer();
-    private static final Bulldozer THIRD = new Bulldozer();
-
     @Override
     public List<Bulldozer> get() {
         List<Bulldozer> bulldozers = new ArrayList<>();
-        bulldozers.add(FIRST);
-        bulldozers.add(SECOND);
-        bulldozers.add(THIRD);
+        bulldozers.add(new Bulldozer());
+        bulldozers.add(new Bulldozer());
+        bulldozers.add(new Bulldozer());
         return bulldozers;
     }
 }
