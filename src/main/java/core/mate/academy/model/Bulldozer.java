@@ -5,7 +5,26 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private boolean isTracked;
+    private String tractionClass;
+
     public Bulldozer() {
+    }
+
+    public boolean isTracked() {
+        return isTracked;
+    }
+
+    public void setTracked(boolean tracked) {
+        isTracked = tracked;
+    }
+
+    public String getTractionClass() {
+        return tractionClass;
+    }
+
+    public void setTractionClass(String tractionClass) {
+        this.tractionClass = tractionClass;
     }
 
     @Override
