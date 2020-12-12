@@ -5,6 +5,25 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int BulldozerSpeed;
+    private String BulldozerColor;
+
+    public int getBulldozerSpeed() {
+        return BulldozerSpeed;
+    }
+
+    public void setBulldozerSpeed(int bulldozerSpeed) {
+        BulldozerSpeed = bulldozerSpeed;
+    }
+
+    public String getBulldozerColor() {
+        return BulldozerColor;
+    }
+
+    public void setBulldozerColor(String bulldozerColor) {
+        BulldozerColor = bulldozerColor;
+    }
+
     public Bulldozer() {
     }
 
