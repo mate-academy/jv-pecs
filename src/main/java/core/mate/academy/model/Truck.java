@@ -8,6 +8,9 @@ public class Truck extends Machine {
     private int truckSpeed;
     private String truckColor;
 
+    public Truck() {
+    }
+
     public int getTruckSpeed() {
         return truckSpeed;
     }
@@ -22,9 +25,6 @@ public class Truck extends Machine {
 
     public void setTruckColor(String truckColor) {
         this.truckColor = truckColor;
-    }
-
-    public Truck() {
     }
 
     @Override

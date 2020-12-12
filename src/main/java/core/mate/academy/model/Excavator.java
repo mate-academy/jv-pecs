@@ -8,6 +8,9 @@ public class Excavator extends Machine {
     private int excavatorSpeed;
     private String excavatorColor;
 
+    public Excavator() {
+    }
+
     public int getExcavatorSpeed() {
         return excavatorSpeed;
     }
@@ -22,9 +25,6 @@ public class Excavator extends Machine {
 
     public void setExcavatorColor(String excavatorColor) {
         this.excavatorColor = excavatorColor;
-    }
-
-    public Excavator() {
     }
 
     @Override
