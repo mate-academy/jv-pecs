@@ -10,15 +10,15 @@ import java.util.List;
 public class Truck extends Machine {
     private int liftingCapacity;
 
-    public int getLiftingCapacity() {
-        return liftingCapacity;
-    }
-
     public Truck(int liftingCapacity) {
         this.liftingCapacity = liftingCapacity;
     }
 
     public Truck() {
+    }
+
+    public int getLiftingCapacity() {
+        return liftingCapacity;
     }
 
     @Override
@@ -27,7 +27,7 @@ public class Truck extends Machine {
     }
 
     @Override
-    public List<? super Machine> get() {
+    public List<Machine> get() {
         List<Machine> returnValue = new ArrayList<>();
         returnValue.add(new Truck(30));
         returnValue.add(new Truck(50));

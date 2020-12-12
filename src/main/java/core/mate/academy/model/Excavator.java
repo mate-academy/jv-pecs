@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class Excavator extends Machine {
     private int tracLength;
+
     public Excavator() {
     }
 
@@ -26,7 +27,7 @@ public class Excavator extends Machine {
     }
 
     @Override
-    public List<? super Machine> get() {
+    public List<Machine> get() {
         List<Machine> returnValue = new ArrayList<>();
         returnValue.add(new Excavator(30));
         returnValue.add(new Excavator(100));

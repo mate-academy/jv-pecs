@@ -10,15 +10,15 @@ import java.util.List;
 public class Bulldozer extends Machine {
     private int weightBucket;
 
-    public int getWeightBucket() {
-        return weightBucket;
-    }
-
     public Bulldozer(int weightBucket) {
         this.weightBucket = weightBucket;
     }
 
     public Bulldozer() {
+    }
+
+    public int getWeightBucket() {
+        return weightBucket;
     }
 
     @Override
@@ -27,7 +27,7 @@ public class Bulldozer extends Machine {
     }
 
     @Override
-    public List<? super Machine> get() {
+    public List<Machine> get() {
         List<Machine> returnValue = new ArrayList<>();
         returnValue.add(new Bulldozer(500));
         returnValue.add(new Bulldozer(200));
