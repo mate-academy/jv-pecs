@@ -7,6 +7,11 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String typeChassis, int dumpWeight) {
+        this.typeChassis = typeChassis;
+        this.dumpWeight = dumpWeight;
+    }
+
     public String getTypeChassis() {
         return typeChassis;
     }

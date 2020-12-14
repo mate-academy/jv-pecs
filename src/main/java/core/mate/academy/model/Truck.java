@@ -1,26 +1,31 @@
 package core.mate.academy.model;
 
 public class Truck extends Machine {
-    private int vanWidth;
-    private int vanHeight;
+    private int vanCapacity;
+    private String typeTruck;
 
     public Truck() {
     }
 
+    public Truck(int vanWidth, String vanHeight) {
+        this.vanCapacity = vanWidth;
+        this.typeTruck = vanHeight;
+    }
+
     public int getTruckCapacity() {
-        return vanWidth;
+        return vanCapacity;
     }
 
     public void setTruckCapacity(int truckCapacity) {
-        this.vanWidth = truckCapacity;
+        this.vanCapacity = truckCapacity;
     }
 
-    public int getVanHeight() {
-        return vanHeight;
+    public String getVanHeight() {
+        return typeTruck;
     }
 
-    public void setVanHeight(int vanHeight) {
-        this.vanHeight = vanHeight;
+    public void setVanHeight(String vanHeight) {
+        this.typeTruck = vanHeight;
     }
 
     @Override
