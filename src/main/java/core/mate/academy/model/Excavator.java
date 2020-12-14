@@ -10,6 +10,11 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(int scoopVolume, String name, String color) {
+        super(name, color);
+        this.scoopVolume = scoopVolume;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

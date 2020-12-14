@@ -10,6 +10,11 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(boolean hasTrailer, String name, String color) {
+        super(name, color);
+        this.hasTrailer = hasTrailer;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
