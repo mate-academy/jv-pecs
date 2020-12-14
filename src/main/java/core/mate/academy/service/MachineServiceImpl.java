@@ -24,7 +24,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         } else if (type == Excavator.class) {
             return new ArrayList<>(new ExcavatorProducer().get());
         }
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
