@@ -14,7 +14,6 @@ public class Excavator extends Machine {
     }
 
     public Excavator() {
-
     }
 
     public int getBucketVolume() {

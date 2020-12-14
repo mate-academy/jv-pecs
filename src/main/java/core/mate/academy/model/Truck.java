@@ -14,7 +14,6 @@ public class Truck extends Machine {
     }
 
     public Truck() {
-
     }
 
     public int getMaxTonnage() {

@@ -14,7 +14,6 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer() {
-
     }
 
     public int getId() {

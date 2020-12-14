@@ -11,10 +11,10 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        if (type.equals(Bulldozer.class)) {
+        if (type == Bulldozer.class) {
             BulldozerProducer bulldozers = new BulldozerProducer();
             return bulldozers.get();
-        } else if (type.equals(Excavator.class)) {
+        } else if (type == Excavator.class) {
             ExcavatorProducer excavators = new ExcavatorProducer();
             return excavators.get();
         } else {
