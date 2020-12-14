@@ -13,9 +13,9 @@ import java.util.List;
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
     @Override
-    public void fill(List<? super Machine> machines, Object value) {
+    public void fill(List<? super Machine> machines, T value) {
         for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, (Machine)value);
+            machines.set(i, value);
         }
     }
 
