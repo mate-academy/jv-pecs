@@ -1,11 +1,15 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private int showelType;
+
     public Bulldozer() {
+
+    }
+
+    public Bulldozer(String name, String color, int power, int showelType) {
+        super(name, color, power);
+        this.showelType = showelType;
     }
 
     @Override
