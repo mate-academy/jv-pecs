@@ -10,11 +10,8 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public boolean isHaveTrailer() {
-        return haveTrailer;
-    }
-
-    public void setHaveTrailer(boolean haveTrailer) {
+    public Truck(String name, String color, boolean haveTrailer) {
+        super(name, color);
         this.haveTrailer = haveTrailer;
     }
 

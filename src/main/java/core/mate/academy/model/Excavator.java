@@ -10,11 +10,8 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public String getBackhoeSize() {
-        return backhoeSize;
-    }
-
-    public void setBackhoeSize(String backhoeSize) {
+    public Excavator(String name, String color, String backhoeSize) {
+        super(name, color);
         this.backhoeSize = backhoeSize;
     }
 

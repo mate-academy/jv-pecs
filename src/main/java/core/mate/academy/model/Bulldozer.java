@@ -8,13 +8,11 @@ public class Bulldozer extends Machine {
     private String bladeSize;
 
     public Bulldozer() {
+
     }
 
-    public String getBladeSize() {
-        return bladeSize;
-    }
-
-    public void setBladeSize(String bladeSize) {
+    public Bulldozer(String name, String color, String bladeSize) {
+        super(name,color);
         this.bladeSize = bladeSize;
     }
 
