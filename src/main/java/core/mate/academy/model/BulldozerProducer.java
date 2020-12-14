@@ -3,10 +3,10 @@ package core.mate.academy.model;
 import core.mate.academy.service.MachineProducer;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer<Machine> {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
-    public List<Machine> get() {
-        List<Machine> bulldozerList = List.of(new Bulldozer(), new Bulldozer(), new Bulldozer());
+    public List<Bulldozer> get() {
+        List<Bulldozer> bulldozerList = List.of(new Bulldozer(), new Bulldozer(), new Bulldozer());
         return bulldozerList;
     }
 }
