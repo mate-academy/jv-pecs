@@ -8,12 +8,13 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public TruckType getType() {
-        return type;
+    public Truck(String name, String color, TruckType type) {
+        super(name, color);
+        this.type = type;
     }
 
-    public void setType(TruckType type) {
-        this.type = type;
+    public TruckType getType() {
+        return type;
     }
 
     public void doWork() {

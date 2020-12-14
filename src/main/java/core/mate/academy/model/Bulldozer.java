@@ -8,12 +8,13 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public Blade getBlade() {
-        return blade;
+    public Bulldozer(String name, String color, Blade blade) {
+        super(name, color);
+        this.blade = blade;
     }
 
-    public void setBlade(Blade blade) {
-        this.blade = blade;
+    public Blade getBlade() {
+        return blade;
     }
 
     @Override

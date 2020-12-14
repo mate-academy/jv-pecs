@@ -6,12 +6,13 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public int getCreateYear() {
-        return createYear;
+    public Excavator(String name, String color, int createYear) {
+        super(name, color);
+        this.createYear = createYear;
     }
 
-    public void setCreateYear(int createYear) {
-        this.createYear = createYear;
+    public int getCreateYear() {
+        return createYear;
     }
 
     @Override
