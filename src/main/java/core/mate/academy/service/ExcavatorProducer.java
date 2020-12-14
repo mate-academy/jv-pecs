@@ -12,7 +12,7 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
 
     private List<Excavator> createList() {
         List<Excavator> excavatorList = new ArrayList<>();
-        excavatorList.add(new Excavator());
+        excavatorList.add(new Excavator("Excavator", "Black", "Ukraine"));
         return excavatorList;
     }
 }
