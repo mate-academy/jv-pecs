@@ -5,11 +5,21 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private double volumePerHour;
+
     public Bulldozer() {
     }
 
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
+    }
+
+    public double getVolumePerHour() {
+        return volumePerHour;
+    }
+
+    public void setVolumePerHour(double volumePerHour) {
+        this.volumePerHour = volumePerHour;
     }
 }
