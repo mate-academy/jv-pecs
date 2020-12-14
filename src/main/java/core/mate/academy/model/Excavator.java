@@ -15,6 +15,14 @@ public class Excavator extends Machine {
         this.scoopVolume = scoopVolume;
     }
 
+    public int getScoopVolume() {
+        return scoopVolume;
+    }
+
+    public void setScoopVolume(int scoopVolume) {
+        this.scoopVolume = scoopVolume;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

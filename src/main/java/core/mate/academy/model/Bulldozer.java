@@ -15,6 +15,14 @@ public class Bulldozer extends Machine {
         this.bladeArea = bladeArea;
     }
 
+    public int getBladeArea() {
+        return bladeArea;
+    }
+
+    public void setBladeArea(int bladeArea) {
+        this.bladeArea = bladeArea;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
