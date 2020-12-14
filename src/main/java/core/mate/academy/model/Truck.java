@@ -6,6 +6,14 @@ public class Truck extends Machine {
     private String engineType;
 
     public Truck() {
+        super();
+    }
+
+    public Truck(String name, String color, int liftCapacity, String bodyType, String engineType) {
+        super(name, color);
+        this.liftCapacity = liftCapacity;
+        this.bodyType = bodyType;
+        this.engineType = engineType;
     }
 
     public int getLiftCapacity() {

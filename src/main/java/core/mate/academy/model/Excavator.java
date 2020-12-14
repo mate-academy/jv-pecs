@@ -8,6 +8,14 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String name, String color, int bucketCapacity, int maxSpeed,
+                     String undercarriageType) {
+        super(name, color);
+        this.bucketCapacity = bucketCapacity;
+        this.maxSpeed = maxSpeed;
+        this.undercarriageType = undercarriageType;
+    }
+
     public int getBucketCapacity() {
         return bucketCapacity;
     }

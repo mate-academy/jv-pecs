@@ -8,6 +8,13 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String name, String color, int weight, int height, int dumpDeepening) {
+        super(name, color);
+        this.weight = weight;
+        this.height = height;
+        this.dumpDeepening = dumpDeepening;
+    }
+
     public int getWeight() {
         return weight;
     }

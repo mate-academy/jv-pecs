@@ -4,32 +4,12 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Machine;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
     public List<Machine> get() {
-        Bulldozer bulldozer1 = new Bulldozer();
-
-        bulldozer1.setName("Bulldozer 1");
-        bulldozer1.setColor("Black");
-        bulldozer1.setWeight(300);
-        bulldozer1.setDumpDeepening(1);
-        bulldozer1.setHeight(3);
-
-        Bulldozer bulldozer2 = new Bulldozer();
-
-        bulldozer2.setName("Bulldozer 2");
-        bulldozer2.setColor("White");
-        bulldozer2.setWeight(200);
-        bulldozer2.setDumpDeepening(2);
-        bulldozer2.setHeight(5);
-
-        Bulldozer bulldozer3 = new Bulldozer();
-
-        bulldozer3.setName("Bulldozer 3");
-        bulldozer3.setColor("Red");
-        bulldozer3.setWeight(400);
-        bulldozer3.setDumpDeepening(3);
-        bulldozer3.setHeight(4);
+        Bulldozer bulldozer1 = new Bulldozer("Bulldozer 1", "Black", 300, 3, 1);
+        Bulldozer bulldozer2 = new Bulldozer("Bulldozer 2", "White", 200, 5, 2);
+        Bulldozer bulldozer3 = new Bulldozer("Bulldozer 3", "Red", 400, 4, 3);
 
         List<Machine> bulldozerList = List.of(bulldozer1, bulldozer2, bulldozer3);
 

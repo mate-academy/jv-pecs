@@ -35,6 +35,5 @@ public class MachineServiceImpl<M extends Machine> implements MachineService<M> 
         for (Machine machine: machines) {
             machine.doWork();
         }
-
     }
 }
