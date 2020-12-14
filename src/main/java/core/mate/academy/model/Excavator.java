@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private String backhoeSize;
+
     public Excavator() {
+    }
+
+    public String getBackhoeSize() {
+        return backhoeSize;
+    }
+
+    public void setBackhoeSize(String backhoeSize) {
+        this.backhoeSize = backhoeSize;
     }
 
     @Override
