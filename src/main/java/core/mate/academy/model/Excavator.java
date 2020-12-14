@@ -16,6 +16,14 @@ public class Excavator extends Machine {
         setColor(color);
     }
 
+    public int getEngineCapacity() {
+        return engineCapacity;
+    }
+
+    public void setEngineCapacity(int engineCapacity) {
+        this.engineCapacity = engineCapacity;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

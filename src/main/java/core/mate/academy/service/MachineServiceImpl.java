@@ -5,6 +5,7 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -26,7 +27,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
             TruckProducer truckProducer = new TruckProducer();
             return new ArrayList<>(truckProducer.get());
         }
-        return null;
+        return Collections.EMPTY_LIST;
     }
 
     @Override

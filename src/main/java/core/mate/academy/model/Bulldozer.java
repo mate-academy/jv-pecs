@@ -16,6 +16,14 @@ public class Bulldozer extends Machine {
         setColor(color);
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
