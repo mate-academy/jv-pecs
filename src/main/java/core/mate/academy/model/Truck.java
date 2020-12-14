@@ -5,7 +5,7 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    int wheelNumber;
+    private int wheelNumber;
 
     public Truck() {
         super("default", "default");

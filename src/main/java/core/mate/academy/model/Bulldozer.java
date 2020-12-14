@@ -5,7 +5,7 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    int trackLength;
+    private int trackLength;
 
     public Bulldozer() {
         super("default", "default");
