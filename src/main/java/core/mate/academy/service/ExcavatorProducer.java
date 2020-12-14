@@ -10,7 +10,7 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
         return createList();
     }
 
-    public List<Excavator> createList() {
+    private List<Excavator> createList() {
         List<Excavator> excavatorList = new ArrayList<>();
         excavatorList.add(new Excavator());
         return excavatorList;

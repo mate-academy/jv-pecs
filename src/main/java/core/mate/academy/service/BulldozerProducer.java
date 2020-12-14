@@ -10,7 +10,7 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
         return createList();
     }
 
-    public List<Bulldozer> createList() {
+    private List<Bulldozer> createList() {
         List<Bulldozer> bulldozerList = new ArrayList<>();
         bulldozerList.add(new Bulldozer());
         return bulldozerList;
