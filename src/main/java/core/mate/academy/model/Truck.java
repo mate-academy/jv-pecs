@@ -1,11 +1,26 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
+    private int liftingCapacity;
+    private String truckBodyType;
+
     public Truck() {
+    }
+
+    public int getLiftingCapacity() {
+        return liftingCapacity;
+    }
+
+    public void setLiftingCapacity(int liftingCapacity) {
+        this.liftingCapacity = liftingCapacity;
+    }
+
+    public String getTruckBodyType() {
+        return truckBodyType;
+    }
+
+    public void setTruckBodyType(String truckBodyType) {
+        this.truckBodyType = truckBodyType;
     }
 
     @Override
