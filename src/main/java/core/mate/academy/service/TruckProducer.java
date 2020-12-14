@@ -4,12 +4,11 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckProducer implements MachineProducer {
+public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
-        Truck truck = new Truck("Volvo", "White", true);
-        trucks.add(truck);
+        trucks.add(new Truck("Volvo", "White", true));
         return trucks;
     }
 }
