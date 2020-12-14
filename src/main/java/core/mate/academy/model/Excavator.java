@@ -5,26 +5,26 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    private int excavatorSpeed;
-    private String excavatorColor;
+    private int speed;
+    private String color;
 
     public Excavator() {
     }
 
-    public int getExcavatorSpeed() {
-        return excavatorSpeed;
+    public int getSpeed() {
+        return speed;
     }
 
-    public void setExcavatorSpeed(int excavatorSpeed) {
-        this.excavatorSpeed = excavatorSpeed;
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 
-    public String getExcavatorColor() {
-        return excavatorColor;
+    public String getColor() {
+        return color;
     }
 
-    public void setExcavatorColor(String excavatorColor) {
-        this.excavatorColor = excavatorColor;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     @Override

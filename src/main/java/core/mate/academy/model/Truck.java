@@ -5,26 +5,26 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    private int truckSpeed;
-    private String truckColor;
+    private int speed;
+    private String color;
 
     public Truck() {
     }
 
-    public int getTruckSpeed() {
-        return truckSpeed;
+    public int getSpeed() {
+        return speed;
     }
 
-    public void setTruckSpeed(int truckSpeed) {
-        this.truckSpeed = truckSpeed;
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 
-    public String getTruckColor() {
-        return truckColor;
+    public String getColor() {
+        return color;
     }
 
-    public void setTruckColor(String truckColor) {
-        this.truckColor = truckColor;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     @Override
