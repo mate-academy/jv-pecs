@@ -4,7 +4,7 @@ package core.mate.academy.model;
  * Add some custom fields that could be only in Excavator
  * Do not remove no-args constructor
  */
-public class Excavator extends Machine implements Workable {
+public class Excavator extends Machine {
     private int bucketCapacity;
 
     public Excavator() {
@@ -14,6 +14,14 @@ public class Excavator extends Machine implements Workable {
         this.bucketCapacity = bucketCapacity;
         super.setColor(color);
         super.setName(name);
+    }
+
+    public int getBucketCapacity() {
+        return bucketCapacity;
+    }
+
+    public void setBucketCapacity(int bucketCapacity) {
+        this.bucketCapacity = bucketCapacity;
     }
 
     @Override
