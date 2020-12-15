@@ -8,31 +8,29 @@ import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import core.mate.academy.model.TruckProducer;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    public List<Machine> getAll(Class type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> resultList = new ArrayList<>();
         if (Truck.class == type) {
-            TruckProducer truckProducer = new TruckProducer();
-            resultList = truckProducer.get();
+            return new ArrayList<>(new TruckProducer().get());
         }
         if (Bulldozer.class == type) {
-            BulldozerProducer bulldozerProducer = new BulldozerProducer();
-            resultList = bulldozerProducer.get();
+            return new ArrayList<>(new BulldozerProducer().get());
         }
         if (Excavator.class == type) {
-            ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-            resultList = excavatorProducer.get();
+            return new ArrayList<>(new ExcavatorProducer().get());
         }
-        return new ArrayList<>(resultList);
+        return Collections.emptyList();
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Object value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
-            machines.set(i,(Machine) value);
+            machines.set(i, value);
         }
     }
 
