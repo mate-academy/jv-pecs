@@ -14,10 +14,12 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Bulldozer.class) {
             MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
             return new ArrayList<>(bulldozerProducer.get());
-        } else if (type == Excavator.class) {
+        }
+        if (type == Excavator.class) {
             MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
             return new ArrayList<>(excavatorProducer.get());
-        } else if (type == Truck.class) {
+        }
+        if (type == Truck.class) {
             MachineProducer<Truck> truckProducer = new TruckProducer();
             return new ArrayList<>(truckProducer.get());
         }

@@ -12,10 +12,9 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(boolean isTracked, String tractionClass, String name, String color) {
+        super(name, color);
         this.isTracked = isTracked;
         this.tractionClass = tractionClass;
-        setName(name);
-        setColor(color);
     }
 
     public boolean isTracked() {
