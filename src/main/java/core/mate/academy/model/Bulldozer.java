@@ -7,6 +7,10 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String bulldozerBladeType) {
+        this.bulldozerBladeType = bulldozerBladeType;
+    }
+
     public String getBulldozerBladeType() {
         return bulldozerBladeType;
     }
