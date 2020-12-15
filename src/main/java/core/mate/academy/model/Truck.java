@@ -19,6 +19,30 @@ public class Truck extends Machine {
         this.speed = speed;
     }
 
+    public String getTypeMachine() {
+        return typeMachine;
+    }
+
+    public String getTypeTruck() {
+        return typeTruck;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setTypeMachine(String typeMachine) {
+        this.typeMachine = typeMachine;
+    }
+
+    public void setTypeTruck(String typeTruck) {
+        this.typeTruck = typeTruck;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

@@ -20,6 +20,30 @@ public class Excavator extends Machine {
         this.destination = destination;
     }
 
+    public String getChassisType() {
+        return chassisType;
+    }
+
+    public String getOperationPrinciple() {
+        return operationPrinciple;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setChassisType(String chassisType) {
+        this.chassisType = chassisType;
+    }
+
+    public void setOperationPrinciple(String operationPrinciple) {
+        this.operationPrinciple = operationPrinciple;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

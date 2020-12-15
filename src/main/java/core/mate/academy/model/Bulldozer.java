@@ -19,6 +19,30 @@ public class Bulldozer extends Machine {
         this.dumpDeepening = dumpDeepening;
     }
 
+    public int getPower() {
+        return power;
+    }
+
+    public int getMass() {
+        return mass;
+    }
+
+    public int getDumpDeepening() {
+        return dumpDeepening;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public void setMass(int mass) {
+        this.mass = mass;
+    }
+
+    public void setDumpDeepening(int dumpDeepening) {
+        this.dumpDeepening = dumpDeepening;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
