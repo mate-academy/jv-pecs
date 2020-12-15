@@ -8,6 +8,11 @@ public class Bulldozer extends Machine {
     private String model;
     private int idNumber;
 
+    public Bulldozer(String model, int idNumber) {
+        this.model = model;
+        this.idNumber = idNumber;
+    }
+
     public Bulldozer() {
     }
 

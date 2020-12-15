@@ -8,6 +8,11 @@ public class Excavator extends Machine {
     private String brand;
     private String motorType;
 
+    public Excavator(String brand, String motorType) {
+        this.brand = brand;
+        this.motorType = motorType;
+    }
+
     public Excavator() {
     }
 
