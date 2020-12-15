@@ -1,17 +1,17 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.BladeType;
 import core.mate.academy.model.Bulldozer;
-import core.mate.academy.model.Machine;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
-    public List<Machine> get() {
-        List<Machine> list = new ArrayList<>();
-        list.add(new Bulldozer());
-        list.add(new Bulldozer());
-        list.add(new Bulldozer());
+    public List<Bulldozer> get() {
+        List<Bulldozer> list = new ArrayList<>();
+        list.add(new Bulldozer(BladeType.S_TYPE));
+        list.add(new Bulldozer(BladeType.U_TYPE));
+        list.add(new Bulldozer(BladeType.S_U_TYPE));
         return list;
     }
 }
