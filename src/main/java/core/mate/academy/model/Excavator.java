@@ -4,12 +4,19 @@ public class Excavator extends Machine {
     private boolean hasLadle;
 
     public Excavator(boolean hasLadle, String name, String color) {
+        super(name, color);
         this.hasLadle = hasLadle;
-        setName(name);
-        setColor(color);
     }
 
     public Excavator() {
+    }
+
+    public boolean isHasLadle() {
+        return hasLadle;
+    }
+
+    public void setHasLadle(boolean hasLadle) {
+        this.hasLadle = hasLadle;
     }
 
     @Override
