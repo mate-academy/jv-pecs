@@ -1,5 +1,6 @@
 package core.mate.academy.model;
 
+import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
  * Add some custom fields that could be only in Bulldozer
  * Do not remove no-args constructor
  */
-public class Bulldozer extends Machine {
+public class Bulldozer extends Machine implements MachineProducer {
     private int weightBucket;
 
     public Bulldozer(int weightBucket) {
