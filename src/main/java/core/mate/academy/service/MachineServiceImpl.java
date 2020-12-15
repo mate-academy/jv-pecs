@@ -40,6 +40,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Truck.class) {
             return new TruckProducer();
         }
-        return null;
+        throw new RuntimeException("Invalid class");
     }
 }
