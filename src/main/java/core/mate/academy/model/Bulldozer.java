@@ -8,6 +8,14 @@ public class Bulldozer extends Machine {
     private String model;
     private int idNumber;
 
+    public Bulldozer(String model, int idNumber) {
+        this.model = model;
+        this.idNumber = idNumber;
+    }
+
+    public Bulldozer() {
+    }
+
     public void setModel(String model) {
         this.model = model;
     }
@@ -22,14 +30,6 @@ public class Bulldozer extends Machine {
 
     public int getIdNumber() {
         return idNumber;
-    }
-
-    public Bulldozer(String model, int idNumber) {
-        this.model = model;
-        this.idNumber = idNumber;
-    }
-
-    public Bulldozer() {
     }
 
     @Override
