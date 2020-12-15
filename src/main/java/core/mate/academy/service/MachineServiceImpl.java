@@ -20,7 +20,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
             List<? extends Machine> trucks = new TruckProducer().get();
             return new ArrayList<>(trucks);
         }
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

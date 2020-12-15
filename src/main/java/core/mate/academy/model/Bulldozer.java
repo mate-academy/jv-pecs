@@ -7,13 +7,16 @@ public class Bulldozer extends Machine {
 
     }
 
-    public Bulldozer(String name, String color,String typeOfBlade) {
-        super(name, color);
-        this.typeOfBlade = typeOfBlade;
-    }
-
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
+    }
+
+    public String getTypeOfBlade() {
+        return typeOfBlade;
+    }
+
+    public void setTypeOfBlade(String typeOfBlade) {
+        this.typeOfBlade = typeOfBlade;
     }
 }

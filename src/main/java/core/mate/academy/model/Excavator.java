@@ -6,13 +6,16 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(String name, String color, String country) {
-        super(name, color);
-        this.country = country;
-    }
-
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 }

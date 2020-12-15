@@ -12,7 +12,7 @@ public class TruckProducer implements MachineProducer<Truck> {
 
     private List<Truck> createList() {
         List<Truck> truckList = new ArrayList<>();
-        truckList.add(new Truck("Truck", "Blue", 500));
+        truckList.add(new Truck());
         return truckList;
     }
 }
