@@ -4,7 +4,7 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -14,9 +14,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        if (type == null) {
-            throw new RuntimeException("Can't accept null type");
-        }
         MachineProducer machineProducer = null;
         if (type == Bulldozer.class) {
             machineProducer = new BulldozerProducer();
@@ -25,8 +22,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         } else if (type == Truck.class) {
             machineProducer = new TruckProducer();
         }
-        List<? extends Machine> machines = machineProducer.get();
-        return new ArrayList<>(machines);
+        return machineProducer != null ? machineProducer.get() : Collections.emptyList();
     }
 
     @Override
