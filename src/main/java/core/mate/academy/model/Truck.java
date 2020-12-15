@@ -8,6 +8,22 @@ public class Truck extends Machine {
     private int trailerVolume;
     private int loadCapacity;
 
+    public void setTrailerVolume(int trailerVolume) {
+        this.trailerVolume = trailerVolume;
+    }
+
+    public void setLoadCapacity(int loadCapacity) {
+        this.loadCapacity = loadCapacity;
+    }
+
+    public int getTrailerVolume() {
+        return trailerVolume;
+    }
+
+    public int getLoadCapacity() {
+        return loadCapacity;
+    }
+
     public Truck() {
     }
 
