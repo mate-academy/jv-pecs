@@ -8,6 +8,11 @@ public class Truck extends Machine {
     private int capacity;
 
     public Truck() {
+
+    }
+
+    public Truck(int capacity) {
+        this.capacity = capacity;
     }
 
     @Override

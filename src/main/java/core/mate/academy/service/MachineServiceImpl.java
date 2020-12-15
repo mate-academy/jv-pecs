@@ -14,6 +14,9 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
+        if (type == null) {
+            throw new RuntimeException("Can't accept null type");
+        }
         MachineProducer machineProducer = null;
         if (type == Bulldozer.class) {
             machineProducer = new BulldozerProducer();

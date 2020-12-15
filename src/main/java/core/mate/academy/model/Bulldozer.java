@@ -8,6 +8,11 @@ public class Bulldozer extends Machine {
     private double volumePerHour;
 
     public Bulldozer() {
+
+    }
+
+    public Bulldozer(double volumePerHour) {
+        this.volumePerHour = volumePerHour;
     }
 
     @Override
