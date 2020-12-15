@@ -11,6 +11,13 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String name, String color, boolean haveTank, int liftingCapacity) {
+        setName(name);
+        setColor(color);
+        this.haveTank = haveTank;
+        this.liftingCapacity = liftingCapacity;
+    }
+
     public boolean isHaveTank() {
         return haveTank;
     }

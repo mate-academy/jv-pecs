@@ -11,6 +11,13 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String name, String color, String type, String appointment) {
+        setName(name);
+        setColor(color);
+        this.type = type;
+        this.appointment = appointment;
+    }
+
     public String getType() {
         return type;
     }
