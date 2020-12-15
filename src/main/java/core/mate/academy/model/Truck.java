@@ -16,6 +16,10 @@ public class Truck extends Machine {
         this.wheelNumber = wheelNumber;
     }
 
+    public int getWheelNumber() {
+        return wheelNumber;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

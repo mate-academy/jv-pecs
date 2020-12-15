@@ -16,6 +16,10 @@ public class Bulldozer extends Machine {
         this.trackLength = trackLength;
     }
 
+    public int getTrackLength() {
+        return trackLength;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");

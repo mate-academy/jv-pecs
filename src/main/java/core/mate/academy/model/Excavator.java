@@ -16,6 +16,10 @@ public class Excavator extends Machine {
         this.bucketVolume = bucketVolume;
     }
 
+    public double getBucketVolume() {
+        return bucketVolume;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

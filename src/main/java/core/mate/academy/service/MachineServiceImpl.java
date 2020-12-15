@@ -3,6 +3,7 @@ package core.mate.academy.service;
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
+import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,10 +34,13 @@ public class MachineServiceImpl implements MachineService<Machine> {
     private MachineProducer<? extends Machine> getProducer(Class<? extends Machine> type) {
         if (type == Excavator.class) {
             return new ExcavatorProducer();
-        } else if (type == Bulldozer.class) {
+        }
+        if (type == Bulldozer.class) {
             return new BulldozerProducer();
-        } else {
+        }
+        if (type == Truck.class) {
             return new TruckProducer();
         }
+        throw new RuntimeException("Dont supported class");
     }
 }
