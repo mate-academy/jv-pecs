@@ -4,10 +4,10 @@ import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckProducer implements MachineProducer {
+public class TruckProducer implements MachineProducer<Truck> {
     @Override
-    public List<Machine> get() {
-        List<Machine> returnValue = new ArrayList<>();
+    public List<Truck> get() {
+        List<Truck> returnValue = new ArrayList<>();
         returnValue.add(new Truck(30));
         returnValue.add(new Truck(50));
         returnValue.add(new Truck(20));
