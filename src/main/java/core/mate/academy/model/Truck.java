@@ -5,7 +5,10 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    boolean isLongVehicles;
+
     public Truck() {
+        isLongVehicles = true;
     }
 
     @Override
