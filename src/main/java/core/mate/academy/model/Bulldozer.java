@@ -12,7 +12,8 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public Bulldozer(int power, int mass, int dumpDeepening) {
+    public Bulldozer(String name, String color, int power, int mass, int dumpDeepening) {
+        super(name, color);
         this.power = power;
         this.mass = mass;
         this.dumpDeepening = dumpDeepening;

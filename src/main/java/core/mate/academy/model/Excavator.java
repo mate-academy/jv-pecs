@@ -12,7 +12,9 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(String chassisType, String operationPrinciple, String destination) {
+    public Excavator(String name, String color, String chassisType,
+                     String operationPrinciple, String destination) {
+        super(name, color);
         this.chassisType = chassisType;
         this.operationPrinciple = operationPrinciple;
         this.destination = destination;
