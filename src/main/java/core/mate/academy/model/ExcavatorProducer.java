@@ -5,15 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-    private List<Excavator> excavatorsList = new ArrayList<>();
 
     @Override
     public List<Excavator> get() {
-        excavatorsList = createExcavatorAndInitializeExcavatorList();
-        return excavatorsList;
+        return createExcavatorList();
     }
 
-    private List<Excavator> createExcavatorAndInitializeExcavatorList() {
+    private List<Excavator> createExcavatorList() {
         Excavator excavator1 = new Excavator();
         excavator1.setName("excavator_1");
         excavator1.setColor("Yellow");
@@ -26,6 +24,7 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
         excavator2.setTypeBuckets("Clamp");
         excavator2.setTypeExcavator("Dragline");
         excavator2.setTypeFrame("Track frame");
+        List<Excavator> excavatorsList = new ArrayList<>();
         excavatorsList.add(excavator1);
         excavatorsList.add(excavator2);
         return excavatorsList;

@@ -5,15 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-    private List<Bulldozer> bulldozersList = new ArrayList<>();
 
     @Override
     public List<Bulldozer> get() {
-        bulldozersList = createBulldozerAndInitializeBulldozersList();
-        return bulldozersList;
+        return createBulldozersList();
     }
 
-    private List<Bulldozer> createBulldozerAndInitializeBulldozersList() {
+    private List<Bulldozer> createBulldozersList() {
         Bulldozer bulldozer1 = new Bulldozer();
         bulldozer1.setName("bulldozer_1");
         bulldozer1.setColor("Red");
@@ -25,6 +23,7 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
         bulldozer2.setBladeCapacity(30);
         bulldozer2.setLengthBlade(5);
         bulldozer2.setWeightBlade(20);
+        List<Bulldozer> bulldozersList = new ArrayList<>();
         bulldozersList.add(bulldozer1);
         bulldozersList.add(bulldozer2);
         return bulldozersList;

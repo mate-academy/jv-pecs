@@ -5,15 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    private List<Truck> truckList = new ArrayList<>();
 
     @Override
     public List<Truck> get() {
-        truckList = createTruckAndInitializeTruckList();
-        return truckList;
+        return createTruckList();
     }
 
-    private List<Truck> createTruckAndInitializeTruckList() {
+    private List<Truck> createTruckList() {
         Truck truck1 = new Truck();
         truck1.setName("truck_1");
         truck1.setColor("Black");
@@ -26,6 +24,7 @@ public class TruckProducer implements MachineProducer<Truck> {
         truck2.setTypesBySize("Off-road");
         truck2.setAmountWheels(4);
         truck2.setHasFridge(false);
+        List<Truck> truckList = new ArrayList<>();
         truckList.add(truck1);
         truckList.add(truck2);
         return truckList;
