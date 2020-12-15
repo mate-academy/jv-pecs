@@ -7,8 +7,11 @@ public class Bulldozer extends Machine {
 
     }
 
-    public Bulldozer(String name, String color, int power, int showelType) {
-        super(name, color, power);
+    public int getShowelType() {
+        return showelType;
+    }
+
+    public void setShowelType(int showelType) {
         this.showelType = showelType;
     }
 

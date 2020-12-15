@@ -1,14 +1,17 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
-    double arrowLength;
+    private double arrowLength;
 
     public Excavator() {
 
     }
 
-    public Excavator(String name, String color, int power, double arrowLength) {
-        super(name, color, power);
+    public double getArrowLength() {
+        return arrowLength;
+    }
+
+    public void setArrowLength(double arrowLength) {
         this.arrowLength = arrowLength;
     }
 

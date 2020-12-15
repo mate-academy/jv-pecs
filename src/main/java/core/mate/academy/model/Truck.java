@@ -11,8 +11,11 @@ public class Truck extends Machine {
 
     }
 
-    public Truck(String name, String color, int power, String typeOfBoard) {
-        super(name, color, power);
+    public String getTypeOfBoard() {
+        return typeOfBoard;
+    }
+
+    public void setTypeOfBoard(String typeOfBoard) {
         this.typeOfBoard = typeOfBoard;
     }
 
