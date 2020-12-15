@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private int truckField;
+
     public Truck() {
+    }
+
+    public int getTruckField() {
+        return truckField;
+    }
+
+    public void setTruckField(int truckField) {
+        this.truckField = truckField;
     }
 
     @Override
