@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int tracLength;
+
     public Excavator() {
+    }
+
+    public Excavator(int tracLength) {
+        this.tracLength = tracLength;
+    }
+
+    public int getTracLength() {
+        return tracLength;
     }
 
     @Override
