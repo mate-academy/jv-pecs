@@ -7,14 +7,11 @@ package core.mate.academy.model;
 public class Bulldozer extends Machine {
     private String name;
 
-    public Bulldozer() {
-
-    }
+    public Bulldozer() {}
 
     public Bulldozer(String name) {
         this.name = name;
     }
-
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
