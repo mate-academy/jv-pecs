@@ -28,6 +28,10 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
             machineProducer = new TruckProducer();
         }
 
+        if (machineProducer == null) {
+            return new ArrayList<>();
+        }
+
         List<T> result = new ArrayList<>(machineProducer.get());
         return result;
     }
@@ -41,8 +45,8 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
 
     @Override
     public void startWorking(List<? extends T> machines) {
-        for (Machine m : machines) {
-            m.doWork();
+        for (Machine machine : machines) {
+            machine.doWork();
         }
     }
 }
