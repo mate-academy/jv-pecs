@@ -10,7 +10,7 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    private Bulldozer(int year) {
+    public Bulldozer(int year) {
         this.year = year;
     }
 

@@ -10,7 +10,7 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    private Truck(int liftingCapacity) {
+    public Truck(int liftingCapacity) {
         this.liftingCapacity = liftingCapacity;
     }
 

@@ -10,7 +10,7 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    private Excavator(int power) {
+    public Excavator(int power) {
         this.power = power;
     }
 
