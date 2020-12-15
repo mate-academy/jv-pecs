@@ -15,6 +15,14 @@ public class Excavator extends Machine {
         this.backhoeSize = backhoeSize;
     }
 
+    public String getBackhoeSize() {
+        return backhoeSize;
+    }
+
+    public void setBackhoeSize(String backhoeSize) {
+        this.backhoeSize = backhoeSize;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

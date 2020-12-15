@@ -15,6 +15,14 @@ public class Truck extends Machine {
         this.haveTrailer = haveTrailer;
     }
 
+    public boolean isHaveTrailer() {
+        return haveTrailer;
+    }
+
+    public void setHaveTrailer(boolean haveTrailer) {
+        this.haveTrailer = haveTrailer;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
