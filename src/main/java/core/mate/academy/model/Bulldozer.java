@@ -16,6 +16,14 @@ public class Bulldozer extends Machine {
         this.track = track;
     }
 
+    public int getBucketVolume() {
+        return bucketVolume;
+    }
+
+    public boolean isTrack() {
+        return track;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");

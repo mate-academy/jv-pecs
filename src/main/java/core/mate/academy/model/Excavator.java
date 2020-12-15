@@ -16,6 +16,14 @@ public class Excavator extends Machine {
         this.power = power;
     }
 
+    public int getLengthArm() {
+        return lengthArm;
+    }
+
+    public double getPower() {
+        return power;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

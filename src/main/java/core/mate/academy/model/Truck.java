@@ -16,6 +16,14 @@ public class Truck extends Machine {
         this.bodyHeight = bodyHeight;
     }
 
+    public int getLiftingCapacity() {
+        return liftingCapacity;
+    }
+
+    public double getBodyHeight() {
+        return bodyHeight;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
