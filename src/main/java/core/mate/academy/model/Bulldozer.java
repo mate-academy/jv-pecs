@@ -11,8 +11,16 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public int getSizeOfShovel() {
+        return sizeOfShovel;
+    }
+
     public void setSizeOfShovel(int sizeOfShovel) {
         this.sizeOfShovel = sizeOfShovel;
+    }
+
+    public String getTypeOfShovel() {
+        return typeOfShovel;
     }
 
     public void setTypeOfShovel(String typeOfShovel) {

@@ -9,11 +9,18 @@ public class Excavator extends Machine {
     private String nameOfExcavator;
 
     public Excavator() {
+    }
 
+    public int getSizeOfBucket() {
+        return sizeOfBucket;
     }
 
     public void setSizeOfBucket(int sizeOfBucket) {
         this.sizeOfBucket = sizeOfBucket;
+    }
+
+    public String getNameOfExcavator() {
+        return nameOfExcavator;
     }
 
     public void setNameOfExcavator(String nameOfExcavator) {
