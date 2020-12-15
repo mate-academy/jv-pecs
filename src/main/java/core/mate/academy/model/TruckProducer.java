@@ -7,7 +7,11 @@ public class TruckProducer implements MachineProducer<Truck> {
 
     @Override
     public List<Truck> get() {
-        List<Truck> listTrucks = List.of(new Truck(),new Truck(),new Truck());
+        List<Truck> listTrucks = List.of(createTruck(),createTruck(),createTruck());
         return listTrucks;
+    }
+
+    public Truck createTruck() {
+        return new Truck();
     }
 }
