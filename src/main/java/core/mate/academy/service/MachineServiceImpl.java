@@ -1,5 +1,6 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
@@ -19,7 +20,10 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Truck.class) {
             return new ArrayList<>(new TruckProducer().get());
         }
-        return new ArrayList<>(new BulldozerProducer().get());
+        if (type == Bulldozer.class) {
+            return new ArrayList<>(new BulldozerProducer().get());
+        }
+        return new ArrayList<>();
     }
 
     @Override
@@ -27,7 +31,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
-
     }
 
     @Override
