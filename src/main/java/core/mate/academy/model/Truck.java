@@ -6,7 +6,6 @@ public class Truck extends Machine {
     private String engineType;
 
     public Truck() {
-        super();
     }
 
     public Truck(String name, String color, int liftCapacity, String bodyType, String engineType) {
