@@ -5,7 +5,18 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    public Truck() {
+    private String typeOfBoard;
+
+    public Truck(){
+
+    }
+
+    public String getTypeOfBoard() {
+        return typeOfBoard;
+    }
+
+    public void setTypeOfBoard(String typeOfBoard) {
+        this.typeOfBoard = typeOfBoard;
     }
 
     @Override
