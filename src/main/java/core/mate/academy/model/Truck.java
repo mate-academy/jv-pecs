@@ -14,6 +14,10 @@ public class Truck extends Machine {
         this.liftingCapacity = liftingCapacity;
     }
 
+    public int getLiftingCapacity() {
+        return liftingCapacity;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

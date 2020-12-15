@@ -14,6 +14,10 @@ public class Bulldozer extends Machine {
         this.year = year;
     }
 
+    public int getYear() {
+        return year;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
