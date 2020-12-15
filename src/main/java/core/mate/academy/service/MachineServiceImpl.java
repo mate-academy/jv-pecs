@@ -23,7 +23,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Truck.class) {
             return new ArrayList<>(new TruckProducer().get());
         }
-        return new ArrayList<>(0);
+        return new ArrayList<>();
     }
 
     @Override
