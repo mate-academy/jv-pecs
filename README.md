@@ -35,14 +35,14 @@ When you parameterize interface `MachineService` keep in mind that we want to re
 Not allow:  
 ~~`DogServiceImpl implements MachineService<Dog>`~~  
 Allow:  
-`TruchServiceImpl implements MachineService<Truck>`  
+`TruckServiceImpl implements MachineService<Truck>`  
 ``
 1. Create a class `MachineServiceImpl` implementing MachineService and realize these methods:
 - `getAll(Class type)`- based on the input class type, choose the right MachineProducer implementation and call its `get()` method.
 
 For example: `if (type == Bulldozer.class)` - we should call the `get()` method from right implementation of MachineProducer (the one that will return `List<Bulldozer>`) and return these machines.
 
-- `fill(List<Object> machines, Object value)` - update to the passed value (which can be of any Machine subtype) all elements from machines list.
+- `fill(List<Object> machines, Object value)` - update to the passed value (**which can be of any Machine subtype**) all elements in the `machines` list.
 
 - `startWorking()` - call `doWork` on every Machine in the list.
 
