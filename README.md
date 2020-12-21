@@ -23,7 +23,7 @@ For example:
     List<Excavator> get();
     ```
 
-1. There is also MachineService interface created. You need to parameterize it as well and 
+1. There is also `MachineService` interface created. You need to parameterize it as well and 
 replace `Object` in method signature with the right option (use PECS):
 
     - the method `getAll(Class type)` produces the list of machines based on the input param.
@@ -33,11 +33,11 @@ replace `Object` in method signature with the right option (use PECS):
 When you parameterize interface `MachineService` keep in mind that we want to restrict types that can be used with it.
 
 Not allow:  
-~~`DogServiceImpl implements MachineService<Dog>`~~  
+~~`MachineServiceImpl implements MachineService<Dog>`~~  
 Allow:  
-`TruckServiceImpl implements MachineService<Truck>`  
+`MachineServiceImpl implements MachineService<Truck>`  
 ``
-1. Create a class `MachineServiceImpl` implementing MachineService and realize these methods:
+1. Use the created class `MachineServiceImpl` implementing MachineService and realize these methods:
 - `getAll(Class type)`- based on the input class type, choose the right MachineProducer implementation and call its `get()` method.
 
 For example: `if (type == Bulldozer.class)` - we should call the `get()` method from right implementation of MachineProducer (the one that will return `List<Bulldozer>`) and return these machines.
