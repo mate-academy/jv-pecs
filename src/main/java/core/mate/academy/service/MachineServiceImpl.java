@@ -19,10 +19,12 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Bulldozer.class) {
             BulldozerProducer bulldozerProducer = new BulldozerProducer();
             return new ArrayList<>(bulldozerProducer.get());
-        } else if (type == Truck.class) {
+        }
+        if (type == Truck.class) {
             TruckProducer truckProducer = new TruckProducer();
             return new ArrayList<>(truckProducer.get());
-        } else if (type == Excavator.class) {
+        }
+        if (type == Excavator.class) {
             ExcavatorProducer excavatorProducer = new ExcavatorProducer();
             return new ArrayList<>(excavatorProducer.get());
         }
