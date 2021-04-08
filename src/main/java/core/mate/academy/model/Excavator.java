@@ -5,7 +5,13 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private double dipperLength;
+
     public Excavator() {
+    }
+
+    public Excavator(double dipperLength) {
+        this.dipperLength = dipperLength;
     }
 
     @Override
