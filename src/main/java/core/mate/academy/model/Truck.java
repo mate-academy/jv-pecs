@@ -11,8 +11,7 @@ public class Truck extends Machine {
     }
 
     public Truck(String name, String color, int speed) {
-        setName(name);
-        setColor(color);
+        super(name, color);
         this.speed = speed;
     }
 

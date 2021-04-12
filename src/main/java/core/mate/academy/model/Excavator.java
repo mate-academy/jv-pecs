@@ -11,8 +11,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, int armLength) {
-        setName(name);
-        setColor(color);
+        super(name, color);
         this.armLength = armLength;
     }
 
