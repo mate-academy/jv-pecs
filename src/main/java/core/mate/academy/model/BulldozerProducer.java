@@ -4,9 +4,9 @@ import core.mate.academy.service.MachineProducer;
 import java.util.List;
 
 public class BulldozerProducer
-        implements MachineProducer<Bulldozer> {
+        implements MachineProducer {
     @Override
     public List<Bulldozer> get() {
-        return List.of(new Bulldozer());
+        return List.of(new Bulldozer("Ivan", "Red"));
     }
 }
