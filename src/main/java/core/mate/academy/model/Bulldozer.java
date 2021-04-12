@@ -15,6 +15,11 @@ public class Bulldozer extends Machine {
         this.bladeType = bladeType;
     }
 
+    @Override
+    public void doWork() {
+        System.out.println("Bulldozer started to work");
+    }
+
     public String getBladeType() {
         return bladeType;
     }
@@ -23,8 +28,4 @@ public class Bulldozer extends Machine {
         this.bladeType = bladeType;
     }
 
-    @Override
-    public void doWork() {
-        System.out.println("Bulldozer started to work");
-    }
 }

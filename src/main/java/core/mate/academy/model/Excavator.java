@@ -15,16 +15,16 @@ public class Excavator extends Machine {
         this.dipperLength = dipperLength;
     }
 
+    @Override
+    public void doWork() {
+        System.out.println("Excavator started to work");
+    }
+
     public double getDipperLength() {
         return dipperLength;
     }
 
     public void setDipperLength(double dipperLength) {
         this.dipperLength = dipperLength;
-    }
-
-    @Override
-    public void doWork() {
-        System.out.println("Excavator started to work");
     }
 }

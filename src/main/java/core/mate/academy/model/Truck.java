@@ -15,16 +15,16 @@ public class Truck extends Machine {
         this.sizeType = sizeType;
     }
 
+    @Override
+    public void doWork() {
+        System.out.println("Truck started to work");
+    }
+
     public String getSizeType() {
         return sizeType;
     }
 
     public void setSizeType(String sizeType) {
         this.sizeType = sizeType;
-    }
-
-    @Override
-    public void doWork() {
-        System.out.println("Truck started to work");
     }
 }
