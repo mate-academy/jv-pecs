@@ -22,8 +22,8 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T>,
 
     @Override
     public void fill(List<? super Machine> machines, T value) {
-        for (Object machine : machines) {
-            machines.set(machines.indexOf(machine), value);
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(machines.indexOf(machines.get(i)), value);
         }
     }
 
