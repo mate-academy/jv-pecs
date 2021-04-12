@@ -10,7 +10,16 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(double dipperLength) {
+    public Excavator(String name, String color, double dipperLength) {
+        super(name, color);
+        this.dipperLength = dipperLength;
+    }
+
+    public double getDipperLength() {
+        return dipperLength;
+    }
+
+    public void setDipperLength(double dipperLength) {
         this.dipperLength = dipperLength;
     }
 

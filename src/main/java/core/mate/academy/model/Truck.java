@@ -10,7 +10,16 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(String sizeType) {
+    public Truck(String name, String color, String sizeType) {
+        super(name, color);
+        this.sizeType = sizeType;
+    }
+
+    public String getSizeType() {
+        return sizeType;
+    }
+
+    public void setSizeType(String sizeType) {
         this.sizeType = sizeType;
     }
 
