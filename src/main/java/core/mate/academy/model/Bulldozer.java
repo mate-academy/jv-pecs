@@ -1,12 +1,13 @@
 package core.mate.academy.model;
 
+import core.mate.academy.service.MachineProducer;
 import java.util.List;
 
 /**
  * Add some custom fields that could be only in Bulldozer
  * Do not remove no-args constructor
  */
-public class Bulldozer extends Machine {
+public class Bulldozer extends Machine implements MachineProducer<Bulldozer> {
     private double bucketVolume;
 
     public Bulldozer() {
@@ -23,7 +24,7 @@ public class Bulldozer extends Machine {
 
     @Override
 
-    public List<Machine> get() {
+    public List<Bulldozer> get() {
         Bulldozer oneCubeBulldozer = new Bulldozer(1);
         Bulldozer oneAndHalfCubeBulldozer = new Bulldozer(1.5);
         return List.of(oneCubeBulldozer, oneAndHalfCubeBulldozer);

@@ -1,12 +1,13 @@
 package core.mate.academy.model;
 
+import core.mate.academy.service.MachineProducer;
 import java.util.List;
 
 /**
  * Add some custom fields that could be only in Excavator
  * Do not remove no-args constructor
  */
-public class Excavator extends Machine {
+public class Excavator extends Machine implements MachineProducer<Excavator> {
     private double caterpillarLength;
 
     public Excavator() {
@@ -22,7 +23,7 @@ public class Excavator extends Machine {
     }
 
     @Override
-    public List<Machine> get() {
+    public List<Excavator> get() {
         Excavator twoMExcavator = new Excavator(2);
         Excavator twoAndHalfMExcavator = new Excavator(2.5);
         return List.of(twoMExcavator, twoAndHalfMExcavator);

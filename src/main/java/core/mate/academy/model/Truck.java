@@ -1,12 +1,13 @@
 package core.mate.academy.model;
 
+import core.mate.academy.service.MachineProducer;
 import java.util.List;
 
 /**
  * Add some custom fields that could be only in Truck
  * Do not remove no-field constructor
  */
-public class Truck extends Machine {
+public class Truck extends Machine implements MachineProducer<Truck> {
     private int wheelAmount;
 
     public Truck() {
@@ -22,7 +23,7 @@ public class Truck extends Machine {
     }
 
     @Override
-    public List<Machine> get() {
+    public List<Truck> get() {
         Truck threeWheelTruck = new Truck(3);
         Truck fourWheelTruck = new Truck(4);
         return List.of(threeWheelTruck, fourWheelTruck);
