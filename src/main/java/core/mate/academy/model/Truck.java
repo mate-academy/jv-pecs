@@ -15,4 +15,12 @@ public class Truck extends Machine {
     public void doWork() {
         System.out.println("Truck started to work");
     }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
 }
