@@ -1,12 +1,5 @@
 package core.mate.academy.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
     private int payload;
     private String purpose;
@@ -33,14 +26,6 @@ public class Truck extends Machine {
 
     public void setPurpose(String purpose) {
         this.purpose = purpose;
-    }
-
-    @Override
-    public List<? super Truck> get() {
-        List<Truck> trucks = new ArrayList<>();
-        trucks.add(new Truck());
-        trucks.add(new Truck());
-        return trucks;
     }
 
     @Override

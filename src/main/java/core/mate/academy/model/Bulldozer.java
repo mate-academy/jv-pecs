@@ -1,12 +1,5 @@
 package core.mate.academy.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
     private String type;
     private int operatingWeight;
@@ -33,14 +26,6 @@ public class Bulldozer extends Machine {
 
     public void setOperatingWeight(int operatingWeight) {
         this.operatingWeight = operatingWeight;
-    }
-
-    @Override
-    public List<? super Bulldozer> get() {
-        List<Bulldozer> bulldozers = new ArrayList<>();
-        bulldozers.add(new Bulldozer());
-        bulldozers.add(new Bulldozer());
-        return bulldozers;
     }
 
     @Override
