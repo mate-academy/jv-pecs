@@ -2,6 +2,7 @@ package core.mate.academy.service;
 
 import core.mate.academy.model.Machine;
 import java.util.List;
+
 /**
  * Parameterize this service and add its implementation in a separate class.
  */
