@@ -15,9 +15,13 @@ public class MachineServiceImpl implements MachineService<Machine> {
         BulldozerProducer bulldozerProducer = new BulldozerProducer();
         TruckProducer truckTruckProducer = new TruckProducer();
 
-        return type.equals(Excavator.class) ? excavatorProducer.get()
-                : type.equals(Bulldozer.class) ? bulldozerProducer.get()
-                : type.equals(Truck.class) ? truckTruckProducer.get()
+        List<Machine> excavatorList = new ArrayList<>(excavatorProducer.get());
+        List<Machine> bulldozerList = new ArrayList<>(bulldozerProducer.get());
+        List<Machine> truckList = new ArrayList<>(truckTruckProducer.get());
+
+        return type.equals(Excavator.class) ? excavatorList
+                : type.equals(Bulldozer.class) ? bulldozerList
+                : type.equals(Truck.class) ? truckList
                 : new ArrayList<>();
     }
 
