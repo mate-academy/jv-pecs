@@ -8,6 +8,7 @@ public class Bulldozer extends Machine {
     private double weight;
 
     public Bulldozer() {
+
     }
 
     public Bulldozer(String name, String color, Double weight) {

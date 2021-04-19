@@ -4,32 +4,34 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
-    public List<Machine> getAll(Class<? extends T> machines) {
+    public List<Machine> getAll(Class<? extends Machine> machines) {
         if (machines.equals(Bulldozer.class)) {
-            return new LinkedList<>(new BulldozerProducer().get());
-        } else if (machines.equals(Excavator.class)) {
-            return new LinkedList<>(new ExcavatorProducer().get());
-        } else if (machines.equals(Truck.class)) {
-            return new LinkedList<>(new TruckProducer().get());
+            return new ArrayList<>(new BulldozerProducer().get());
         }
-        return new LinkedList<>();
+        if (machines.equals(Excavator.class)) {
+            return new ArrayList<>(new ExcavatorProducer().get());
+        }
+        if (machines.equals(Truck.class)) {
+            return new ArrayList<>(new TruckProducer().get());
+        }
+        return new ArrayList<>();
     }
 
     @Override
-    public void fill(List<? super T> machines, T value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
-    public void startWorking(List<? extends T> machines) {
+    public void startWorking(List<? extends Machine> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }
