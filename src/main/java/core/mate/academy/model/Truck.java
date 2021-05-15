@@ -1,11 +1,15 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
+    private boolean hasContainer;
+    private int sizeOfTruck;
+
     public Truck() {
+    }
+
+    public Truck(boolean hasContainer, int sizeOfTruck) {
+        this.hasContainer = hasContainer;
+        this.sizeOfTruck = sizeOfTruck;
     }
 
     @Override
