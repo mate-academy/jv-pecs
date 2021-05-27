@@ -6,11 +6,11 @@ package core.mate.academy.model;
  */
 public class Excavator extends Machine {
     private int bucketVolume;
-    private  double arrowLenght;
+    private double arrowLength;
 
-    public Excavator(int bucketVolume, double arrowLenght) {
+    public Excavator(int bucketVolume, double arrowLength) {
         this.bucketVolume = bucketVolume;
-        this.arrowLenght = arrowLenght;
+        this.arrowLength = arrowLength;
     }
 
     public Excavator() {
