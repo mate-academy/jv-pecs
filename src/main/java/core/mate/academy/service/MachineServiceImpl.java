@@ -4,6 +4,7 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
@@ -11,11 +12,13 @@ public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Truck.class) {
-            return new TruckProducer().get();
-        } else if (type == Bulldozer.class) {
-            return new BulldozerProducer().get();
-        } else if (type == Excavator.class) {
-            return new ExcavatorProducer().get();
+            return new ArrayList<>(new TruckProducer().get());
+        }
+        if (type == Bulldozer.class) {
+            return new ArrayList<>(new BulldozerProducer().get());
+        }
+        if (type == Excavator.class) {
+            return new ArrayList<>(new ExcavatorProducer().get());
         }
         return List.of();
     }
