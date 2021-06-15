@@ -6,7 +6,7 @@ import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    public List<Machine> getAll(Class<? extends Machine> type) {
+    public List<? extends Machine> getAll(Class<? extends Machine> type) {
         switch (type.getSimpleName()) {
             case "Bulldozer":
                 return new BulldozerProducer().get();
