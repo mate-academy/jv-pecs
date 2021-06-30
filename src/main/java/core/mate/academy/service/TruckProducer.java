@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class TruckProducer {
-    public static List<Truck> get() {
+public class TruckProducer implements MachineProducer<Truck> {
+    public List<Truck> get() {
         Truck truck1 = new Truck();
         truck1.setName("Jack");
         truck1.setColor("black");

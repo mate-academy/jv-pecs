@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer {
-    public static List<Bulldozer> get() {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
+    public List<Bulldozer> get() {
         Bulldozer bulldozer1 = new Bulldozer();
         bulldozer1.setName("Nadiya");
         bulldozer1.setColor("blue");

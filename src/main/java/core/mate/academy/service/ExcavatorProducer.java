@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ExcavatorProducer implements MachineProducer {
-    public static List<Excavator> get() {
+public class ExcavatorProducer implements MachineProducer<Excavator> {
+    public List<Excavator> get() {
         Excavator excavator1 = new Excavator();
         excavator1.setName("Piotr");
         excavator1.setColor("white");
