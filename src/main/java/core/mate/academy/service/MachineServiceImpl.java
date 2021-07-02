@@ -11,9 +11,9 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        return type == Bulldozer.class ? new BulldozerProducer().get()
-                : type == Truck.class ? new TruckProducer().get()
-                : type == Excavator.class ? new ExcavatorProducer().get()
+        return type == Bulldozer.class ? new ArrayList<>(new BulldozerProducer().get())
+                : type == Truck.class ? new ArrayList<>(new TruckProducer().get())
+                : type == Excavator.class ? new ArrayList<>(new ExcavatorProducer().get())
                 : new ArrayList<>();
     }
 
