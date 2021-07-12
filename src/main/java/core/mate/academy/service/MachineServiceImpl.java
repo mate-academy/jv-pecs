@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl <T extends Machine> implements MachineService {
+public class MachineServiceImpl<T extends Machine> implements MachineService {
     @Override
     public List getAll(Class type) {
         MachineProducer machineProducer;
