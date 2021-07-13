@@ -1,7 +1,5 @@
 package core.mate.academy.model;
 
-import java.util.Objects;
-
 /**
  * Add some custom fields that could be only in Excavator
  * Do not remove no-args constructor
