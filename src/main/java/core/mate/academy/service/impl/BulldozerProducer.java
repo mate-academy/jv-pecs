@@ -9,6 +9,6 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
     public List<Bulldozer> get() {
         return List.of(new Bulldozer("M.A.G.E.N.T.A.", "magenta", true),
                 new Bulldozer("Y.E.L.L.O.W.", "yellow", true),
-                new Bulldozer("C.Y.A.N", "cyan", true));
+                new Bulldozer("C.Y.A.N.", "cyan", true));
     }
 }
