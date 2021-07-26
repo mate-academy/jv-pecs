@@ -12,6 +12,22 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public double getBoomLength() {
+        return boomLength;
+    }
+
+    public void setBoomLength(double boomLength) {
+        this.boomLength = boomLength;
+    }
+
+    public double getBucketVolume() {
+        return bucketVolume;
+    }
+
+    public void setBucketVolume(double bucketVolume) {
+        this.bucketVolume = bucketVolume;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
