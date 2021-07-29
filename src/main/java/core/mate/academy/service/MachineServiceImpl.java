@@ -4,7 +4,7 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import core.mate.academy.model.Workable;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -29,7 +29,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (machine == null) {
             return Collections.emptyList();
         }
-        return (List<Machine>) machine.get();
+        return new ArrayList<>(machine.get());
     }
 
     @Override
