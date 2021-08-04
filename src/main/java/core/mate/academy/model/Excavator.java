@@ -18,11 +18,11 @@ public class Excavator extends Machine {
         System.out.println("Excavator started to work");
     }
 
-    public boolean isContinuousTrack() {
+    public boolean isBackhoe() {
         return backhoe;
     }
 
-    public void setContinuousTrack(boolean backhoe) {
+    public void setBackhoe(boolean backhoe) {
         this.backhoe = backhoe;
     }
 
