@@ -1,8 +1,5 @@
 package core.mate.academy.service.impl;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
@@ -12,10 +9,10 @@ import core.mate.academy.service.BulldozerProducer;
 import core.mate.academy.service.ExcavatorProducer;
 import core.mate.academy.service.MachineService;
 import core.mate.academy.service.TruckProducer;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl<T extends Machine> implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
