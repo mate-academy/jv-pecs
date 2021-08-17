@@ -5,25 +5,14 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    private String color;
     private int enginePower;
 
     public Bulldozer() {
     }
 
-    public Bulldozer(String color, int enginePower) {
-        this.color = color;
+    public Bulldozer(String name, String color, int enginePower) {
+        super(name, color);
         this.enginePower = enginePower;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public int getEnginePower() {
@@ -42,8 +31,7 @@ public class Bulldozer extends Machine {
     @Override
     public String toString() {
         return "Bulldozer{"
-                + "color='" + color + '\''
-                + ", enginePower=" + enginePower
+                + "enginePower = " + enginePower
                 + '}';
     }
 }
