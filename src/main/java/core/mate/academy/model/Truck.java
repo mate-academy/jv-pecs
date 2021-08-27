@@ -7,15 +7,15 @@ package core.mate.academy.model;
 public class Truck extends Machine {
     private int maxWeight;
 
+    public Truck() {
+    }
+
     public int getMaxWeight() {
         return maxWeight;
     }
 
     public void setMaxWeight(int maxPower) {
         this.maxWeight = maxPower;
-    }
-
-    public Truck() {
     }
 
     @Override

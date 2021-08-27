@@ -7,15 +7,15 @@ package core.mate.academy.model;
 public class Bulldozer extends Machine {
     private int maxPower;
 
+    public Bulldozer() {
+    }
+
     public int getMaxPower() {
         return maxPower;
     }
 
     public void setMaxPower(int maxPower) {
         this.maxPower = maxPower;
-    }
-
-    public Bulldozer() {    
     }
 
     @Override
