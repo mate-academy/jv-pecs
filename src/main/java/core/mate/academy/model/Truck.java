@@ -5,7 +5,14 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private double totalWeight;
+
     public Truck() {
+    }
+
+    public Truck(String name, String color, double totalWeight) {
+        super(name, color);
+        this.totalWeight = totalWeight;
     }
 
     @Override
