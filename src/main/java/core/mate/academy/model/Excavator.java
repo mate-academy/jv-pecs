@@ -21,10 +21,10 @@ public class Excavator extends Machine {
 
     @Override
     public String toString() {
-        return "Excavator{" +
-                super.toString() +
-                "bucketVolume=" + bucketVolume +
-                ", diggingDepth=" + diggingDepth +
-                "}\n";
+        return "Excavator{"
+                + super.toString()
+                + "bucketVolume=" + bucketVolume
+                + ", diggingDepth=" + diggingDepth
+                + "}\n";
     }
 }

@@ -21,10 +21,10 @@ public class Truck extends Machine {
 
     @Override
     public String toString() {
-        return "Truck{" +
-                super.toString() +
-                "cargoWeight=" + cargoWeight +
-                ", wheelNum=" + wheelNum +
-                "}\n";
+        return "Truck{"
+                + super.toString()
+                + "cargoWeight=" + cargoWeight
+                + ", wheelNum=" + wheelNum
+                + "}\n";
     }
 }

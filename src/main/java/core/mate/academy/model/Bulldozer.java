@@ -23,11 +23,11 @@ public class Bulldozer extends Machine {
 
     @Override
     public String toString() {
-        return "Bulldozer{" +
-                super.toString() +
-                "weight=" + weight +
-                ", bladeWidth=" + bladeWidth +
-                ", height=" + height +
-                "}\n";
+        return "Bulldozer{"
+                + super.toString()
+                + "weight=" + weight
+                + ", bladeWidth=" + bladeWidth
+                + ", height=" + height
+                + "}\n";
     }
 }

@@ -22,7 +22,7 @@ public abstract class Machine implements Workable {
 
     @Override
     public String toString() {
-        return "name='" + name + '\'' +
-                ", color='" + color + '\'' + ", ";
+        return "name='" + name + '\''
+                + ", color='" + color + '\'' + ", ";
     }
 }
