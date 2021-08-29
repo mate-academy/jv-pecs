@@ -19,4 +19,10 @@ public abstract class Machine implements Workable {
     public void setColor(String color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", color='" + color + '\'' + ", ";
+    }
 }
