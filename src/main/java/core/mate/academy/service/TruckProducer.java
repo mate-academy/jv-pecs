@@ -1,6 +1,5 @@
 package core.mate.academy.service;
 
-
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.ArrayList;
@@ -14,7 +13,6 @@ public class TruckProducer<T extends Truck> implements MachineProducer<T> {
             "JCB", "KOMATSU", "HITACHI", "CAT"};
     private final int[] loadCapacity = new int[]{5, 10, 20};
     private final Random random = new Random();
-
 
     @Override
     public List<? extends Machine> get() {

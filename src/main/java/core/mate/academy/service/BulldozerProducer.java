@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class BulldozerProducer<T extends Bulldozer> implements MachineProducer<T>{
+public class BulldozerProducer<T extends Bulldozer> implements MachineProducer<T> {
     private final String[] colors = new String[]{"red", "blue", "black",
             "orange", "grey", "green", "yellow"};
     private final String[] names = new String[]{"Volvo", "Freightliner", "Peterbilt",

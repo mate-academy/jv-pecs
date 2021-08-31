@@ -12,7 +12,6 @@ import java.util.List;
  */
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
-
     @Override
     public List<T> getAll(Class<? extends Machine> type) {
         BulldozerProducer<Bulldozer> bulldozers = new BulldozerProducer<>();
@@ -45,7 +44,5 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         for (Machine machine: machines) {
             machine.doWork();
         }
-
     }
-
 }

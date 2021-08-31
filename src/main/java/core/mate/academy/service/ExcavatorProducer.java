@@ -14,7 +14,6 @@ public class ExcavatorProducer<T extends Excavator> implements MachineProducer<T
     private final String[] motorTypes = new String[]{"diesel", "electric"};
     private final Random random = new Random();
 
-
     @Override
     public List<? extends Machine> get() {
         List<Excavator> list = new ArrayList<Excavator>();
