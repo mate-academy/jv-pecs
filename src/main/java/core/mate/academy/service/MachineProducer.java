@@ -4,7 +4,6 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-
 import java.util.List;
 
 public interface MachineProducer<T extends Machine> {
@@ -27,9 +26,9 @@ public interface MachineProducer<T extends Machine> {
 
     public List<? extends Machine> get();
 
-    public List<Bulldozer> BulldozerProducer();
+    public List<Bulldozer> bulldozerProducer();
 
-    public List<Excavator> ExcavatorProducer();
+    public List<Excavator> excavatorProducer();
 
-    public List<Truck> TruckProducer();
+    public List<Truck> truckProducer();
 }

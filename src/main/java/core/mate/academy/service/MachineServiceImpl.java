@@ -4,7 +4,6 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -12,21 +11,22 @@ import java.util.Random;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T>, MachineProducer<T> {
-    Random random = new Random();
+public class MachineServiceImpl<T extends Machine> implements MachineService<T>,
+        MachineProducer<T> {
+    private Random random = new Random();
 
     @Override
     public List<T> getAll(Class<? extends Machine> type) {
         List<T> list = new ArrayList<>();
         if (type == Bulldozer.class) {
-            list = (List<T>) BulldozerProducer();
+            list = (List<T>) bulldozerProducer();
         }
         if (type == Excavator.class) {
-            list = (List<T>) ExcavatorProducer();
+            list = (List<T>) excavatorProducer();
 
         }
         if (type == Truck.class) {
-            list = (List<T>) TruckProducer();
+            list = (List<T>) truckProducer();
         }
         return list;
     }
@@ -34,7 +34,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T>,
     @Override
     public void fill(List<? super T> machines, T value) {
         int size = machines.size();
-        for (int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             machines.set(i, value);
         }
     }
@@ -53,7 +53,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T>,
     }
 
     @Override
-    public List<Bulldozer> BulldozerProducer() {
+    public List<Bulldozer> bulldozerProducer() {
         List<Bulldozer> list = new ArrayList<Bulldozer>();
         for (int i = 0; i < 3; i++) {
             Bulldozer bulldozer = new Bulldozer();
@@ -66,7 +66,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T>,
     }
 
     @Override
-    public List<Excavator> ExcavatorProducer() {
+    public List<Excavator> excavatorProducer() {
         List<Excavator> list = new ArrayList<Excavator>();
         for (int i = 0; i < 3; i++) {
             Excavator excavator = new Excavator();
@@ -79,7 +79,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T>,
     }
 
     @Override
-    public List<Truck> TruckProducer() {
+    public List<Truck> truckProducer() {
         List<Truck> list = new ArrayList<Truck>();
         for (int i = 0; i < 3; i++) {
             Truck truck = new Truck();
