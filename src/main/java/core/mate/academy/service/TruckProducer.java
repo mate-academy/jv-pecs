@@ -1,12 +1,11 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class TruckProducer<T extends Truck> implements MachineProducer<T> {
+public class TruckProducer implements MachineProducer<Truck> {
     private final String[] colors = new String[]{"red", "blue", "black",
             "orange", "grey", "green", "yellow"};
     private final String[] names = new String[]{"Volvo", "Freightliner", "Peterbilt",
@@ -15,7 +14,7 @@ public class TruckProducer<T extends Truck> implements MachineProducer<T> {
     private final Random random = new Random();
 
     @Override
-    public List<? extends Machine> get() {
+    public List<Truck> get() {
         List<Truck> list = new ArrayList<Truck>();
         for (int i = 0; i < 3; i++) {
             Truck truck = new Truck();
