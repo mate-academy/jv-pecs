@@ -38,8 +38,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-        for (Machine item : machines) {
-            item.doWork();
+        for (Machine machine : machines) {
+            machine.doWork();
         }
     }
 }
