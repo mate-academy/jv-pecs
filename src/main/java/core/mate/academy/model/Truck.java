@@ -7,11 +7,10 @@ public class Truck extends Machine {
 
     public Truck(int numberOfAxles, boolean hasSleeper, boolean hasSemiTrailer,
                  String name, String color) {
+        super(name, color);
         this.numberOfAxles = numberOfAxles;
         this.hasSleeper = hasSleeper;
         this.hasSemiTrailer = hasSemiTrailer;
-        super.setName(name);
-        super.setColor(color);
     }
 
     public Truck() {

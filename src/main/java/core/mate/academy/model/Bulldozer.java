@@ -5,10 +5,9 @@ public class Bulldozer extends Machine {
     private boolean hasPlower;
 
     public Bulldozer(boolean hasWheels, boolean hasPlower, String name, String color) {
+        super(name, color);
         this.hasWheels = hasWheels;
         this.hasPlower = hasPlower;
-        super.setName(name);
-        super.setColor(color);
     }
 
     public Bulldozer() {

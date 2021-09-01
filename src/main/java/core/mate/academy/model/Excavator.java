@@ -7,11 +7,10 @@ public class Excavator extends Machine {
 
     public Excavator(int armLength, boolean isSmall, boolean hasRotatingBucket,
                      String name, String color) {
+        super(name, color);
         this.armLength = armLength;
         this.isSmall = isSmall;
         this.hasRotatingBucket = hasRotatingBucket;
-        super.setName(name);
-        super.setColor(color);
     }
 
     public Excavator() {
