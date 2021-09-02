@@ -5,11 +5,11 @@ public class Truck extends Machine {
     private int wheelNum;
 
     public Truck() {
+        super(null, null);
     }
 
     public Truck(String name, String color, double cargoWeight, int wheelNum) {
-        this.setName(name);
-        this.setColor(color);
+        super(name, color);
         this.cargoWeight = cargoWeight;
         this.wheelNum = wheelNum;
     }

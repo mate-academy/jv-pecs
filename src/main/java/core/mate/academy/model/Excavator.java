@@ -5,11 +5,11 @@ public class Excavator extends Machine {
     private int diggingDepth;
 
     public Excavator() {
+        super(null, null);
     }
 
     public Excavator(String name, String color, double bucketVolume, int diggingDepth) {
-        this.setName(name);
-        this.setColor(color);
+        super(name, color);
         this.bucketVolume = bucketVolume;
         this.diggingDepth = diggingDepth;
     }
