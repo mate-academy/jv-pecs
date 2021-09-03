@@ -24,7 +24,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
             return new ArrayList<>(truckList);
         }
         return new ArrayList<>();
-
     }
 
     @Override

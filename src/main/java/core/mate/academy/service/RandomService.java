@@ -26,35 +26,6 @@ import java.util.Random;
 public class RandomService {
     private final Random random = new Random();
 
-    private int getRandomInt(int from, int to) {
-        return random.nextInt(to - from) + from;
-    }
-
-    private double getRandomDouble(double from, double to) {
-        return from + (to - from) * random.nextDouble();
-    }
-
-    private char getRandomLetter() {
-        return (char) getRandomInt(97, 122);
-    }
-
-    private char getRandomNumber() {
-        return (char) getRandomInt(48, 57);
-    }
-
-    private String getRandomName() {
-        StringBuilder res = new StringBuilder();
-        int size = getRandomInt(3, 8);
-        for (int i = 0; i < size; i++) {
-            res.append(getRandomLetter());
-        }
-        return res.append("-").append(getRandomNumber()).toString();
-    }
-
-    private String getRandomColor() {
-        return Constants.COLORS[getRandomInt(0, Constants.COLORS.length)];
-    }
-
     public List<Bulldozer> getBulldozerList(int number) {
         List<Bulldozer> bulldozers = new ArrayList<>();
         for (int i = 0; i < number; i++) {
@@ -77,6 +48,35 @@ public class RandomService {
             excavators.add(getRandomExcavator());
         }
         return excavators;
+    }
+
+    private int getRandomInt(int from, int to) {
+        return random.nextInt(to - from) + from;
+    }
+
+    private double getRandomDouble(double from, double to) {
+        return from + (to - from) * random.nextDouble();
+    }
+
+    private char getRandomLetter() {
+        return (char) getRandomInt(97, 122);
+    }
+
+    private char getRandomNumber() {
+        return (char) getRandomInt(48, 57);
+    }
+
+    private String getRandomName() {
+        StringBuilder builder = new StringBuilder();
+        int size = getRandomInt(3, 8);
+        for (int i = 0; i < size; i++) {
+            builder.append(getRandomLetter());
+        }
+        return builder.append("-").append(getRandomNumber()).toString();
+    }
+
+    private String getRandomColor() {
+        return Constants.COLORS[getRandomInt(0, Constants.COLORS.length)];
     }
 
     private Excavator getRandomExcavator() {

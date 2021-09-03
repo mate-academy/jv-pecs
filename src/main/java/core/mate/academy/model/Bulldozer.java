@@ -6,11 +6,12 @@ public class Bulldozer extends Machine {
     private double height;
 
     public Bulldozer() {
-        super(null, null);
+
     }
 
     public Bulldozer(String name, String color, double weight, double bladeWidth, double height) {
-        super(name, color);
+        setName(name);
+        setColor(color);
         this.weight = weight;
         this.bladeWidth = bladeWidth;
         this.height = height;
