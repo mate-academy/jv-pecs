@@ -1,17 +1,43 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
-    private int bucketCapacity;
-    private String chassisType;
-    private String dutyCycle;
+    private double bucketCapacity;
+    private int bucketWidth;
+    private int diggingDepth;
 
     public Excavator() {
     }
 
-    public Excavator(int bucketCapacity, String chassisType, String dutyCycle) {
+    public Excavator(String name, String color,
+                     double bucketCapacity, int bucketWidth, int diggingDepth) {
+        super(name, color);
         this.bucketCapacity = bucketCapacity;
-        this.chassisType = chassisType;
-        this.dutyCycle = dutyCycle;
+        this.bucketWidth = bucketWidth;
+        this.diggingDepth = diggingDepth;
+    }
+
+    public double getBucketCapacity() {
+        return bucketCapacity;
+    }
+
+    public void setBucketCapacity(double bucketCapacity) {
+        this.bucketCapacity = bucketCapacity;
+    }
+
+    public int getBucketWidth() {
+        return bucketWidth;
+    }
+
+    public void setBucketWidth(int bucketWidth) {
+        this.bucketWidth = bucketWidth;
+    }
+
+    public int getDiggingDepth() {
+        return diggingDepth;
+    }
+
+    public void setDiggingDepth(int diggingDepth) {
+        this.diggingDepth = diggingDepth;
     }
 
     @Override

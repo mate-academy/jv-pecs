@@ -5,16 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    private List<Truck> produce() {
-        List<Truck> truckList = new ArrayList<>();
-        for (int i = 0; i < DEFAULT_NUMBER_OF_MACHINES; i++) {
-            truckList.add(new Truck());
-        }
-        return truckList;
-    }
-
     @Override
     public List<Truck> get() {
-        return produce();
+        List<Truck> truckList = new ArrayList<>();
+        truckList.add(new Truck("Freightliner M2", "orange",
+                "dump truck", 30, 6));
+        truckList.add(new Truck("Liebherr T 282B", "white",
+                "mining truck", 363, 4));
+        truckList.add(new Truck("A Mack Titan", "blue",
+                "road train", 200, 44));
+        return truckList;
     }
 }
