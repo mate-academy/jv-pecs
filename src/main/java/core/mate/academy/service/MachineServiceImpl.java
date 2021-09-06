@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-
     @Override
     public List<Machine> getAll(Class<? extends Machine> machine) {
         if (machine.equals(Bulldozer.class)) {
@@ -24,9 +23,9 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Machine fuel) {
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, fuel);
+            machines.set(i, value);
         }
     }
 
