@@ -6,16 +6,14 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     private int wheelsNum;
-    private String name;
-    private String color;
 
     public Truck() {
     }
 
     public Truck(int wheelsNum, String name, String color) {
         this.wheelsNum = wheelsNum;
-        this.name = name;
-        this.color = color;
+        setName(name);
+        setColor(color);
     }
 
     @Override
