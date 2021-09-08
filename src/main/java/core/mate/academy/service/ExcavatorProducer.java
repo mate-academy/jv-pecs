@@ -7,8 +7,8 @@ import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Machine> {
     @Override
-    public List<Machine> get() {
-        List<Machine> excavators = new ArrayList<>();
+    public List<Excavator> get() {
+        List<Excavator> excavators = new ArrayList<>();
         excavators.add(new Excavator("Hitachi", "Yellow", 3, 5));
         excavators.add(new Excavator("Terex MHL", "Red", 1, 2));
         excavators.add(new Excavator("Volvo", "Grin", 2, 4));
