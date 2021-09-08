@@ -13,6 +13,22 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public int getScoopCapacity() {
+        return scoopCapacity;
+    }
+
+    public void setScoopCapacity(int scoopCapacity) {
+        this.scoopCapacity = scoopCapacity;
+    }
+
+    public int getArmLength() {
+        return armLength;
+    }
+
+    public void setArmLength(int armLength) {
+        this.armLength = armLength;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

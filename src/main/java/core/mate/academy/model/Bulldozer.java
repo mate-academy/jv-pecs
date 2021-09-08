@@ -13,6 +13,22 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public void setBladeSquare(int bladeSquare) {
+        this.bladeSquare = bladeSquare;
+    }
+
+    public void setTrack(int track) {
+        this.track = track;
+    }
+
+    public int getBladeSquare() {
+        return bladeSquare;
+    }
+
+    public int getTrack() {
+        return track;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");

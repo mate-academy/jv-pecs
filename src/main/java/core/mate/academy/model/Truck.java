@@ -13,6 +13,22 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public double getMaxLoad() {
+        return maxLoad;
+    }
+
+    public void setMaxLoad(double maxLoad) {
+        this.maxLoad = maxLoad;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
