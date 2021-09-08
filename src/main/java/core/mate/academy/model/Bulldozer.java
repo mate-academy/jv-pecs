@@ -10,6 +10,11 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String name, String color, int maxPower) {
+        super(name, color);
+        this.maxPower = maxPower;
+    }
+
     public int getMaxPower() {
         return maxPower;
     }

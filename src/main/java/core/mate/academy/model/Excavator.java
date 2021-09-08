@@ -10,8 +10,9 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public int getMaxHeight() {
-        return maxHeight;
+    public Excavator(String name, String color, int maxHeight) {
+        super(name, color);
+        this.maxHeight = maxHeight;
     }
 
     public void setMaxHeight(int maxPower) {

@@ -8,22 +8,13 @@ public class BulldozerProducer implements MachineProducer {
 
     @Override
     public List<Bulldozer> get() {
-        Bulldozer bulldozerOne = new Bulldozer();
-        bulldozerOne.setColor("blue");
-        bulldozerOne.setName("smallBulldozer");
-        bulldozerOne.setMaxPower(255);
-        Bulldozer bulldozerTwo = new Bulldozer();
-        bulldozerTwo.setColor("yellow");
-        bulldozerTwo.setName("middleBulldozer");
-        bulldozerTwo.setMaxPower(510);
-        Bulldozer bulldozerThree = new Bulldozer();
-        bulldozerThree.setColor("green");
-        bulldozerThree.setName("bigBulldozer");
-        bulldozerThree.setMaxPower(765);
-        ArrayList<Bulldozer> output = new ArrayList<>();
-        output.add(bulldozerOne);
-        output.add(bulldozerTwo);
-        output.add(bulldozerThree);
-        return output;
+        Bulldozer small = new Bulldozer("smallBulldozer", "blue", 255);
+        Bulldozer middle = new Bulldozer("middleBulldozer", "yellow", 510);
+        Bulldozer big = new Bulldozer("bigBulldozer", "green", 765);
+        ArrayList<Bulldozer> bulldozers = new ArrayList<>();
+        bulldozers.add(small);
+        bulldozers.add(middle);
+        bulldozers.add(big);
+        return bulldozers;
     }
 }

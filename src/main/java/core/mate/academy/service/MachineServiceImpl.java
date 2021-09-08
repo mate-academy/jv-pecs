@@ -24,8 +24,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
             TruckProducer truckProducer = new TruckProducer();
             return truckProducer.get();
         } else {
-            List emptyList = new ArrayList(){};
-            return emptyList;
+            return new ArrayList(){};
         }
     }
 

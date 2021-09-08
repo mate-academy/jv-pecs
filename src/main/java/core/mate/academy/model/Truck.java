@@ -10,6 +10,11 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String name, String color, int maxWeight) {
+        super(name, color);
+        this.maxWeight = maxWeight;
+    }
+
     public int getMaxWeight() {
         return maxWeight;
     }
