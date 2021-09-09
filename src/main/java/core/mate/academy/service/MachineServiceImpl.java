@@ -10,20 +10,20 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    @SuppressWarnings({"unchecked", "rawtypes"})
-    public List<T> getAll(Class type) {
+    @SuppressWarnings({"unchecked"})
+    public List<Machine> getAll(Class type) {
         if (type == Truck.class) {
             TruckProducer truckProducer = new TruckProducer();
-            return (List<T>) truckProducer.get();
+            return truckProducer.get();
         }
         if (type == Bulldozer.class) {
             BulldozerProducer bulldozerProducer = new BulldozerProducer();
-            return (List<T>) bulldozerProducer.get();
+            return bulldozerProducer.get();
         } else if (type == Excavator.class) {
             ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-            return (List<T>) excavatorProducer.get();
+            return excavatorProducer.get();
         }
         return new ArrayList<>();
     }

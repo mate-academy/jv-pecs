@@ -6,6 +6,12 @@ package core.mate.academy.model;
  */
 public class Excavator extends Machine {
     public Excavator() {
+        super();
+    }
+
+    public Excavator(String color, String name) {
+        this.color = color;
+        this.name = name;
     }
 
     @Override
