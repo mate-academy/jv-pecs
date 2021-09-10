@@ -17,7 +17,7 @@ public interface MachineService<T extends Machine> {
      * @return the list of machines
      */
 
-    List<Machine> getAll(Class<? extends T> type);
+    List<T> getAll(Class<? extends T> type);
     /**
      * Fill the machines list with passed value
      * Replace the Object with parametrized value.
