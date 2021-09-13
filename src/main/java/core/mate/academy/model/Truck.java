@@ -10,8 +10,7 @@ public class Truck extends Machine {
     }
 
     public Truck(String color, String name) {
-        this.color = color;
-        this.name = name;
+        super(name, color);
     }
 
     @Override

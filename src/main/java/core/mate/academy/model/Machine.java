@@ -9,6 +9,11 @@ public abstract class Machine implements Workable {
         color = "default color";
     }
 
+    protected Machine(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
+
     public String getName() {
         return name;
     }

@@ -10,8 +10,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String color, String name) {
-        this.color = color;
-        this.name = name;
+        super(name, color);
     }
 
     @Override
