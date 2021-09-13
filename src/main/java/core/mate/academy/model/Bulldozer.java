@@ -11,9 +11,8 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(int bladeSize, String name, String color) {
+        super(name, color);
         this.bladeSize = bladeSize;
-        setName(name);
-        setColor(color);
     }
 
     @Override

@@ -11,9 +11,8 @@ public class Truck extends Machine {
     }
 
     public Truck(int wheelsNum, String name, String color) {
+        super(name, color);
         this.wheelsNum = wheelsNum;
-        setName(name);
-        setColor(color);
     }
 
     @Override
