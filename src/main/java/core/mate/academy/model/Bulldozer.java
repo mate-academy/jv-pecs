@@ -1,22 +1,22 @@
 package core.mate.academy.model;
 
 public class Bulldozer extends Machine {
-    private int bulldozerYear;
+    private int bladeLength;
 
-    public Bulldozer(String name, String color, int bulldozerYear) {
+    public Bulldozer(String name, String color, int bladeLength) {
         super(name, color);
-        this.bulldozerYear = bulldozerYear;
+        this.bladeLength = bladeLength;
     }
 
     public Bulldozer() {
     }
 
-    public int getBulldozerYear() {
-        return bulldozerYear;
+    public int getBladeLength() {
+        return bladeLength;
     }
 
-    public void setBulldozerYear(int bulldozerYear) {
-        this.bulldozerYear = bulldozerYear;
+    public void setBladeLength(int bladeLength) {
+        this.bladeLength = bladeLength;
     }
 
     @Override

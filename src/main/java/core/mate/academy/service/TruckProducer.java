@@ -8,9 +8,9 @@ public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
-        trucks.add(new Truck("First truck", "white", 2001));
-        trucks.add(new Truck("Second truck", "blue", 2002));
-        trucks.add(new Truck("Second truck", "red", 2003));
+        trucks.add(new Truck("First truck", "white", 25));
+        trucks.add(new Truck("Second truck", "blue", 30));
+        trucks.add(new Truck("Second truck", "red", 35));
         return trucks;
     }
 }

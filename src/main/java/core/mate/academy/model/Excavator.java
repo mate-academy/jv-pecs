@@ -1,22 +1,22 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
-    private int excavatorYear;
+    private int boomLength;
 
     public Excavator(String name, String color, int excavatorYear) {
         super(name, color);
-        this.excavatorYear = excavatorYear;
+        this.boomLength = excavatorYear;
     }
 
     public Excavator() {
     }
 
-    public int getExcavatorYear() {
-        return excavatorYear;
+    public int getBoomLength() {
+        return boomLength;
     }
 
-    public void setExcavatorYear(int excavatorYear) {
-        this.excavatorYear = excavatorYear;
+    public void setBoomLength(int boomLength) {
+        this.boomLength = boomLength;
     }
 
     @Override

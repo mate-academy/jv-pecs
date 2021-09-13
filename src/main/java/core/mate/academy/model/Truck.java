@@ -1,22 +1,22 @@
 package core.mate.academy.model;
 
 public class Truck extends Machine {
-    private int truckYear;
+    private int maxWeight;
 
     public Truck(String name, String color, int truckYear) {
         super(name, color);
-        this.truckYear = truckYear;
+        this.maxWeight = truckYear;
     }
 
     public Truck() {
     }
 
-    public int getTruckYear() {
-        return truckYear;
+    public int getMaxWeight() {
+        return maxWeight;
     }
 
-    public void setTruckYear(int truckYear) {
-        this.truckYear = truckYear;
+    public void setMaxWeight(int maxWeight) {
+        this.maxWeight = maxWeight;
     }
 
     @Override
