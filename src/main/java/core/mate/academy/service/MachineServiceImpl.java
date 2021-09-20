@@ -10,12 +10,41 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService {
-
-    List<Machine> machines;
-
+public class MachineServiceImpl<Machine> implements MachineService<Machine> {
+    @Override
+    public List<Machine> getAll(Class type) {
+        return null;
+    }
 
     @Override
+    public void fill(List<? super Machine> machines, Machine value) {
+
+    }
+
+    @Override
+    public void startWorking(List list) {
+
+    }
+
+    @Override
+    public void fill(List<? super Machine> machines, Machine value) {
+
+    }
+
+
+
+/*
+    @Override
+    public void fill(List<? super Machine> machines, Machine value) {
+
+    }
+*/
+
+
+
+
+
+/*    @Override
     public List getAll(Class type) {
         Bulldozer test = new Bulldozer();
         if (type.getClass().equals(Bulldozer.class)){
@@ -24,10 +53,10 @@ public class MachineServiceImpl<T extends Machine> implements MachineService {
         return null;
     }
 
-    @Override
+*//*    @Override
     public void fill(List list, Object value) {
 
-    }
+    }*//*
 
     @Override
     public void startWorking(List list) {
@@ -40,5 +69,5 @@ public class MachineServiceImpl<T extends Machine> implements MachineService {
             Collection<Machine> machines = (Collection<Machine>) list;
             this.machines.addAll(machines);
         }
-    }
+    }*/
 }
