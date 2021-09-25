@@ -10,22 +10,22 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
-    public List getAll(Class<? extends Machine> type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
-            return new BulldozerProducer().get();
+            return new ArrayList<>(new BulldozerProducer().get());
         }
         if (type == Truck.class) {
-            return new TruckProducer().get();
+            return new ArrayList<>(new TruckProducer().get());
         }
         if (type == Excavator.class) {
-            return new ExcavatorProducer().get();
+            return new ArrayList<>(new ExcavatorProducer().get());
         } else {
             return new ArrayList();
         }
     }
 
     @Override
-    public void fill(List machines, Object value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
