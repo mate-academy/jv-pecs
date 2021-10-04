@@ -7,9 +7,10 @@ public class TruckProducer implements MachineProducer<Truck> {
     private Truck chevrolet = new Truck("Chevrolet", "green", 100);
     private Truck daimler = new Truck("Daimler", "blue", 120);
     private Truck isuzu = new Truck("Isuzu", "black", 140);
+    private Truck defaultTruck = new Truck();
 
     @Override
     public List<Truck> get() {
-        return List.of(chevrolet, daimler, isuzu);
+        return List.of(chevrolet, daimler, isuzu, defaultTruck);
     }
 }
