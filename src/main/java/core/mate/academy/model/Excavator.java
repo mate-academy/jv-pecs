@@ -3,12 +3,8 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
     private int bucketLength;
 
-    public Excavator() {
-    }
-
     public Excavator(String name, String color, int bucketLength) {
-        super.setName(name);
-        super.setColor(color);
+        super(name, color);
         this.bucketLength = bucketLength;
     }
 

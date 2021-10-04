@@ -3,12 +3,8 @@ package core.mate.academy.model;
 public class Truck extends Machine {
     private int carrying;
 
-    public Truck() {
-    }
-
     public Truck(String name, String color, int carrying) {
-        super.setName(name);
-        super.setColor(color);
+        super(name, color);
         this.carrying = carrying;
     }
 
