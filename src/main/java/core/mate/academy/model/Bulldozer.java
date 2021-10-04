@@ -1,12 +1,12 @@
 package core.mate.academy.model;
 
 public class Bulldozer extends Machine {
-    private Integer weight;
+    private int weight;
 
     public Bulldozer() {
     }
 
-    public Bulldozer(Integer weight, String name, String color) {
+    public Bulldozer(int weight, String name, String color) {
         super(name, color);
         this.weight = weight;
     }

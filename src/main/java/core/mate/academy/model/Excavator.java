@@ -1,12 +1,12 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
-    private Integer wheelsCount;
+    private int wheelsCount;
 
     public Excavator() {
     }
 
-    public Excavator(String name, String color, Integer wheelsCount) {
+    public Excavator(String name, String color, int wheelsCount) {
         super(name, color);
         this.wheelsCount = wheelsCount;
     }
