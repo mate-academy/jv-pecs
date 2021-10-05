@@ -4,7 +4,7 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckProducer implements MachineProducer {
+public class TruckProducer implements MachineProducer<Truck> {
     private List<Truck> trucks = new ArrayList<>();
     private Truck truck1 = new Truck();
     private Truck truck2 = new Truck();

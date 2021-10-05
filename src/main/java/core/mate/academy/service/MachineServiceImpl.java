@@ -18,7 +18,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     private List<? extends Machine> machineArrayList = new ArrayList<>();
 
     @Override
-    public List<Machine> getAll(Class type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
             machineArrayList = bulldozerProducer.get();
         } else if (type == Excavator.class) {

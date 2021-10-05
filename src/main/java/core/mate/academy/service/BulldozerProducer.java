@@ -4,7 +4,7 @@ import core.mate.academy.model.Bulldozer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     private List<Bulldozer> bulldozers = new ArrayList<>();
     private Bulldozer bulldozer1 = new Bulldozer();
     private Bulldozer bulldozer2 = new Bulldozer();
