@@ -12,39 +12,6 @@ import java.util.List;
  */
 public class MachineServiceImpl implements MachineService<Machine> {
 
-    public static class BulldozerProducer implements MachineProducer {
-        private final List<Bulldozer> bulldozerList = new ArrayList<>();
-
-        @Override
-        public List<? extends Machine> get() {
-            bulldozerList.add(new Bulldozer());
-            bulldozerList.add(new Bulldozer());
-            return bulldozerList;
-        }
-    }
-
-    public static class ExcavatorProducer implements MachineProducer {
-        private final List<Excavator> excavatorList = new ArrayList<>();
-
-        @Override
-        public List<? extends Machine> get() {
-            excavatorList.add(new Excavator());
-            excavatorList.add(new Excavator());
-            return excavatorList;
-        }
-    }
-
-    public static class TruckProducer implements MachineProducer {
-        private final List<Truck> truckList = new ArrayList<>();
-
-        @Override
-        public List<? extends Machine> get() {
-            truckList.add(new Truck());
-            truckList.add(new Truck());
-            return truckList;
-        }
-    }
-
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machineArrayList = new ArrayList<>();
