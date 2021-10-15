@@ -1,18 +1,16 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Excavator;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-    private List<Excavator> excavators = new ArrayList<>();
+    private List<Excavator> excavators;
 
     {
-        Excavator excavator = new Excavator();
-        excavator.setName("Excavator");
-        excavator.setColor("Red");
-        excavator.setMaxDeep(30);
-        excavators.add(excavator);
+        Excavator excavatorsFirst = new Excavator("ExcavatorFirst", "White", 30);
+        Excavator excavatorsSecond = new Excavator("ExcavatorSecond", "Black", 35);
+        Excavator excavatorsThird = new Excavator("ExcavatorThird", "Orange", 25);
+        excavators = List.of(excavatorsFirst, excavatorsSecond, excavatorsThird);
     }
 
     @Override

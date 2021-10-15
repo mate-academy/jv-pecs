@@ -1,18 +1,16 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Truck;
-import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    private List<Truck> trucks = new ArrayList<>();
+    private List<Truck> trucks;
 
     {
-        Truck truck = new Truck();
-        truck.setName("Track");
-        truck.setColor("Green");
-        truck.setPower(700);
-        trucks.add(truck);
+        Truck trucksFirst = new Truck("TruckFirst", "White", 700);
+        Truck trucksSecond = new Truck("TruckSecond", "Black", 650);
+        Truck trucksThird = new Truck("TruckThird", "Orange", 750);
+        trucks = List.of(trucksFirst, trucksSecond, trucksThird);
     }
 
     @Override

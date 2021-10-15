@@ -1,18 +1,16 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Bulldozer;
-import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-    private List<Bulldozer> bulldozers = new ArrayList<>();
+    private List<Bulldozer> bulldozers;
 
     {
-        Bulldozer bulldozer = new Bulldozer();
-        bulldozer.setName("Bulldozer");
-        bulldozer.setColor("White");
-        bulldozer.setWight(50);
-        bulldozers.add(bulldozer);
+        Bulldozer bulldozerFirst = new Bulldozer("BulldozerFirst", "White", 50);
+        Bulldozer bulldozerSecond = new Bulldozer("BulldozerSecond", "Black", 65);
+        Bulldozer bulldozerThird = new Bulldozer("BulldozerThird", "Orange", 35);
+        bulldozers = List.of(bulldozerFirst, bulldozerSecond, bulldozerThird);
     }
 
     @Override
