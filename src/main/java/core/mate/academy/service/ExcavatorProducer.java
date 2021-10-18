@@ -6,6 +6,6 @@ import java.util.List;
 public class ExcavatorProducer implements MachineProducer<Excavator> {
     @Override
     public List<Excavator> get() {
-        return new RandomService().getExcavatorList(6);
+        return new RandomService().getExcavatorList(7);
     }
 }
