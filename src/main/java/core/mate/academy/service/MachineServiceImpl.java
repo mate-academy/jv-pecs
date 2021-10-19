@@ -27,7 +27,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List machines, Object value) {
+    public void fill(List<? super Machine> machines, Object value) {
         if (value instanceof Bulldozer) {
             int size = machines.size();
             machines.clear();
@@ -51,8 +51,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-        for (int index = 0; index < machines.size(); index++) {
-            machines.get(index).doWork();
+        for (Machine machine : machines) {
+            machine.doWork();
         }
     }
 }
