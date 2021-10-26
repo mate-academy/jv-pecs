@@ -3,20 +3,29 @@ package core.mate.academy.service;
 import core.mate.academy.model.Machine;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 /**
  * Your implementation of MachineService.
  */
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private MachineTypes[] machineTypes = MachineTypes.values();
+    private Map<Class<? extends Machine>,
+            MachineProducer<? extends Machine>> machineTypesMap = init();
+
+    private Map<Class<? extends Machine>, MachineProducer<? extends Machine>> init() {
+        Map<Class<? extends Machine>, MachineProducer<? extends Machine>> result = new HashMap<>();
+        for (MachineTypes machine : MachineTypes.values()) {
+            result.put(machine.getMachineClass(), machine.getMachineProducer());
+        }
+        return result;
+    }
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        for (MachineTypes machine : machineTypes) {
-            if (machine.getMachineClass().equals(type)) {
-                return new ArrayList<>(machine.getMachineType().get());
-            }
+        if (machineTypesMap.containsKey(type)) {
+            return new ArrayList<>(machineTypesMap.get(type).get());
         }
         return new ArrayList<>();
     }

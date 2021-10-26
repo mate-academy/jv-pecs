@@ -10,17 +10,17 @@ public enum MachineTypes {
     TRUCK(new TruckProducer(), Truck.class),
     EXCAVATOR(new ExcavatorProducer(), Excavator.class);
 
-    private final MachineProducer<? extends Machine> machineType;
+    private final MachineProducer<? extends Machine> machineProducer;
     private final Class<? extends Machine> machineClass;
 
-    MachineTypes(MachineProducer<? extends Machine> machineType,
+    MachineTypes(MachineProducer<? extends Machine> machineProducer,
                  Class<? extends Machine> machineClass) {
-        this.machineType = machineType;
+        this.machineProducer = machineProducer;
         this.machineClass = machineClass;
     }
 
-    public MachineProducer<? extends Machine> getMachineType() {
-        return machineType;
+    public MachineProducer<? extends Machine> getMachineProducer() {
+        return machineProducer;
     }
 
     public Class<? extends Machine> getMachineClass() {
