@@ -15,6 +15,14 @@ public class Bulldozer extends Machine {
         this.countOfWheels = countOfWheels;
     }
 
+    public int getCountOfWheels() {
+        return countOfWheels;
+    }
+
+    public void setCountOfWheels(int countOfWheels) {
+        this.countOfWheels = countOfWheels;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");

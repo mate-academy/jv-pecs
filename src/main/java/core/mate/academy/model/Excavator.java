@@ -15,6 +15,14 @@ public class Excavator extends Machine {
         this.year = year;
     }
 
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
