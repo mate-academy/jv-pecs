@@ -14,7 +14,7 @@ import java.util.List;
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
     @Override
-    public List<? extends Machine> getAll(Class<? extends T> type) {
+    public List<Machine> getAll(Class<? extends T> type) {
         MachineProducer machineProducer;
         if (type.equals(Bulldozer.class)) {
             machineProducer = new BulldozerProducer();
