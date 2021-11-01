@@ -23,28 +23,28 @@ public class MachineServiceTest {
 
     @Test
     public void getAll_bulldozerType() {
-        List<? extends Machine> actual = machineService.getAll(Bulldozer.class);
+        List<Machine> actual = machineService.getAll(Bulldozer.class);
         assertEquals("The list should contain elements of type Bulldozer",
             Bulldozer.class, actual.get(0).getClass());
     }
 
     @Test
     public void getAll_excavatorType() {
-        List<? extends Machine> actual = machineService.getAll(Excavator.class);
+        List<Machine> actual = machineService.getAll(Excavator.class);
         assertEquals("The list should contain elements of type Excavator",
             Excavator.class, actual.get(0).getClass());
     }
 
     @Test
     public void getAll_truckType() {
-        List<? extends Machine> actual = machineService.getAll(Truck.class);
+        List<Machine> actual = machineService.getAll(Truck.class);
         assertEquals("The list should contain elements of type Truck",
             Truck.class, actual.get(0).getClass());
     }
 
     @Test
     public void getAll_invalidType() {
-        List<? extends Machine> actual = machineService.getAll(Machine.class);
+        List<Machine> actual = machineService.getAll(Machine.class);
         assertEquals("For the unknown class you should return empty list",
             Collections.emptyList(), actual);
     }
