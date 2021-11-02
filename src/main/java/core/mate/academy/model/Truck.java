@@ -7,8 +7,7 @@ public class Truck extends Machine {
 
     public Truck(double loadTons, double maxSpeed, String bodyType,
                  String name, String color) {
-        super.setName(name);
-        super.setColor(color);
+        super(name, color);
         this.loadTons = loadTons;
         this.maxSpeed = maxSpeed;
         this.bodyType = bodyType;

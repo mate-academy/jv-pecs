@@ -5,8 +5,7 @@ public class Bulldozer extends Machine {
     private boolean ripper;
 
     public Bulldozer(String blade, boolean ripper, String name, String color) {
-        super.setName(name);
-        super.setColor(color);
+        super(name, color);
         this.blade = blade;
         this.ripper = ripper;
     }

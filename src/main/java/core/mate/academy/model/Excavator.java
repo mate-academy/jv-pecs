@@ -9,8 +9,7 @@ public class Excavator extends Machine {
 
     public Excavator(String type, int armLength, int bucketVolume,int maximumSwingSpeed,
                      int machineWeight, String name, String color) {
-        super.setName(name);
-        super.setColor(color);
+        super(name, color);
         this.type = type;
         this.armLength = armLength;
         this.bucketVolume = bucketVolume;

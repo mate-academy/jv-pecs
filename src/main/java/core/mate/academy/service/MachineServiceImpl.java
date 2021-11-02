@@ -1,8 +1,11 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Machine;
-import core.mate.academy.model.MachineTypes;
+import core.mate.academy.model.*;
+import core.mate.academy.service.producer.BulldozerProducer;
+import core.mate.academy.service.producer.ExcavatorProducer;
 import core.mate.academy.service.producer.MachineProducer;
+import core.mate.academy.service.producer.TruckProducer;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -33,9 +36,9 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     private HashMap<Class<? extends Machine>, MachineProducer> mapCreate() {
         HashMap<Class<? extends Machine>, MachineProducer> hashMap = new HashMap<>();
-        for (MachineTypes machine : MachineTypes.values()) {
-            hashMap.put(machine.getMachineClass(), machine.getMachineProducer());
-        }
+        hashMap.put(Bulldozer.class, new BulldozerProducer());
+        hashMap.put(Truck.class, new TruckProducer());
+        hashMap.put(Excavator.class, new ExcavatorProducer());
         return hashMap;
     }
 }
