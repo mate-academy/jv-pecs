@@ -1,6 +1,6 @@
 package core.mate.academy.model;
 
-public abstract class Machine<T> implements Workable {
+public abstract class Machine implements Workable {
     protected String name;
     protected String color;
 
