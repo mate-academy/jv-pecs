@@ -9,15 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private final HashMap<Class<? extends Machine>, MachineProducer> machineTypeMap = init();
-
-    private HashMap<Class<? extends Machine>, MachineProducer> init() {
-        HashMap<Class<? extends Machine>, MachineProducer> result = new HashMap<>();
-        for (MachineTypes machine : MachineTypes.values()) {
-            result.put(machine.getMachineClass(), machine.getMachineProducer());
-        }
-        return result;
-    }
+    private final HashMap<Class<? extends Machine>, MachineProducer> machineTypeMap = mapCreate();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
@@ -37,5 +29,13 @@ public class MachineServiceImpl implements MachineService<Machine> {
         for (Machine machine: machines) {
             machine.doWork();
         }
+    }
+
+    private HashMap<Class<? extends Machine>, MachineProducer> mapCreate() {
+        HashMap<Class<? extends Machine>, MachineProducer> hashMap = new HashMap<>();
+        for (MachineTypes machine : MachineTypes.values()) {
+            hashMap.put(machine.getMachineClass(), machine.getMachineProducer());
+        }
+        return hashMap;
     }
 }
