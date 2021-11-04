@@ -1,9 +1,9 @@
 package core.mate.academy.model;
 
 public class Truck extends Machine {
-    String transmission;
-    String bodyType;
-    String cabType;
+    private String transmission;
+    private String bodyType;
+    private String cabType;
 
     public Truck() {
     }

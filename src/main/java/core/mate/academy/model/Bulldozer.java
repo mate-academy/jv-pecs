@@ -1,8 +1,8 @@
 package core.mate.academy.model;
 
 public class Bulldozer extends Machine {
-    String bladeType;
-    int ripperSize;
+    private String bladeType;
+    private int ripperSize;
 
     public Bulldozer() {
     }

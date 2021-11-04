@@ -1,8 +1,8 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
-    int bucketCapacity;
-    boolean tracks;
+    private int bucketCapacity;
+    private boolean tracks;
 
     public Excavator() {
     }

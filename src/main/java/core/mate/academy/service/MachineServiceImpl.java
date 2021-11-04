@@ -7,15 +7,14 @@ import core.mate.academy.model.Truck;
 import core.mate.academy.service.producerimpl.BulldozerProducer;
 import core.mate.academy.service.producerimpl.ExcavatorProducer;
 import core.mate.academy.service.producerimpl.TruckProducer;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    BulldozerProducer bulldozerProducer = new BulldozerProducer();
-    ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-    TruckProducer truckProducer = new TruckProducer();
-    List<Machine> machines = new ArrayList<>();
+    private BulldozerProducer bulldozerProducer = new BulldozerProducer();
+    private ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+    private TruckProducer truckProducer = new TruckProducer();
+    private List<Machine> machines = new ArrayList<>();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
@@ -29,6 +28,14 @@ public class MachineServiceImpl implements MachineService<Machine> {
             machines = new ArrayList<>();
         }
         return machines;
+    }
+
+    public void test() {
+        List<Machine> machines = null;
+        List<Object> objects = null;
+        fill(machines, null);
+        fill(objects, null);
+
     }
 
     @Override
