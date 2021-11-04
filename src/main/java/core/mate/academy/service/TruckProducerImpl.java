@@ -4,7 +4,7 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckProducerImpl implements MachineProducer {
+public class TruckProducerImpl implements MachineProducer<Truck> {
     private static final Truck FIRST_TRUCK = new Truck("yellow", 1000, "Volvo");
     private static final Truck SECOND_TRUCK = new Truck("black", 900, "Ford");
     private static final Truck THIRD_TRUCK = new Truck("white", 1100, "NISSAN");

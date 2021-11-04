@@ -4,7 +4,7 @@ import core.mate.academy.model.Excavator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExcavatorProducerImpl implements MachineProducer {
+public class ExcavatorProducerImpl implements MachineProducer<Excavator> {
     private static final Excavator FIRST_EXCAVATOR = new Excavator("yellow", 1500, "JCB");
     private static final Excavator SECOND_EXCAVATOR = new Excavator("black", 500, "CATERPILLAR");
     private static final Excavator THIRD_EXCAVATOR = new Excavator("white", 1000, "HITACHI");
