@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Machine> {
-    private Excavator excavator1 = new Excavator();
-    private Excavator excavator2 = new Excavator();
-    private Excavator excavator3 = new Excavator();
-    private List<Machine> excavators = new ArrayList<>();
 
     @Override
-    public List<Machine> get() {
+    public List<Excavator> get() {
+        Excavator excavator1 = new Excavator();
+        Excavator excavator2 = new Excavator();
+        Excavator excavator3 = new Excavator();
+        List<Excavator> excavators = new ArrayList<>();
         excavators.add(excavator1);
         excavators.add(excavator2);
         excavators.add(excavator3);
