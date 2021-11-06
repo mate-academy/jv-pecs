@@ -5,14 +5,15 @@ import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExcavatorProducer implements MachineProducer {
+public class ExcavatorProducer implements MachineProducer<Excavator> {
+    private static final int COUNT_OF_MACHINES = 2;
+
     @Override
     public List<Excavator> get() {
-        Excavator excavator = new Excavator();
-        excavator.setColor("blue");
-        excavator.setName("excavator");
         List<Excavator> list = new ArrayList<>();
-        list.add(excavator);
+        for (int i = 0; i < COUNT_OF_MACHINES; i++) {
+            list.add(new Excavator());
+        }
         return list;
     }
 }

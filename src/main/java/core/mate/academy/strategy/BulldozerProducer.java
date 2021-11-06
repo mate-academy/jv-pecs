@@ -5,14 +5,15 @@ import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
+    private static final int COUNT_OF_MACHINES = 2;
+
     @Override
     public List<Bulldozer> get() {
-        Bulldozer bulldozer = new Bulldozer();
-        bulldozer.setColor("green");
-        bulldozer.setName("bulldozer");
         List<Bulldozer> list = new ArrayList<>();
-        list.add(bulldozer);
+        for (int i = 0; i < COUNT_OF_MACHINES; i++) {
+            list.add(new Bulldozer());
+        }
         return list;
     }
 }

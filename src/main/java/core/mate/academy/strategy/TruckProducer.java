@@ -5,14 +5,15 @@ import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckProducer implements MachineProducer {
+public class TruckProducer implements MachineProducer<Truck> {
+    private static final int COUNT_OF_MACHINES = 2;
+
     @Override
     public List<Truck> get() {
-        Truck truck = new Truck();
-        truck.setColor("red");
-        truck.setName("truck");
         List<Truck> list = new ArrayList<>();
-        list.add(truck);
+        for (int i = 0; i < COUNT_OF_MACHINES; i++) {
+            list.add(new Truck());
+        }
         return list;
     }
 }

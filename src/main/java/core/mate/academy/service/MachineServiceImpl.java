@@ -8,40 +8,39 @@ import core.mate.academy.strategy.BulldozerProducer;
 import core.mate.academy.strategy.ExcavatorProducer;
 import core.mate.academy.strategy.TruckProducer;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService<Machine> {
+public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
     @Override
-    public List<Machine> getAll(Class type) {
+    public List<T> getAll(Class<? extends T> type) {
+        List<? extends T> machines;
         if (type == Bulldozer.class) {
             BulldozerProducer bulldozerProducer = new BulldozerProducer();
-            List<? extends Machine> machines = bulldozerProducer.get();
+            machines = (List<? extends T>) bulldozerProducer.get();
             return new ArrayList<>(machines);
         } else if (type == Truck.class) {
             TruckProducer truckProducer = new TruckProducer();
-            List<? extends Machine> machines = truckProducer.get();
+            machines = (List<? extends T>) truckProducer.get();
             return new ArrayList<>(machines);
         } else if (type == Excavator.class) {
             ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-            List<? extends Machine> machines = excavatorProducer.get();
+            machines = (List<? extends T>) excavatorProducer.get();
             return new ArrayList<>(machines);
         }
         return new ArrayList<>();
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Machine value) {
-        int size = machines.size();
-        for (int i = 0; i < size; i++) {
-            machines.set(i, value);
-        }
+    public void fill(List<? super T> machines, T value) {
+        Collections.fill(machines, value);
     }
 
     @Override
-    public void startWorking(List<? extends Machine> machines) {
+    public void startWorking(List<? extends T> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }
