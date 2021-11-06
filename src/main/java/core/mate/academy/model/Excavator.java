@@ -1,8 +1,8 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
-    double boomLength;
-    String workZone;
+    private double boomLength;
+    private String workZone;
 
     public Excavator() {
     }

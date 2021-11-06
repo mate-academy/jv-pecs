@@ -1,8 +1,8 @@
 package core.mate.academy.model;
 
 public class Truck extends Machine {
-    int truckCapasity;
-    boolean work;
+    private int truckCapasity;
+    private boolean work;
 
     public Truck() {
     }

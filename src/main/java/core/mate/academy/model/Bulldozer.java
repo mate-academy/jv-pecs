@@ -1,8 +1,8 @@
 package core.mate.academy.model;
 
 public class Bulldozer extends Machine {
-    int bucketCapacity;
-    int workTime;
+    private int bucketCapacity;
+    private int workTime;
 
     public Bulldozer() {
     }
