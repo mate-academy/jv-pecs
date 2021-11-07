@@ -8,7 +8,8 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(String undercarriageType, String principleOfOperation, String operationalPurpose) {
+    public Excavator(String undercarriageType, String principleOfOperation,
+                     String operationalPurpose) {
         this.undercarriageType = undercarriageType;
         this.principleOfOperation = principleOfOperation;
         this.operationalPurpose = operationalPurpose;

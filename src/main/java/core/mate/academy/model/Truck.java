@@ -8,7 +8,8 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(String cargoCompartmentLength, String cargoCompartmentWidth, String cargoCompartmentVolume) {
+    public Truck(String cargoCompartmentLength, String cargoCompartmentWidth,
+                 String cargoCompartmentVolume) {
         this.cargoCompartmentLength = cargoCompartmentLength;
         this.cargoCompartmentWidth = cargoCompartmentWidth;
         this.cargoCompartmentVolume = cargoCompartmentVolume;
