@@ -1,11 +1,54 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private boolean isCaterpillar;
+    private double misstatementWall;
+    private int urgeMove;
+    private int widthShanks;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(boolean isCaterpillar, double misstatementWall, int urgeMove,
+                     int widthShanks, String name, String color) {
+        this.isCaterpillar = isCaterpillar;
+        this.misstatementWall = misstatementWall;
+        this.urgeMove = urgeMove;
+        this.widthShanks = widthShanks;
+        super.setName(name);
+        super.setColor(color);
+    }
+
+    public boolean isCaterpillar() {
+        return isCaterpillar;
+    }
+
+    public double getMisstatementWall() {
+        return misstatementWall;
+    }
+
+    public double getUrgeMove() {
+        return urgeMove;
+    }
+
+    public double getWidthShanks() {
+        return widthShanks;
+    }
+
+    public void setCaterpillar(boolean caterpillar) {
+        isCaterpillar = caterpillar;
+    }
+
+    public void setMisstatementWall(double misstatementWall) {
+        this.misstatementWall = misstatementWall;
+    }
+
+    public void setUrgeMove(int urgeMove) {
+        this.urgeMove = urgeMove;
+    }
+
+    public void setWidthShanks(int widthShanks) {
+        this.widthShanks = widthShanks;
     }
 
     @Override
