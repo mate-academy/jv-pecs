@@ -11,12 +11,11 @@ public class Bulldozer extends Machine {
 
     public Bulldozer(boolean isCaterpillar, double misstatementWall, int urgeMove,
                      int widthShanks, String name, String color) {
+        super(name, color);
         this.isCaterpillar = isCaterpillar;
         this.misstatementWall = misstatementWall;
         this.urgeMove = urgeMove;
         this.widthShanks = widthShanks;
-        super.setName(name);
-        super.setColor(color);
     }
 
     public boolean isCaterpillar() {

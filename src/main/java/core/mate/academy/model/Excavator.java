@@ -10,11 +10,10 @@ public class Excavator extends Machine {
 
     public Excavator(double volumeBucket, boolean hotFilter, boolean coldFilter,
                      String name, String color) {
+        super(name, color);
         this.volumeBucket = volumeBucket;
         this.hotFilter = hotFilter;
         this.coldFilter = coldFilter;
-        super.setName(name);
-        super.setColor(color);
     }
 
     public double getVolumeBucket() {

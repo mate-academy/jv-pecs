@@ -5,16 +5,15 @@ public class Truck extends Machine {
     private double workingVolume;
     private int ratedSpeed;
 
-    public Truck() {
-    }
-
     public Truck(int numberCylinders, double workingVolume, int ratedSpeed,
                  String name, String color) {
+        super(name, color);
         this.numberCylinders = numberCylinders;
         this.workingVolume = workingVolume;
         this.ratedSpeed = ratedSpeed;
-        super.setName(name);
-        super.setColor(color);
+    }
+
+    public Truck() {
     }
 
     public int getNumberCylinders() {
