@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
-    public List<T> getAll(Class<? extends T> type) {
-        MachineProducer machineProducer;
+    public List<Machine> getAll(Class<? extends Machine> type) {
+        MachineProducer<? extends Machine> machineProducer;
         if (type.equals(Bulldozer.class)) {
             machineProducer = new BulldozerProducer();
         } else if (type.equals(Truck.class)) {
@@ -22,17 +22,17 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         } else {
             return new ArrayList<>();
         }
-        List<? extends T> machines = machineProducer.get();
+        List<? extends Machine> machines = machineProducer.get();
         return new ArrayList<>(machines);
     }
 
     @Override
-    public void fill(List<? super T> machines, T value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         Collections.fill(machines, value);
     }
 
     @Override
-    public void startWorking(List<? extends T> machines) {
+    public void startWorking(List<? extends Machine> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }
