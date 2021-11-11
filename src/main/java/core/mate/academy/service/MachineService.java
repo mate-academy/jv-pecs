@@ -9,6 +9,6 @@ public interface MachineService<T extends Machine> {
 
     void startWorking(List<? extends T> machines);
 
-    List<Machine> getAll(Class<? extends T> type);
+    List<T> getAll(Class<? extends T> type);
 
 }
