@@ -17,18 +17,17 @@ import java.util.List;
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
     @Override
     public List<T> getAll(Class<? extends T> type) {
-        MachineProducer machineProducer;
+        MachineProducer machineProducer = null;
         if (type.equals(Bulldozer.class)) {
             machineProducer = new BulldozerProducer();
         } else if (type.equals(Truck.class)) {
             machineProducer = new TruckProducer();
         } else if (type.equals(Excavator.class)) {
             machineProducer = new ExcavatorProducer();
-        } else {
-            return new ArrayList<>();
         }
-        List<? extends T> machines = machineProducer.get();
-        return new ArrayList<>(machines);
+        return machineProducer == null
+                ? Collections.emptyList()
+                : machineProducer.get();
     }
 
     @Override
