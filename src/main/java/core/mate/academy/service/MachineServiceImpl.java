@@ -13,10 +13,6 @@ import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
 
-    public MachineServiceImpl() {
-
-    }
-
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machines = new ArrayList<>();
         if (type == Bulldozer.class) {
