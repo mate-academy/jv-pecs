@@ -9,19 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private MachineProducer machineProducer;
 
     @Override
-    public List getAll(Class<? extends Machine> type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
-            machineProducer = new BulldozerProducer();
-            return machineProducer.get();
+            return new ArrayList<>(new BulldozerProducer().get());
         } else if (type == Truck.class) {
-            machineProducer = new TruckProducer();
-            return machineProducer.get();
+            return new ArrayList<>(new TruckProducer().get());
         } else if (type == Excavator.class) {
-            machineProducer = new ExcavatorProducer();
-            return machineProducer.get();
+            return new ArrayList<>(new ExcavatorProducer().get());
         } else {
             return new ArrayList();
         }
@@ -39,4 +35,3 @@ public class MachineServiceImpl implements MachineService<Machine> {
         machines.forEach(Workable::doWork);
     }
 }
-
