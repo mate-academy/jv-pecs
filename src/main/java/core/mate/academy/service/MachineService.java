@@ -17,7 +17,7 @@ public interface MachineService<M extends Machine> {
      * @param type - any class of Machine sub class. For example: Truck.class or Bulldozer.class
      * @return the list of machines
      */
-    List<Machine> getAll(Class<? extends Machine> type);
+    List<M> getAll(Class<? extends Machine> type);
 
     /**
      * Fill the machines list with passed value
@@ -28,7 +28,7 @@ public interface MachineService<M extends Machine> {
      * @param value    - any object of machine sub class
      */
     void fill(List<? super Machine> machines, M value);//machines is a consumer collection
-    //                                             because here we put values in it
+    //                                             because in this method we put values in it
 
     /**
      * Call the method doWork() from each machine.
@@ -36,5 +36,6 @@ public interface MachineService<M extends Machine> {
      *
      * @param machines - the list of machines
      */
-    void startWorking(List<? extends Machine> machines);
+    void startWorking(List<? extends Machine> machines);//machines is a producer collection
+    //                                              because in this method we get values from it
 }

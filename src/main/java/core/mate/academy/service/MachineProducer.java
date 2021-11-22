@@ -11,5 +11,5 @@ public interface MachineProducer<M extends Machine> { //parametrized with type M
      * In your implementations - create 2-3 models, add them to the list and return
      * @return - the list of models
      */
-    List<M> get();//правильнее было бы назвать метод produce()
+    List<M> produce();
 }
