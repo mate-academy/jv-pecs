@@ -4,16 +4,30 @@ import core.mate.academy.model.Bulldozer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
+
+    public static final List<Bulldozer> BULLDOZER_ARRAY_LIST = new ArrayList<>();
+
     @Override
     public List<Bulldozer> get() {
-        List<Bulldozer> bulldozers = new ArrayList<>();
-        Bulldozer bulldozer1 = new Bulldozer();
-        bulldozers.add(bulldozer1);
-        Bulldozer bulldozer2 = new Bulldozer();
-        bulldozers.add(bulldozer2);
-        Bulldozer bulldozer3 = new Bulldozer();
-        bulldozers.add(bulldozer3);
-        return bulldozers;
+        Bulldozer firstBulldozer = new Bulldozer();
+        firstBulldozer.setName("Volvo");
+        firstBulldozer.setColor("yellow");
+        firstBulldozer.setBlade("volvoBlade");
+        firstBulldozer.setRipper("volvoRipper");
+        BULLDOZER_ARRAY_LIST.add(firstBulldozer);
+        Bulldozer secondBulldozer = new Bulldozer();
+        secondBulldozer.setName("Ford");
+        secondBulldozer.setColor("grey");
+        secondBulldozer.setBlade("fordBlade");
+        secondBulldozer.setRipper("fordRipper");
+        BULLDOZER_ARRAY_LIST.add(secondBulldozer);
+        Bulldozer thirdBulldozer = new Bulldozer();
+        thirdBulldozer.setName("Dodge");
+        thirdBulldozer.setColor("green");
+        thirdBulldozer.setBlade("dodgeBlade");
+        thirdBulldozer.setRipper("dodgeRipper");
+        BULLDOZER_ARRAY_LIST.add(thirdBulldozer);
+        return BULLDOZER_ARRAY_LIST;
     }
 }
