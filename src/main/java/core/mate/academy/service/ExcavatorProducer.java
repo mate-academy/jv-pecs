@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-
-    public static final List<Excavator> EXCAVATOR_ARRAY_LIST = new ArrayList<>();
-
     @Override
     public List<Excavator> get() {
         Excavator firstExcavator = new Excavator();
@@ -15,19 +12,23 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
         firstExcavator.setColor("black");
         firstExcavator.setBoom("dodgeBoom");
         firstExcavator.setDipper("dodgeDipper");
-        EXCAVATOR_ARRAY_LIST.add(firstExcavator);
+
         Excavator secondExcavator = new Excavator();
         secondExcavator.setName("Ford");
         secondExcavator.setColor("orange");
         secondExcavator.setBoom("fordBoom");
         secondExcavator.setDipper("fordDipper");
-        EXCAVATOR_ARRAY_LIST.add(secondExcavator);
+
         Excavator thirdExcavator = new Excavator();
         thirdExcavator.setName("Volvo");
         thirdExcavator.setColor("navy");
         thirdExcavator.setBoom("volvoBoom");
         thirdExcavator.setDipper("volvoDipper");
-        EXCAVATOR_ARRAY_LIST.add(thirdExcavator);
-        return EXCAVATOR_ARRAY_LIST;
+
+        List<Excavator> excavatorList = new ArrayList<>();
+        excavatorList.add(firstExcavator);
+        excavatorList.add(secondExcavator);
+        excavatorList.add(thirdExcavator);
+        return excavatorList;
     }
 }

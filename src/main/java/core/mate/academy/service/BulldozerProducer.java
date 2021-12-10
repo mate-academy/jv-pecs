@@ -6,8 +6,6 @@ import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
 
-    public static final List<Bulldozer> BULLDOZER_ARRAY_LIST = new ArrayList<>();
-
     @Override
     public List<Bulldozer> get() {
         Bulldozer firstBulldozer = new Bulldozer();
@@ -15,19 +13,23 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
         firstBulldozer.setColor("yellow");
         firstBulldozer.setBlade("volvoBlade");
         firstBulldozer.setRipper("volvoRipper");
-        BULLDOZER_ARRAY_LIST.add(firstBulldozer);
+
         Bulldozer secondBulldozer = new Bulldozer();
         secondBulldozer.setName("Ford");
         secondBulldozer.setColor("grey");
         secondBulldozer.setBlade("fordBlade");
         secondBulldozer.setRipper("fordRipper");
-        BULLDOZER_ARRAY_LIST.add(secondBulldozer);
+
         Bulldozer thirdBulldozer = new Bulldozer();
         thirdBulldozer.setName("Dodge");
         thirdBulldozer.setColor("green");
         thirdBulldozer.setBlade("dodgeBlade");
         thirdBulldozer.setRipper("dodgeRipper");
-        BULLDOZER_ARRAY_LIST.add(thirdBulldozer);
-        return BULLDOZER_ARRAY_LIST;
+
+        List<Bulldozer> bulldozerList = new ArrayList<>();
+        bulldozerList.add(firstBulldozer);
+        bulldozerList.add(secondBulldozer);
+        bulldozerList.add(thirdBulldozer);
+        return bulldozerList;
     }
 }
