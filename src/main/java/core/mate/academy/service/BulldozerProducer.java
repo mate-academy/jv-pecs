@@ -1,13 +1,13 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Bulldozer;
-import core.mate.academy.model.Machine;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer<Machine> {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
+
     @Override
-    public List<Machine> get() {
+    public List<Bulldozer> get() {
         Bulldozer bulldozer1 = new Bulldozer();
         bulldozer1.setId(1);
         bulldozer1.setModel("T-130");
@@ -16,7 +16,7 @@ public class BulldozerProducer implements MachineProducer<Machine> {
         bulldozer2.setId(2);
         bulldozer2.setModel("T-75");
 
-        List<Machine> bulldozers = new ArrayList<>();
+        List<Bulldozer> bulldozers = new ArrayList<>();
         bulldozers.add(bulldozer1);
         bulldozers.add(bulldozer2);
         return bulldozers;
