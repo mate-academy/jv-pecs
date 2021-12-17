@@ -14,7 +14,7 @@ import java.util.ListIterator;
 public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
-    public List<?> getAll(Class type) {
+    public List<? extends Machine> getAll(Class type) {
         if (Bulldozer.class.equals(type)) {
             return new BulldozerProducer().get();
         } else if (Excavator.class.equals(type)) {
