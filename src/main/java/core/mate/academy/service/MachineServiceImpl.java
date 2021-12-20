@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    public List getAll(Class type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
             BulldozerProducer bulldozerProducer = new BulldozerProducer();
             return bulldozerProducer.get();
