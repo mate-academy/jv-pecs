@@ -16,15 +16,15 @@ public class MachineServiceImpl implements MachineService<Machine> {
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
             BulldozerProducer bulldozerProducer = new BulldozerProducer();
-            return bulldozerProducer.get();
+            return new ArrayList<>(bulldozerProducer.get());
         }
         if (type == Excavator.class) {
             ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-            return excavatorProducer.get();
+            return new ArrayList<>(excavatorProducer.get());
         }
         if (type == Truck.class) {
             TruckProducer truckProducer = new TruckProducer();
-            return truckProducer.get();
+            return new ArrayList<>(truckProducer.get());
         }
         return new ArrayList();
     }
