@@ -11,6 +11,7 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService {
+
     @Override
     public List<Machine> getAll(Class type) {
         if (type == Bulldozer.class) {
@@ -41,6 +42,8 @@ public class MachineServiceImpl implements MachineService {
 
     @Override
     public void startWorking(List machines) {
-
+        for (Object machine : machines) {
+            ((Machine) machine).doWork();
+        }
     }
 }
