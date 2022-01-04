@@ -5,17 +5,16 @@ import core.mate.academy.model.Machine;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExcavatorProducer implements MachineProducer {
-    private List<Machine> excavators = new ArrayList<>();
-
-    public ExcavatorProducer() {
-        excavators.add(new Excavator());
-        excavators.add(new Excavator());
-        excavators.add(new Excavator());
-    }
+public class ExcavatorProducer implements MachineProducer<Excavator> {
 
     @Override
     public List get() {
+        List<Machine> excavators = new ArrayList<>();
+
+        excavators.add(new Excavator());
+        excavators.add(new Excavator());
+        excavators.add(new Excavator());
+
         return excavators;
     }
 }
