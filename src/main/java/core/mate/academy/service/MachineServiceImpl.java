@@ -10,28 +10,21 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService {
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class type) {
         List<Machine> list = new ArrayList<Machine>();
 
         if (type == Bulldozer.class) {
-            for (int i = 0;i < 3;i++) {
-                list.add(new Bulldozer());
-            }
+            list.addAll((new BulldozerProducer()).get());
         }
         if (type == Excavator.class) {
-            for (int i = 0;i < 3;i++) {
-                list.add(new Excavator());
-            }
+            list.addAll((new ExcavatorProducer()).get());
         }
         if (type == Truck.class) {
-            for (int i = 0;i < 3;i++) {
-                list.add(new Truck());
-            }
+            list.addAll((new TruckProducer()).get());
         }
-
         return list;
     }
 

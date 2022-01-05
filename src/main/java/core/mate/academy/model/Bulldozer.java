@@ -5,8 +5,8 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    private String bulldozerCustom1;
-    private String bulldozerCustom2;
+    private String bladeType;
+    private int weight;
 
     public Bulldozer() {
     }
@@ -16,19 +16,19 @@ public class Bulldozer extends Machine {
         System.out.println("Bulldozer started to work");
     }
 
-    public String getBulldozerCustom1() {
-        return bulldozerCustom1;
+    public String getBladeType() {
+        return bladeType;
     }
 
-    public void setBulldozerCustom1(String bulldozerCustom1) {
-        this.bulldozerCustom1 = bulldozerCustom1;
+    public void setBladeType(String bladeType) {
+        this.bladeType = bladeType;
     }
 
-    public String getBulldozerCustom2() {
-        return bulldozerCustom2;
+    public int getWeight() {
+        return weight;
     }
 
-    public void setBulldozerCustom2(String bulldozerCustom2) {
-        this.bulldozerCustom2 = bulldozerCustom2;
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 }

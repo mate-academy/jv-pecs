@@ -5,8 +5,8 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    private String excavatorCustom1;
-    private String excavatorCustom2;
+    private String chassisType;
+    private int bucketVolume;
 
     public Excavator() {
     }
@@ -16,19 +16,19 @@ public class Excavator extends Machine {
         System.out.println("Excavator started to work");
     }
 
-    public String getExcavatorCustom1() {
-        return excavatorCustom1;
+    public String getChassisType() {
+        return chassisType;
     }
 
-    public void setExcavatorCustom1(String excavatorCustom1) {
-        this.excavatorCustom1 = excavatorCustom1;
+    public void setChassisType(String chassisType) {
+        this.chassisType = chassisType;
     }
 
-    public String getExcavatorCustom2() {
-        return excavatorCustom2;
+    public int getBucketVolume() {
+        return bucketVolume;
     }
 
-    public void setExcavatorCustom2(String excavatorCustom2) {
-        this.excavatorCustom2 = excavatorCustom2;
+    public void setBucketVolume(int bucketVolume) {
+        this.bucketVolume = bucketVolume;
     }
 }
