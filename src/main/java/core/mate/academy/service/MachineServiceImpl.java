@@ -14,17 +14,18 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine>{
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        List<? extends Machine> retVal = getProducer(type).get();
+        MachineProducer producer = getProducer(type);
+        if (producer == null) {
+            return new ArrayList<>();
+        }
+        List<? extends Machine> retVal = producer.get();
         return new ArrayList<>(retVal);
     }
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        int i = machines.indexOf(value);
-        if (i  > -1) {
+        for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
-        } else {
-            machines.add(value);
         }
     }
 
@@ -43,8 +44,8 @@ public class MachineServiceImpl implements MachineService<Machine>{
             return new ExcavatorProducer();
         }
         if (Truck.class.equals(type)) {
-            return new ExcavatorProducer();
+            return new TruckProducer();
         }
-        throw new IllegalArgumentException("MachineProducer can not be '" + type + "\'");
+        return null;
     }
 }
