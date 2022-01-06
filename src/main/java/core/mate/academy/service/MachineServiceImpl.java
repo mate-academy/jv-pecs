@@ -17,8 +17,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (producer == null) {
             return new ArrayList<>();
         }
-        List<? extends Machine> retVal = producer.get();
-        return new ArrayList<>(retVal);
+        List<? extends Machine> machines = producer.get();
+        return new ArrayList<>(machines);
     }
 
     @Override
