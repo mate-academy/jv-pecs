@@ -5,40 +5,52 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    private Double bladeArea;
-    private String typeOfBlade;
+    private String bulldozerName;
+    private Integer power;
+    private Double wheelRadius;
+    private Double fuelConsumption;
+
+    public Bulldozer(String bulldozerName, Integer power,
+                     Double wheelRadius, Double fuelConsumption) {
+        this.bulldozerName = bulldozerName;
+        this.power = power;
+        this.wheelRadius = wheelRadius;
+        this.fuelConsumption = fuelConsumption;
+    }
 
     public Bulldozer() {
     }
 
-    public Double getBladeArea() {
-        return bladeArea;
+    public Integer getPower() {
+        return power;
     }
 
-    public void setBladeArea(Double bladeArea) {
-        this.bladeArea = bladeArea;
+    public void setPower(Integer power) {
+        this.power = power;
     }
 
-    public String getTypeOfBlade() {
-        return typeOfBlade;
+    public Double getWheelRadius() {
+        return wheelRadius;
     }
 
-    public void setTypeOfBlade(String typeOfBlade) {
-        this.typeOfBlade = typeOfBlade;
+    public void setWheelRadius(Double wheelRadius) {
+        this.wheelRadius = wheelRadius;
+    }
+
+    public Double getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(Double fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public String getBulldozerName() {
+        return bulldozerName;
     }
 
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
-    }
-
-    @Override
-    public void bucketVolume(double v) {
-
-    }
-
-    @Override
-    public void setLoadCapacity(int i) {
-
     }
 }

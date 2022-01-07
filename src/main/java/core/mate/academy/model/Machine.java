@@ -15,8 +15,4 @@ public abstract class Machine implements Workable {
     public void setColor(String color) {
         this.color = color;
     }
-
-    public abstract void bucketVolume(double v);
-
-    public abstract void setLoadCapacity(int i);
 }
