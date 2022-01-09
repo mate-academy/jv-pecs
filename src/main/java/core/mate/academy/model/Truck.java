@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private Double dumpBedVolume;
+
     public Truck() {
+    }
+
+    public Double getDumpBedVolume() {
+        return dumpBedVolume;
+    }
+
+    public void setDumpBedVolume(Double dumpBedVolume) {
+        this.dumpBedVolume = dumpBedVolume;
     }
 
     @Override
