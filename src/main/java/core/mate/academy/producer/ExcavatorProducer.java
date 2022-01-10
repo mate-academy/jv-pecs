@@ -10,7 +10,7 @@ import java.util.Random;
 public class ExcavatorProducer implements MachineProducer<Excavator> {
 
     @Override
-    public List<Excavator> producer() {
+    public List<Excavator> produce() {
 
         int index = new Random().nextInt(OperationalPurposes.values().length);
 

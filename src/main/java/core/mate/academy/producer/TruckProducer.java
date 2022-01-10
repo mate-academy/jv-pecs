@@ -10,7 +10,7 @@ import java.util.Random;
 public class TruckProducer implements MachineProducer<Truck> {
 
     @Override
-    public List<Truck> producer() {
+    public List<Truck> produce() {
         int index = new Random().nextInt(TruckTypes.values().length); 
         
         Truck truckVolvo = new Truck();

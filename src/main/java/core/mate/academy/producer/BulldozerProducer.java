@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
-    public List<Bulldozer> producer() {
+    public List<Bulldozer> produce() {
 
         int indexSuspension = new Random().nextInt(SuspensionTypes.values().length);
         int indexTransmission = new Random().nextInt(TransmissionTypes.values().length);

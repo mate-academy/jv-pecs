@@ -17,20 +17,20 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override // Wildcard -> because name of type object unknown
-    public List<Machine> getAll(Class<?> type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         List<Machine> machines = new ArrayList<>();
 
         if (type == Excavator.class) {
             ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-            machines = new ArrayList<>(excavatorProducer.producer());
+            machines = new ArrayList<>(excavatorProducer.produce());
         }
         if (type == Bulldozer.class) {
             BulldozerProducer bulldozerProducer = new BulldozerProducer();
-            machines = new ArrayList<>(bulldozerProducer.producer());
+            machines = new ArrayList<>(bulldozerProducer.produce());
         }
         if (type == Truck.class) {
             TruckProducer truckProducer = new TruckProducer();
-            machines = new ArrayList<>(truckProducer.producer());
+            machines = new ArrayList<>(truckProducer.produce());
         }
         return machines;
     }
