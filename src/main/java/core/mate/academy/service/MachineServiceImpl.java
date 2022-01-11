@@ -13,7 +13,7 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
-    public List<Machine> getAll(Class type) {
+    public List<? extends Machine> getAll(Class type) {
         if (type == Bulldozer.class) {
             BulldozerProducer bulldozer = new BulldozerProducer();
             return bulldozer.get();
@@ -32,11 +32,9 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List machines, Machine value) {
-        int i = 0;
-        for (Object machine : machines) {
+    public void fill(List<? super Machine> machines, Machine value) {
+        for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
-            i++;
         }
     }
 
