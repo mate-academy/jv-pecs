@@ -1,10 +1,14 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private String bucketType;
+    private String hoistDriveMechanism;
+
+    public Bulldozer(String bucketType, String hoistDriveMechanism) {
+        this.bucketType = bucketType;
+        this.hoistDriveMechanism = hoistDriveMechanism;
+    }
+
     public Bulldozer() {
     }
 
