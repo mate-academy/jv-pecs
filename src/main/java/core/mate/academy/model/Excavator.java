@@ -5,7 +5,26 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private String typeOfDipper;
+    private int volumeOfDipper;
+
     public Excavator() {
+    }
+
+    public String getTypeOfDipper() {
+        return typeOfDipper;
+    }
+
+    public void setTypeOfDipper(String typeOfDipper) {
+        this.typeOfDipper = typeOfDipper;
+    }
+
+    public int getVolumeOfDipper() {
+        return volumeOfDipper;
+    }
+
+    public void setVolumeOfDipper(int volumeOfDipper) {
+        this.volumeOfDipper = volumeOfDipper;
     }
 
     @Override
