@@ -1,9 +1,10 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.Machine;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer {
+public class BulldozerProducer implements MachineProducer<Machine> {
     @Override
     public List<Bulldozer> get() {
         Bulldozer bulldozer1 = new Bulldozer("some ladle type", 199_991);
