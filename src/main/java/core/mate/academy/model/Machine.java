@@ -3,6 +3,7 @@ package core.mate.academy.model;
 public abstract class Machine implements Workable {
     private String name;
     private String color;
+    private double price;
 
     public String getName() {
         return name;
@@ -18,5 +19,13 @@ public abstract class Machine implements Workable {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
