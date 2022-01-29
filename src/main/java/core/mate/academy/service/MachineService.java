@@ -2,10 +2,10 @@ package core.mate.academy.service;
 
 import java.util.List;
 
-public interface MachineService<Machine> {
-    List<Machine> getAll(Class<? extends Machine> type);
+public interface MachineService<M> {
+    List<M> getAll(Class<? extends M> type);
 
-    void fill(List<? super Machine> machines, Machine value);
+    void fill(List<? super M> machines, M value);
 
-    void startWorking(List<? extends Machine> machines);
+    void startWorking(List<? extends M> machines);
 }
