@@ -8,22 +8,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private final BulldozerProducer bulldozerProducer = new BulldozerProducer();
-    private final TruckProducer truckProducer = new TruckProducer();
-    private final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-    private final Bulldozer bulldozer = new Bulldozer();
-    private final Excavator excavator = new Excavator();
-    private final Truck truck = new Truck();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<Machine> machines = new ArrayList<>();
         if (Bulldozer.class.equals(type)) {
-            return new ArrayList<>(bulldozerProducer.get());
+            return new ArrayList<>(new BulldozerProducer().get());
         } else if (Truck.class.equals(type)) {
-            return new ArrayList<>(truckProducer.get());
+            return new ArrayList<>(new TruckProducer().get());
         } else if (Excavator.class.equals(type)) {
-            return new ArrayList<>(excavatorProducer.get());
+            return new ArrayList<>(new ExcavatorProducer().get());
         }
         return machines;
     }
@@ -36,17 +30,9 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Object value) {
-        int size = machines.size();
-        machines.clear();
-        for (int i = 0; i < size; i++) {
-            if (Bulldozer.class.equals(value.getClass())) {
-                machines.add(bulldozer);
-            } else if (Truck.class.equals(value.getClass())) {
-                machines.add(truck);
-            } else if (Excavator.class.equals(value.getClass())) {
-                machines.add(excavator);
-            }
+    public void fill(List<? super Machine> machines, Machine machine) {
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(i,machine);
         }
     }
 }
