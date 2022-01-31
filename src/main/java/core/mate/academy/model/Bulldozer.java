@@ -1,15 +1,30 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private int fuelConsumptionPerHour;
+    private int power;
+
     public Bulldozer() {
     }
 
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
+    }
+
+    public int getFuelConsumptionPerHour() {
+        return fuelConsumptionPerHour;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public void setFuelConsumptionPerHour(int fuelConsumptionPerHour) {
+        this.fuelConsumptionPerHour = fuelConsumptionPerHour;
     }
 }
