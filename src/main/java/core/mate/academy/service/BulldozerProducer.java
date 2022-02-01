@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-    private List<Bulldozer> bulldozers = new ArrayList<>();
+    private static final int SIZE_OF_LIST = 10;
 
     @Override
     public List<Bulldozer> get() {
-        for (int i = 0; i < 10; i++) {
+        List<Bulldozer> bulldozers = new ArrayList<>();
+        for (int i = 0; i < SIZE_OF_LIST; i++) {
             bulldozers.add(new Bulldozer());
         }
         return bulldozers;
