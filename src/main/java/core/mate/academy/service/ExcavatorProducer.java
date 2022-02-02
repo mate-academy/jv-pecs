@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-
     private List<Excavator> excavators;
 
     public ExcavatorProducer() {
