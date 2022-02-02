@@ -11,6 +11,11 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(int cargo, int oilCapacity) {
+        this.cargo = cargo;
+        this.oilCapacity = oilCapacity;
+    }
+
     public int getCargo() {
         return cargo;
     }

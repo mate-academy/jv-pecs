@@ -1,5 +1,16 @@
 package core.mate.academy.service;
 
-public class TruckProducer implements MachineService {
+import core.mate.academy.model.Machine;
+import core.mate.academy.model.Truck;
+import java.util.List;
 
+public class TruckProducer implements MachineProducer<Truck>  {
+
+  @Override
+  public List<Truck> get() {
+    Truck truck1 = new Truck(234, 34);
+    Truck truck2 = new Truck(256, 40);
+    Truck truck3 = new Truck(546, 10);
+    return List.of(truck1, truck2, truck3);
+  }
 }

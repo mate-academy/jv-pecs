@@ -11,6 +11,11 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(int speed, int yearOfRegestrationDriver) {
+        this.speed = speed;
+        this.yearOfRegestrationDriver = yearOfRegestrationDriver;
+    }
+
     public int getSpeed() {
         return speed;
     }

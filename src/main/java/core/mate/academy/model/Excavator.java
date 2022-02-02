@@ -11,6 +11,11 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(int cargoWeigth, int fuelCapacity) {
+        this.cargoWeigth = cargoWeigth;
+        this.fuelCapacity = fuelCapacity;
+    }
+
     public int getCargoWeigth() {
         return cargoWeigth;
     }
