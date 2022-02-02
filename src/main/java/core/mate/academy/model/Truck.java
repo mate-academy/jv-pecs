@@ -6,6 +6,11 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     public Truck() {
+        super();
+    }
+
+    public Truck(String color, String name) {
+        super(name, color);
     }
 
     @Override
