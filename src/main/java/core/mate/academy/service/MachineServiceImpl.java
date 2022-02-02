@@ -11,7 +11,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        List<Machine> machines = new ArrayList<>();
         if (Bulldozer.class.equals(type)) {
             return new ArrayList<>(new BulldozerProducer().get());
         } else if (Truck.class.equals(type)) {
@@ -19,7 +18,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         } else if (Excavator.class.equals(type)) {
             return new ArrayList<>(new ExcavatorProducer().get());
         }
-        return machines;
+        return new ArrayList<>();
     }
 
     @Override
@@ -32,7 +31,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public void fill(List<? super Machine> machines, Machine machine) {
         for (int i = 0; i < machines.size(); i++) {
-            machines.set(i,machine);
+            machines.set(i, machine);
         }
     }
 }
