@@ -5,7 +5,26 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int cargoWeigth;
+    private int fuelCapacity;
+
     public Excavator() {
+    }
+
+    public int getCargoWeigth() {
+        return cargoWeigth;
+    }
+
+    public void setCargoWeigth(int cargoWeigth) {
+        this.cargoWeigth = cargoWeigth;
+    }
+
+    public int getFuelCapacity() {
+        return fuelCapacity;
+    }
+
+    public void setFuelCapacity(int fuelCapacity) {
+        this.fuelCapacity = fuelCapacity;
     }
 
     @Override
