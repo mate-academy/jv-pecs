@@ -8,12 +8,6 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public Bulldozer(String model, String color, int energy) {
-        this.model = model;
-        this.color = color;
-        this.energy = energy;
-    }
-
     public String getName() {
         return this.model;
     }

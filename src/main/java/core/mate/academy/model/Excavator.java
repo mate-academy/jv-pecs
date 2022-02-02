@@ -8,12 +8,6 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(String name, String color, double weight) {
-        this.name = name;
-        this.color = color;
-        this.weight = weight;
-    }
-
     public String getName() {
         return this.name;
     }

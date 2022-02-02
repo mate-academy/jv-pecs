@@ -8,12 +8,6 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(String model, double speed, double energy) {
-        this.model = model;
-        this.speed = speed;
-        this.energy = energy;
-    }
-
     public double getSpeed() {
         return speed;
     }
