@@ -1,39 +1,39 @@
 package core.mate.academy.model;
 
 /**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
+ * Add some custom fields that could be only in Excavator Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    private int cargoWeigth;
-    private int fuelCapacity;
 
-    public Excavator() {
-    }
+  private int cargoWeigth;
+  private int fuelCapacity;
 
-    public Excavator(int cargoWeigth, int fuelCapacity) {
-        this.cargoWeigth = cargoWeigth;
-        this.fuelCapacity = fuelCapacity;
-    }
+  public Excavator() {
+  }
 
-    public int getCargoWeigth() {
-        return cargoWeigth;
-    }
+  public Excavator(int cargoWeigth, int fuelCapacity) {
+    this.cargoWeigth = cargoWeigth;
+    this.fuelCapacity = fuelCapacity;
+  }
 
-    public void setCargoWeigth(int cargoWeigth) {
-        this.cargoWeigth = cargoWeigth;
-    }
+  public int getCargoWeigth() {
+    return cargoWeigth;
+  }
 
-    public int getFuelCapacity() {
-        return fuelCapacity;
-    }
+  public void setCargoWeigth(int cargoWeigth) {
+    this.cargoWeigth = cargoWeigth;
+  }
 
-    public void setFuelCapacity(int fuelCapacity) {
-        this.fuelCapacity = fuelCapacity;
-    }
+  public int getFuelCapacity() {
+    return fuelCapacity;
+  }
 
-    @Override
-    public void doWork() {
-        System.out.println("Excavator started to work");
-    }
+  public void setFuelCapacity(int fuelCapacity) {
+    this.fuelCapacity = fuelCapacity;
+  }
+
+  @Override
+  public void doWork() {
+    System.out.println("Excavator started to work");
+  }
 }
