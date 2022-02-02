@@ -1,9 +1,6 @@
 package core.mate.academy.model;
 
-import core.mate.academy.service.MachineProducer;
-import java.util.List;
-
-public class Truck extends Machine implements MachineProducer {
+public class Truck extends Machine {
     private int amountOfWheels;
 
     public Truck(int amountOfWheels) {
@@ -16,11 +13,5 @@ public class Truck extends Machine implements MachineProducer {
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
-    }
-
-    @Override
-    public List<Machine> getListMachines() {
-        return List.of(new Truck(8),
-                new Truck(6));
     }
 }
