@@ -5,12 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
+    private static final int COUNT_TRUCKS = 3;
+
     @Override
     public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
-        trucks.add(new Truck(2000));
-        trucks.add(new Truck(1500));
-        trucks.add(new Truck(3000));
+        for (int i = 0; i < COUNT_TRUCKS; i++) {
+            trucks.add(new Truck());
+        }
         return trucks;
     }
 }
