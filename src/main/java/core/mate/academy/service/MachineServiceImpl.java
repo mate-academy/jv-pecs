@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-
     @Override
     public List getAll(Class type) {
         if (type.equals(Bulldozer.class)) {
