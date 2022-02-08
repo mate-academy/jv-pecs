@@ -5,7 +5,23 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private String owner;
+    private int volume;
+
     public Truck() {
+    }
+
+    public Truck(String owner, int volume) {
+        this.owner = owner;
+        this.volume = volume;
+    }
+
+    void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    String getOwner() {
+        return owner;
     }
 
     @Override
