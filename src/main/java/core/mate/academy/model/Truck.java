@@ -16,6 +16,10 @@ public class Truck extends Machine {
         this.volume = volume;
     }
 
+    void setOwner(String owner) {
+        this.owner = owner;
+    }
+
     String getOwner() {
         return owner;
     }

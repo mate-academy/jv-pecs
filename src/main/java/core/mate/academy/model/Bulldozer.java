@@ -16,6 +16,10 @@ public class Bulldozer extends Machine {
         this.strength = strength;
     }
 
+    void setStrength(int strength) {
+        this.strength = strength;
+    }
+
     int getStrength() {
         return strength;
     }

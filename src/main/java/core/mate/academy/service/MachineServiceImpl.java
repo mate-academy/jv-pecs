@@ -14,6 +14,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List getAll(Class type) {
+        /*
         if (type == Bulldozer.class) {
             return new BulldozerProducer().get();
         }
@@ -23,7 +24,21 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Truck.class) {
             return new TruckProducer().get();
         }
-        return new ArrayList<>();
+        */
+        if (type == Bulldozer.class) {
+            return new BulldozerProducer().get();
+        } else {
+            if (type == Excavator.class) {
+                return new ExcavatorProducer().get();
+            } else {
+                if (type == Truck.class) {
+                    return new TruckProducer().get();
+                } else {
+                    return new ArrayList<>();
+                }
+            }
+        }
+
     }
 
     @Override

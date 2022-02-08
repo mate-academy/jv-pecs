@@ -16,6 +16,10 @@ public class Excavator extends Machine {
         this.age = age;
     }
 
+    void setMaker(String maker) {
+        this.maker = maker;
+    }
+
     String getMaker() {
         return maker;
     }
