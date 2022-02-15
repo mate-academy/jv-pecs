@@ -10,10 +10,10 @@ import core.mate.academy.model.TruckProducer;
 import java.util.Collections;
 import java.util.List;
 
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
-    public List<T> getAll(Class<? extends T> type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         MachineProducer<? extends Machine> machineProducer;
         if (type == Bulldozer.class) {
             machineProducer = new BulldozerProducer();
@@ -24,18 +24,18 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         } else {
             return Collections.emptyList();
         }
-        return (List<T>) machineProducer.get();
+        return (List<Machine>) machineProducer.get();
     }
 
     @Override
-    public void fill(List<? super T> machines, T value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
-    public void startWorking(List<? extends T> machines) {
+    public void startWorking(List<? extends Machine> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }
