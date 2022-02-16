@@ -5,11 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    private List<Truck> truckList = new ArrayList<Truck>();
+    private final List<Truck> truckList = new ArrayList<>();
 
     @Override
     public List<Truck> get() {
-        truckList.add(new Truck());
+        for (int i = 0; i < 5; i++) {
+            truckList.add(new Truck());
+        }
         return truckList;
     }
 }
