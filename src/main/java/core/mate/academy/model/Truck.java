@@ -8,6 +8,11 @@ public class Truck extends Machine {
     private String fuelType;
     private int weight;
     private int loadCapacity;
+    private int serialNumber;
+
+    public Truck(int serialNumber) {
+        this.serialNumber = serialNumber;
+    }
 
     public Truck() {
     }

@@ -8,6 +8,11 @@ public class Bulldozer extends Machine {
     private String fuelType;
     private int weight;
     private int numberOfBlades;
+    private int serialNumber;
+
+    public Bulldozer(int serialNumber) {
+        this.serialNumber = serialNumber;
+    }
 
     public Bulldozer() {
     }

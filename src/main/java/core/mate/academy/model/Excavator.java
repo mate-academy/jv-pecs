@@ -8,6 +8,11 @@ public class Excavator extends Machine {
     private String fuelType;
     private int weight;
     private int bucketVolume;
+    private int serialNumber;
+
+    public Excavator(int serialNumber) {
+        this.serialNumber = serialNumber;
+    }
 
     public Excavator() {
     }
