@@ -1,6 +1,6 @@
 package core.mate.academy.model;
 
-public abstract class Machine implements Workable {
+public abstract class Machine<T> implements Workable {
     private String name;
     private String color;
 
@@ -19,4 +19,5 @@ public abstract class Machine implements Workable {
     public void setColor(String color) {
         this.color = color;
     }
+
 }
