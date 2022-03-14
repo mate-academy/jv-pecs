@@ -7,12 +7,8 @@ package core.mate.academy.model;
 public class Bulldozer extends Machine {
     private int height;
 
-    public int getHeight() {
-        return height;
-    }
+    public Bulldozer() {
 
-    public void setHeight(int height) {
-        this.height = height;
     }
 
     public Bulldozer(String name, String color, int height) {
@@ -21,7 +17,13 @@ public class Bulldozer extends Machine {
         this.height = height;
     }
 
-    public Bulldozer() {}
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
 
     @Override
     public void doWork() {

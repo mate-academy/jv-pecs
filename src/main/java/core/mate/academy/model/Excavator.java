@@ -7,12 +7,8 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
     private int year;
 
-    public int getYear() {
-        return year;
-    }
+    public Excavator() {
 
-    public void setYear(int year) {
-        this.year = year;
     }
 
     public Excavator(String name, String color, int year) {
@@ -21,7 +17,13 @@ public class Excavator extends Machine {
         this.year = year;
     }
 
-    public Excavator() {}
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
 
     @Override
     public void doWork() {
