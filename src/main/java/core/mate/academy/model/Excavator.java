@@ -11,8 +11,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, int high) {
-        this.name = name;
-        this.color = color;
+        super(name, color);
         this.high = high;
     }
 
