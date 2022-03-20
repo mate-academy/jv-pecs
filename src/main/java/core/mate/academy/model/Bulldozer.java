@@ -1,5 +1,8 @@
 package core.mate.academy.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Add some custom fields that could be only in Bulldozer
  * Do not remove no-args constructor
@@ -11,5 +14,13 @@ public class Bulldozer extends Machine {
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
+    }
+
+    public List<Bulldozer> get() {
+        List<Bulldozer> bulldozers = new ArrayList<>();
+        for (int i = 0;i < bulldozers.size();i++) {
+            bulldozers.add(null);
+        }
+        return bulldozers;
     }
 }

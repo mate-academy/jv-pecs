@@ -1,9 +1,8 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class Excavator extends Machine {
     public Excavator() {
     }
@@ -11,5 +10,13 @@ public class Excavator extends Machine {
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
+    }
+
+    public List<Excavator> get() {
+        List<Excavator> excavators = new ArrayList<>();
+        for (int i = 0;i < excavators.size();i++) {
+            excavators.add(null);
+        }
+        return excavators;
     }
 }

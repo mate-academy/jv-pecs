@@ -1,6 +1,9 @@
 package core.mate.academy.model;
 
-public abstract class Machine implements Workable {
+import core.mate.academy.service.MachineProducer;
+import java.util.List;
+
+public abstract class Machine implements Workable, MachineProducer {
     private String name;
     private String color;
 
@@ -18,5 +21,9 @@ public abstract class Machine implements Workable {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public List<? extends Machine> get() {
+        return null;
     }
 }
