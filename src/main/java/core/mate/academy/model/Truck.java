@@ -11,6 +11,12 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String name, String color, int speed, int weight) {
+        super(name, color);
+        this.speed = speed;
+        this.weight = weight;
+    }
+
     public int getSpeed() {
         return speed;
     }

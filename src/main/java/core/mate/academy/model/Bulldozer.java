@@ -11,6 +11,12 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String name, String color, int power, String type) {
+        super(name, color);
+        this.power = power;
+        this.type = type;
+    }
+
     public int getPower() {
         return power;
     }
