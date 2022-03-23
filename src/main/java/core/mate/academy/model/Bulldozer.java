@@ -5,14 +5,14 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    private String cabinDimensions;
+    private int cabinDimensions;
     private String cabinFunctions;
     private int fuelTankSize;
 
     public Bulldozer() {
     }
 
-    public Bulldozer(String name, String color, String cabinDimensions,
+    public Bulldozer(String name, String color, int cabinDimensions,
                      String cabinFunctions, int fuelTankSize) {
         super(name, color);
         this.cabinDimensions = cabinDimensions;
@@ -25,11 +25,11 @@ public class Bulldozer extends Machine {
         System.out.println("Bulldozer started to work");
     }
 
-    public String getCabinDimensions() {
+    public int getCabinDimensions() {
         return cabinDimensions;
     }
 
-    public void setCabinDimensions(String cabinDimensions) {
+    public void setCabinDimensions(int cabinDimensions) {
         this.cabinDimensions = cabinDimensions;
     }
 
