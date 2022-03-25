@@ -5,22 +5,22 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    private String markBulldozer;
+    private String mark;
 
     public Bulldozer() {
     }
 
     public Bulldozer(String name, String color, String markBulldozer) {
         super(name, color);
-        this.markBulldozer = markBulldozer;
+        this.mark = markBulldozer;
     }
 
-    public String getMarkBulldozer() {
-        return markBulldozer;
+    public String getMark() {
+        return mark;
     }
 
-    public void setMarkBulldozer(String markBulldozer) {
-        this.markBulldozer = markBulldozer;
+    public void setMark(String mark) {
+        this.mark = mark;
     }
 
     @Override
@@ -31,6 +31,6 @@ public class Bulldozer extends Machine {
     @Override
     public String toString() {
         return super.toString()
-                + "markBulldozer='" + markBulldozer + "'}";
+                + "markBulldozer='" + mark + "'}";
     }
 }
