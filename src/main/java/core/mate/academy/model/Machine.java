@@ -1,9 +1,9 @@
 package core.mate.academy.model;
 
-import core.mate.academy.service.MachineProducer;
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Machine implements Workable, MachineProducer {
+public abstract class Machine implements Workable {
     private String name;
     private String color;
 
@@ -24,6 +24,6 @@ public abstract class Machine implements Workable, MachineProducer {
     }
 
     public List<? extends Machine> get() {
-        return null;
+        return new ArrayList<>();
     }
 }

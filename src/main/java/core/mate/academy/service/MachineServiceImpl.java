@@ -11,7 +11,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-
         if (type == Truck.class) {
             List<Truck> trucks = new TruckProducer().get();
             return new ArrayList<>(trucks);

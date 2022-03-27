@@ -13,7 +13,7 @@ public interface MachineService<T extends Machine> {
      * @param type - any class of Machine sub class. For example: Truck.class or Bulldozer.class
      * @return the list of machines
      */
-    List<T> getAll(Class<? extends Machine> type);
+    List<T> getAll(Class<? extends T> type);
     /**
      * Fill the machines list with passed value
      * Replace the Object with parametrized value.
@@ -23,7 +23,7 @@ public interface MachineService<T extends Machine> {
      * @param value    - any object of machine sub class
      */
 
-    void fill(List<? super Machine> machines, T value);
+    void fill(List<? super T> machines, T value);
     /**
      * Call the method doWork() from each machine.
      * This method should be able to accept a list of bulldozers as well as list of trucks.
@@ -31,5 +31,5 @@ public interface MachineService<T extends Machine> {
      * @param machines - the list of machines
      */
 
-    void startWorking(List<? extends Machine> machines);
+    void startWorking(List<? extends T> machines);
 }
