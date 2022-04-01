@@ -5,6 +5,10 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private String excavatorModel;
+    private int scoopVolume;
+    private int minScoopTurnRadius;
+
     public Excavator() {
     }
 
