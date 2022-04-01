@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
-    public List<Machine> get() {
+    public List<Bulldozer> get() {
         return List.of(new Bulldozer("S-Blade"),
                 new Bulldozer("U-Blade"), new Bulldozer("S-U-Blade"));
     }
