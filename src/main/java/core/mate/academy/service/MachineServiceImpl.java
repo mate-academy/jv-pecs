@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService {
+    private MachineProducer machines;
 
     @Override
-    public List<Machine> getAll(Class type) {
-        MachineProducer machines;
+    public List<? extends Machine> getAll(Class type) {
         if (type == Bulldozer.class) {
             machines = new BulldozerProducer();
             return machines.get();
@@ -38,5 +38,3 @@ public class MachineServiceImpl implements MachineService {
     public void startWorking(List list) {
     }
 }
-
-

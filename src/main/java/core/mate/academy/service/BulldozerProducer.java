@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer {
-    private static final int SIZE = 3;
 
     @Override
     public List<Bulldozer> get() {
