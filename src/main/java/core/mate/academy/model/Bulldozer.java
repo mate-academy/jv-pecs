@@ -1,16 +1,21 @@
 package core.mate.academy.model;
 
 public class Bulldozer extends Machine {
-    private int bumperSize;
+    private String bumperSize;
+
+    public Bulldozer(String bumperSize, String name, String color) {
+        super(name, color);
+        this.bumperSize = bumperSize;
+    }
 
     public Bulldozer() {
     }
 
-    public void setBumperSize(int bumperSize) {
+    public void setBumperSize(String bumperSize) {
         this.bumperSize = bumperSize;
     }
 
-    public int getBumperSize() {
+    public String getBumperSize() {
         return bumperSize;
     }
 

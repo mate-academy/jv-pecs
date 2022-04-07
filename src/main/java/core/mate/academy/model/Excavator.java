@@ -1,16 +1,21 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
-    private int ledgeSize;
+    private String ledgeSize;
+
+    public Excavator(String ledgeSize, String name, String color) {
+        super(name, color);
+        this.ledgeSize = ledgeSize;
+    }
 
     public Excavator() {
     }
 
-    public void setLedgeSize(int ledgeSize) {
+    public void setLedgeSize(String ledgeSize) {
         this.ledgeSize = ledgeSize;
     }
 
-    public int getLedgeSize() {
+    public String getLedgeSize() {
         return ledgeSize;
     }
 
