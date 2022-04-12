@@ -19,7 +19,7 @@ public interface MachineService<T extends Machine> {
      * @return the list of machines
      */
 
-    List<Machine> getAll(Class type);
+    List<Machine> getAll(Class<? extends Machine> type);
 
     /**
      * Fill the machines list with passed value
@@ -29,7 +29,7 @@ public interface MachineService<T extends Machine> {
      * @param value    - any object of machine sub class
      */
 
-    void fill(List<Object> machines, Object value);
+    void fill(List<? super Machine> machines, Machine value);
 
     /**
      * Call the method doWork() from each machine.
