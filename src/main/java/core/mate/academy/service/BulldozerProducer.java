@@ -5,12 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer {
-
     @Override
     public List<Bulldozer> get() {
-        Bulldozer model = new Bulldozer();
+        Bulldozer bulldozer = new Bulldozer();
         List<Bulldozer> bulldozers = new ArrayList<>();
-        bulldozers.add(model);
+        bulldozers.add(bulldozer);
         return bulldozers;
     }
 }
