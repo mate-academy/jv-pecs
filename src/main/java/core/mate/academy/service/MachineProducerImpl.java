@@ -14,7 +14,6 @@ public class MachineProducerImpl implements MachineProducer {
     private final Truck truck2 = new Truck();
     private final Excavator excavator = new Excavator();
 
-
     @Override
     public List<? extends Machine> get() {
         return List.of(bulldozer1, truck1, bulldozer2, truck2, bulldozer3, excavator);
