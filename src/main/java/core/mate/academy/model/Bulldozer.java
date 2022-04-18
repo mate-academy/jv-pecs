@@ -1,11 +1,41 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private String runningBase;
+    private String liftMechanism;
+    private double operatingWeight;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(String runningBase, String liftMechanism, double operatingWeight) {
+        this.runningBase = runningBase;
+        this.liftMechanism = liftMechanism;
+        this.operatingWeight = operatingWeight;
+    }
+
+    public String getRunningBase() {
+        return runningBase;
+    }
+
+    public void setRunningBase(String runningBase) {
+        this.runningBase = runningBase;
+    }
+
+    public String getLiftMechanism() {
+        return liftMechanism;
+    }
+
+    public void setLiftMechanism(String liftMechanism) {
+        this.liftMechanism = liftMechanism;
+    }
+
+    public double getOperatingWeight() {
+        return operatingWeight;
+    }
+
+    public void setOperatingWeight(double operatingWeight) {
+        this.operatingWeight = operatingWeight;
     }
 
     @Override
