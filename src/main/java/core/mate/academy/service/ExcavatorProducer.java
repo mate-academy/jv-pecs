@@ -12,7 +12,6 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
         Excavator secondExcavator = new Excavator(false, 0.23, 5);
         secondExcavator.setName("Excavator2");
         secondExcavator.setColor("Orange");
-        List<Excavator> list = List.of(firstExcavator, secondExcavator);
-        return list;
+        return List.of(firstExcavator, secondExcavator);
     }
 }

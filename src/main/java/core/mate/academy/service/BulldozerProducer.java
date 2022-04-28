@@ -12,7 +12,6 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
         Bulldozer secondBulldozer = new Bulldozer(4000, 6000, 2000, 20);
         secondBulldozer.setName("Bulldozer2");
         secondBulldozer.setColor("Orange");
-        List<Bulldozer> list = List.of(firstBulldozer, secondBulldozer);
-        return list;
+        return List.of(firstBulldozer, secondBulldozer);
     }
 }
