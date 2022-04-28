@@ -13,7 +13,6 @@ public class TruckProducer implements MachineProducer<Truck> {
         Truck truck2 = new Truck(6000, 90, 150);
         truck2.setName("Truck2");
         truck2.setColor("Orange");
-        List<Truck> list = List.of(truck1, truck2);
-        return list;
+        return List.of(truck1, truck2);
     }
 }
