@@ -12,7 +12,6 @@ public class TruckProducer implements MachineProducer<Truck> {
         Truck secondTruck = new Truck(6000, 90, 150);
         secondTruck.setName("Truck2");
         secondTruck.setColor("Orange");
-        List<Truck> list = List.of(firstTruck, secondTruck);
-        return list;
+        return List.of(firstTruck, secondTruck);
     }
 }
