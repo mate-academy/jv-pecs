@@ -4,15 +4,15 @@ import core.mate.academy.model.Excavator;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-
     @Override
     public List<Excavator> get() {
-        Excavator excavator1 = new Excavator(true, 0.57, 1);
-        excavator1.setName("Excavator1");
-        excavator1.setColor("White");
-        Excavator excavator2 = new Excavator(false, 0.23, 5);
-        excavator2.setName("Excavator2");
-        excavator2.setColor("Orange");
-        return List.of(excavator1, excavator2);
+        Excavator firstExcavator = new Excavator(true, 0.57, 1);
+        firstExcavator.setName("Excavator1");
+        firstExcavator.setColor("White");
+        Excavator secondExcavator = new Excavator(false, 0.23, 5);
+        secondExcavator.setName("Excavator2");
+        secondExcavator.setColor("Orange");
+        List<Excavator> list = List.of(firstExcavator, secondExcavator);
+        return list;
     }
 }
