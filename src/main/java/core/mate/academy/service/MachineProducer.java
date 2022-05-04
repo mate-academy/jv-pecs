@@ -8,5 +8,5 @@ public interface MachineProducer<T> {
      * In your implementations - create 2-3 models, add them to the list and return
      * @return - the list of models
      */
-    List<Machine> get();
+    List<? super Machine> get();
 }
