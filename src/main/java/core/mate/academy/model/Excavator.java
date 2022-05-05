@@ -6,8 +6,13 @@ package core.mate.academy.model;
  */
 
 public class Excavator extends Machine {
+    private int laddleVolume;
 
     public Excavator() {
+    }
+
+    public void setLaddleVolume(int laddleVolume) {
+        this.laddleVolume = laddleVolume;
     }
 
     @Override
@@ -16,5 +21,3 @@ public class Excavator extends Machine {
     }
 
 }
-
-

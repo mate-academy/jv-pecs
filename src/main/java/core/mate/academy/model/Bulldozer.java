@@ -6,8 +6,13 @@ package core.mate.academy.model;
  */
 
 public class Bulldozer extends Machine {
+    private int laddleWidth;
 
     public Bulldozer() {
+    }
+
+    public void setLaddleWidth(int laddleWidth) {
+        this.laddleWidth = laddleWidth;
     }
 
     @Override
@@ -15,4 +20,3 @@ public class Bulldozer extends Machine {
         System.out.println("Bulldozer started to work");
     }
 }
-
