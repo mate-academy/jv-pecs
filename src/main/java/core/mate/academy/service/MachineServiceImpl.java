@@ -22,9 +22,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
         } else if (type == Truck.class) {
             TruckProducer truckProducer = new TruckProducer();
             return new ArrayList<>(truckProducer.get());
-        } else {
-            return new ArrayList<>();
         }
+        return new ArrayList<>();
     }
 
     @Override
