@@ -14,16 +14,16 @@ public class MachineServiceImpl implements MachineService<Machine> {
         BulldozerProducer bulldozerProducer = new BulldozerProducer();
         ExcavatorProducer excavatorProducer = new ExcavatorProducer();
         TruckProducer truckProducer = new TruckProducer();
-        List<? extends Machine> bulldozers = bulldozerProducer.get();
-        List<? extends Machine> excavators = excavatorProducer.get();
-        List<? extends Machine> trucks = truckProducer.get();
         if (type.equals(Bulldozer.class)) {
+            List<? extends Machine> bulldozers = bulldozerProducer.get();
             return new ArrayList<>(bulldozers);
         }
         if (type.equals(Excavator.class)) {
+            List<? extends Machine> excavators = excavatorProducer.get();
             return new ArrayList<>(excavators);
         }
         if (type.equals(Truck.class)) {
+            List<? extends Machine> trucks = truckProducer.get();
             return new ArrayList<>(trucks);
         }
         return Collections.emptyList();
