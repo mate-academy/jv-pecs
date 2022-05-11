@@ -1,9 +1,9 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Excavator;
-import core.mate.academy.model.Machine;
 import java.util.List;
-public class ExcavatorProduser<T extends Machine> implements MachineProducer<T> {
+
+public class ExcavatorProduser implements MachineProducer<Excavator> {
     @Override
     public List<Excavator> get() {
         Excavator firstExcavator = new Excavator("John Deere", "White", "75G");
