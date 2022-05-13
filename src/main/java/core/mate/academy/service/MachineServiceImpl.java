@@ -22,9 +22,8 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         }
         if (type == Excavator.class) {
             return new ArrayList<>(new ExcavatorProducer().get());
-        } else {
-            return Collections.emptyList();
         }
+        return Collections.emptyList();
     }
 
     @Override
