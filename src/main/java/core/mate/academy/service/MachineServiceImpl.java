@@ -30,17 +30,18 @@ public class MachineServiceImpl implements MachineService {
     }
 
     @Override
-    public void fill(List machines, Object value) {
-//        for (Machine machine: machines) {
-//            machine = value;
-//        }
+    public void startWorking(List machines) {
+        for (int i = 0; i < machines.size(); i++) {
+            Machine machine = (Machine) machines.get(i);
+            machine.doWork();
+        }
     }
 
     @Override
-    public void startWorking(List list) {
-//        for (Machine machine: list) {
-//            machine.doWork();
-//        }
+    public void fill(List machines, Machine value) {
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(i, value);
+        }
     }
 }
 
