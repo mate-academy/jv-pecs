@@ -5,11 +5,21 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int bulldozerDriverAge = 20;
+
     public Bulldozer() {
     }
 
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
+    }
+
+    public int getBulldozerDriverAge() {
+        return bulldozerDriverAge;
+    }
+
+    public void setBulldozerDriverAge(int bulldozerDriverAge) {
+        this.bulldozerDriverAge = bulldozerDriverAge;
     }
 }
