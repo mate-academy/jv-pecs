@@ -6,14 +6,24 @@ package core.mate.academy.model;
  */
 
 public class Excavator extends Machine {
+    private String trackShoeWidth;
     private String model;
 
     public Excavator() {
     }
 
-    public Excavator(String name, String color, String model) {
+    public Excavator(String name, String color, String trackShoeWidth, String model) {
         super(name, color);
+        this.trackShoeWidth = trackShoeWidth;
         this.model = model;
+    }
+
+    public String getTrackShoeWidth() {
+        return trackShoeWidth;
+    }
+
+    public void setTrackShoeWidth(String trackShoeWidth) {
+        this.trackShoeWidth = trackShoeWidth;
     }
 
     public String getModel() {

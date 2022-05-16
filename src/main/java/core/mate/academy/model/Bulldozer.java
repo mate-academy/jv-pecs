@@ -6,23 +6,32 @@ package core.mate.academy.model;
  */
 
 public class Bulldozer extends Machine {
+    private String bladeWidth;
     private String model;
 
     public Bulldozer() {
     }
 
-    public Bulldozer(String name, String color, String model) {
+    public Bulldozer(String name, String color, String bladeWidth, String model) {
         super(name, color);
+        this.bladeWidth = bladeWidth;
         this.model = model;
+    }
+
+    public String getBladeWidth() {
+        return bladeWidth;
+    }
+
+    public void setBladeWidth(String bladeWidth) {
+        this.bladeWidth = bladeWidth;
     }
 
     public String getModel() {
         return model;
     }
 
-    public Bulldozer setModel(String model) {
+    public void setModel(String model) {
         this.model = model;
-        return this;
     }
 
     @Override
