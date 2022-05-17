@@ -13,10 +13,10 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService {
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
-    public List getAll(Class type) {
+    public List getAll(Class<? extends Machine> type) {
         if (type == null) {
             throw new NullPointerException("Please, provide Machine's type!");
         }
@@ -36,17 +36,16 @@ public class MachineServiceImpl implements MachineService {
     }
 
     @Override
-    public void fill(List machines, Machine value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
-    public void startWorking(List machines) {
+    public void startWorking(List<? extends Machine> machines) {
         for (int i = 0; i < machines.size(); i++) {
-            Machine machine = (Machine) machines.get(i);
-            machine.doWork();
+            machines.get(i).doWork();
         }
     }
 }
