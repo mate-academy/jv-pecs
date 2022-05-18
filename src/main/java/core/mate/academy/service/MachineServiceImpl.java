@@ -17,9 +17,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List getAll(Class<? extends Machine> type) {
-        if (type == null) {
-            throw new NullPointerException("Please, provide Machine's type!");
-        }
         if (type == Truck.class) {
             TruckProducer truckProducer = new TruckProducer();
             return truckProducer.get();
