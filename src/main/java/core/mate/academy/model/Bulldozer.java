@@ -5,7 +5,32 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int power;
+    private int width;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(String color, String name, int power, int width) {
+        super(color, name);
+        this.power = power;
+        this.width = width;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
     }
 
     @Override
