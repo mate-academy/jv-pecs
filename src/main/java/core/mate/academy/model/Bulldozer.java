@@ -1,11 +1,34 @@
 package core.mate.academy.model;
 
+import java.util.Random;
+
 /**
  * Add some custom fields that could be only in Bulldozer
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int number;
+    private int year;
+
     public Bulldozer() {
+        this.number = new Random().nextInt(100);
+        this.year = (int)Math.floor(Math.random() * (2022 - 1960 + 1) + 1960);
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
     }
 
     @Override
