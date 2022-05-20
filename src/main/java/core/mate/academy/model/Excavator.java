@@ -12,8 +12,8 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, int wheelAxles, boolean electricDrive) {
-        this.setName(name);
-        this.setColor(color);
+        setName(name);
+        setColor(color);
         this.wheelAxles = wheelAxles;
         this.electricDrive = electricDrive;
     }

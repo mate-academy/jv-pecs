@@ -12,9 +12,10 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, int weigth, boolean isCaterpillar) {
-        this.setName(name);
-        this.setColor(color);
+        setName(name);
+        setColor(color);
         this.isCaterpillar = isCaterpillar;
+        this.weigth = weigth;
     }
 
     @Override

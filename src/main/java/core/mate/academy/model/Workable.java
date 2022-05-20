@@ -1,6 +1,6 @@
 package core.mate.academy.model;
 
-public interface Workable<T extends Machine> {
+public interface Workable {
 
     void doWork();
 }

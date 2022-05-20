@@ -12,8 +12,8 @@ public class Truck extends Machine {
     }
 
     public Truck(String name, String color, int longVehicle, boolean isRoadTrain) {
-        this.setName(name);
-        this.setColor(color);
+        setName(name);
+        setColor(color);
         this.longVehicle = longVehicle;
         this.isRoadTrain = isRoadTrain;
     }
