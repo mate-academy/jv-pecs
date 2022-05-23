@@ -7,12 +7,10 @@ import java.util.Random;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    private double engineVolume;
-    private int year;
+    private double engineVolume = (0.5 + (6.0 - 0.5) * new Random().nextDouble());
+    private int year = 1960 + (int) (Math.random() * 2022);
 
     public Excavator() {
-        this.engineVolume = (0.5 + (6.0 - 0.5) * new Random().nextDouble());
-        this.year = 1960 + (int) (Math.random() * 2022);
     }
 
     public double getEngineVolume() {

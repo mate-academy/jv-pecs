@@ -7,12 +7,10 @@ import java.util.Random;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    private int number;
-    private boolean trailer;
+    private int number = new Random().nextInt(100);
+    private boolean trailer = new Random().nextBoolean();
 
     public Truck() {
-        this.number = new Random().nextInt(100);
-        this.trailer = new Random().nextBoolean();
     }
 
     public boolean isTrailer() {
