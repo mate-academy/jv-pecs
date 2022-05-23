@@ -1,14 +1,13 @@
 package core.mate.academy.model;
 
-import java.util.Random;
-
 /**
  * Add some custom fields that could be only in Excavator
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    private double engineVolume = (0.5 + (6.0 - 0.5) * new Random().nextDouble());
-    private int year = 1960 + (int) (Math.random() * 2022);
+
+    private double engineVolume;
+    private int year;
 
     public Excavator() {
     }
