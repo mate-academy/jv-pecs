@@ -12,8 +12,6 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl<T> implements MachineService<T> {
-    public MachineServiceImpl() {
-    }
 
     @Override
     public List<T> getAll(Class<? extends Machine> type) {

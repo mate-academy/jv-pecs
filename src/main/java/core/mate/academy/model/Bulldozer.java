@@ -11,9 +11,8 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, String dumpShape) {
+        super(name, color);
         this.dumpShape = dumpShape;
-        this.setColor(color);
-        this.setName(name);
     }
 
     @Override
