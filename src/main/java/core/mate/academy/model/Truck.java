@@ -6,18 +6,19 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     private int maxMass;
-    public Truck() {
-    }
 
-    @Override
-    public void doWork() {
-        System.out.println("Truck started to work");
+    public Truck() {
     }
 
     public Truck(String name, String color, int maxMass) {
         this.maxMass = maxMass;
         this.setColor(color);
         this.setName(name);
+    }
+
+    @Override
+    public void doWork() {
+        System.out.println("Truck started to work");
     }
 
     public int getMaxMass() {
