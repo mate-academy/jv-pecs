@@ -16,16 +16,16 @@ public class Excavator extends Machine {
         this.cost = cost;
     }
 
-    @Override
-    public void doWork() {
-        System.out.println("Excavator started to work");
-    }
-
     public int getCost() {
         return cost;
     }
 
     public void setCost(int cost) {
         this.cost = cost;
+    }
+
+    @Override
+    public void doWork() {
+        System.out.println("Excavator started to work");
     }
 }

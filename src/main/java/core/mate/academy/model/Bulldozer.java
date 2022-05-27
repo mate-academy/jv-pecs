@@ -16,16 +16,16 @@ public class Bulldozer extends Machine {
         this.cost = cost;
     }
 
-    @Override
-    public void doWork() {
-        System.out.println("Bulldozer started to work");
-    }
-
     public int getCost() {
         return cost;
     }
 
     public void setCost(int cost) {
         this.cost = cost;
+    }
+
+    @Override
+    public void doWork() {
+        System.out.println("Bulldozer started to work");
     }
 }
