@@ -1,9 +1,5 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
     private boolean hasIdler;
     private String axlesConfiguration;
@@ -15,5 +11,29 @@ public class Truck extends Machine {
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
+    }
+
+    public boolean isHasIdler() {
+        return hasIdler;
+    }
+
+    public void setHasIdler(boolean hasIdler) {
+        this.hasIdler = hasIdler;
+    }
+
+    public String getAxlesConfiguration() {
+        return axlesConfiguration;
+    }
+
+    public void setAxlesConfiguration(String axlesConfiguration) {
+        this.axlesConfiguration = axlesConfiguration;
+    }
+
+    public int getEcoStandard() {
+        return ecoStandard;
+    }
+
+    public void setEcoStandard(int ecoStandard) {
+        this.ecoStandard = ecoStandard;
     }
 }
