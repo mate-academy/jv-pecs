@@ -5,6 +5,10 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private boolean hasIdler;
+    private String axlesConfiguration;
+    private int ecoStandard;
+
     public Truck() {
     }
 
