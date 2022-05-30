@@ -11,6 +11,7 @@ public class Truck extends Machine {
         this.type = type;
         this.number = number;
     }
+
     public String getType() {
         return type;
     }
@@ -32,3 +33,4 @@ public class Truck extends Machine {
         System.out.println("Truck started to work");
     }
 }
+
