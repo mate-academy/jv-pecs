@@ -11,7 +11,6 @@ public class Truck extends Machine {
         this.type = type;
         this.number = number;
     }
-
     public String getType() {
         return type;
     }
