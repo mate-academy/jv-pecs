@@ -11,8 +11,7 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, float enginePower) {
-        setName(name);
-        setColor(color);
+        super(name, color);
         this.enginePower = enginePower;
     }
 
