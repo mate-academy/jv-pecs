@@ -1,16 +1,16 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Truck;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Truck> get() {
-        Truck truckFirst = new Truck();
-        Truck truckSecond = new Truck();
-        Truck truckThird = new Truck();
-        Truck truckFourth = new Truck();
-        List<Truck> truckList = List.of(truckFirst, truckSecond, truckThird, truckFourth);
+        List<Truck> truckList = new ArrayList<>();
+        for (int i = 0; i <= 5; i++) {
+            truckList.add(new Truck());
+        }
         return truckList;
     }
 }
