@@ -1,15 +1,12 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
 public class Excavator extends Machine {
-    public int ipn;
-    public String name;
+    private int ipn;
+    private String name;
 
     public Excavator() {
     }
+
     public Excavator(int ipn, String name) {
         this.ipn = ipn;
         this.name = name;
@@ -18,5 +15,23 @@ public class Excavator extends Machine {
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
+    }
+
+    public int getIpn() {
+        return ipn;
+    }
+
+    public void setIpn(int ipn) {
+        this.ipn = ipn;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 }

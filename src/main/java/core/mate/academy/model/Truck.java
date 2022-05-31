@@ -1,12 +1,9 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
     private int ipn;
     private String mame;
+
     public Truck() {
     }
 
@@ -18,5 +15,21 @@ public class Truck extends Machine {
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
+    }
+
+    public int getIpn() {
+        return ipn;
+    }
+
+    public void setIpn(int ipn) {
+        this.ipn = ipn;
+    }
+
+    public String getMame() {
+        return mame;
+    }
+
+    public void setMame(String mame) {
+        this.mame = mame;
     }
 }
