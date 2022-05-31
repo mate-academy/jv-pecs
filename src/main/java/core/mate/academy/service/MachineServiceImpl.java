@@ -14,12 +14,19 @@ import java.util.Map;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T> implements MachineService<Machine> {
-    private Map<Class<? extends Machine>, List<Machine>> allImpl;
+public class MachineServiceImpl implements MachineService<Machine> {
+    private Map<Class<? extends Machine>, List> allImpl;
+
+    public MachineServiceImpl() {
+        allImpl = new HashMap<>();
+        allImpl.put(Truck.class, new TrackProducer().get());
+        allImpl.put(Excavator.class, new ExcavatorProducer().get());
+        allImpl.put(Bulldozer.class, new BulldozerProducer().get());
+        allImpl.put(Machine.class, new ArrayList<>());
+    }
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        loadingAllImplementations();
         return allImpl.get(type);
     }
 
@@ -33,13 +40,5 @@ public class MachineServiceImpl<T> implements MachineService<Machine> {
     @Override
     public void startWorking(List<? extends Machine> machines) {
         machines.forEach(Workable::doWork);
-    }
-
-    private void loadingAllImplementations() {
-        allImpl = new HashMap<>();
-        allImpl.put(Truck.class, new TrackProducerImpl().get());
-        allImpl.put(Excavator.class, new ExcavatorProducerImpl().get());
-        allImpl.put(Bulldozer.class, new BulldozerProducerImpl().get());
-        allImpl.put(Machine.class, new ArrayList<>());
     }
 }
