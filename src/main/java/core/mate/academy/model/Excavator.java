@@ -1,11 +1,41 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
 public class Excavator extends Machine {
+    private int size;
+    private int gasConsumptionPerHour;
+    private String brand;
+
     public Excavator() {
+    }
+
+    public Excavator(int size, int gasConsumptionPerHour, String brand) {
+        this.size = size;
+        this.gasConsumptionPerHour = gasConsumptionPerHour;
+        this.brand = brand;
+    }
+
+    public void setGasConsumptionPerHour(int gasConsumptionPerHour) {
+        this.gasConsumptionPerHour = gasConsumptionPerHour;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public int getGasConsumptionPerHour() {
+        return gasConsumptionPerHour;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     @Override
