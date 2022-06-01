@@ -8,18 +8,18 @@ import java.util.Collections;
 import java.util.List;
 
 public class MachineServiceImpl<T extends Machine> implements MachineService<Machine> {
-
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        MachineProducer<? extends Machine> listMachines = null;
+        MachineProducer<? extends Machine> machineProducer = null;
         if (type.equals(Bulldozer.class)) {
-            listMachines = new BulldozerProducer();
+            machineProducer = new BulldozerProducer();
         } else if (type.equals(Excavator.class)) {
-            listMachines = new ExcavatorProducer();
+            machineProducer = new ExcavatorProducer();
         } else if (type.equals(Truck.class)) {
-            listMachines = new TruckProducer();
+            machineProducer = new TruckProducer();
         }
-        return listMachines != null ? (List<Machine>) listMachines.get() : Collections.emptyList();
+        return machineProducer != null
+                ? (List<Machine>) machineProducer.get() : Collections.emptyList();
     }
 
     @Override

@@ -1,14 +1,14 @@
 package core.mate.academy.model;
 
 public class Bulldozer extends Machine {
-    private int ipn;
+    private int individualNumber;
     private String name;
 
     public Bulldozer() {
     }
 
     public Bulldozer(int ipn, String name) {
-        this.ipn = ipn;
+        this.individualNumber = ipn;
         this.name = name;
     }
 
@@ -17,12 +17,12 @@ public class Bulldozer extends Machine {
         System.out.println("Bulldozer started to work");
     }
 
-    public int getIpn() {
-        return ipn;
+    public int getIndividualNumber() {
+        return individualNumber;
     }
 
-    public void setIpn(int ipn) {
-        this.ipn = ipn;
+    public void setIndividualNumber(int individualNumber) {
+        this.individualNumber = individualNumber;
     }
 
     @Override
