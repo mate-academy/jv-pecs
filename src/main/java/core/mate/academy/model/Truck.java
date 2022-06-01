@@ -7,9 +7,9 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(int ipn, String mame) {
+    public Truck(int ipn, String name) {
         this.ipn = ipn;
-        this.mame = mame;
+        this.mame = name;
     }
 
     @Override
