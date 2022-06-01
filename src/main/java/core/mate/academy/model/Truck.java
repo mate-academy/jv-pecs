@@ -2,14 +2,14 @@ package core.mate.academy.model;
 
 public class Truck extends Machine {
     private int ipn;
-    private String mame;
+    private String name;
 
     public Truck() {
     }
 
     public Truck(int ipn, String name) {
         this.ipn = ipn;
-        this.mame = name;
+        this.name = name;
     }
 
     @Override
@@ -25,11 +25,11 @@ public class Truck extends Machine {
         this.ipn = ipn;
     }
 
-    public String getMame() {
-        return mame;
+    public String getName() {
+        return name;
     }
 
-    public void setMame(String mame) {
-        this.mame = mame;
+    public void setName(String name) {
+        this.name = name;
     }
 }
