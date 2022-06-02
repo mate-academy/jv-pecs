@@ -9,8 +9,8 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, String maker, String model, int year) {
-        setColor(color);
         setName(name);
+        setColor(color);
         this.maker = maker;
         this.model = model;
         this.year = year;
@@ -38,16 +38,6 @@ public class Bulldozer extends Machine {
 
     public void setYear(int year) {
         this.year = year;
-    }
-
-    @Override
-    public void setName(String name) {
-        super.setName(name);
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
     }
 
     @Override
