@@ -13,8 +13,8 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, int maximumDiggingDepth) {
-        super.setName(name);
-        super.setColor(color);
+        setName(name);
+        setColor(color);
         this.maximumDiggingDepth = maximumDiggingDepth;
     }
 

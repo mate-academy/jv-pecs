@@ -14,8 +14,8 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, int shieldWidth, int shieldHeight) {
-        super.setName(name);
-        super.setColor(color);
+        setName(name);
+        setColor(color);
         this.shieldWidth = shieldWidth;
         this.shieldHeight = shieldHeight;
     }
