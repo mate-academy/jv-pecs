@@ -9,8 +9,7 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, String maker, String model, int year) {
-        setName(name);
-        setColor(color);
+        super(name, color);
         this.maker = maker;
         this.model = model;
         this.year = year;

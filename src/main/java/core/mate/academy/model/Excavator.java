@@ -9,8 +9,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, int size, int gasConsumptionPerHour, String brand) {
-        setName(name);
-        setColor(color);
+        super(name, color);
         this.size = size;
         this.gasConsumptionPerHour = gasConsumptionPerHour;
         this.brand = brand;
