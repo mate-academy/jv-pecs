@@ -7,22 +7,19 @@ import core.mate.academy.model.Truck;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-
     @Override
     public List<? extends Machine> getAll(Class type) {
+        List<? extends Machine> output = List.of();
         if (type.equals(Truck.class)) {
-            TruckProducer truckProducer = new TruckProducer();
-            return truckProducer.get();
+            output = new TruckProducer().get();
         }
         if (type.equals(Excavator.class)) {
-            ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-            return excavatorProducer.get();
+            output = new ExcavatorProducer().get();
         }
         if (type.equals(Bulldozer.class)) {
-            BulldozerProducer bulldozerProducer = new BulldozerProducer();
-            return bulldozerProducer.get();
+            output = new BulldozerProducer().get();
         }
-        return List.of();
+        return output;
     }
 
     @Override
