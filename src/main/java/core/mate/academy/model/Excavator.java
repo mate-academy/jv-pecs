@@ -8,7 +8,9 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(int size, int gasConsumptionPerHour, String brand) {
+    public Excavator(String name, String color, int size, int gasConsumptionPerHour, String brand) {
+        setName(name);
+        setColor(color);
         this.size = size;
         this.gasConsumptionPerHour = gasConsumptionPerHour;
         this.brand = brand;
@@ -36,6 +38,16 @@ public class Excavator extends Machine {
 
     public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    @Override
+    public void setName(String name) {
+        super.setName(name);
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
     }
 
     @Override

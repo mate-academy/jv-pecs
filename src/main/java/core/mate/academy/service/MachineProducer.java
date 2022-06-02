@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface MachineProducer<M extends Machine> {
 
-    List<Object> get();
+    List<M> get();
 }

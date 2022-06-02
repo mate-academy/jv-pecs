@@ -8,7 +8,9 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(String model, int wheelBase, int horsePower) {
+    public Truck(String name, String color, String model, int wheelBase, int horsePower) {
+        setName(name);
+        setColor(color);
         this.model = model;
         this.wheelBase = wheelBase;
         this.horsePower = horsePower;
@@ -36,6 +38,16 @@ public class Truck extends Machine {
 
     public void setHorsePower(int horsePower) {
         this.horsePower = horsePower;
+    }
+
+    @Override
+    public void setName(String name) {
+        super.setName(name);
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
     }
 
     @Override
