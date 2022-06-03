@@ -4,5 +4,5 @@ import core.mate.academy.model.Machine;
 import java.util.List;
 
 public interface MachineProducer<T extends Machine> {
-    List get();
+    List<? extends T> get();
 }
