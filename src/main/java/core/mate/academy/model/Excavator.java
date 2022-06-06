@@ -11,8 +11,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, int maximumBucketReach) {
-        super.setName(name);
-        super.setColor(color);
+        super(name, color);
         this.maximumBucketReach = maximumBucketReach;
     }
 

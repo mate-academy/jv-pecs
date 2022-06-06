@@ -4,7 +4,8 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import java.util.LinkedList;
+
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -20,7 +21,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         } else if (type == Truck.class) {
             return new TruckProducer().get();
         } else {
-            return new LinkedList<>();
+            return Collections.emptyList();
         }
     }
 
