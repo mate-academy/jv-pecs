@@ -1,7 +1,6 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Truck;
-
 import java.util.LinkedList;
 import java.util.List;
 
