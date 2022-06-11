@@ -19,9 +19,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
             return new ExcavatorProducer().get();
         } else if (type == Truck.class) {
             return new TruckProducer().get();
-        } else {
-            return Collections.emptyList();
         }
+        return Collections.emptyList();
     }
 
     @Override
