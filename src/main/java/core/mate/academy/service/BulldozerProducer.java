@@ -8,8 +8,8 @@ import java.util.List;
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
     public List<Bulldozer> get() {
-        return new ArrayList<>(Arrays.asList(new Bulldozer("Bulldozer1", "blue", "123456"),
-                new Bulldozer("Bulldozer2", "white", "723456"),
-                new Bulldozer("Bulldozer3", "black", "323456")));
+        return new ArrayList<>(Arrays.asList(new Bulldozer("Bulldozer1", "blue", 123),
+                new Bulldozer("Bulldozer2", "white", 723),
+                new Bulldozer("Bulldozer3", "black", 234)));
     }
 }

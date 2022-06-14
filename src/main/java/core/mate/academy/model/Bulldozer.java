@@ -5,16 +5,27 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int bladeWeight;
+
     public Bulldozer() {
-        super("", "", "");
+        super("", "");
     }
 
-    public Bulldozer(String name, String color, String serial) {
-        super(name, color, serial);
+    public Bulldozer(String name, String color, int bladeWeight) {
+        super(name, color);
+        this.bladeWeight = bladeWeight;
     }
 
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
+    }
+
+    public int getBladeWeight() {
+        return bladeWeight;
+    }
+
+    public void setBladeWeight(int bladeWeight) {
+        this.bladeWeight = bladeWeight;
     }
 }
