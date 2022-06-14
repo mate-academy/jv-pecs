@@ -7,11 +7,11 @@ import java.util.List;
 public class ExcavatorProducer implements MachineProducer<Excavator> {
     @Override
     public List<Excavator> get() {
-        Excavator excavator10 = new Excavator("Caterpillar 10", "Yellow", 30);
-        Excavator excavator20 = new Excavator("Caterpillar", "Yellow", 50);
+        Excavator firstExcavator = new Excavator("Caterpillar 10", "Yellow", 30);
+        Excavator secondExcavator = new Excavator("Caterpillar", "Yellow", 50);
         List<Excavator> excavators = new LinkedList<>();
-        excavators.add(excavator10);
-        excavators.add(excavator20);
+        excavators.add(firstExcavator);
+        excavators.add(secondExcavator);
         return excavators;
     }
 }

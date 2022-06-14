@@ -7,11 +7,11 @@ import java.util.List;
 public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Truck> get() {
-        Truck truckRenault = new Truck("Renault", "Red", 10, 20);
-        Truck truckMercedes = new Truck("Mercedes", "Black", 10, 21);
+        Truck firstTruck = new Truck("Renault", "Red", 10, 20);
+        Truck secondTruck = new Truck("Mercedes", "Black", 10, 21);
         List<Truck> trucks = new LinkedList<>();
-        trucks.add(truckRenault);
-        trucks.add(truckMercedes);
+        trucks.add(firstTruck);
+        trucks.add(secondTruck);
         return trucks;
     }
 }
