@@ -8,7 +8,6 @@ public class Truck extends Machine {
     private int numberOfTrailer;
 
     public Truck() {
-        super("", "");
     }
 
     public Truck(String name, String color, int numberOfTrailer) {
