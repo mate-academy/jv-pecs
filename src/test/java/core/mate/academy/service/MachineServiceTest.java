@@ -120,5 +120,4 @@ public class MachineServiceTest {
         List<Truck> trucks = List.of(new Truck());
         machineService.startWorking(trucks);
     }
-
 }
