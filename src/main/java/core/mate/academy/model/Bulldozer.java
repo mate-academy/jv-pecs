@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int hoursOfWork;
+    private int salaryForWork;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(String name, String color, int hoursOfWork, int salaryForWork) {
+        this.hoursOfWork = hoursOfWork;
+        this.salaryForWork = salaryForWork;
     }
 
     @Override
