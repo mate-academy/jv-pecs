@@ -12,6 +12,7 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, int hoursOfWork, int salaryForWork) {
+        super(name, color);
         this.hoursOfWork = hoursOfWork;
         this.salaryForWork = salaryForWork;
     }

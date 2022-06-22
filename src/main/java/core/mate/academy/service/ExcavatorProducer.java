@@ -5,12 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer {
-
     @Override
     public List<Excavator> get() {
         List<Excavator> excavators = new ArrayList<>();
-        excavators.add(new Excavator("E-20", "black", 30000, "Ivanov"));
-        excavators.add(new Excavator("E-33","yellow", 20000, "Petrov"));
+        excavators.add(new Excavator("E-20", "black",30000, "Ivanov"));
+        excavators.add(new Excavator("E-55","purple",20000, "Petrov"));
         return excavators;
     }
 }

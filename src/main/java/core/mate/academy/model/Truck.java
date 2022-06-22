@@ -12,6 +12,7 @@ public class Truck extends Machine {
     }
 
     public Truck(String name, String color, int weightInTons, int salaryForDistance) {
+        super(name, color);
         this.weightInTons = weightInTons;
         this.salaryForDistance = salaryForDistance;
     }

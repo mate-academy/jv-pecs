@@ -12,6 +12,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, int salaryForMonth, String driverName) {
+        super(name, color);
         this.salaryForMonth = salaryForMonth;
         this.driverName = driverName;
     }
