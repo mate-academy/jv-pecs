@@ -18,7 +18,6 @@ public class Truck extends Machine {
         this.weighOfTruck = weighOfTruck;
         this.heightOfTruck = heightOfTruck;
         this.hoursOfWorkTruck = hoursOfWorkTruck;
-
     }
 
     @Override

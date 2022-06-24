@@ -18,7 +18,6 @@ public class Bulldozer extends Machine {
         this.weightOfBulldozer = weightOfBulldozer;
         this.heightOfBulldozer = heightOfBulldozer;
         this.hoursOfWorkBulldozer = hoursOfWorkBulldozer;
-
     }
 
     @Override
