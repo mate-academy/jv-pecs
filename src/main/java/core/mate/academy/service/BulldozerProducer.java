@@ -12,6 +12,5 @@ public class BulldozerProducer implements MachineProducer {
         bulldozers.add(new Bulldozer("Mercedes", "White", 11, 3, 17));
         bulldozers.add(new Bulldozer("Subaru", "White", 17, 6, 546));
         return bulldozers;
-
     }
 }
