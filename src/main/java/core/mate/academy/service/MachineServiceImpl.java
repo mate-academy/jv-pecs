@@ -10,10 +10,10 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<M> implements MachineService<M> {
+public class MachineServiceImpl<M extends Machine> implements MachineService<M> {
 
     @Override
-    public List<Machine> getAll(Class<? extends Machine> type) {
+    public List<M> getAll(Class<? extends M> type) {
         MachineProducer machineProducer = null;
         if (type.equals(Truck.class)) {
             machineProducer = new TruckProducer();
@@ -32,11 +32,10 @@ public class MachineServiceImpl<M> implements MachineService<M> {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
-
     }
 
     @Override
-    public void startWorking(List<? extends Machine> machines) {
+    public void startWorking(List<? extends M> machines) {
 
     }
 }

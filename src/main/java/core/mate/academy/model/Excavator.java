@@ -8,8 +8,8 @@ public class Excavator extends Machine {
     private int bucketCapacity;
     private int age;
 
-    public Excavator(String name,String color,int bucketCapacity, int age) {
-        super(name,color);
+    public Excavator(String name, String color, int bucketCapacity, int age) {
+        super(name, color);
         this.bucketCapacity = bucketCapacity;
         this.age = age;
     }
