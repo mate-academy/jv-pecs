@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class MachineServiceImpl<Machine> implements MachineService<Machine> {
     @Override
-    public List<Machine> getAll(Class type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         return null;
     }
 
