@@ -6,13 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-
     @Override
     public List<? extends Machine> get() {
-        List<Truck> truckList = new ArrayList<>();
-        truckList.add(new Truck());
-        truckList.add(new Truck());
-        truckList.add(new Truck());
-        return truckList;
+        List<Truck> trucks = new ArrayList<>();
+        trucks.add(new Truck());
+        trucks.add(new Truck());
+        trucks.add(new Truck());
+        return trucks;
     }
 }

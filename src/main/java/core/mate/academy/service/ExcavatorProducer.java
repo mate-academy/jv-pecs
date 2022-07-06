@@ -6,13 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-
     @Override
     public List<? extends Machine> get() {
-        List<Excavator> excavatorList = new ArrayList<>();
-        excavatorList.add(new Excavator());
-        excavatorList.add(new Excavator());
-        excavatorList.add(new Excavator());
-        return excavatorList;
+        List<Excavator> excavators = new ArrayList<>();
+        excavators.add(new Excavator());
+        excavators.add(new Excavator());
+        excavators.add(new Excavator());
+        return excavators;
     }
 }
