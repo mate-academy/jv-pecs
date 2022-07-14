@@ -7,7 +7,12 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
     private double bucketCapacity;
 
+    public Excavator(String name, double bucketCapacity, String color) {
+        this.bucketCapacity = bucketCapacity;
+    }
+
     public Excavator() {
+        super();
     }
 
     public double getBucketCapacity() {
