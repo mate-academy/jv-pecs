@@ -1,19 +1,12 @@
 package core.mate.academy.service;
 
-import java.util.List;
-import java.util.Collections;
-import core.mate.academy.model.Machine;
-import core.mate.academy.service.BulldozerProducer;
-import core.mate.academy.service.ExcavatorProducer;
-import core.mate.academy.service.TruckProducer;
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
+import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
+import java.util.Collections;
+import java.util.List;
 
-
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
@@ -40,8 +33,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-            for (Machine machine : machines) {
-                machine.doWork();
-            }
+        for (Machine machine : machines) {
+            machine.doWork();
         }
+    }
 }
