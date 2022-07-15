@@ -4,6 +4,7 @@ public class Truck extends Machine {
     private String equipmentType;
 
     public Truck(String name, String equipmentType, String color) {
+        super(name, color);
         this.equipmentType = equipmentType;
     }
 

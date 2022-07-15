@@ -4,6 +4,7 @@ public class Bulldozer extends Machine {
     private String baseOfBulldozer;
 
     public Bulldozer(String name, String baseOfBulldozer, String color) {
+        super(name, color);
         this.baseOfBulldozer = baseOfBulldozer;
     }
 

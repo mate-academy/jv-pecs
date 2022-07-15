@@ -4,6 +4,7 @@ public class Excavator extends Machine {
     private double bucketCapacity;
 
     public Excavator(String name, double bucketCapacity, String color) {
+        super(name, color);
         this.bucketCapacity = bucketCapacity;
     }
 
