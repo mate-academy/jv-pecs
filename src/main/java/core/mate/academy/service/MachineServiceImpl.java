@@ -4,12 +4,10 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.ListIterator;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-
     @Override
     public List<? extends Machine> getAll(Class type) {
         if (Truck.class.equals(type)) {
@@ -19,16 +17,12 @@ public class MachineServiceImpl implements MachineService<Machine> {
         } else if (Bulldozer.class.equals(type)) {
             return new BulldozerProducer().get();
         }
-        return new ArrayList<>();
+        return Collections.emptyList();
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Machine value) {
-        ListIterator<? super Machine> machinesList = machines.listIterator();
-        while (machinesList.hasNext()) {
-            machinesList.next();
-            machinesList.set(value);
-        }
+    public void fill(List<? super Machine> machines, Machine machine) {
+        Collections.fill(machines, machine);
     }
 
     @Override

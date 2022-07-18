@@ -7,8 +7,10 @@ import java.util.List;
 public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<? extends Truck> get() {
-        List<Truck> truckList = new ArrayList<>();
-        truckList.add(new Truck());
-        return truckList;
+        List<Truck> trucks = new ArrayList<>();
+        trucks.add(new Truck("MAN","white","refrigerator", 30, 20));
+        trucks.add(new Truck("MERSEDES","blue","platform", 20,15));
+        trucks.add(new Truck("SCANIA","gold","awning", 60,40));
+        return trucks;
     }
 }
