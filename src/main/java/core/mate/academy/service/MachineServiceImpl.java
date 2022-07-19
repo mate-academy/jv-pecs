@@ -1,41 +1,38 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
+import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    public List<Machine> getAll(Class<? extends Machine> type) {
-        MachineProducer<? extends Machine> machineProducer;
-        switch (type.getSimpleName()) {
-            case "Bulldozer":
-                machineProducer = new BulldozerProducer();
-                break;
-            case "Excavator":
-                machineProducer = new ExcavatorProducer();
-                break;
-            case "Truck":
-                machineProducer = new TruckProducer();
-                break;
-            default:
-                return new ArrayList<Machine>();
+    public List getAll(Class<? extends Machine> type) {
+        if (type == Bulldozer.class) {
+            return new BulldozerProducer().get();
+        } else if (type == Excavator.class) {
+            return new ExcavatorProducer().get();
+        } else if (type == Truck.class) {
+            return new TruckProducer().get();
+        } else {
+            return new ArrayList<Machine>();
         }
-        return (List<Machine>) machineProducer.get();
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Machine value) {
+    public void fill(List<? super Machine> machines, Machine machine) {
         for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, value);
+            machines.set(i, machine);
         }
     }
 
     @Override
-    public void startWorking(List<? extends T> machines) {
+    public void startWorking(List<? extends Machine> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }

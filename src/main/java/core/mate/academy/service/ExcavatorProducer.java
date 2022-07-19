@@ -7,8 +7,8 @@ import java.util.List;
 public class ExcavatorProducer implements MachineProducer<Excavator> {
     @Override
     public List<Excavator> get() {
-        List<Excavator> list = new ArrayList<>();
-        list.add(new Excavator(25, "E1", "red"));
-        return list;
+        List<Excavator> excavators = new ArrayList<>();
+        excavators.add(new Excavator("E1", "red", 25));
+        return excavators;
     }
 }

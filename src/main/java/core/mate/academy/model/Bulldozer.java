@@ -10,10 +10,9 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public Bulldozer(Integer power, String name, String color) {
+    public Bulldozer(String name, String color, Integer power) {
+        super(name, color);
         this.power = power;
-        setName(name);
-        setColor(color);
     }
 
     public Integer getPower() {

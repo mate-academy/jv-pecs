@@ -10,10 +10,9 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(Integer weight, String name, String color) {
+    public Excavator(String name, String color, Integer weight) {
+        super(name, color);
         this.weight = weight;
-        setName(name);
-        setColor(color);
     }
 
     public Integer getWeight() {
