@@ -7,9 +7,9 @@ import java.util.List;
 public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Machine> get() {
-        Truck Truck_One = new Truck("Truck_One", "black", "SuperCargo");
-        Truck Truck_Two = new Truck("Truck_Two", "blue", "Standard");
-        Truck Truck_Three = new Truck("Truck_Three", "green", "Wagon");
-        return List.of(Truck_One, Truck_Two, Truck_Three);
+        Truck truckOne = new Truck("truckOne", "black", "SuperCargo");
+        Truck truckTwo = new Truck("truckTwo", "blue", "Standard");
+        Truck truckThree = new Truck("truckThree", "green", "Wagon");
+        return List.of(truckOne, truckTwo, truckThree);
     }
 }
