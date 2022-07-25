@@ -8,7 +8,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         MachineProducer<? extends Machine> machineProducer;
@@ -21,7 +20,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         } else {
             return Collections.emptyList();
         }
-        return (List<Machine>) machineProducer.get();
+        return machineProducer.get();
     }
 
     @Override
