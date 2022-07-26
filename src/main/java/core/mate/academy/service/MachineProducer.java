@@ -3,7 +3,7 @@ package core.mate.academy.service;
 import core.mate.academy.model.Machine;
 import java.util.List;
 
-public interface MachineProducer {
+public interface MachineProducer<T extends Machine> {
     int SIZE = 3;
-    List<? extends Machine> get();
+    List<T> get();
 }

@@ -7,11 +7,11 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MachineServiceImpl implements MachineService {
+public class MachineServiceImpl implements MachineService<Machine> {
     private MachineProducer machines;
 
     @Override
-    public List<? extends Machine> getAll(Class type) {
+    public List<Machine> getAll(Class type) {
         if (type == Bulldozer.class) {
             machines = new BulldozerProducer();
             return machines.get();
