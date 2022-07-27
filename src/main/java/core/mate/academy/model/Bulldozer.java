@@ -6,12 +6,8 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public void setEnginePower(int enginePower) {
-        this.enginePower = enginePower;
-    }
-
-    public int getEnginePower() {
-        return enginePower;
+    public Bulldozer(String name, String color) {
+        super(name, color);
     }
 
     @Override
