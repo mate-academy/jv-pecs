@@ -12,8 +12,8 @@ public class Bulldozer extends Machine {
 
     public Bulldozer(int caterpillarWidth, String name, String color) {
         this.caterpillarWidth = caterpillarWidth;
-        this.setName(name);
-        this.setColor(color);
+        setName(name);
+        setColor(color);
     }
 
     @Override

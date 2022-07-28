@@ -12,8 +12,8 @@ public class Excavator extends Machine {
 
     public Excavator(int volume, String name, String color) {
         this.bucketVolume = volume;
-        this.setName(name);
-        this.setColor(color);
+        setName(name);
+        setColor(color);
     }
 
     @Override
