@@ -7,15 +7,22 @@ package core.mate.academy.model;
 public class Bulldozer extends Machine {
     private String type;
     private double dozerCapacity;
-    private int numberOFTeeth;
+    private int numberOfTeeth;
+
     public Bulldozer() {
     }
-    public Bulldozer (String name, String color, String type,
-                      double dozerCapacity, int numberOFTeeth) {
+
+    private Bulldozer(String name, String color, String type,
+                      double dozerCapacity, int numberOfTeeth) {
         super(name, color);
         this.type = type;
         this.dozerCapacity = dozerCapacity;
-        this.numberOFTeeth = numberOFTeeth;
+        this.numberOfTeeth = numberOfTeeth;
+    }
+
+    public static Bulldozer create(String name, String color, String type,
+                               double dozerCapacity, int numberOfTeeth) {
+        return new Bulldozer(name, color, type, dozerCapacity, numberOfTeeth);
     }
 
     public String getType() {
@@ -34,12 +41,12 @@ public class Bulldozer extends Machine {
         this.dozerCapacity = dozerCapacity;
     }
 
-    public int getNumberOFTeeth() {
-        return numberOFTeeth;
+    public int getNumberOfTeeth() {
+        return numberOfTeeth;
     }
 
-    public void setNumberOFTeeth(int numberOFTeeth) {
-        this.numberOFTeeth = numberOFTeeth;
+    public void setNumberOfTeeth(int numberOfTeeth) {
+        this.numberOfTeeth = numberOfTeeth;
     }
 
     @Override

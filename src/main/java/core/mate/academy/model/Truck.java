@@ -9,6 +9,9 @@ public class Truck extends Machine {
     private int numberOfAxles;
     private double carryingCapacity;
 
+    public Truck() {
+    }
+
     private Truck(String name, String color, int maxSpeed,
                   int numberOfAxles, double carryingCapacity) {
         super(name, color);
@@ -17,7 +20,9 @@ public class Truck extends Machine {
         this.carryingCapacity = carryingCapacity;
     }
 
-    public Truck() {
+    public static Truck create(String name, String color, int maxSpeed,
+                          int numberOfAxles, double carryingCapacity) {
+        return new Truck(name, color, maxSpeed, numberOfAxles, carryingCapacity);
     }
 
     public int getMaxSpeed() {

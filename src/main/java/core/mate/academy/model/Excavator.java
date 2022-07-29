@@ -1,28 +1,32 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
 public class Excavator extends Machine {
-    private String typeOfChassis;
+    private String size;
     private double diggingDepth;
     private boolean hasHydraulicHummer;
 
-    private Excavator(String name, String color, String typeOfChassis,
+    public Excavator() {
+    }
+
+    private Excavator(String name, String color, String size,
                       double diggingDepth, boolean hasHydraulicHummer) {
         super(name, color);
-        this.typeOfChassis = typeOfChassis;
+        this.size = size;
         this.diggingDepth = diggingDepth;
         this.hasHydraulicHummer = hasHydraulicHummer;
     }
 
-    public String getTypeOfChassis() {
-        return typeOfChassis;
+    public static Excavator create(String name, String color, String size,
+                               double diggingDepth, boolean hasHydraulicHummer) {
+        return new Excavator(name, color, size, diggingDepth, hasHydraulicHummer);
     }
 
-    public void setTypeOfChassis(String typeOfChassis) {
-        this.typeOfChassis = typeOfChassis;
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public double getDiggingDepth() {
