@@ -15,5 +15,4 @@ public class TruckProducer implements MachineProducer<Truck> {
                 95, 4, 32.3);
         return List.of(man, ford, mercedes);
     }
-
 }

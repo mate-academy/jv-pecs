@@ -33,6 +33,5 @@ public class MachineServiceImpl implements MachineService<Machine> {
         for (Machine machine : machines) {
             machine.doWork();
         }
-
     }
 }
