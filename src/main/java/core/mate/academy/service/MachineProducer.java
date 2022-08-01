@@ -7,4 +7,3 @@ public interface MachineProducer {
 
     List<? extends Machine> get();
 }
-

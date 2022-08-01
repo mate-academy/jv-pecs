@@ -28,6 +28,3 @@ public class Bulldozer extends Machine {
         this.tankCapacity = tankCapacity;
     }
 }
-
-
-

@@ -28,4 +28,3 @@ public class Excavator extends Machine {
         this.grabCapacity = grabCapacity;
     }
 }
-
