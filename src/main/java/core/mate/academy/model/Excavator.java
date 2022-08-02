@@ -1,8 +1,8 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
-    int bucket_volume;
-    int weight;
+    private int bucketVolume;
+    private int weight;
 
     public Excavator() {
     }
@@ -12,12 +12,12 @@ public class Excavator extends Machine {
         System.out.println("Excavator started to work");
     }
 
-    public int getBucket_volume() {
-        return bucket_volume;
+    public int getBucketVolume() {
+        return bucketVolume;
     }
 
-    public void setBucket_volume(int bucket_volume) {
-        this.bucket_volume = bucket_volume;
+    public void setBucketVolume(int bucketVolume) {
+        this.bucketVolume = bucketVolume;
     }
 
     public int getWeight() {

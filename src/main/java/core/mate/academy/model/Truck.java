@@ -1,8 +1,8 @@
 package core.mate.academy.model;
 
 public class Truck extends Machine {
-    int horsepower;
-    double engineVolume;
+    private int horsepower;
+    private double engineVolume;
 
     public Truck() {
     }
