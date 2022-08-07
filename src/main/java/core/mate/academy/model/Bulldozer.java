@@ -5,7 +5,16 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int power;
+    private String manufacturer;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(int power, String manufacturer, String color) {
+        this.power = power;
+        this.manufacturer = manufacturer;
+        setColor(color);
     }
 
     @Override
