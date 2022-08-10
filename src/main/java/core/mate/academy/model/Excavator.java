@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private double backetVolume;
+
     public Excavator() {
+    }
+
+    public double getBacketVolume() {
+        return backetVolume;
+    }
+
+    public void setBacketVolume(double backetVolume) {
+        this.backetVolume = backetVolume;
     }
 
     @Override
