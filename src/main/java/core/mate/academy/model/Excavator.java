@@ -10,12 +10,10 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public double getBacketVolume() {
-        return backetVolume;
-    }
-
-    public void setBacketVolume(double backetVolume) {
+    public Excavator(String name, String color, double backetVolume) {
         this.backetVolume = backetVolume;
+        setName(name);
+        setColor(color);
     }
 
     @Override

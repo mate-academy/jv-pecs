@@ -10,12 +10,10 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public boolean isTracked() {
-        return isTracked;
-    }
-
-    public void setTracked(boolean tracked) {
-        isTracked = tracked;
+    public Bulldozer(String name, String color, boolean isTracked) {
+        this.isTracked = isTracked;
+        setName(name);
+        setColor(color);
     }
 
     @Override

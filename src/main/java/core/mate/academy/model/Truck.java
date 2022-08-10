@@ -10,12 +10,10 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public double getLuggageVolume() {
-        return luggageVolume;
-    }
-
-    public void setLuggageVolume(double luggageVolume) {
+    public Truck(String name, String color, double luggageVolume) {
         this.luggageVolume = luggageVolume;
+        setName(name);
+        setColor(color);
     }
 
     @Override
