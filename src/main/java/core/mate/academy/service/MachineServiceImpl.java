@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService {
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<? extends Machine> getAll(Class type) {
         List<? extends Machine> machines = new ArrayList<>();
@@ -30,7 +30,10 @@ public class MachineServiceImpl implements MachineService {
     }
 
     @Override
-    public void startWorking(List list) {
+    public void startWorking(List<? extends Machine> list) {
+        for (Machine machine: list) {
+            machine.doWork();
+        }
     }
 
     @Override

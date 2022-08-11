@@ -7,7 +7,7 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
     private int size;
     private double bucketVolume;
-    private String typeExcavator;
+    private String type;
 
     public Excavator() {
     }
@@ -33,11 +33,11 @@ public class Excavator extends Machine {
         this.bucketVolume = bucketVolume;
     }
 
-    public String getTypeExcavator() {
-        return typeExcavator;
+    public String getType() {
+        return type;
     }
 
-    public void setTypeExcavator(String typeExcavator) {
-        this.typeExcavator = typeExcavator;
+    public void setType(String type) {
+        this.type = type;
     }
 }

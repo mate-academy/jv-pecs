@@ -6,7 +6,7 @@ package core.mate.academy.model;
  */
 public class Bulldozer extends Machine {
     private int year;
-    private String madeIn;
+    private String country;
     private int weight;
 
     public Bulldozer() {
@@ -14,7 +14,6 @@ public class Bulldozer extends Machine {
 
     @Override
     public void doWork() {
-
         System.out.println("Bulldozer started to work");
     }
 
@@ -26,12 +25,12 @@ public class Bulldozer extends Machine {
         this.year = year;
     }
 
-    public String getMadeIn() {
-        return madeIn;
+    public String getCountry() {
+        return country;
     }
 
-    public void setMadeIn(String madeIn) {
-        this.madeIn = madeIn;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public int getWeight() {

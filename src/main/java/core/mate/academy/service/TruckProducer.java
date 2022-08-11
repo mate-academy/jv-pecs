@@ -1,21 +1,20 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.LinkedList;
 import java.util.List;
 
-public class TruckProducer implements MachineProducer {
+public class TruckProducer implements MachineProducer<Truck> {
 
     @Override
-    public List<? extends Machine> get() {
-        Truck truck = new Truck();
-        Truck truck1 = new Truck();
-        truck.setKindOfFuel("hybrid");
-        truck1.setLength(12);
+    public List<Truck> get() {
+        Truck firstTruck = new Truck();
+        Truck secondTruck = new Truck();
+        firstTruck.setFuelType("hybrid");
+        secondTruck.setLength(12);
         List<Truck> trucks = new LinkedList<>();
-        trucks.add(truck);
-        trucks.add(truck1);
+        trucks.add(firstTruck);
+        trucks.add(secondTruck);
         return trucks;
     }
 }

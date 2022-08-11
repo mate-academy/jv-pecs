@@ -6,8 +6,8 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     private int length;
-    private String typeTruck;
-    private String kindOfFuel;
+    private String type;
+    private String fuelType;
 
     public Truck() {
     }
@@ -25,19 +25,19 @@ public class Truck extends Machine {
         this.length = length;
     }
 
-    public String getTypeTruck() {
-        return typeTruck;
+    public String getType() {
+        return type;
     }
 
-    public void setTypeTruck(String typeTruck) {
-        this.typeTruck = typeTruck;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getKindOfFuel() {
-        return kindOfFuel;
+    public String getFuelType() {
+        return fuelType;
     }
 
-    public void setKindOfFuel(String kindOfFuel) {
-        this.kindOfFuel = kindOfFuel;
+    public void setFuelType(String fuelType) {
+        this.fuelType = fuelType;
     }
 }
