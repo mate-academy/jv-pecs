@@ -7,6 +7,11 @@ package core.mate.academy.model;
 public class Truck extends Machine {
     private String trailerModel;
 
+    public Truck(String name, String color, String trailerModel) {
+        super(name, color);
+        this.trailerModel = trailerModel;
+    }
+
     public Truck() {
     }
 

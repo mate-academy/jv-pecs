@@ -7,6 +7,11 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
     private String type;
 
+    public Excavator(String name, String color, String type) {
+        super(name, color);
+        this.type = type;
+    }
+
     public Excavator() {
     }
 
