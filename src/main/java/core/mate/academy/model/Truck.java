@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private double luggageVolume;
+
     public Truck() {
+    }
+
+    public Truck(String name, String color, double luggageVolume) {
+        this.luggageVolume = luggageVolume;
+        setName(name);
+        setColor(color);
     }
 
     @Override
