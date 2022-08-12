@@ -1,6 +1,10 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
+import core.mate.academy.model.Truck;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -12,13 +16,13 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List getAll(Class<? extends Machine> type) {
-        if (type.getSimpleName().equals("Truck")) {
+        if (type == Truck.class) {
             return new ArrayList(new TruckProducer().get());
         }
-        if (type.getSimpleName().equals("Bulldozer")) {
+        if (type == Bulldozer.class) {
             return new ArrayList(new BulldozerProducer().get());
         }
-        if (type.getSimpleName().equals("Excavator")) {
+        if (type == Excavator.class) {
             return new ArrayList(new ExcavatorProducer().get());
         }
         return new ArrayList();
@@ -34,6 +38,5 @@ public class MachineServiceImpl implements MachineService<Machine> {
         for (Machine machine : machines) {
             machine.doWork();
         }
-
     }
 }
