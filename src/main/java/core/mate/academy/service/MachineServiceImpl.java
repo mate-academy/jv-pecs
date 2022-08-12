@@ -18,13 +18,10 @@ public class MachineServiceImpl implements MachineService<Machine> {
         switch (type.getSimpleName()) {
             case NAME_BULLDOZER:
                 return new ArrayList<>(new BulldozerProducer().get());
-
             case NAME_EXCAVATOR:
                 return new ArrayList<>(new ExcavatorProducer().get());
-
             case NAME_TRUCK:
                 return new ArrayList<>(new TruckProducer().get());
-
             default:
                 return new ArrayList<>();
         }
