@@ -5,19 +5,21 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    private int paramExcavator1;
-    private String paramExcavator2;
+    private int operatingWeight;
+    private String size;
 
     public Excavator() {
     }
 
-    public Excavator(int paramExcavator1, String paramExcavator2) {
-        this.paramExcavator1 = paramExcavator1;
-        this.paramExcavator2 = paramExcavator2;
+    public Excavator(String color, String name, int operatingWeight, String size) {
+        super(color, name);
+        this.operatingWeight = operatingWeight;
+        this.size = size;
     }
 
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
     }
+
 }
