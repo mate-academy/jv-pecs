@@ -8,7 +8,6 @@ public class Excavator extends Machine {
     private int bucketCapacity;
 
     public Excavator() {
-        super();
     }
 
     public Excavator(String name, String color, int bucketCapacity) {
