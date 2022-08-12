@@ -6,7 +6,7 @@ import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
     @Override
-    public List<? super Truck> get() {
+    public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
         trucks.add(new Truck("Mersedes", "silver", 40));
         trucks.add(new Truck("Volvo", "white", 42));
