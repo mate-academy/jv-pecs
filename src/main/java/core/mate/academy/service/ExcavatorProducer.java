@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer extends Excavator implements MachineProducer<Excavator> {
-
     @Override
     public List<Excavator> get() {
         List<Excavator> excavatorList = new ArrayList<>();
