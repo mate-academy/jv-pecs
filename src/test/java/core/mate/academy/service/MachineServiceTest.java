@@ -52,7 +52,7 @@ public class MachineServiceTest {
     @Test
     public void fill_bulldozerValue() {
         List<Object> machines = new ArrayList<>();
-        int randomSize = new Random().nextInt(100);
+        int randomSize = new Random().nextInt(10);
         for (int i = 0; i < randomSize; i++) {
             machines.add(new Object());
         }
