@@ -7,6 +7,11 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String walkingMode, String bladeType) {
+        this.walkingMode = walkingMode;
+        this.bladeType = bladeType;
+    }
+
     public String getWalkingMode() {
         return walkingMode;
     }

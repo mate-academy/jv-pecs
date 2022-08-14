@@ -7,6 +7,11 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String bucketCapacity, String driveType) {
+        this.bucketCapacity = bucketCapacity;
+        this.driveType = driveType;
+    }
+
     public String getBucketCapacity() {
         return bucketCapacity;
     }

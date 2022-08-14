@@ -7,6 +7,11 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String horsepower, String tireDesign) {
+        this.horsepower = horsepower;
+        this.tireDesign = tireDesign;
+    }
+
     public String getHorsepower() {
         return horsepower;
     }
