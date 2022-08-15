@@ -23,10 +23,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Excavator.class) {
             machineProducer = new ExcavatorProducer();
         }
-        if (machineProducer == null) {
             return Collections.emptyList();
-        }
-        return machineProducer.get();
     }
 
     @Override
