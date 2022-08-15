@@ -15,7 +15,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     public <T extends Machine> List<Machine> getAll(Class<T> type) {
         MachineProducer machineProducer = null;
         if (type == Bulldozer.class) {
-            machineProducer = new BulldozerProducer();
+            return new BulldozerProducer().get();
         }
         if (type == Truck.class) {
             machineProducer = new TruckProducer();
