@@ -7,9 +7,6 @@ import core.mate.academy.model.Truck;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public <T extends Machine> List<Machine> getAll(Class<T> type) {
@@ -23,7 +20,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Excavator.class) {
             machineProducer = new ExcavatorProducer();
         }
-            return Collections.emptyList();
+        return Collections.emptyList();
     }
 
     @Override
