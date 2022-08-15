@@ -11,9 +11,9 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
         Bulldozer firstBulldozer = new Bulldozer();
         Bulldozer secondBulldozer = new Bulldozer();
         Bulldozer thirdBulldozer = new Bulldozer();
-        bulldozerList.add(bulldozer1);
-        bulldozerList.add(bulldozer2);
-        bulldozerList.add(bulldozer3);
-        return bulldozerList;
+        bulldozers.add(firstBulldozer);
+        bulldozers.add(secondBulldozer);
+        bulldozers.add(thirdBulldozer);
+        return bulldozers;
     }
 }
