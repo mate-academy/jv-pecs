@@ -7,13 +7,13 @@ import java.util.List;
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
     public List<Bulldozer> get() {
-        Bulldozer bulldozer = new Bulldozer(false, 100);
-        Bulldozer bulldozer1 = new Bulldozer(true, 200);
-        Bulldozer bulldozer3 = new Bulldozer(true, 0);
+        Bulldozer bulldozerOne = new Bulldozer(false, 100);
+        Bulldozer bulldozerTwo = new Bulldozer(true, 200);
+        Bulldozer bulldozerThree = new Bulldozer(true, 0);
         List<Bulldozer> bulldozers = new ArrayList<>();
-        bulldozers.add(bulldozer);
-        bulldozers.add(bulldozer1);
-        bulldozers.add(bulldozer3);
+        bulldozers.add(bulldozerOne);
+        bulldozers.add(bulldozerTwo);
+        bulldozers.add(bulldozerThree);
         return bulldozers;
     }
 }
