@@ -1,16 +1,13 @@
 package core.mate.academy.service.impl;
 
-import core.mate.academy.enums.ExcavatorUsage;
-import core.mate.academy.model.Excavator;
-import core.mate.academy.model.Machine;
-import core.mate.academy.service.MachineProducer;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import static core.mate.academy.enums.ExcavatorUsage.DEMOLITION;
 import static core.mate.academy.enums.ExcavatorUsage.DIGGING;
 import static core.mate.academy.enums.ExcavatorUsage.MINING;
+
+import core.mate.academy.model.Excavator;
+import core.mate.academy.service.MachineProducer;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer {
     @Override

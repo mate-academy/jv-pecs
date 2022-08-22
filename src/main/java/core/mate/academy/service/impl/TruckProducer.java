@@ -1,16 +1,13 @@
 package core.mate.academy.service.impl;
 
-import core.mate.academy.enums.TruckSize;
-import core.mate.academy.model.Machine;
-import core.mate.academy.model.Truck;
-import core.mate.academy.service.MachineProducer;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import static core.mate.academy.enums.TruckSize.HEAVY;
 import static core.mate.academy.enums.TruckSize.LIGHT;
 import static core.mate.academy.enums.TruckSize.MEDIUM;
+
+import core.mate.academy.model.Truck;
+import core.mate.academy.service.MachineProducer;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TruckProducer implements MachineProducer {
     @Override

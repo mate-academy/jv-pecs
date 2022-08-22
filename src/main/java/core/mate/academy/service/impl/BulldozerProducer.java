@@ -1,15 +1,12 @@
 package core.mate.academy.service.impl;
 
-import core.mate.academy.enums.BulldozerVariant;
-import core.mate.academy.model.Bulldozer;
-import core.mate.academy.model.Machine;
-import core.mate.academy.service.MachineProducer;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import static core.mate.academy.enums.BulldozerVariant.ARMORED;
 import static core.mate.academy.enums.BulldozerVariant.REMOTE_CONTROLLED;
+
+import core.mate.academy.model.Bulldozer;
+import core.mate.academy.service.MachineProducer;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BulldozerProducer implements MachineProducer {
     @Override

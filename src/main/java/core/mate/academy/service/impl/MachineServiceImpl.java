@@ -5,7 +5,6 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import core.mate.academy.service.MachineService;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +41,4 @@ public class MachineServiceImpl implements MachineService<Machine> {
             machine.doWork();
         }
     }
-
-
 }
