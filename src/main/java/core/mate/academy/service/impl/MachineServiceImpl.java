@@ -24,14 +24,13 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type.equals(Truck.class)) {
             machines = new TruckProducer().get();
         }
-        return (List<Machine>) machines;
+        return new ArrayList<>(machines);
     }
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
-            machines.remove(i);
-            machines.add(i, value);
+            machines.set(i, value);
         }
     }
 
