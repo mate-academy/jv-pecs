@@ -6,22 +6,24 @@ import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final Map<
+            Class<? extends Machine>,
+            MachineProducer<? extends Machine>
+            > producersMap = new HashMap<>() {{
+                put(Bulldozer.class, new BulldozerProducer());
+                put(Excavator.class, new ExcavatorProducer());
+                put(Truck.class, new TruckProducer());
+    }};
+
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        List<? extends Machine> machines = new ArrayList<>();
-        if (type.equals(Bulldozer.class)) {
-            machines = new BulldozerProducer().get();
-        }
-        if (type.equals(Excavator.class)) {
-            machines = new ExcavatorProducer().get();
-        }
-        if (type.equals(Truck.class)) {
-            machines = new TruckProducer().get();
-        }
-        return (List<Machine>) machines;
+        MachineProducer<? extends Machine> producer = producersMap.get(type);
+        return producer == null ? Collections.emptyList() : new ArrayList<>(producer.get());
     }
 
     @Override
