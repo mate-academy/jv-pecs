@@ -11,14 +11,14 @@ import java.util.List;
 import java.util.Map;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private final Map<
-            Class<? extends Machine>,
-            MachineProducer<? extends Machine>
-            > producersMap = new HashMap<>() {{
-                put(Bulldozer.class, new BulldozerProducer());
-                put(Excavator.class, new ExcavatorProducer());
-                put(Truck.class, new TruckProducer());
-    }};
+    private final Map<Class<? extends Machine>, MachineProducer<? extends Machine>> producersMap
+            = new HashMap<>();
+
+    {
+        producersMap.put(Bulldozer.class, new BulldozerProducer());
+        producersMap.put(Excavator.class, new ExcavatorProducer());
+        producersMap.put(Truck.class, new TruckProducer());
+    }
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
