@@ -1,18 +1,18 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
-    private int excInt;
-    private String excStr;
-    private boolean excBool;
+    private int serialNumber;
+    private String model;
+    private boolean isElectric;
 
     public Excavator() {
 
     }
 
-    public Excavator(int excInt, String excStr, boolean excBool) {
-        this.excInt = excInt;
-        this.excStr = excStr;
-        this.excBool = excBool;
+    public Excavator(int serialNumber, String model, boolean isElectric) {
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.isElectric = isElectric;
     }
 
     @Override

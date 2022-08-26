@@ -1,18 +1,18 @@
 package core.mate.academy.model;
 
 public class Truck extends Machine {
-    private int truckInt;
-    private String truckStr;
-    private boolean truckBool;
+    private int serialNumber;
+    private String model;
+    private boolean isElectric;
 
     public Truck() {
 
     }
 
-    public Truck(int truckInt, String truckStr, boolean truckBool) {
-        this.truckInt = truckInt;
-        this.truckStr = truckStr;
-        this.truckBool = truckBool;
+    public Truck(int serialNumber, String model, boolean isElectric) {
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.isElectric = isElectric;
     }
 
     @Override
