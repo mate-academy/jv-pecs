@@ -1,14 +1,10 @@
 package core.mate.academy.model;
 
-import core.mate.academy.service.MachineProducer;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Add some custom fields that could be only in Bulldozer
  * Do not remove no-args constructor
  */
-public class Bulldozer<T extends Machine> extends Machine implements MachineProducer<T> {
+public class Bulldozer extends Machine {
     private int dozerBladeWidth;
     private int dozerBladeHeight;
     private String dozerBladeForm;
@@ -37,12 +33,5 @@ public class Bulldozer<T extends Machine> extends Machine implements MachineProd
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
-    }
-
-    @Override
-    public List<T> get() {
-        List<T> bulldozers = new ArrayList<>();
-        bulldozers.add((T) new Bulldozer<>(4, 3, "square"));
-        return bulldozers;
     }
 }

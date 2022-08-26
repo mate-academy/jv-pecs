@@ -1,14 +1,10 @@
 package core.mate.academy.model;
 
-import core.mate.academy.service.MachineProducer;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Add some custom fields that could be only in Excavator
  * Do not remove no-args constructor
  */
-public class Excavator<T extends Machine> extends Machine implements MachineProducer<T> {
+public class Excavator extends Machine {
     private int bucketVolume;
     private int cargoLiftHeight;
     private String drivetrainType;
@@ -46,10 +42,4 @@ public class Excavator<T extends Machine> extends Machine implements MachineProd
         System.out.println("Excavator started to work");
     }
 
-    @Override
-    public List<T> get() {
-        List<T> excavators = new ArrayList<>();
-        excavators.add((T) new Excavator<>(500, 10, "tracks", "sand"));
-        return excavators;
-    }
 }

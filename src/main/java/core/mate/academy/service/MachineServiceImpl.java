@@ -10,37 +10,31 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T>,
-        MachineProducer<T> {
-    private MachineProducer<Bulldozer<T>> bulldozerProducer;
-    private MachineProducer<Truck<T>> truckProducer;
-    private MachineProducer<Excavator<T>> excavatorProducer;
+public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+    private MachineProducer<Bulldozer> bulldozerProducer;
+    private MachineProducer<Truck> truckProducer;
+    private MachineProducer<Excavator> excavatorProducer;
 
     public MachineServiceImpl() {
-        bulldozerProducer = new Bulldozer<>();
-        truckProducer = new Truck<>();
-        excavatorProducer = new Excavator<>();
+        bulldozerProducer = new BulldozerProducer();
+        truckProducer = new TruckProducer();
+        excavatorProducer = new ExcavatorProducer();
     }
 
-    public MachineProducer<Bulldozer<T>> getBulldozerProducer() {
+    public MachineProducer<Bulldozer> getBulldozerProducer() {
         return bulldozerProducer;
     }
 
-    public MachineProducer<Truck<T>> getTruckProducer() {
+    public MachineProducer<Truck> getTruckProducer() {
         return truckProducer;
     }
 
-    public MachineProducer<Excavator<T>> getExcavatorProducer() {
+    public MachineProducer<Excavator> getExcavatorProducer() {
         return excavatorProducer;
     }
 
     @Override
-    public List<T> get() {
-        return null;
-    }
-
-    @Override
-    public List<T> getAll(Class<? extends Machine> type) {
+    public List<T> getAll(Class<? extends T> type) {
         List<? extends Machine> machines = new ArrayList<>();
         if (type.equals(Bulldozer.class)) {
             machines = bulldozerProducer.get();
@@ -55,14 +49,16 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T>,
     }
 
     @Override
-    public void fill(List<? super Machine> machines, T value) {
+    public void fill(List<? super T> machines, T value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
-    public void startWorking(List<? extends Machine> machines) {
-
+    public void startWorking(List<? extends T> machines) {
+        for (T machine : machines) {
+            machine.doWork();
+        }
     }
 }
