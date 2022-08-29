@@ -5,15 +5,11 @@ import core.mate.academy.model.Machine;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer extends Machine implements MachineProducer<Bulldozer> {
-    @Override
-    public void doWork() {
-        System.out.println("Bulldozer started to work");
-    }
+public class BulldozerProducer implements MachineProducer<Machine> {
 
     @Override
-    public List<Bulldozer> get() {
-        List<Bulldozer> bulldozers = new ArrayList<>();
+    public List<Machine> get() {
+        List<Machine> bulldozers = new ArrayList<>();
         bulldozers.add(new Bulldozer(4, 3, "square"));
         return bulldozers;
     }
