@@ -12,7 +12,8 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(String name, String color, String chassisType, String principeOfOperation, int bucketCapacity) {
+    public Excavator(String name, String color, String chassisType,
+                     String principeOfOperation, int bucketCapacity) {
         super(name, color);
         this.chassisType = chassisType;
         this.principeOfOperation = principeOfOperation;

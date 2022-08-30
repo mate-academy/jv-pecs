@@ -12,7 +12,8 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public Bulldozer(String name, String color, int bladeLength, int bladeWeight, int bladeLifting) {
+    public Bulldozer(String name, String color, int bladeLength,
+                     int bladeWeight, int bladeLifting) {
         super(name, color);
         this.bladeLength = bladeLength;
         this.bladeWeight = bladeWeight;
