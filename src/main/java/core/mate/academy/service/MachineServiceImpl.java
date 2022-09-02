@@ -13,15 +13,17 @@ import java.util.List;
  */
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    public List getAll(Class<? extends Machine> type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         if (Bulldozer.class.equals(type)) {
-            return new ArrayList(new BuldozerProducer().get());
-        } else if (Excavator.class.equals(type)) {
-            return new ArrayList(new ExcavatorProducer().get());
-        } else if (Truck.class.equals(type)) {
-            return new ArrayList(new TruckProducer().get());
+            return new ArrayList<>(new BuldozerProducer().get());
         }
-        return new ArrayList();
+        if (Excavator.class.equals(type)) {
+            return new ArrayList<>(new ExcavatorProducer().get());
+        }
+        if (Truck.class.equals(type)) {
+            return new ArrayList<>(new TruckProducer().get());
+        }
+        return new ArrayList<>();
     }
 
     @Override
