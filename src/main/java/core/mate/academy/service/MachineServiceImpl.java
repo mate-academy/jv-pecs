@@ -14,16 +14,16 @@ public class MachineServiceImpl implements MachineService<Machine> {
     private static final String NAME_CLASS_TRUCK = "Truck";
 
     @Override
-    public List getAll(Class<? extends Machine> type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         switch (type.getSimpleName()) {
             case NAME_CLASS_BULLDOZER:
-                return new BulldozerProducer().get();
+                return new ArrayList<>(new BulldozerProducer().get());
             case NAME_CLASS_EXCAVATOR:
-                return new ExcavatorProducer().get();
+                return new ArrayList<>(new ExcavatorProducer().get());
             case NAME_CLASS_TRUCK:
-                return new TruckProducer().get();
+                return new ArrayList<>(new TruckProducer().get());
             default:
-                return new ArrayList<Machine>();
+                return new ArrayList<>();
         }
     }
 
