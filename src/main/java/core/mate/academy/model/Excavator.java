@@ -16,6 +16,10 @@ public class Excavator extends Machine {
     @Override
     public void doWork() {
         isWorking = true;
-        System.out.println("Excavator " + brand + " started to work");
+        if (brand != null) {
+            System.out.println("Excavator " + brand + " started to work");
+        } else {
+            System.out.println("Excavator started to work");
+        }
     }
 }

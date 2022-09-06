@@ -16,6 +16,10 @@ public class Truck extends Machine {
     @Override
     public void doWork() {
         isWorking = true;
-        System.out.println("Truck " + brand + " started to work");
+        if (brand != null) {
+            System.out.println("Truck " + brand + " started to work");
+        } else {
+            System.out.println("Truck started to work");
+        }
     }
 }
