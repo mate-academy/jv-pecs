@@ -5,7 +5,7 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    private String manufacturersOfBulldozer;
+    private String manufacturer;
     private String type;
     private String bladeType;
     private boolean offRoadTires;
