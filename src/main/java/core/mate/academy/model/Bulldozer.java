@@ -13,7 +13,7 @@ public class Bulldozer extends Machine {
     public Bulldozer(String manufacturersOfBulldozer,
                      String type,
                      String bladeType, boolean offRoadTires) {
-        this.manufacturersOfBulldozer = manufacturersOfBulldozer;
+        this.manufacturer = manufacturersOfBulldozer;
         this.type = type;
         this.bladeType = bladeType;
         this.offRoadTires = offRoadTires;
