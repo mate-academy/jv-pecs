@@ -5,7 +5,7 @@ public class Truck extends Machine {
     private int horsePower;
     private boolean isWorking;
 
-    public Truck () {
+    public Truck() {
     }
 
     public Truck(String brand, int horsePower) {
