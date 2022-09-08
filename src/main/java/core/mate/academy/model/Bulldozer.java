@@ -7,7 +7,7 @@ package core.mate.academy.model;
 public class Bulldozer extends Machine {
     private int scoopSize;
 
-    public Bulldozer (String name, String color, int scoopSize) {
+    public Bulldozer(String name, String color, int scoopSize) {
         super(color, name);
         this.scoopSize = scoopSize;
     }

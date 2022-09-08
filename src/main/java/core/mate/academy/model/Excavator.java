@@ -10,6 +10,7 @@ public class Excavator extends Machine {
     public Excavator() {
         super();
     }
+
     public Excavator(String name, String color, int maxLength) {
         super(name, color);
         this.maxLength = maxLength;
