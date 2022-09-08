@@ -4,7 +4,6 @@ public class Truck extends Machine {
     private int maxCapacity;
 
     public Truck() {
-        super();
     }
 
     public Truck(String color, String name, int maxCapacity) {

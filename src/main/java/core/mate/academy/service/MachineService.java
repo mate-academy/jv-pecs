@@ -3,9 +3,6 @@ package core.mate.academy.service;
 import core.mate.academy.model.Machine;
 import java.util.List;
 
-/**
- * Parameterize this service and add its implementation in a separate class.
- */
 public interface MachineService<M extends Machine> {
 
     List<M> getAll(Class<? extends M> type);

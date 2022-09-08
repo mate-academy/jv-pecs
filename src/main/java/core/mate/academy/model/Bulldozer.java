@@ -13,7 +13,6 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer() {
-        super();
     }
 
     public int getScoopSize() {
