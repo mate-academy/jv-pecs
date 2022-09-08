@@ -6,17 +6,12 @@ import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
 
-    /**
-     * In your implementations - create 2-3 models, add them to the list and return
-     *
-     * @return - the list of models
-     */
     @Override
     public List<Bulldozer> get() {
         List<Bulldozer> bulldozers = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            bulldozers.add(new Bulldozer());
-        }
+        bulldozers.add(new Bulldozer("Alfa", "Red", true, 3.0));
+        bulldozers.add(new Bulldozer("Betta", "Blue", false, 4.5));
+        bulldozers.add(new Bulldozer("Gamma", "Yellow", true, 7.0));
         return bulldozers;
     }
 }

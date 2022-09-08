@@ -5,17 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    /**
-     * In your implementations - create 2-3 models, add them to the list and return
-     *
-     * @return - the list of models
-     */
+
     @Override
     public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            trucks.add(new Truck());
-        }
+        trucks.add(new Truck("Ocean", "Pink", 6, true));
+        trucks.add(new Truck("Apple", "Green", 8, false));
+        trucks.add(new Truck("Shark", "Brown", 4, true));
         return trucks;
     }
 }
