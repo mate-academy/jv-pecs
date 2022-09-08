@@ -19,7 +19,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
             machineProducer = new ExcavatorProducer();
         } else if (Bulldozer.class.equals(type)) {
             machineProducer = new BulldozerProducer();
-                } else if (Truck.class.equals(type)) {
+        } else if (Truck.class.equals(type)) {
             machineProducer = new TruckProducer();
         }
         return machineProducer == null ? Collections.emptyList() : machineProducer.get();
