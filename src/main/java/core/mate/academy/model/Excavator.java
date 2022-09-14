@@ -8,8 +8,7 @@ public class Excavator extends Machine {
     private int excavatorPower;
 
     public Excavator(String name, String color, int power) {
-        super.setName(name);
-        super.setColor(color);
+        super(name, color);
         this.excavatorPower = power;
     }
 

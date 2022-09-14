@@ -8,8 +8,7 @@ public class Truck extends Machine {
     private int truckPower;
 
     public Truck(String name, String color, int power) {
-        super.setName(name);
-        super.setColor(color);
+        super(name, color);
         this.truckPower = power;
     }
 
