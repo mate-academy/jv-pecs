@@ -1,5 +1,6 @@
 package core.mate.academy.model;
 
+
 public abstract class Machine implements Workable {
     private String name;
     private String color;
@@ -18,5 +19,9 @@ public abstract class Machine implements Workable {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public void doWork() {
+        System.out.println("Machine started to work");
     }
 }
