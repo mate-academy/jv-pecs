@@ -8,6 +8,9 @@ public class Truck extends Machine {
     private String cockpitColor;
     private int cockpitVolume;
 
+    public Truck() {
+    }
+
     public String getCockpitColor() {
         return cockpitColor;
     }
@@ -22,9 +25,6 @@ public class Truck extends Machine {
 
     public void setCockpitVolume(int cockpitVolume) {
         this.cockpitVolume = cockpitVolume;
-    }
-
-    public Truck() {
     }
 
     @Override
