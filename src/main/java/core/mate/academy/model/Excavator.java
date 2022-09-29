@@ -17,6 +17,22 @@ public class Excavator extends Machine {
         this.manufactureYear = manufactureYear;
     }
 
+    public int getHorsPower() {
+        return horsPower;
+    }
+
+    public void setHorsPower(int horsPower) {
+        this.horsPower = horsPower;
+    }
+
+    public int getManufactureYear() {
+        return manufactureYear;
+    }
+
+    public void setManufactureYear(int manufactureYear) {
+        this.manufactureYear = manufactureYear;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
