@@ -5,24 +5,23 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-
-    private int horsPower;
+    private int horsePower;
     private int manufactureYear;
 
     public Truck() {
     }
 
     public Truck(int horsPower, int manufactureYear) {
-        this.horsPower = horsPower;
+        this.horsePower = horsPower;
         this.manufactureYear = manufactureYear;
     }
 
-    public int getHorsPower() {
-        return horsPower;
+    public int getHorsePower() {
+        return horsePower;
     }
 
-    public void setHorsPower(int horsPower) {
-        this.horsPower = horsPower;
+    public void setHorsePower(int horsePower) {
+        this.horsePower = horsePower;
     }
 
     public int getManufactureYear() {
