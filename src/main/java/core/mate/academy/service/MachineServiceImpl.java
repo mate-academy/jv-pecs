@@ -30,6 +30,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         }
         return new ArrayList<>();
     }
+
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
