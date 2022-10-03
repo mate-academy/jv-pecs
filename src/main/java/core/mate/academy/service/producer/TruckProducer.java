@@ -5,7 +5,6 @@ import core.mate.academy.service.MachineProducer;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-
     @Override
     public List<Truck> get() {
         Truck peterbilt579 = new Truck("579", "red",
