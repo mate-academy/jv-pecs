@@ -10,6 +10,7 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
 
     public ExcavatorProducer() {
         this.excavatorList = new ArrayList<>();
+        excavatorList.add(new Excavator(5, 12d));
     }
 
     @Override

@@ -10,6 +10,7 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
 
     public BulldozerProducer() {
         this.bulldozerList = new ArrayList<>();
+        bulldozerList.add(new Bulldozer(12d));
     }
 
     @Override

@@ -10,6 +10,7 @@ public class TruckProducer implements MachineProducer<Truck> {
 
     public TruckProducer() {
         truckList = new ArrayList<>();
+        truckList.add(new Truck(15d));
     }
 
 

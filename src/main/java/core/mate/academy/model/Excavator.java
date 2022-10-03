@@ -5,14 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    private double degreeOfFreedom;
+    private int degreeOfFreedom;
     private double maxLiftHeight;
 
     public Excavator() {
     }
 
-    public Excavator(double bucketVolume) {
-        this.degreeOfFreedom = bucketVolume;
+    public Excavator(int degreeOfFreedom, double maxLiftHeight) {
+        this.degreeOfFreedom = degreeOfFreedom;
+        this.maxLiftHeight = maxLiftHeight;
     }
 
     @Override
@@ -20,11 +21,11 @@ public class Excavator extends Machine {
         System.out.println("Excavator started to work");
     }
 
-    public double getDegreeOfFreedom() {
+    public int getDegreeOfFreedom() {
         return degreeOfFreedom;
     }
 
-    public Excavator setDegreeOfFreedom(double degreeOfFreedom) {
+    public Excavator setDegreeOfFreedom(int degreeOfFreedom) {
         this.degreeOfFreedom = degreeOfFreedom;
         return this;
     }
