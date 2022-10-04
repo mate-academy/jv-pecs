@@ -9,7 +9,6 @@ public class Excavator extends Machine {
     private int boomLength;
 
     public Excavator() {
-
     }
 
     public Excavator(int bucketVolume, int boomLength) {

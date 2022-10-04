@@ -9,7 +9,6 @@ public class Truck extends Machine {
     private int maxLoad;
 
     public Truck() {
-
     }
 
     public Truck(int engineDisplacement, int maxLoad) {

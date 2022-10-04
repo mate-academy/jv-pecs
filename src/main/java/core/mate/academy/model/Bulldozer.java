@@ -9,7 +9,6 @@ public class Bulldozer extends Machine {
     private int weight;
 
     public Bulldozer() {
-
     }
 
     public Bulldozer(int bladeScale, int weight) {
