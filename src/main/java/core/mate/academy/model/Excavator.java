@@ -10,6 +10,10 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(int speed) {
+        this.speed = speed;
+    }
+
     public void setSpeed(int speed) {
         this.speed = speed;
     }
