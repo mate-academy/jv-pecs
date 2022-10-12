@@ -8,9 +8,6 @@ import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
     private RandomValue randomValue;
-    private Bulldozer greenBulldozer;
-    private Bulldozer yellowBulldozer;
-    private Bulldozer redBulldozer;
     private final List<Bulldozer> bulldozerList;
 
     public BulldozerProducer() {
@@ -20,29 +17,36 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
 
     @Override
     public List<Bulldozer> get() {
-        init();
-        bulldozerList.add(greenBulldozer);
-        bulldozerList.add(yellowBulldozer);
-        bulldozerList.add(redBulldozer);
+        bulldozerList.add(makeDefaultGreenBulldozer());
+        bulldozerList.add(makeDefaultYellowBulldozer());
+        bulldozerList.add(makeDefaultRedBulldozer());
         return bulldozerList;
     }
 
-    @Override
-    public void init() {
-        greenBulldozer = new Bulldozer();
+    private Bulldozer makeDefaultGreenBulldozer() {
+        Bulldozer greenBulldozer = new Bulldozer();
         greenBulldozer.setColor(Color.GREEN.name());
         greenBulldozer.setName(Bulldozer.class.getName());
         greenBulldozer.setLengthOfCrawler(randomValue.getRandomValue());
         greenBulldozer.setWeightBucket(randomValue.getRandomValue());
-        yellowBulldozer = new Bulldozer();
+        return greenBulldozer;
+    }
+
+    private Bulldozer makeDefaultYellowBulldozer() {
+        Bulldozer yellowBulldozer = new Bulldozer();
         yellowBulldozer.setColor(Color.YELLOW.name());
         yellowBulldozer.setName(Bulldozer.class.getName());
         yellowBulldozer.setLengthOfCrawler(randomValue.getRandomValue());
         yellowBulldozer.setWeightBucket(randomValue.getRandomValue());
-        redBulldozer = new Bulldozer();
+        return yellowBulldozer;
+    }
+
+    private Bulldozer makeDefaultRedBulldozer() {
+        Bulldozer redBulldozer = new Bulldozer();
         redBulldozer.setColor(Color.RED.name());
         redBulldozer.setName(Bulldozer.class.getName());
         redBulldozer.setLengthOfCrawler(randomValue.getRandomValue());
         redBulldozer.setWeightBucket(randomValue.getRandomValue());
+        return redBulldozer;
     }
 }

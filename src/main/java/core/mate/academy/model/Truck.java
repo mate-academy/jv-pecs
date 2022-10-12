@@ -16,26 +16,8 @@ public class Truck extends Machine {
         System.out.println("Truck started to work");
     }
 
-    @Override
-    public void setName(String name) {
-        super.setName(name);
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
-    }
-
-    public int getTrailerLength() {
-        return trailerLength;
-    }
-
     public void setTrailerLength(int trailerLength) {
         this.trailerLength = trailerLength;
-    }
-
-    public int getTrailerCapacity() {
-        return trailerCapacity;
     }
 
     public void setTrailerCapacity(int trailerCapacity) {

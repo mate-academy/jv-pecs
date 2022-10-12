@@ -16,26 +16,8 @@ public class Bulldozer extends Machine {
         System.out.println("Bulldozer started to work");
     }
 
-    @Override
-    public void setName(String name) {
-        super.setName(name);
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
-    }
-
-    public int getLengthOfCrawler() {
-        return lengthOfCrawler;
-    }
-
     public void setLengthOfCrawler(int lengthOfCrawler) {
         this.lengthOfCrawler = lengthOfCrawler;
-    }
-
-    public int getWeightBucket() {
-        return weightBucket;
     }
 
     public void setWeightBucket(int weightBucket) {
