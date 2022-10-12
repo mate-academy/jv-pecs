@@ -10,9 +10,6 @@ public class Truck extends Machine {
     private int fuelPer100Km;
 
     public Truck() {
-        color = "Red";
-        cargo = 30;
-        fuelPer100Km = 10;
     }
 
     @Override

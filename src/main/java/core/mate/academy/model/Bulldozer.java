@@ -10,9 +10,6 @@ public class Bulldozer extends Machine {
     private int power;
 
     public Bulldozer() {
-        color = "Yellow";
-        weight = 15;
-        power = 1000;
     }
 
     @Override

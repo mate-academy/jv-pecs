@@ -10,9 +10,6 @@ public class Excavator extends Machine {
     private int fuelPerHour;
 
     public Excavator() {
-        color = "Yellow";
-        weight = 10;
-        fuelPerHour = 20;
     }
 
     @Override
