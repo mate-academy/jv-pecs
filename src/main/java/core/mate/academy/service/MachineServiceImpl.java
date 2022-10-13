@@ -7,16 +7,15 @@ import java.util.List;
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
     @Override
     public List<Machine> getAll(Class<? extends T> type) {
-        List<Machine> machines = new ArrayList<>();
         switch (type.getSimpleName()) {
             case "Bulldozer":
-                return machines = new BulldozerProducer().get();
+                return new BulldozerProducer().get();
             case "Excavator":
-                return machines = new ExcavatorProducer().get();
+                return new ExcavatorProducer().get();
             case "Truck":
-                return machines = new TruckProducer().get();
+                return new TruckProducer().get();
             default:
-                return machines;
+                return new ArrayList<Machine>();
         }
     }
 
