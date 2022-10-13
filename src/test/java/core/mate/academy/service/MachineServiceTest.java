@@ -30,7 +30,7 @@ public class MachineServiceTest {
 
     @Test
     public void getAll_excavatorType() {
-        List<Object> actual = machineService.getAll(Excavator.class);
+        List<Machine> actual = machineService.getAll(Excavator.class);
         assertEquals("The list should contain elements of type Excavator",
             Excavator.class, actual.get(0).getClass());
     }

@@ -5,7 +5,9 @@ import java.util.List;
 /**
  * Parameterize this service and add its implementation in a separate class.
  */
+
 public interface MachineService<T> {
+
     /**
      * Return the list of machines.
      * In the implementation of this method please use your MachineProducer implementations
@@ -15,7 +17,7 @@ public interface MachineService<T> {
      * @param type - any class of Machine sub class. For example: Truck.class or Bulldozer.class
      * @return the list of machines
      */
-    List getAll(Class<? extends T> type);
+    List<T> getAll(Class<? extends T> type);
     /**
      * Fill the machines list with passed value
      * Replace the Object with parametrized value.
