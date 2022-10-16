@@ -32,8 +32,12 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-        for (Machine machine : machines) {
-            machine.doWork();
+        if (machines == null) {
+            throw new NullPointerException();
+        } else {
+            for (Machine machine : machines) {
+                machine.doWork();
+            }
         }
     }
 }
