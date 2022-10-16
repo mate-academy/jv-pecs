@@ -8,14 +8,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class type) {
         if (type == Bulldozer.class) {
-            return new BulldozerProduced().get();
+            return new BulldozerProducer().get();
         } else if (type == Excavator.class) {
             return new ExcavatorProducer().get();
         } else if (type == Truck.class) {
@@ -25,7 +22,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List machines, Object value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         Collections.fill(machines, value);
     }
 
