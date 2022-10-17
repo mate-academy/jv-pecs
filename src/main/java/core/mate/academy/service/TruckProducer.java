@@ -1,6 +1,5 @@
 package core.mate.academy.service;
 
-import core.mate.academy.interfaces.MachineProducer;
 import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package core.mate.academy.interfaces;
+package core.mate.academy.model;
 
 public interface Workable {
 

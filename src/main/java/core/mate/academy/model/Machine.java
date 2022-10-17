@@ -1,7 +1,5 @@
 package core.mate.academy.model;
 
-import core.mate.academy.interfaces.Workable;
-
 public abstract class Machine implements Workable {
     private String name;
     private String color;
