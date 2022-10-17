@@ -1,12 +1,15 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
-import java.util.ArrayList;
-import java.util.List;
+import core.mate.academy.model.Truck;
 
-/**
- * Your implementation of MachineService.
- */
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class MachineServiceImpl implements MachineService<Machine> {
     private static final String EXCAVATOR_SIMPLE_CLASS_NAME = "Excavator";
     private static final String TRUCK_SIMPLE_CLASS_NAME = "Truck";
@@ -15,20 +18,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machines;
-
-        switch (type.getSimpleName()) {
-            case EXCAVATOR_SIMPLE_CLASS_NAME:
-                machines = new ExcavatorProducer().get();
-                break;
-            case TRUCK_SIMPLE_CLASS_NAME:
-                machines = new TruckProducer().get();
-                break;
-            case BULLDOZER_SIMPLE_CLASS_NAME:
-                machines = new BulldozerProducer().get();
-                break;
-            default:
-                machines = new ArrayList<>();
-        }
+        machines = getProducersMap().get(type).get();
         return new ArrayList<>(machines);
     }
 
@@ -42,5 +32,13 @@ public class MachineServiceImpl implements MachineService<Machine> {
         for (Machine machine : machines) {
             machine.doWork();
         }
+    }
+
+    private Map<Class<?>, MachineProducer<?>> getProducersMap() {
+        HashMap<Class<?>, MachineProducer<?>> producers = new HashMap<>();
+        producers.put(Excavator.class, new ExcavatorProducer());
+        producers.put(Truck.class, new TruckProducer());
+        producers.put(Bulldozer.class, new BulldozerProducer());
+        return producers;
     }
 }
