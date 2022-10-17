@@ -6,7 +6,9 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(int weight) {
+    public Excavator(String name, String colour, int weight) {
+        this.setName(name);
+        this.setColor(colour);
         this.weight = weight;
     }
 

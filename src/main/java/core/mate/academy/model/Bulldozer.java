@@ -6,7 +6,9 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public Bulldozer(int size) {
+    public Bulldozer(String name, String colour, int size) {
+        this.setName(name);
+        this.setColor(colour);
         this.size = size;
     }
 

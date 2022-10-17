@@ -6,7 +6,9 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(boolean isLoaded) {
+    public Truck(String name, String colour, boolean isLoaded) {
+        this.setName(name);
+        this.setColor(colour);
         this.isLoaded = isLoaded;
     }
 

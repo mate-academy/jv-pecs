@@ -9,8 +9,8 @@ public class TruckProducer implements MachineProducer {
 
     public TruckProducer() {
         truckList = new ArrayList<>();
-        truckList.add(new Truck(true));
-        truckList.add(new Truck(false));
+        truckList.add(new Truck("MAN", "White", true));
+        truckList.add(new Truck("Ford", "Red", false));
     }
 
     @Override
