@@ -6,8 +6,10 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(int lorryCapacity) {
+    public Truck(int lorryCapacity, String name, String color) {
         this.lorryCapacity = lorryCapacity;
+        super.setName(name);
+        super.setName(color);
     }
 
     public int getLorryCapacity() {
