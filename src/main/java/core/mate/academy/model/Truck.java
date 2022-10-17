@@ -10,6 +10,10 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(int tonnage) {
+        this.tonnage = tonnage;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

@@ -10,6 +10,10 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String size) {
+        this.size = size;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");

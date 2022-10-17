@@ -10,6 +10,10 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String bucketModel) {
+        this.bucketModel = bucketModel;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
