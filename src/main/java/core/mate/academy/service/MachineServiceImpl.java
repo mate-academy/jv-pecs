@@ -10,15 +10,15 @@ import java.util.List;
 import java.util.Map;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private static final String EXCAVATOR_SIMPLE_CLASS_NAME = "Excavator";
-    private static final String TRUCK_SIMPLE_CLASS_NAME = "Truck";
-    private static final String BULLDOZER_SIMPLE_CLASS_NAME = "Bulldozer";
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        List<? extends Machine> machines;
-        machines = getProducersMap().get(type).get();
-        return new ArrayList<>(machines);
+        List<? extends Machine> machines = null;
+        MachineProducer<?> producer = getProducersMap().get(type);
+        if (producer != null) {
+            return new ArrayList<>(producer.get());
+        }
+        return new ArrayList<>();
     }
 
     @Override
