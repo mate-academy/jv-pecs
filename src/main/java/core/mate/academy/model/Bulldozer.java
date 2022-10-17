@@ -5,15 +5,10 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    public static final int DEFAULT_WEIGHT = 30_000;
-    
-    private int weight = DEFAULT_WEIGHT;
+    private final int weight;
 
     public Bulldozer() {
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
+        weight = 30;
     }
 
     @Override

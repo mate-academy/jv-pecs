@@ -5,15 +5,10 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    public static final int DEFAULT_SPEED = 60;
-
-    private int speed = DEFAULT_SPEED;
+    private final int speed;
 
     public Truck() {
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
+        speed = 60;
     }
 
     @Override

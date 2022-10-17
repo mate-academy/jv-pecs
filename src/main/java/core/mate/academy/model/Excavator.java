@@ -5,15 +5,10 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    public static final int DEFAULT_HEIGHT = 15;
-
-    private int height = DEFAULT_HEIGHT;
+    private final int height;
 
     public Excavator() {
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
+        height = 15;
     }
 
     @Override
