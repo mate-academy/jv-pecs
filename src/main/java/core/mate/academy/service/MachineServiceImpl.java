@@ -9,6 +9,7 @@ import core.mate.academy.producers.ExcavatorProducer;
 import core.mate.academy.producers.MachineProducer;
 import core.mate.academy.producers.TruckProducer;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Truck.class) {
             machineProducer = new TruckProducer();
         }
-        return machineProducer == null ? new ArrayList<>() : machineProducer.get();
+        return machineProducer == null ? Collections.emptyList() : machineProducer.get();
     }
 
     @Override
