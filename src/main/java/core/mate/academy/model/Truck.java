@@ -10,7 +10,8 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(int capacity) {
+    public Truck(String name, String color, int capacity) {
+        super(name, color);
         this.capacity = capacity;
     }
 
