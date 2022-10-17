@@ -8,8 +8,8 @@ public class ExcovatorProducer implements MachineProducer<Excavator> {
     @Override
     public List<Excavator> get() {
         List<Excavator> excavators = new ArrayList<>();
-        excavators.add(new Excavator());
-        excavators.add(new Excavator());
+        excavators.add(new Excavator(15));
+        excavators.add(new Excavator(17));
         return excavators;
     }
 }
