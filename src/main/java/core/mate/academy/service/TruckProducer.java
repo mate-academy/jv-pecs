@@ -2,16 +2,16 @@ package core.mate.academy.service;
 
 import core.mate.academy.constant.Color;
 import core.mate.academy.model.Truck;
-import core.mate.academy.util.RandomValue;
+import core.mate.academy.util.RandomValueService;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    private RandomValue randomValue;
+    private RandomValueService randomValue;
     private List<Truck> truckList;
 
     public TruckProducer() {
-        randomValue = new RandomValue();
+        randomValue = new RandomValueService();
         this.truckList = new ArrayList<>();
     }
 

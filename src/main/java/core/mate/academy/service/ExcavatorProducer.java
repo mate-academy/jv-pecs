@@ -2,16 +2,16 @@ package core.mate.academy.service;
 
 import core.mate.academy.constant.Color;
 import core.mate.academy.model.Excavator;
-import core.mate.academy.util.RandomValue;
+import core.mate.academy.util.RandomValueService;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-    private RandomValue randomValue;
+    private RandomValueService randomValue;
     private List<Excavator> listExcavator;
 
     public ExcavatorProducer() {
-        randomValue = new RandomValue();
+        randomValue = new RandomValueService();
         this.listExcavator = new ArrayList<>();
     }
 

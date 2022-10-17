@@ -2,16 +2,16 @@ package core.mate.academy.service;
 
 import core.mate.academy.constant.Color;
 import core.mate.academy.model.Bulldozer;
-import core.mate.academy.util.RandomValue;
+import core.mate.academy.util.RandomValueService;
 import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-    private RandomValue randomValue;
+    private RandomValueService randomValue;
     private final List<Bulldozer> bulldozerList;
 
     public BulldozerProducer() {
-        randomValue = new RandomValue();
+        randomValue = new RandomValueService();
         bulldozerList = new ArrayList<>();
     }
 
