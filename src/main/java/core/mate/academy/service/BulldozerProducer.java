@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
+    private static final double DEFAULT_BUCKET_VOLUME = 12d;
     private final List<Bulldozer> bulldozerList;
 
     public BulldozerProducer() {
         this.bulldozerList = new ArrayList<>();
-        bulldozerList.add(new Bulldozer(12d));
+        bulldozerList.add(new Bulldozer(DEFAULT_BUCKET_VOLUME));
     }
 
     @Override

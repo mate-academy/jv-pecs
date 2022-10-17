@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
+    private static final double DEFAULT_LOAD_CAPACITY = 15d;
     private final List<Truck> truckList;
 
     public TruckProducer() {
         truckList = new ArrayList<>();
-        truckList.add(new Truck(15d));
+        truckList.add(new Truck(DEFAULT_LOAD_CAPACITY));
     }
 
     @Override
