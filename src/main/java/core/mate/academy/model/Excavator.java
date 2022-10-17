@@ -12,8 +12,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, String typeOfExcavator, String typeOfRunningGear) {
-        this.setName(name);
-        this.setColor(color);
+        super(name, color);
         this.typeOfExcavator = typeOfExcavator;
         this.typeOfRunningGear = typeOfRunningGear;
 
