@@ -11,6 +11,7 @@ public class Truck extends Machine {
     }
 
     public Truck(int tonnage) {
+        super();
         this.tonnage = tonnage;
     }
 

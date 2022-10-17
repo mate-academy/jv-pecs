@@ -11,6 +11,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String bucketModel) {
+        super();
         this.bucketModel = bucketModel;
     }
 

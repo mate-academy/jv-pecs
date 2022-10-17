@@ -11,6 +11,7 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String size) {
+        super();
         this.size = size;
     }
 

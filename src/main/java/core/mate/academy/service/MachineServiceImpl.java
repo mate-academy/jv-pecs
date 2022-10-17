@@ -13,21 +13,12 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        MachineProducer machineProducer;
-        List machines;
-
         if (type == Bulldozer.class) {
-            machineProducer = new BulldozerProducer();
-            machines = machineProducer.get();
-            return new ArrayList<>(machines);
+            return new ArrayList<>(new BulldozerProducer().get());
         } else if (type == Excavator.class) {
-            machineProducer = new ExcavatorProducer();
-            machines = machineProducer.get();
-            return new ArrayList<>(machines);
+            return new ArrayList<>(new ExcavatorProducer().get());
         } else if (type == Truck.class) {
-            machineProducer = new TruckProducer();
-            machines = machineProducer.get();
-            return new ArrayList<>(machines);
+            return new ArrayList<>(new TruckProducer().get());
         }
         return new ArrayList<>();
     }
