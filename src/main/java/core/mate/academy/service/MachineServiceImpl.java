@@ -23,7 +23,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     @SuppressWarnings("unchecked")
     @Override
     public <V extends Machine> List<V> getAll(Class<? extends Machine> type) {
-        MachineProducer<? extends Machine> producer = producerMap.getOrDefault(type, null);
+        MachineProducer<? extends Machine> producer = producerMap.get(type);
         return producer == null ? new ArrayList<>() : (List<V>)producer.get();
     }
 
