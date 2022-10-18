@@ -10,15 +10,10 @@ import java.util.List;
 import java.util.Map;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        List<? extends Machine> machines = null;
         MachineProducer<?> producer = getProducersMap().get(type);
-        if (producer != null) {
-            return new ArrayList<>(producer.get());
-        }
-        return new ArrayList<>();
+        return producer != null ? new ArrayList<>(producer.get()) : new ArrayList<>();
     }
 
     @Override
