@@ -26,10 +26,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         MachineProducer<? extends Machine> machineProducer = mapOfMachines.get(type);
-        if (machineProducer != null) {
-            return new ArrayList<>(machineProducer.get());
-        }
-        return Collections.emptyList();
+        return machineProducer != null ? new ArrayList<>(machineProducer.get())
+                : Collections.emptyList();
     }
 
     @Override
