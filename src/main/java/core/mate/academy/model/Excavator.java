@@ -4,7 +4,14 @@ public class Excavator extends Machine {
     private String type;
 
     public Excavator() {
-        this.type = "Excavator";
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override

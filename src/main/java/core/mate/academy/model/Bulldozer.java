@@ -4,7 +4,14 @@ public class Bulldozer extends Machine {
     private String type;
 
     public Bulldozer() {
-        this.type = "Bulldozer";
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override

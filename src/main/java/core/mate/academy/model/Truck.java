@@ -4,7 +4,14 @@ public class Truck extends Machine {
     private String type;
 
     public Truck() {
-        this.type = "Truck";
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
