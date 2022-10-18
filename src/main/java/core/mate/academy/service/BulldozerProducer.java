@@ -6,6 +6,6 @@ import java.util.List;
 
 public class BulldozerProducer implements MachineProducer {
     public List<Bulldozer> get() {
-        return new ArrayList<>();
+        return List.of(new Bulldozer(), new Bulldozer());
     }
 }
