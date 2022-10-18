@@ -10,7 +10,8 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(int maxKg) {
+    public Truck(String name, String color, int maxKg) {
+        super(name, color);
         this.maxKg = maxKg;
     }
 
