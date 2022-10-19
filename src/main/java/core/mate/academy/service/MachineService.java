@@ -7,7 +7,7 @@ public interface MachineService<T extends Machine> {
 
     List<Machine> getAll(Class<? extends T> type);
 
-    void fill(List<? super T > machines, Machine value);
+    void fill(List<? super T> machines, T value);
 
     void startWorking(List<? extends T> machines);
 }
