@@ -11,21 +11,22 @@ public class MachineServiceImpl implements MachineService<Machine> {
     private BuldozerProducer buldozerProducer = new BuldozerProducer();
     private ExcavatorProducer excavatorProducer = new ExcavatorProducer();
     private TruckProducer truckProducer = new TruckProducer();
+    private MachineProducer machineProducer;
 
-    public List<? extends Machine> getMachineService(Class<? extends Machine> type) {
+    public MachineProducer getMachineService(Class<? extends Machine> type) {
         if (type.equals(Bulldozer.class)) {
-            return buldozerProducer.get();
+            return machineProducer = new BuldozerProducer();
         } else if (type.equals(Excavator.class)) {
-            return excavatorProducer.get();
+            return machineProducer = new ExcavatorProducer();
         } else if (type.equals(Truck.class)) {
-            return truckProducer.get();
+            return machineProducer = new TruckProducer();
         }
-        return new ArrayList<>();
+        return ArrayList::new;
     }
 
     @Override
     public List<? extends Machine> getAll(Class type) {
-        List<? extends Machine> machines = getMachineService(type);
+        List<? extends Machine> machines = getMachineService(type).get();
         return machines;
     }
 
