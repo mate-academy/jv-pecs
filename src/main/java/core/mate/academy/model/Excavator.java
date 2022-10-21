@@ -6,10 +6,8 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(String name,String color,float diggingDepth) {
-        super();
-        this.setName(name);
-        this.setColor(color);
+    public Excavator(String name, String color, float diggingDepth) {
+        super(name, color);
         this.diggingDepth = diggingDepth;
     }
 

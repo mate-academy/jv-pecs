@@ -6,10 +6,8 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(String name,String color,float payload) {
-        super();
-        this.setName(name);
-        this.setColor(color);
+    public Truck(String name, String color, float payload) {
+        super(name, color);
         this.payload = payload;
     }
 
