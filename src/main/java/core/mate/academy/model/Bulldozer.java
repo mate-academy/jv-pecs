@@ -7,9 +7,7 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name,String color,String dumpType) {
-        super();
-        this.setName(name);
-        this.setColor(color);
+        super(name, color);
         this.dumpType = dumpType;
     }
 
