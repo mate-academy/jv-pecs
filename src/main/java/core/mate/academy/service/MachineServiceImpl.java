@@ -14,13 +14,13 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class type) {
-        if (Bulldozer.class.equals(type)) {
+        if (Bulldozer.class == type) {
             return new LinkedList<>(new BulldozerProducer().get());
         }
-        if (Excavator.class.equals(type)) {
+        if (Excavator.class == type) {
             return new LinkedList<>(new ExcavatorProducer().get());
         }
-        if (Truck.class.equals(type)) {
+        if (Truck.class == type) {
             return new LinkedList<>(new TruckProducer().get());
         }
         return new LinkedList<>();
@@ -39,6 +39,5 @@ public class MachineServiceImpl implements MachineService<Machine> {
         for (Machine machine : machines) {
             machine.doWork();
         }
-
     }
 }
