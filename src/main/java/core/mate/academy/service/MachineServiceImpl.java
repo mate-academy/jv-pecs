@@ -14,7 +14,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class type) {
-        if (Bulldozer.class.equals(type)) {
+        if (Bulldozer.class == type) {
             return new LinkedList<>(new BulldozerProducer().get());
         }
         if (Excavator.class.equals(type)) {
