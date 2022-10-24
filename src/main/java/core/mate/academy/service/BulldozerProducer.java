@@ -5,8 +5,8 @@ import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
     private final Bulldozer bulldozer0 = new Bulldozer();
-    private final Bulldozer bulldozer1 = new Bulldozer(true,false,8);
-    private final Bulldozer bulldozer2 = new Bulldozer(false,true,6);
+    private final Bulldozer bulldozer1 = new Bulldozer(true, false, 8);
+    private final Bulldozer bulldozer2 = new Bulldozer(false, true, 6);
 
     @Override
     public List<Bulldozer> get() {

@@ -27,11 +27,14 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Machine value) {
+    public void fill(List<? super Machine> machines, T value) {
         machines.replaceAll(ignored -> value);
     }
 
     @Override
     public void startWorking(List<? extends T> machines) {
+        for (T machine: machines) {
+            machine.doWork();
+        }
     }
 }
