@@ -3,7 +3,7 @@ package core.mate.academy.service;
 import core.mate.academy.model.Bulldozer;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer<Bulldozer>{
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     private final Bulldozer bulldozer1 = new Bulldozer();
     private final Bulldozer bulldozer2 = new Bulldozer();
     private final Bulldozer bulldozer3 = new Bulldozer();
