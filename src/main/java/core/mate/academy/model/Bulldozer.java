@@ -5,19 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    private String type;
     private double bladeCapacity;
     private boolean isTrack;
 
     public Bulldozer() {
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
+    public Bulldozer(String name, String color, String manufacturer,
+                     double bladeCapacity, boolean isTrack) {
+        super(name, color, manufacturer);
+        this.bladeCapacity = bladeCapacity;
+        this.isTrack = isTrack;
     }
 
     public double getBladeCapacity() {
