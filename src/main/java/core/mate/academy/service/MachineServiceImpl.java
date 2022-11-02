@@ -27,9 +27,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<Mac
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, value);
-        }
+        machines.replaceAll(ignored -> value);
     }
 
     @Override
