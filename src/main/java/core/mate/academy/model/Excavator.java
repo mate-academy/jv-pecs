@@ -6,10 +6,18 @@ package core.mate.academy.model;
  */
 public class Excavator extends Machine {
     private int unloadingRange;
-    private int diggingDepth;
+    private double diggingDepth;
     private double bucketCapacity;
 
     public Excavator() {
+    }
+
+    public Excavator(String name, String color, String manufacturer,
+                      int unloadingRange, double diggingDepth, double bucketCapacity) {
+        super(name, color, manufacturer);
+        this.unloadingRange = unloadingRange;
+        this.diggingDepth = diggingDepth;
+        this.bucketCapacity = bucketCapacity;
     }
 
     public int getUnloadingRange() {
@@ -20,7 +28,7 @@ public class Excavator extends Machine {
         this.unloadingRange = unloadingRange;
     }
 
-    public int getDiggingDepth() {
+    public double getDiggingDepth() {
         return diggingDepth;
     }
 
