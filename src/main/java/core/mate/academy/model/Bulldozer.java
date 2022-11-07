@@ -6,6 +6,7 @@ package core.mate.academy.model;
  */
 public class Bulldozer extends Machine {
     private int power;
+
     public Bulldozer() {
     }
 
