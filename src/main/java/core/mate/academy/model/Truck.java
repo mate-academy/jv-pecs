@@ -5,17 +5,12 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    private int power;
 
     public Truck() {
     }
 
-    public void setPower(int power) {
-        this.power = power;
-    }
-
-    public int getPower() {
-        return power;
+    public Truck(String name, String color, int power) {
+        super();
     }
 
     @Override
