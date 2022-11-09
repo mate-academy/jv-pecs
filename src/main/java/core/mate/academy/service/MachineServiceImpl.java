@@ -10,7 +10,7 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        MachineProducer machineProducer = typeComparator(type);
+        MachineProducer machineProducer = compareTypeWithMachines(type);
         if (machineProducer == null) {
             return new ArrayList<>();
         }
@@ -31,7 +31,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         }
     }
 
-    private MachineProducer typeComparator(Class<? extends Machine> type) {
+    private MachineProducer compareTypeWithMachines(Class<? extends Machine> type) {
         if (type == null) {
             throw new RuntimeException("Required type is null");
         } else if (type.equals(Bulldozer.class)) {
