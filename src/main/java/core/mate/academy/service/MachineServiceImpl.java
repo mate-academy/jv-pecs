@@ -7,10 +7,10 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MachineServiceImpl implements MachineService<Machine> {
+public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
     @Override
-    public List<Machine> getAll(Class<? extends Machine> type) {
-        MachineProducer machineProducer = compareTypeWithMachines(type);
+    public List<Machine> getAll(Class<? extends T> type) {
+        MachineProducer machineProducer = getProducerByType(type);
         if (machineProducer == null) {
             return new ArrayList<>();
         }
@@ -18,30 +18,27 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Machine value) {
+    public void fill(List<? super T> machines, T value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
-    public void startWorking(List<? extends Machine> list) {
-        for (Machine machine : list) {
+    public void startWorking(List<? extends T> list) {
+        for (T machine : list) {
             machine.doWork();
         }
     }
 
-    private MachineProducer compareTypeWithMachines(Class<? extends Machine> type) {
-        if (type == null) {
-            throw new RuntimeException("Required type is null");
-        } else if (type.equals(Bulldozer.class)) {
+    private MachineProducer getProducerByType(Class<? extends T> type) {
+        if (Bulldozer.class.equals(type)) {
             return new BulldozerProducer();
-        } else if (type.equals(Truck.class)) {
+        } else if (Truck.class.equals(type)) {
             return new TruckProducer();
-        } else if (type.equals(Excavator.class)) {
+        } else if (Excavator.class.equals(type)) {
             return new ExcavatorProducer();
-        } else {
-            return null;
         }
+        return null;
     }
 }
