@@ -8,9 +8,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MachineServiceImpl implements MachineService<Machine> {
+public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+    
     @Override
-    public List<Machine> getAll(Class<? extends Machine> type) {
+    public List<Machine> getAll(Class<? extends T> type) {
         if (type == Truck.class) {
             return new ArrayList<>(new TruckProducer().get());
         }
@@ -20,20 +21,17 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Bulldozer.class) {
             return new ArrayList<>(new BulldozerProducer().get());
         }
-        if (type == Machine.class) {
-            return new ArrayList<>();
-        }
-        return null;
+        return new ArrayList<>();
     }
     
     @Override
-    public void fill(List<? super Machine> machines, Machine value) {
+    public void fill(List<? super T> machines, T value) {
         Collections.fill(machines, value);
     }
     
     @Override
-    public void startWorking(List<? extends Machine> machines) {
-        for (Machine machine : machines) {
+    public void startWorking(List<? extends T> machines) {
+        for (T machine : machines) {
             machine.doWork();
         }
     }
