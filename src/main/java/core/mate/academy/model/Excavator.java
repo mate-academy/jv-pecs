@@ -5,7 +5,26 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int digHeight;
+    private int shovelCapacity;
+
     public Excavator() {
+    }
+
+    public void setDigHeight(int digHeight) {
+        this.digHeight = digHeight;
+    }
+
+    public void setShovelCapacity(int shovelCapacity) {
+        this.shovelCapacity = shovelCapacity;
+    }
+
+    public int getDigHeight() {
+        return digHeight;
+    }
+
+    public int getShovelCapacity() {
+        return shovelCapacity;
     }
 
     @Override
