@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Parameterize this service and add its implementation in a separate class.
  */
-public interface MachineService <T> {
+public interface MachineService<T> {
 
     /**
      * Return the list of machines.
@@ -22,7 +22,8 @@ public interface MachineService <T> {
      * Fill the machines list with passed value
      * Replace the Object with parametrized value.
      * This method should be able to work well with any type of machine passed as 'value'
-     *  @param machines - list of machines to be filled with value
+     *
+     * @param machines - list of machines to be filled with value
      * @param value    - any object of machine sub class
      */
     void fill(List<? super T> machines, T value);
