@@ -35,6 +35,4 @@ public interface MachineService<T> {
      * @param machines - the list of machines
      */
     void startWorking(List<? extends T> machines);
-
-
 }
