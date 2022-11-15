@@ -5,7 +5,13 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int axis;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(int axis) {
+        this.axis = axis;
     }
 
     @Override
@@ -13,3 +19,5 @@ public class Bulldozer extends Machine {
         System.out.println("Bulldozer started to work");
     }
 }
+
+
