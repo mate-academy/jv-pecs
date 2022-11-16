@@ -9,5 +9,4 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
     public List<Bulldozer> get() {
         return List.of(new Bulldozer(2), new Bulldozer(4), new Bulldozer(6));
     }
-
 }

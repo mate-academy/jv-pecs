@@ -18,4 +18,12 @@ public class Truck extends Machine {
     public void doWork() {
         System.out.println("Truck started to work");
     }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
 }

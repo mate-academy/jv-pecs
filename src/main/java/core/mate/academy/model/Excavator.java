@@ -18,4 +18,12 @@ public class Excavator extends Machine {
     public void doWork() {
         System.out.println("Excavator started to work");
     }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
 }

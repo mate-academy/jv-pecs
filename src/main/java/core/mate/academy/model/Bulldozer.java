@@ -18,6 +18,14 @@ public class Bulldozer extends Machine {
     public void doWork() {
         System.out.println("Bulldozer started to work");
     }
+
+    public int getAxis() {
+        return axis;
+    }
+
+    public void setAxis(int axis) {
+        this.axis = axis;
+    }
 }
 
 
