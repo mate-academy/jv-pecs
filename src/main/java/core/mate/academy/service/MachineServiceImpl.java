@@ -9,20 +9,20 @@ import java.util.Collections;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private List<? extends Machine> bulldozers = new BulldozerProducer().get();
-    private List<? extends Machine> excavators = new ExcavatorProducer().get();
-    private List<? extends Machine> trucks = new TruckProducer().get();
+    private MachineProducer<Bulldozer> bulldozers = new BulldozerProducer();
+    private MachineProducer<Excavator> excavators = new ExcavatorProducer();
+    private MachineProducer<Truck> trucks = new TruckProducer();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
-            return new ArrayList<>(bulldozers);
+            return new ArrayList<>(bulldozers.get());
         }
         if (type == Excavator.class) {
-            return new ArrayList<>(excavators);
+            return new ArrayList<>(excavators.get());
         }
         if (type == Truck.class) {
-            return new ArrayList<>(trucks);
+            return new ArrayList<>(trucks.get());
         }
         return Collections.EMPTY_LIST;
     }
