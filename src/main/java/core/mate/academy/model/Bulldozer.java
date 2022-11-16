@@ -11,12 +11,12 @@ public class Bulldozer extends Machine {
 
     public Bulldozer(String name, String color, double bladeLength,
                      double bladeWidth, double bladeHeight, int bladeWeight) {
+        setName(name);
+        setColor(color);
         this.bladeLength = bladeLength;
         this.bladeWidth = bladeWidth;
         this.bladeHeight = bladeHeight;
         this.bladeWeight = bladeWeight;
-        setName(name);
-        setColor(color);
     }
 
     public double getBladeLength() {

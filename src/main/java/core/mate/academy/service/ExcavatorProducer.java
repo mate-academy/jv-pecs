@@ -7,10 +7,13 @@ import java.util.List;
 public class ExcavatorProducer implements MachineProducer<Excavator> {
     @Override
     public List<Excavator> get() {
-        ArrayList<Excavator> excavatorArrayList = new ArrayList<>();
-        excavatorArrayList.add(new Excavator("Volvo", "yellow", "Special", 3));
+        List<Excavator> excavatorArrayList = new ArrayList<>();
+        int volvoNumberOfPumps = 3;
+        int mercedesNumberOfPumps = 4;
+        excavatorArrayList.add(new Excavator("Volvo", "yellow", "Special", volvoNumberOfPumps));
         excavatorArrayList.add(new Excavator());
-        excavatorArrayList.add(new Excavator("Mercedes", "black", "Special-long", 4));
+        excavatorArrayList.add(new Excavator("Mercedes", "black", "Special-long",
+                mercedesNumberOfPumps));
         return excavatorArrayList;
     }
 }
