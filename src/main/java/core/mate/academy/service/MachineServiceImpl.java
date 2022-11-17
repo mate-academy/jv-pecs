@@ -32,7 +32,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
         Collections.fill(machines, value);
-
     }
 
     @Override
