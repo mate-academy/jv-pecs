@@ -2,11 +2,11 @@ package core.mate.academy.model;
 
 public class Excavator extends Machine {
     private int yearService;
-    private String countryOrigin;
+    private String country;
 
     public Excavator(int yearService, String countryOrigin) {
         this.yearService = yearService;
-        this.countryOrigin = countryOrigin;
+        this.country = country;
     }
 
     public Excavator() {
@@ -16,8 +16,8 @@ public class Excavator extends Machine {
         return yearService;
     }
 
-    public String getCountryOrigin() {
-        return countryOrigin;
+    public String getCountry() {
+        return country;
     }
 
     @Override
