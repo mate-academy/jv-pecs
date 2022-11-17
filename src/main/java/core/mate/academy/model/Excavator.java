@@ -4,7 +4,7 @@ public class Excavator extends Machine {
     private int yearService;
     private String country;
 
-    public Excavator(int yearService, String countryOrigin) {
+    public Excavator(int yearService, String country) {
         this.yearService = yearService;
         this.country = country;
     }
