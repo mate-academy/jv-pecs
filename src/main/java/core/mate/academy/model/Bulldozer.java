@@ -12,6 +12,7 @@ public class Bulldozer extends Machine {
         this.service = service;
         this.motor = motor;
     }
+
     public Bulldozer() {
     }
 
