@@ -5,11 +5,14 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    int service;
-    String motor;
+    private int service;
+    private String motor;
+
     public Bulldozer(int service, String motor) {
         this.service = service;
         this.motor = motor;
+    }
+    public Bulldozer() {
     }
 
     public int getService() {
@@ -18,9 +21,6 @@ public class Bulldozer extends Machine {
 
     public String getMotor() {
         return motor;
-    }
-    public Bulldozer() {
-
     }
 
     @Override

@@ -6,21 +6,21 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     int yearProduction;
-    String Manufacturer;
-    public Truck(int yearProduction, String Manufacturer) {
+    String Country;
+
+    public Truck(int yearProduction, String Country) {
         this.yearProduction = yearProduction;
-        this.Manufacturer = Manufacturer;
+        this.Country = Country;
+    }
+    public Truck() {
     }
 
     public int getYearProduction() {
         return yearProduction;
     }
 
-    public String getManufacturer() {
-        return Manufacturer;
-    }
-    public Truck() {
-
+    public String getCountry() {
+        return Country;
     }
 
     @Override
