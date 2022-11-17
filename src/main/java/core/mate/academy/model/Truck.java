@@ -8,7 +8,7 @@ public class Truck extends Machine {
     private int yearProduction;
     private String serviceCountry;
 
-    public Truck(int yearProduction, String Country) {
+    public Truck(int yearProduction, String serviceCountry) {
         this.yearProduction = yearProduction;
         this.serviceCountry = serviceCountry;
     }
