@@ -9,25 +9,31 @@ import java.util.Collections;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private TruckProducer t;
+    private BulldozerProducer b;
+    private ExcavatorProducer e;
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
+        final MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
+        final MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
+        final MachineProducer<Truck> truckProducer = new TruckProducer();
         MachineProducer<? extends Machine> machineProducer;
         if (Bulldozer.class.equals(type)) {
-            machineProducer = new BulldozerProducer();
+            return new ArrayList<>(bulldozerProducer.get());
         } else if (Truck.class.equals(type)) {
-            machineProducer = new TruckProducer();
+            return new ArrayList<>(truckProducer.get());
         } else if (Excavator.class.equals(type)) {
-            machineProducer = new ExcavatorProducer();
+            return new ArrayList<>(excavatorProducer.get());
         } else {
             return new ArrayList<>();
         }
-        List<? extends Machine> machines = machineProducer.get();
-        return new ArrayList<>(machines);
     }
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        Collections.fill(machines, value);
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(i, value);
+        }
     }
 
     @Override
