@@ -12,6 +12,5 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
         excavators.add(new Excavator("Link-Belt", "blue", 1500));
         excavators.add(new Excavator("Terex", "indigo", 4500));
         return excavators;
-
     }
 }

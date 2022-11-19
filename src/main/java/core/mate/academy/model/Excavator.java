@@ -8,12 +8,10 @@ public class Excavator extends Machine {
     private int numberOfHorsepower;
 
     public Excavator() {
-
     }
 
     public Excavator(String name, String color, int numberOfHorsepower) {
-        setName(name);
-        setColor(color);
+        super(name, color);
         this.numberOfHorsepower = numberOfHorsepower;
     }
 

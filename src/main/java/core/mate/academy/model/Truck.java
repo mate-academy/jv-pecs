@@ -8,12 +8,10 @@ public class Truck extends Machine {
     private String typeBySize;
 
     public Truck() {
-
     }
 
     public Truck(String name, String color, String typeBySize) {
-        setName(name);
-        setName(color);
+        super(name, color);
         this.typeBySize = typeBySize;
     }
 
