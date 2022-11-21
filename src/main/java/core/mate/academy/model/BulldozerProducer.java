@@ -4,7 +4,7 @@ import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer<Machine> {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     private List<Machine> list = new ArrayList<>();
 
     public List<Machine> get() {
