@@ -8,11 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
+    private final MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
+    private final MachineProducer<Truck> truckProducer = new TruckProducer();
+
     @Override
-    public List<Machine> getAll(Class type) {
-        BulldozerProducer bulldozerProducer = new BulldozerProducer();
-        ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-        TruckProducer truckProducer = new TruckProducer();
+    public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machines = List.of();
         if (type == Bulldozer.class) {
             machines = bulldozerProducer.get();
