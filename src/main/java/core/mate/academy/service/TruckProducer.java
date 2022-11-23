@@ -7,12 +7,13 @@ import java.util.Random;
 
 public class TruckProducer implements MachineProducer<Truck> {
     private static final int MAX_COUNT = 10;
-    private int randomSize = new Random().nextInt(MAX_COUNT);
+    private static int sizeRandom;
 
     @Override
     public List<Truck> get() {
+        sizeRandom = new Random().nextInt(MAX_COUNT);
         List<Truck> trucks = new ArrayList<>();
-        for (int i = 0; i < MAX_COUNT; i++) {
+        for (int i = 0; i < sizeRandom; i++) {
             trucks.add(new Truck());
         }
         return trucks;

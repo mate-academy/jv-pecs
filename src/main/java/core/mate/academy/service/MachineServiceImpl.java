@@ -14,7 +14,6 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     private static final BulldozerProducer bulldozerProducer = new BulldozerProducer();
     private static final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
     private static final TruckProducer truckProducer = new TruckProducer();
-    private static final List<Machine> machines = new ArrayList<>();
 
     @Override
     public List<T> getAll(Class<? extends T> type) {
@@ -25,11 +24,12 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         } else if (type == Truck.class) {
             return (List<T>) truckProducer.get();
         }
-        return (List<T>) machines;
+        List<T> machines = new ArrayList<>();
+        return machines;
     }
 
     @Override
-    public void fill(List<? super Machine> machines, T value) {
+    public void fill(List<? super T> machines, T value) {
         int size = machines.size();
         for (int i = 0; i < size; i++) {
             machines.set(i, value);
@@ -37,7 +37,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
 
     @Override
-    public void startWorking(List<? extends Machine> machines) {
+    public void startWorking(List<? extends T> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }
