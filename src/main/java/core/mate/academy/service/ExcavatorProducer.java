@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class ExcavatorProducer implements MachineProducer {
+public class ExcavatorProducer implements MachineProducer<Excavator> {
     private static final int MAX_COUNT = 10;
     private int randomSize = new Random().nextInt(MAX_COUNT);
 
