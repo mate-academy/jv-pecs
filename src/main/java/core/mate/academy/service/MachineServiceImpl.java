@@ -11,9 +11,9 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
-    private static final BulldozerProducer bulldozerProducer = new BulldozerProducer();
-    private static final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-    private static final TruckProducer truckProducer = new TruckProducer();
+    private final BulldozerProducer bulldozerProducer = new BulldozerProducer();
+    private final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+    private final TruckProducer truckProducer = new TruckProducer();
 
     @Override
     public List<T> getAll(Class<? extends T> type) {
