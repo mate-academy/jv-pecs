@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class TruckProducer implements MachineProducer<Truck> {
     private static final int MAX_COUNT = 10;
-    private Random random;
+    private Random random = new Random();
 
     @Override
     public List<Truck> get() {

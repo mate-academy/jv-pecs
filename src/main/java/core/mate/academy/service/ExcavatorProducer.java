@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
     private static int MAX_COUNT = 10;
-    private Random random;
+    private Random random = new Random();
 
     @Override
     public List<Excavator> get() {
