@@ -7,22 +7,22 @@ import java.util.List;
 public class ExcavatorProducer implements MachineProducer<Excavator> {
     @Override
     public List<Excavator> get() {
-        Excavator excavator1 = new Excavator();
-        excavator1.setColor("Yellow");
-        excavator1.setName("Komatsu");
+        Excavator excavatorFirst = new Excavator();
+        excavatorFirst.setColor("Yellow");
+        excavatorFirst.setName("Komatsu");
 
-        Excavator excavator2 = new Excavator();
-        excavator2.setColor("Green");
-        excavator2.setName("Liebherr");
+        Excavator excavatorSecond = new Excavator();
+        excavatorSecond.setColor("Green");
+        excavatorSecond.setName("Liebherr");
 
-        Excavator excavator3 = new Excavator();
-        excavator3.setColor("Black");
-        excavator3.setName("Volvo");
+        Excavator excavatorThird = new Excavator();
+        excavatorThird.setColor("Black");
+        excavatorThird.setName("Volvo");
 
         List<Excavator> excavatorList = new ArrayList<>();
-        excavatorList.add(excavator1);
-        excavatorList.add(excavator2);
-        excavatorList.add(excavator3);
+        excavatorList.add(excavatorFirst);
+        excavatorList.add(excavatorSecond);
+        excavatorList.add(excavatorThird);
 
         return excavatorList;
     }
