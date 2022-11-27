@@ -8,8 +8,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, String engine, int motor) {
-        setName(name);
-        setColor(color);
+        setNameColor(name, color);
         this.engine = engine;
         this.motor = motor;
     }

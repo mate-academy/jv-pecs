@@ -8,8 +8,7 @@ public class Truck extends Machine {
     }
 
     public Truck(String name, String color, String owner, int power) {
-        setName(name);
-        setColor(color);
+        setNameColor(name, color);
         this.owner = owner;
         this.power = power;
     }
