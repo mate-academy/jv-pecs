@@ -8,6 +8,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, String engine, int motor) {
+        super(name, color);
         this.engine = engine;
         this.motor = motor;
     }

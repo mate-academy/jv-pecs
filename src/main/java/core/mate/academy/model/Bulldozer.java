@@ -8,6 +8,7 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, int weight, String fuel) {
+        super(name, color);
         this.weight = weight;
         this.fuel = fuel;
     }
