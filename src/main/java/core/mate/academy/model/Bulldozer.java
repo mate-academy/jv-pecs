@@ -8,7 +8,6 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, int weight, String fuel) {
-        constructor();
         this.weight = weight;
         this.fuel = fuel;
     }
