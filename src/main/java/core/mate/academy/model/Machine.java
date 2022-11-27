@@ -20,8 +20,9 @@ public abstract class Machine implements Workable {
         this.color = color;
     }
 
-    public void setNameColor(String name, String color) {
+    public void constructor() {
         this.name = name;
         this.color = color;
+
     }
 }
