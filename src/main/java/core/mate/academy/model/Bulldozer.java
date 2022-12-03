@@ -7,6 +7,12 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String name, String color, int bulldozerIntField, String bulldozerStrField) {
+        super(name, color);
+        this.bulldozerIntField = bulldozerIntField;
+        this.bulldozerStrField = bulldozerStrField;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");

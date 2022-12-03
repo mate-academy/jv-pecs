@@ -7,6 +7,12 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String name, String color, int truckIntField, String truckStrField) {
+        super(name, color);
+        this.truckIntField = truckIntField;
+        this.truckStrField = truckStrField;
+    }
+    
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

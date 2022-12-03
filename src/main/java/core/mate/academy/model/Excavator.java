@@ -6,6 +6,12 @@ public class Excavator extends Machine {
 
     public Excavator() {
     }
+    
+    public Excavator(String name, String color, int excavatorIntField, String excavatorStrField) {
+        super(name, color);
+        this.excavatorIntField = excavatorIntField;
+        this.excavatorStrField = excavatorStrField;
+    }
 
     @Override
     public void doWork() {
