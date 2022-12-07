@@ -30,7 +30,7 @@ public interface MachineService<T extends Machine> {
      * @param value    - any object of machine sub class
      */
 
-    void fill(List<? super Machine> machines, Machine value);
+    void fill(List<? super T> machines, T value);
 
     /**
      * Call the method doWork() from each machine.

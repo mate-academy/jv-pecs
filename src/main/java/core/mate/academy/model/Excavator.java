@@ -26,16 +26,6 @@ public class Excavator extends Machine {
     }
 
     @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    @Override
     public void doWork() {
         System.out.println("Excavator started to work");
     }
