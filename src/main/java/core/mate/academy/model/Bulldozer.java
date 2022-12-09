@@ -14,4 +14,15 @@ public class Bulldozer extends Machine {
     public void doWork() {
         System.out.println("Bulldozer started to work");
     }
+
+    ///////////// delete toString//////////////
+
+    @Override
+    public String toString() {
+        return "Bulldozer{" +
+                "horsePower=" + horsePower +
+                ", chassisType='" + chassisType + "', " +
+                super.toString() +
+                System.lineSeparator();
+    }
 }
