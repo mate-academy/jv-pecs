@@ -10,19 +10,31 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String name, String color, int horsePower, String chassisType) {
+        setName(name);
+        setColor(color);
+        this.horsePower = horsePower;
+        this.chassisType = chassisType;
+    }
+
+    public int getHorsePower() {
+        return horsePower;
+    }
+
+    public void setHorsePower(int horsePower) {
+        this.horsePower = horsePower;
+    }
+
+    public String getChassisType() {
+        return chassisType;
+    }
+
+    public void setChassisType(String chassisType) {
+        this.chassisType = chassisType;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
-    }
-
-    ///////////// delete toString//////////////
-
-    @Override
-    public String toString() {
-        return "Bulldozer{" +
-                "horsePower=" + horsePower +
-                ", chassisType='" + chassisType + "', " +
-                super.toString() +
-                System.lineSeparator();
     }
 }

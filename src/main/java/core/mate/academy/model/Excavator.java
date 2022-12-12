@@ -10,6 +10,29 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String name, String color, int numberOfBuckets, int bucketValue) {
+        setName(name);
+        setColor(color);
+        this.numberOfBuckets = numberOfBuckets;
+        this.bucketValue = bucketValue;
+    }
+
+    public int getNumberOfBuckets() {
+        return numberOfBuckets;
+    }
+
+    public void setNumberOfBuckets(int numberOfBuckets) {
+        this.numberOfBuckets = numberOfBuckets;
+    }
+
+    public int getBucketValue() {
+        return bucketValue;
+    }
+
+    public void setBucketValue(int bucketValue) {
+        this.bucketValue = bucketValue;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

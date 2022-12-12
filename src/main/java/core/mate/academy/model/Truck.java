@@ -10,6 +10,13 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String name, String color, int weight, int value) {
+        setName(name);
+        setColor(color);
+        this.weight = weight;
+        this.value = value;
+    }
+
     public int getWeight() {
         return weight;
     }
@@ -30,16 +37,4 @@ public class Truck extends Machine {
     public void doWork() {
         System.out.println("Truck started to work");
     }
-
-    ////////////////////////// delete toString ////////////////
-
-    @Override
-    public String toString() {
-        return "Truck{" +
-                "weight=" + weight +
-                ", value=" + value +
-                '}';
-    }
 }
-
-
