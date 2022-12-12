@@ -7,6 +7,7 @@ package core.mate.academy.model;
 public class Bulldozer extends Machine {
     private int horsePower;
     private String chassisType;
+
     public Bulldozer() {
     }
 

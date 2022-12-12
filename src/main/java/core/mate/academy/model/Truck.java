@@ -7,6 +7,7 @@ package core.mate.academy.model;
 public class Truck extends Machine {
     private int weight;
     private int value;
+
     public Truck() {
     }
 
