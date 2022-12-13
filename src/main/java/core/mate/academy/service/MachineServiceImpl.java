@@ -14,11 +14,14 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        List<? extends Machine> machines =
-                type == Bulldozer.class ? new BulldozerProducer().get()
-                : type == Excavator.class ? new ExcavatorProducer().get()
-                : type == Truck.class ? new TruckProducer().get()
-                : Collections.emptyList();
+        if (type != Bulldozer.class && type != Excavator.class && type != Truck.class) {
+            return Collections.emptyList();
+        }
+        MachineProducer<? extends Machine> machineProducer =
+                type == Bulldozer.class ? new BulldozerProducer()
+                : type == Excavator.class ? new ExcavatorProducer()
+                : new TruckProducer();
+        List<? extends Machine> machines = machineProducer.get();
         return new ArrayList<>(machines);
     }
 
