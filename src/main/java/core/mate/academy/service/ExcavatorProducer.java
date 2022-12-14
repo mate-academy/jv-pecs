@@ -4,7 +4,7 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import java.util.List;
 
-public class ExcavatorProducer extends Excavator implements MachineProducer {
+public class ExcavatorProducer implements MachineProducer {
     @Override
     public List<Machine> get() {
         return List.of(new Excavator(), new Excavator(), new Excavator());
