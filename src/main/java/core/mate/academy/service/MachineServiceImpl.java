@@ -10,7 +10,7 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List getAll(Class type) {
-        MachineProducer machineProducer;
+        MachineProducer machineProducer = null;
         if (type.equals(Bulldozer.class)) {
             machineProducer = new BulldozerProducer();
             return machineProducer.get();
@@ -23,7 +23,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
             machineProducer = new ExcavatorProducer();
             return machineProducer.get();
         }
-        return Collections.emptyList();
+        return machineProducer != null ? machineProducer.get() : Collections.emptyList();
     }
 
     @Override
