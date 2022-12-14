@@ -8,7 +8,7 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
     public List<Bulldozer> get() {
         Bulldozer bulldozerGarry = new Bulldozer("Garry", "dirt", 330, "wheels");
         Bulldozer bulldozerCat = new Bulldozer("Caterpillar", "yellow", 540, "caterpillars");
-        Bulldozer bulldozerJBC = new Bulldozer("JBC", "yellow", 350, "caterpillars");
-        return List.of(bulldozerGarry, bulldozerCat, bulldozerJBC);
+        Bulldozer bulldozerJbc = new Bulldozer("JBC", "yellow", 350, "caterpillars");
+        return List.of(bulldozerGarry, bulldozerCat, bulldozerJbc);
     }
 }
