@@ -12,17 +12,18 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
-    private HashMap<String, MachineProducer<? extends Machine>> producers = new HashMap<>();
+    private HashMap<Class<? extends Machine>,
+            MachineProducer<? extends Machine>> producers = new HashMap<>();
 
     public MachineServiceImpl() {
-        producers.put(Bulldozer.class.getName(), new BulldozerProducer());
-        producers.put(Excavator.class.getName(), new ExcavatorProducer());
-        producers.put(Truck.class.getName(), new TruckProducer());
+        producers.put(Bulldozer.class, new BulldozerProducer());
+        producers.put(Excavator.class, new ExcavatorProducer());
+        producers.put(Truck.class, new TruckProducer());
     }
 
     @Override
-    public List<Machine> getAll(Class type) {
-        MachineProducer<? extends Machine> producer = producers.get(type.getName());
+    public List<Machine> getAll(Class<? extends Machine> type) {
+        MachineProducer<? extends Machine> producer = producers.get(type);
         List<? extends Machine> machines = producer == null ? new ArrayList<>() : producer.get();
         return new ArrayList<>(machines);
     }
