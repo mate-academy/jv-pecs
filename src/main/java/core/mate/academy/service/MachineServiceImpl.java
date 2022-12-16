@@ -13,15 +13,12 @@ public class MachineServiceImpl implements MachineService<Machine> {
         MachineProducer machineProducer = null;
         if (type.equals(Bulldozer.class)) {
             machineProducer = new BulldozerProducer();
-            return machineProducer.get();
         }
         if (type.equals(Truck.class)) {
             machineProducer = new TruckProducer();
-            return machineProducer.get();
         }
         if (type.equals(Excavator.class)) {
             machineProducer = new ExcavatorProducer();
-            return machineProducer.get();
         }
         return machineProducer != null ? machineProducer.get() : Collections.emptyList();
     }
