@@ -10,7 +10,7 @@ import core.mate.academy.model.TruckProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MachineServiceImpl implements MachineService {
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<? extends Machine> getAll(Class machineClass) {
