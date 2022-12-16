@@ -14,14 +14,6 @@ public class Truck extends Machine {
         this.cargo = cargo;
     }
 
-    public int getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(int cargo) {
-        this.cargo = cargo;
-    }
-
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

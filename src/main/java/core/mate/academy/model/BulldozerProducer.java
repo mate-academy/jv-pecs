@@ -4,18 +4,18 @@ import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer {
+public class BulldozerProducer implements MachineProducer<Machine> {
     @Override
-    public List<Bulldozer> get() {
-        List<Bulldozer> bulldozers = new ArrayList<Bulldozer>();
-        Bulldozer bulldozer1 = new Bulldozer(500);
-        bulldozer1.setName("Bulldozer 1");
-        bulldozer1.setColor("Yellow");
-        bulldozers.add(bulldozer1);
-        Bulldozer bulldozer2 = new Bulldozer(600);
-        bulldozer2.setName("Bulldozer 2");
-        bulldozer2.setColor("Red");
-        bulldozers.add(bulldozer2);
+    public List<Machine> get() {
+        List<Machine> bulldozers = new ArrayList<>();
+        Bulldozer firstBulldozer = new Bulldozer(500);
+        firstBulldozer.setName("First bulldozer");
+        firstBulldozer.setColor("Yellow");
+        bulldozers.add(firstBulldozer);
+        Bulldozer secondBulldozer = new Bulldozer(600);
+        secondBulldozer.setName("Second bulldozer");
+        secondBulldozer.setColor("Red");
+        bulldozers.add(secondBulldozer);
         return bulldozers;
     }
 }

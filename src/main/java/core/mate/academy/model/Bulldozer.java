@@ -14,14 +14,6 @@ public class Bulldozer extends Machine {
         this.power = power;
     }
 
-    public void setPower(int power) {
-        this.power = power;
-    }
-
-    public int getPower() {
-        return power;
-    }
-
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
