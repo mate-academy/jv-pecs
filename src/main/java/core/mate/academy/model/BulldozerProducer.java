@@ -4,10 +4,10 @@ import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer<Machine> {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
-    public List<Machine> get() {
-        List<Machine> bulldozers = new ArrayList<>();
+    public List<Bulldozer> get() {
+        List<Bulldozer> bulldozers = new ArrayList<>();
         Bulldozer firstBulldozer = new Bulldozer(500);
         firstBulldozer.setName("First bulldozer");
         firstBulldozer.setColor("Yellow");
