@@ -26,6 +26,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         }
         return new ArrayList<>();
     }
+
     @Override
     public void fill(List machines, Machine value) {
         int sizeOfList = machines.size();
