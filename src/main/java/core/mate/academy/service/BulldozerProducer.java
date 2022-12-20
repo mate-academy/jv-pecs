@@ -5,8 +5,8 @@ import core.mate.academy.model.Machine;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer {
-    private final List<Machine> bulldozers;
+public class BulldozerProducer implements MachineProducer<Machine> {
+    private final List<Bulldozer> bulldozers;
 
     public BulldozerProducer() {
         bulldozers = new ArrayList<>();
@@ -15,7 +15,7 @@ public class BulldozerProducer implements MachineProducer {
     }
 
     @Override
-    public List<? extends Machine> get() {
+    public List<Bulldozer> get() {
         return bulldozers;
     }
 }

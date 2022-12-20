@@ -5,8 +5,8 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckProducer implements MachineProducer {
-    private final List<Machine> trucks;
+public class TruckProducer implements MachineProducer<Machine> {
+    private final List<Truck> trucks;
 
     public TruckProducer() {
         trucks = new ArrayList<>();
@@ -15,7 +15,7 @@ public class TruckProducer implements MachineProducer {
     }
 
     @Override
-    public List<? extends Machine> get() {
+    public List<Truck> get() {
         return trucks;
     }
 }
