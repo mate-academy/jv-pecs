@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-
     @Override
     public List<Bulldozer> get() {
         return listOfBulldozers();
@@ -13,17 +12,17 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
 
     private List<Bulldozer> listOfBulldozers() {
         List<Bulldozer> testList = new ArrayList<>();
-        testList.add(getBulldozer("Red", 2019, "BEML"));
-        testList.add(getBulldozer("Yellow", 2020, "XCMG"));
-        testList.add(getBulldozer("Green", 2021, "Zoomlion"));
+        testList.add(getBulldozer("USA", 2019, "D348"));
+        testList.add(getBulldozer("England", 2020, "3412"));
+        testList.add(getBulldozer("Sweden", 2021, "3508"));
         return testList;
     }
 
-    private Bulldozer getBulldozer(String color, int year, String name) {
+    private Bulldozer getBulldozer(String madeIn, int year, String engineModel) {
         Bulldozer dozer = new Bulldozer();
-        dozer.setColor(color);
+        dozer.setMadeIn(madeIn);
         dozer.setYear(year);
-        dozer.setName(name);
+        dozer.setEngineModel(engineModel);
         return dozer;
     }
 }

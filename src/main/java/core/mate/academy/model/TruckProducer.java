@@ -12,15 +12,15 @@ public class TruckProducer implements MachineProducer<Truck> {
 
     private List<Truck> listOfTrucks() {
         List<Truck> truck = new ArrayList<>();
-        truck.add(getTruck("Red", 3, 15));
-        truck.add(getTruck("Black", 4, 25));
-        truck.add(getTruck("White", 3, 10));
+        truck.add(getTruck("Heavy-duty", 3, 15));
+        truck.add(getTruck("Light-duty", 4, 25));
+        truck.add(getTruck("Midsize", 3, 10));
         return truck;
     }
 
-    private Truck getTruck(String color, int fuelPerHour, int size) {
+    private Truck getTruck(String truckType, int fuelPerHour, int size) {
         Truck truck = new Truck();
-        truck.setColor(color);
+        truck.setTruckType(truckType);
         truck.setFuelPerHour(fuelPerHour);
         truck.setSize(size);
         return truck;

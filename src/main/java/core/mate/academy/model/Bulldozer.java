@@ -5,9 +5,9 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    private String color;
+    private String madeIn;
     private int year;
-    private String name;
+    private String engineModel;
 
     public Bulldozer() {
     }
@@ -17,31 +17,27 @@ public class Bulldozer extends Machine {
         System.out.println("Bulldozer started to work");
     }
 
-    @Override
-    public String getColor() {
-        return color;
+    public String getMadeIn() {
+        return madeIn;
     }
 
     public int getYear() {
         return year;
     }
 
-    @Override
-    public String getName() {
-        return name;
+    public String getEngineModel() {
+        return engineModel;
     }
 
-    @Override
-    public void setColor(String color) {
-        this.color = color;
+    public void setMadeIn(String madeIn) {
+        this.madeIn = madeIn;
     }
 
     public void setYear(int year) {
         this.year = year;
     }
 
-    @Override
-    public void setName(String name) {
-        this.name = name;
+    public void setEngineModel(String engineModel) {
+        this.engineModel = engineModel;
     }
 }
