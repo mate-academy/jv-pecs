@@ -1,10 +1,6 @@
 package core.mate.academy.model;
 
-import core.mate.academy.service.MachineProducer;
-import java.util.Random;
-
-public abstract class Machine implements Workable, MachineProducer {
-    protected final Random random = new Random();
+public abstract class Machine implements Workable {
     private String name;
     private String color;
 
