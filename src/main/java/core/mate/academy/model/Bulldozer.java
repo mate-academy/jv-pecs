@@ -8,6 +8,11 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String name, String color) {
+        this.setName(name);
+        this.setColor(color);
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");

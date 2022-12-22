@@ -8,6 +8,11 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String name, String color) {
+        this.setName(name);
+        this.setColor(color);
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
