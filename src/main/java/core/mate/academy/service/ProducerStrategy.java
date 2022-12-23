@@ -6,16 +6,20 @@ import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 
 public class ProducerStrategy {
+    private final MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
+    private final MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
+    private final MachineProducer<Truck> truckProducer = new TruckProducer();
+
     public MachineProducer<? extends Machine> getMachineProducer(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
-            return new BulldozerProducer();
+            return bulldozerProducer;
         }
         if (type == Excavator.class) {
-            return new ExcavatorProducer();
+            return excavatorProducer;
         }
         if (type == Truck.class) {
-            return new TruckProducer();
+            return truckProducer;
         }
-        return null;
+        throw new RuntimeException("Got invalid class for producer. Please, input valid class");
     }
 }

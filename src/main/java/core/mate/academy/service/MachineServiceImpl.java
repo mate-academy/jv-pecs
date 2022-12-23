@@ -9,16 +9,17 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final ProducerStrategy strategy = new ProducerStrategy();
+
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        ProducerStrategy strategy = new ProducerStrategy();
-        MachineProducer<? extends Machine> producer = strategy.getMachineProducer(type);
-        if (producer != null) {
+        try {
+            MachineProducer<? extends Machine> producer = strategy.getMachineProducer(type);
             List<? extends Machine> machines = producer.get();
             return new ArrayList<>(machines);
+        } catch (RuntimeException e) {
+            return new ArrayList<>();
         }
-
-        return new ArrayList<>();
     }
 
     @Override
