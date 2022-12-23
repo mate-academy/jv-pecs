@@ -47,3 +47,53 @@ For example: `if (type == Bulldozer.class)` - we should call the `get()` method 
 - `startWorking()` - call `doWork` on every Machine in the list.
 
 #### [Try to avoid these common mistakes while solving task](https://mate-academy.github.io/jv-program-common-mistakes/java-core/pecs/pecs.html)
+
+1. У вас є абстрактний клас `Машина` і три підкласи: `Бульдозер`, `Екскаватор` і `Вантажівка`. Не соромтеся додавати до цих класів поля, що стосуються певного типу.
+1. Кожна машина має можливість почати роботу.
+1. Створено інтерфейс MachineProducer.
+   Метою реалізації цього інтерфейсу є створення списку конкретних машин (`Бульдозер`, `Екскаватор` і `Вантажівка`).
+   Ви повинні мати принаймні 3 реалізації: `BulldozerProducer`, `ExcavatorProducer`, `TruckProducer`;
+   Будь ласка, параметризуйте свій `MachineProducer` і замініть `Object` у `get()` відповідним параметром.
+     ```java
+     публічний інтерфейс MachineProducer<PARAMETRIZE ME>{ ... }
+     ```
+1. У реалізаціях `MachineProducer` ваш метод `get()` має повертати список конкретних машин.
+   Наприклад:
+     ```java
+     List<Bulldozer> get();
+     ```
+   або
+     ```java
+     List<Truck> get();
+     ```
+   або
+     ```java
+     List<Excavator> get();
+     ```
+
+1. Також створено інтерфейс `MachineService`. Вам також потрібно його параметризувати і
+   замініть `Object` у підписі методу на правильний параметр (використовуйте PECS):
+
+   - метод getAll(Class type) створює список машин на основі вхідного параметра.
+   - метод `fill(List<Object> machines, Object value)` заповнює список машин переданим значенням.
+   - метод `startWorking()` повинен мати можливість приймати список, що містить будь-яку машину.
+
+Коли ви параметризуєте інтерфейс `MachineService`, майте на увазі, що ми хочемо обмежити типи, які можна використовувати з ним.
+
+Не дозволяє:
+~~`MachineServiceImpl реалізує MachineService<Dog>`~~
+Дозволити:
+`MachineServiceImpl реалізує MachineService<Truck>`
+``
+1. Використовуйте створений клас `MachineServiceImpl`, що реалізує MachineService, і реалізуйте ці методи:
+- `getAll(Class type)`- на основі типу вхідного класу виберіть правильну реалізацію MachineProducer і викличте його метод `get()`.
+
+Наприклад: `if (type == Bulldozer.class)` - ми повинні викликати метод `get()` із правої реалізації MachineProducer (той, який повертатиме 
+`List<Bulldozer>`) і повертати ці машини.
+
+- `fill(List<Object> machines, Object value)` - оновити до переданого значення (**яке може бути будь-якого підтипу Machine**) 
+- усіх елементів у списку `machines`.
+
+- `startWorking()` - викликати `doWork` на кожній машині в списку.
+
+#### [Намагайтеся уникати цих поширених помилок під час вирішення завдання](https://mate-academy.github.io/jv-program-common-mistakes/java-core/pecs/pecs.html)
