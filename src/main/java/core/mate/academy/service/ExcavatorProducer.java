@@ -6,11 +6,6 @@ import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer {
 
-    /**
-     * In your implementations - create 2-3 models, add them to the list and return
-     *
-     * @return - the list of models
-     */
     @Override
     public List<Excavator> get() {
         List<Excavator> excavatorList = new ArrayList<>();
