@@ -15,7 +15,7 @@ public class Truck extends Machine {
     }
 
     public Truck(String name, String color, int towingCapacity) {
-        super(name , color);
+        super(name, color);
         this.towingCapacity = towingCapacity;
     }
 

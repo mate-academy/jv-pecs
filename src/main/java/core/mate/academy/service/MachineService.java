@@ -1,9 +1,5 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Bulldozer;
-import core.mate.academy.model.Machine;
-
-import javax.crypto.Mac;
 import java.util.List;
 
 /**

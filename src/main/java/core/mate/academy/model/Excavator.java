@@ -15,7 +15,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, int loadingHeight) {
-        super(name , color);
+        super(name, color);
         this.loadingHeight = loadingHeight;
     }
 

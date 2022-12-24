@@ -11,7 +11,7 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, int bucketVolume) {
-        super(name , color);
+        super(name, color);
         this.bucketVolume = bucketVolume;
     }
 

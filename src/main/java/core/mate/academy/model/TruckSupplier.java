@@ -3,8 +3,8 @@ package core.mate.academy.model;
 import java.util.Random;
 
 public class TruckSupplier {
-    ModelSupplier model = new ModelSupplier();
-    ColorSupplier color = new ColorSupplier();
+    private ModelSupplier model = new ModelSupplier();
+    private ColorSupplier color = new ColorSupplier();
 
     public Truck getTruck() {
         int towingCapacity = new Random().nextInt(5) * 10;
