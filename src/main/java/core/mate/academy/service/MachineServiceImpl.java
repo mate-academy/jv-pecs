@@ -11,21 +11,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-
     @Override
     public List<? super Machine> getAll(Class type) {
         MachineProducer machineProducer;
         if (type.equals(Excavator.class)) {
             machineProducer = new ExcavatorProducer();
-            return (List<? super Machine>) machineProducer.get();
+            return (List<Machine>) machineProducer.get();
         }
         if (type.equals(Bulldozer.class)) {
             machineProducer = new BulldozerProducer();
-            return (List<? super Machine>) machineProducer.get();
+            return (List<Machine>) machineProducer.get();
         }
         if (type.equals(Truck.class)) {
             machineProducer = new TruckProducer();
-            return (List<? super Machine>) machineProducer.get();
+            return (List<Machine>) machineProducer.get();
         }
         return new ArrayList<>();
     }
