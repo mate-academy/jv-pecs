@@ -6,8 +6,6 @@ import java.util.List;
 public class ExcavatorProducer implements MachineProducer {
     @Override
     public List get() {
-        Excavator firstExcavator = new Excavator();
-        Excavator secondExcavator = new Excavator();
-        return List.of(firstExcavator, secondExcavator);
+        return List.of(new Excavator(), new Excavator());
     }
 }

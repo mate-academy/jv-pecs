@@ -7,7 +7,7 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public boolean isHasCaterpillars() {
+    public boolean hasCaterpillars() {
         return hasCaterpillars;
     }
 
