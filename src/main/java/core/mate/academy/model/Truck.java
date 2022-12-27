@@ -12,7 +12,7 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(boolean trailer, int maxCarryingCapacity, String type) {
+    private Truck(boolean trailer, int maxCarryingCapacity, String type) {
         this.trailer = trailer;
         this.maxCarryingCapacity = maxCarryingCapacity;
         this.type = type;

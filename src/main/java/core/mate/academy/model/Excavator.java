@@ -13,7 +13,7 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(double radiusOfTurning, double bucketCapacity, String typeOfMobilePlatform) {
+    private Excavator(double radiusOfTurning, double bucketCapacity, String typeOfMobilePlatform) {
         this.radiusOfTurning = radiusOfTurning;
         this.bucketCapacity = bucketCapacity;
         this.typeOfMobilePlatform = typeOfMobilePlatform;

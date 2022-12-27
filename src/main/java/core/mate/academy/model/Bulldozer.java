@@ -12,7 +12,7 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public Bulldozer(int weightOfDump, int distanceMovementGround, String model) {
+    private Bulldozer(int weightOfDump, int distanceMovementGround, String model) {
         this.weightOfDump = weightOfDump;
         this.distanceMovementGround = distanceMovementGround;
         this.model = model;
