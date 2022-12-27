@@ -8,29 +8,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private BulldozerProducer bulldozerProducer = new BulldozerProducer();
+    private ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+    private TruckProducer truckProducer = new TruckProducer();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
+        List<? extends Machine> machines;
         if (type == Bulldozer.class) {
-            List<? extends Machine> machines = new BulldozerProducer().get();
+            machines = bulldozerProducer.get();
             return new ArrayList<>(machines);
         }
         if (type == Excavator.class) {
-            List<? extends Machine> machines = new ExcavatorProducer().get();
+            machines = excavatorProducer.get();
             return new ArrayList<>(machines);
         }
         if (type == Truck.class) {
-            List<? extends Machine> machines = new TruckProducer().get();
+            machines = truckProducer.get();
             return new ArrayList<>(machines);
         }
-        List<Machine> list = new ArrayList<>();
-        return list;
+        return new ArrayList<>();
     }
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        int listSize = machines.size();
-        for (int i = 0; i < listSize; i++) {
+        for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
