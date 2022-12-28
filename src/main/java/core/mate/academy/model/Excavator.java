@@ -5,6 +5,9 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int brand;
+    private int typeOfWheels;
+
     public Excavator() {
     }
 
@@ -12,4 +15,5 @@ public class Excavator extends Machine {
     public void doWork() {
         System.out.println("Excavator started to work");
     }
+
 }
