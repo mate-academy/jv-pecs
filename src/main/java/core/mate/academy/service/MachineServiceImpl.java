@@ -11,22 +11,22 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List getAll(Class type) {
-        List machines;
+        MachineProducer machineProducer;
         String className = type.getSimpleName();
         switch (className) {
             case "Excavator":
-                machines = new ExcavatorProducer().get();
+                machineProducer = new ExcavatorProducer();
                 break;
             case "Bulldozer":
-                machines = new BulldozerProducer().get();
+                machineProducer = new BulldozerProducer();
                 break;
             case "Truck":
-                machines = new TruckProducer().get();
+                machineProducer = new TruckProducer();
                 break;
             default:
                 return Collections.emptyList();
         }
-        return new ArrayList<>(machines);
+        return new ArrayList<>(machineProducer.get());
     }
 
     @Override
