@@ -10,28 +10,30 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
-    @Override
-    public List<T> getAll(Object type) {
+public class MachineServiceImpl<T extends Machine> implements MachineService<Machine> {
+    private MachineProducer bulldozerProducer = new BulldozerProducer();
+    private MachineProducer truckProducer = new TruckProducer();
+    private MachineProducer excavatorProducer = new ExcavatorProducer();
 
+    public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
-            return (List<T>) new BulldozerProducer().get();
+            return bulldozerProducer.get();
         } else if (type == Truck.class) {
-            return (List<T>) new TruckProducer().get();
+            return truckProducer.get();
         } else if (type == Excavator.class) {
-            return (List<T>) new ExcavatorProducer().get();
+            return excavatorProducer.get();
         }
         return new ArrayList<>();
     }
 
     @Override
-    public void fill(List<? super T> machines, T value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         machines.replaceAll(machine -> (T) value);
     }
 
     @Override
-    public void startWorking(List<? extends T> machines) {
-        for (T machine : machines) {
+    public void startWorking(List<? extends Machine> machines) {
+        for (Machine machine : machines) {
             machine.doWork();
         }
     }

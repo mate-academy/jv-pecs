@@ -5,11 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-    private List<Excavator> bulldozerList = new ArrayList<>();
-
     @Override
     public List<Excavator> get() {
-        bulldozerList.add(new Excavator());
-        return bulldozerList;
+        List<Excavator> excavatorArrayList = new ArrayList<>();
+        excavatorArrayList.add(new Excavator(5,3,1));
+        return excavatorArrayList;
     }
 }
