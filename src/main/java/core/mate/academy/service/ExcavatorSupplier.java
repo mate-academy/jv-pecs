@@ -1,7 +1,9 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.*;
-
+import core.mate.academy.model.ColorSupplier;
+import core.mate.academy.model.Excavator;
+import core.mate.academy.model.Machine;
+import core.mate.academy.model.ModelSupplier;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
