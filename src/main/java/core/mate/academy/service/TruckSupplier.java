@@ -12,7 +12,7 @@ public class TruckSupplier implements MachineProducer<Machine> {
     private ModelSupplier modelSupplier = new ModelSupplier();
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    private List<? super Machine> listOfTrucks = new ArrayList<>();
+    private List<Machine> listOfTrucks = new ArrayList<>();
 
     public Truck getTruck() {
         int towingCapacity = random.nextInt(5) * 10;
@@ -21,7 +21,7 @@ public class TruckSupplier implements MachineProducer<Machine> {
     }
 
     @Override
-    public List<? super Machine> get() {
+    public List<Machine> get() {
         TruckSupplier truck = new TruckSupplier();
         for (int i = 0; i < 4; i++) {
             listOfTrucks.add(truck.getTruck());

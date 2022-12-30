@@ -12,7 +12,7 @@ public class BulldozerSupplier implements MachineProducer<Machine> {
     private ModelSupplier modelSupplier = new ModelSupplier();
     private ColorSupplier colorSupllier = new ColorSupplier();
     private Random random = new Random();
-    private List<? super Machine> listOfBulls = new ArrayList<>();
+    private List<Machine> listOfBulls = new ArrayList<>();
 
     public Bulldozer getBulldozer() {
         int bucketVolume = random.nextInt(10);
@@ -21,7 +21,7 @@ public class BulldozerSupplier implements MachineProducer<Machine> {
     }
 
     @Override
-    public List<? super Machine> get() {
+    public List<Machine> get() {
         BulldozerSupplier bulldozer = new BulldozerSupplier();
         for (int i = 0; i < 4; i++) {
             listOfBulls.add(bulldozer.getBulldozer());
