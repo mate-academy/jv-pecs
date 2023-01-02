@@ -6,12 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer {
-    private Bulldozer firstBulldozer = new Bulldozer();
-    private Bulldozer secondBulldozer = new Bulldozer();
-    private Bulldozer thirdBulldozer = new Bulldozer();
 
     @Override
     public List<Machine> get() {
+        Bulldozer firstBulldozer = new Bulldozer();
+        Bulldozer secondBulldozer = new Bulldozer();
+        Bulldozer thirdBulldozer = new Bulldozer();
+
         List<Machine> list = new ArrayList<>();
         list.add(firstBulldozer);
         list.add(secondBulldozer);
