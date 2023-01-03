@@ -12,12 +12,11 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
-    private List<Machine> allMachines = null;
 
     @Override
-    public List<Machine> getAll(Class type) {
-        allMachines = new ArrayList<>();
-        List<? extends Machine> listMachine = new ArrayList<>();
+    public List<Machine> getAll(Class<? extends Machine> type) {
+        List<Machine> allMachines = new ArrayList<>();
+        List<? extends Machine> listMachine;
         if (Bulldozer.class.equals(type)) {
             listMachine = new BulldozerProducer().get();
         } else if (Excavator.class.equals(type)) {
@@ -40,8 +39,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-        for (int i = 0; i < machines.size(); i++) {
-            machines.get(i).doWork();
+        for (Machine machine : machines) {
+            machine.doWork();
         }
     }
 }

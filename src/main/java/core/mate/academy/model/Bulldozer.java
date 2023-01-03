@@ -5,7 +5,7 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 
-public class Bulldozer extends Machine implements Workable {
+public class Bulldozer extends Machine {
     private int bulldozerBladeVolume;
     private int manufactureYear;
 

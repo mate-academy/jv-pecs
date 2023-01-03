@@ -4,10 +4,16 @@ import core.mate.academy.model.Excavator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExcavatorProducer implements MachineProducer {
+public class ExcavatorProducer implements MachineProducer<Excavator> {
     private List<Excavator> list;
 
-    {
+    @Override
+    public List<Excavator> get() {
+        createList();
+        return list;
+    }
+
+    private void createList() {
         list = new ArrayList<>();
         Excavator excavator1 = new Excavator();
         excavator1.setExcavatorBucketVolume(20);
@@ -20,10 +26,4 @@ public class ExcavatorProducer implements MachineProducer {
         excavator2.setColor("yellow");
         list.add(excavator2);
     }
-
-    @Override
-    public List<Excavator> get() {
-        return list;
-    }
-
 }
