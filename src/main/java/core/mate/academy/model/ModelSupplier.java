@@ -3,8 +3,10 @@ package core.mate.academy.model;
 import java.util.Random;
 
 public class ModelSupplier {
+    Random random = new Random();
+
     public String getRandomModel() {
-        int index = new Random().nextInt(Models.values().length);
-        return Models.values()[index].toString();
+        int index = random.nextInt(Model.values().length);
+        return Model.values()[index].name();
     }
 }
