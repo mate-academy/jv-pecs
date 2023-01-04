@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+
     private final ProducerStrategy producerStrategy = new ProducerStrategy();
 
     @Override
