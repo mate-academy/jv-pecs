@@ -1,6 +1,6 @@
 package core.mate.academy.model;
 
-public enum Models {
+public enum Model {
     MAN,
     DAF,
     MERCEDES_BENZ,

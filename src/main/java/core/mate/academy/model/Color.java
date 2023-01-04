@@ -1,6 +1,6 @@
 package core.mate.academy.model;
 
-public enum Colors {
+public enum Color {
     WHITE,
     RED,
     YELLOW,
