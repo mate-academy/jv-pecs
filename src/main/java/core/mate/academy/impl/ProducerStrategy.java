@@ -18,7 +18,7 @@ public class ProducerStrategy {
         producers.put(Truck.class, new TruckProducer());
     }
 
-    public Map<Class<? extends Machine>, MachineProducer<? extends Machine>> getProducers() {
-        return producers;
+    public MachineProducer<? extends Machine> getProducer(Class<? extends Machine> type) {
+        return producers.get(type);
     }
 }

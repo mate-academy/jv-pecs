@@ -6,14 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-
     private final ProducerStrategy producerStrategy = new ProducerStrategy();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         try {
-            MachineProducer<? extends Machine> producer = producerStrategy.getProducers().get(type);
-            List<? extends Machine> machines = producer.get();
+            List<? extends Machine> machines = producerStrategy.getProducer(type).get();
             return new ArrayList<>(machines);
         } catch (RuntimeException e) {
             return new ArrayList<>();
