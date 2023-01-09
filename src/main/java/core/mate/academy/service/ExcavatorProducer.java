@@ -4,12 +4,8 @@ import core.mate.academy.model.Excavator;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-    private final Excavator sany = new Excavator();
-    private final Excavator hitachi = new Excavator();
-    private final Excavator doosan = new Excavator();
-
     @Override
     public List<Excavator> get() {
-        return List.of(sany, hitachi, doosan);
+        return List.of(new Excavator(), new Excavator(), new Excavator());
     }
 }
