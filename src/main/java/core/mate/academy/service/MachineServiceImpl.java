@@ -5,8 +5,8 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
 public class MachineServiceImpl implements MachineService<Machine> {
     private final MachineProducer<Bulldozer> bulldozer = new BulldozerProducer();
