@@ -5,7 +5,7 @@ import core.mate.academy.model.Machine;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExcavatorProducer implements MachineProducer {
+public class ExcavatorProducer implements MachineProducer<Machine> {
     private List<Machine> excavatorList = new ArrayList<>();
 
     public ExcavatorProducer() {
