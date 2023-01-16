@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Random;
 
 public class MachineServiceTest {
-    private static MachineService machineService;
+    private static MachineService<Machine> machineService;
 
     @BeforeClass
     public static void beforeClass() {
