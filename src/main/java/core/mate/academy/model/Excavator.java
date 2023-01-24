@@ -9,6 +9,7 @@ public class Excavator extends Machine {
     private int maxSpeed;
 
     public Excavator() {
+
     }
 
     public Excavator(String name, String color, double fuelVolume, String brand, int maxSpeed) {

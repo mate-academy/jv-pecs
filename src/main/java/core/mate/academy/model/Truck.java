@@ -9,6 +9,7 @@ public class Truck extends Machine {
     private double trailerVolume;
 
     public Truck() {
+
     }
 
     public Truck(String name, String color, double fuelVolume,

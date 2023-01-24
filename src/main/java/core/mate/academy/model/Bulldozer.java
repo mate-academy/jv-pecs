@@ -9,6 +9,7 @@ public class Bulldozer extends Machine {
     private int horsePower;
 
     public Bulldozer() {
+
     }
 
     public Bulldozer(String name, String color, double fuelVolume,
