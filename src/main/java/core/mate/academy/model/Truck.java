@@ -1,12 +1,14 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
-    private String Truck1;
-    private String Truck2;
+    private double shippingCargoWeight;
+
+    public Truck(Double shippingCargoWeight, String setName, String setColor) {
+        this.shippingCargoWeight = shippingCargoWeight;
+        super.setName(setName);
+        super.setColor(setColor);
+    }
+
     public Truck() {
     }
 
