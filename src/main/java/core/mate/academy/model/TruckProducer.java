@@ -7,9 +7,9 @@ public class TruckProducer implements MachineProducer<Truck> {
 
     @Override
     public List<Truck> get() {
-        Truck truck001 = new Truck(1100.25, "truck758", "White");
-        Truck truck002 = new Truck(1220.35, "truck400", "Green");
-        Truck truck003 = new Truck(2010.20, "truck808", "Gray");
-        return List.of(truck001, truck002, truck003);
+        Truck volvoA40f = new Truck(1100.25, "A40F", "White");
+        Truck terexTa35 = new Truck(1220.35, "TA35", "Green");
+        Truck caterpillar740b = new Truck(2010.20, "740B", "Gray");
+        return List.of(volvoA40f, terexTa35, caterpillar740b);
     }
 }
