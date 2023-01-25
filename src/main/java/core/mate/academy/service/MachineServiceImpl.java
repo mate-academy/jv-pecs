@@ -7,7 +7,6 @@ import core.mate.academy.model.ExcavatorProducer;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import core.mate.academy.model.TruckProducer;
-
 import java.util.ArrayList;
 import java.util.List;
 

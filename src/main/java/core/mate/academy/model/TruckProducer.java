@@ -1,10 +1,10 @@
 package core.mate.academy.model;
 
 import core.mate.academy.service.MachineProducer;
-
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
+
     @Override
     public List<Truck> get() {
         Truck truck001 = new Truck(1100.25, "truck758", "White");
