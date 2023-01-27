@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService<Machine> {
+public class MachineServiceImpl implements MachineService<Machine>, MachineProducer<Machine> {
     private BulldozerProducer bulldozerProducer = new BulldozerProducer();
     private ExcavatorProducer excavatorProducer = new ExcavatorProducer();
     private TruckProducer truckProducer = new TruckProducer();
@@ -42,8 +42,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-        for (int i = 0; i < machines.size(); i++) {
-            machines.get(i).doWork();
+        for (Machine machine: machines) {
+            machine.doWork();
         }
     }
 }
