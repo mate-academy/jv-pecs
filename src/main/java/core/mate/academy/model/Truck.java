@@ -3,10 +3,9 @@ package core.mate.academy.model;
 public class Truck extends Machine {
     private double shippingCargoWeight;
 
-    public Truck(Double shippingCargoWeight, String setName, String setColor) {
+    public Truck(Double shippingCargoWeight, String name, String color) {
+        super(name,color);
         this.shippingCargoWeight = shippingCargoWeight;
-        super.setName(setName);
-        super.setColor(setColor);
     }
 
     public Truck() {

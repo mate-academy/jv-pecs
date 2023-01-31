@@ -3,10 +3,9 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
     private Double ladleCargoWeight;
 
-    public Excavator(Double ladleCargoWeight, String setName, String setColor) {
+    public Excavator(Double ladleCargoWeight, String name, String color) {
+        super(name, color);
         this.ladleCargoWeight = ladleCargoWeight;
-        super.setName(setName);
-        super.setColor(setColor);
     }
 
     public Excavator() {

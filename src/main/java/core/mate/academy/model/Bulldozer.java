@@ -3,10 +3,9 @@ package core.mate.academy.model;
 public class Bulldozer extends Machine {
     private Double bucketCargoWeight;
 
-    public Bulldozer(Double bucketCargoWeight, String setName, String setColor) {
+    public Bulldozer(Double bucketCargoWeight, String name, String color) {
+        super(name, color);
         this.bucketCargoWeight = bucketCargoWeight;
-        super.setName(setName);
-        super.setColor(setColor);
     }
 
     public Bulldozer() {
