@@ -8,6 +8,6 @@ import java.util.List;
 public class ExcavatorProducer implements MachineProducer{
     @Override
     public List<Excavator> get() {
-        return null;
+        return List.of(new Excavator(), new Excavator(), new Excavator());
     }
 }

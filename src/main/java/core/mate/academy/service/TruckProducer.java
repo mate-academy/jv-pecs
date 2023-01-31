@@ -7,6 +7,6 @@ import java.util.List;
 public class TruckProducer implements MachineProducer {
     @Override
     public List<Truck> get() {
-        return null;
+        return List.of(new Truck(), new Truck(), new Truck());
     }
 }
