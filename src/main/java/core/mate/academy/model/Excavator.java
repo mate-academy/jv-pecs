@@ -9,7 +9,6 @@ public class Excavator extends Machine {
     private int bucketVolume;
 
     public Excavator(){
-
     }
 
     public Excavator(String name, String color, String model, int bucketVolume) {
