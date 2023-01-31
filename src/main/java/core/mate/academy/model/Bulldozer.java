@@ -8,12 +8,12 @@ public class Bulldozer extends Machine {
     private int weight;
     private String model;
 
-    public Bulldozer() {
+    public Bulldozer(){
+
     }
 
     public Bulldozer(String name, String color, String model, int weight) {
-        super.setName(name);
-        super.setColor(color);
+        super(name,color);
         this.model = model;
         this.weight = weight;
     }

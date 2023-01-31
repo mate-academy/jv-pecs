@@ -8,12 +8,12 @@ public class Excavator extends Machine {
     private String model;
     private int bucketVolume;
 
-    public Excavator() {
+    public Excavator(){
+
     }
 
     public Excavator(String name, String color, String model, int bucketVolume) {
-        setName(name);
-        setColor(color);
+        super(name, color);
         this.model = model;
         this.bucketVolume = bucketVolume;
     }
