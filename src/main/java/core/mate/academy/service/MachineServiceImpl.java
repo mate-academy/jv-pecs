@@ -5,6 +5,7 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -12,29 +13,26 @@ import java.util.List;
  */
 public class MachineServiceImpl implements MachineService<Machine> {
     private final MachineProducer<Bulldozer> bulldozerProducer;
-    private final MachineProducer<Excavator> excavatorMachineProducer;
+    private final MachineProducer<Excavator> excavatorProducer;
     private final MachineProducer<Truck> truckProducer;
 
     public MachineServiceImpl() {
         this.bulldozerProducer = new BulldozerProducer();
-        this.excavatorMachineProducer = new ExcavatorProducer();
+        this.excavatorProducer = new ExcavatorProducer();
         this.truckProducer = new TruckProducer();
     }
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        // is it List<Machine> producer in this method?
-        List<Machine> machines = new ArrayList<>();
-
         if (type.equals(Bulldozer.class)) {
-            return bulldozerProducer.get();
+            return new ArrayList<>(bulldozerProducer.get());
 
         } else if (type.equals(Excavator.class)) {
-            return excavatorMachineProducer.get();
+            return new ArrayList<>(excavatorProducer.get());
         } else if (type.equals(Truck.class)) {
-            return truckProducer.get();
+            return new ArrayList<>(truckProducer.get());
         }
-        return machines;
+        return Collections.emptyList();
     }
 
     @Override
