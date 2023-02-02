@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private final MachineProducer truckProducer = new TruckProducer();
-    private final MachineProducer excavatorProducer = new ExcavatorProducer();
-    private final MachineProducer bulldozerProducer = new BulldozerProducer();
+    private final MachineProducer<Truck> truckProducer = new TruckProducer();
+    private final MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
+    private final MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
@@ -27,7 +27,10 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List<Object> machines, Object value) {
+   // public void fill(List<Object> machines, Object value) {
+   //public void fill(List<? super T> machines, T value) {
+    // void fill(List<? super T> machines, T value) {
+        public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
