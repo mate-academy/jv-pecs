@@ -27,10 +27,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-   // public void fill(List<Object> machines, Object value) {
-   //public void fill(List<? super T> machines, T value) {
-    // void fill(List<? super T> machines, T value) {
-        public void fill(List<? super Machine> machines, Machine value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
