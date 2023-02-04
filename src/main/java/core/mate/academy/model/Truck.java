@@ -11,6 +11,11 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String typeTruck, int weightTruck) {
+        this.typeTruck = typeTruck;
+        this.weightTruck = weightTruck;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

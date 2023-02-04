@@ -11,6 +11,11 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String typeExcavator, int weightExcavator) {
+        this.typeExcavator = typeExcavator;
+        this.weightExcavator = weightExcavator;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

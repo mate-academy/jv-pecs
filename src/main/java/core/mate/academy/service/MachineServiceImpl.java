@@ -10,16 +10,11 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService<Machine>, MachineProducer<Machine> {
+public class MachineServiceImpl implements MachineService<Machine> {
     private BulldozerProducer bulldozerProducer = new BulldozerProducer();
     private ExcavatorProducer excavatorProducer = new ExcavatorProducer();
     private TruckProducer truckProducer = new TruckProducer();
-
-    @Override
-    public List<? extends Machine> get() {
-        return null;
-    }
-
+    
     @Override
     public List<Machine> getAll(Class type) {
         if (type == Bulldozer.class) {

@@ -11,6 +11,11 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String typeBulldozer, int weightBulldozer) {
+        this.typeBulldozer = typeBulldozer;
+        this.weightBulldozer = weightBulldozer;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
