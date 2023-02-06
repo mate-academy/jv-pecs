@@ -7,12 +7,9 @@ import core.mate.academy.model.Truck;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Your implementation of MachineService.
- */
-public class MachineServiceImpl implements MachineService {
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    public List<? super Machine> getAll(Class type) {
+    public List<? extends Machine> getAll(Class type) {
         if (type == Bulldozer.class) {
             return new BulldozerProducer().get();
         }
@@ -26,7 +23,7 @@ public class MachineServiceImpl implements MachineService {
     }
 
     @Override
-    public void startWorking(List list) {
+    public void startWorking(List<? extends Machine> list) {
 
     }
 
