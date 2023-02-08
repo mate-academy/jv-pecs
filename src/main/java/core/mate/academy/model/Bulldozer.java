@@ -8,7 +8,7 @@ public class Bulldozer extends Machine {
         this.bucketCargoWeight = bucketCargoWeight;
     }
 
-    public Bulldozer() {
+    public Bulldozer()  {
     }
 
     @Override
