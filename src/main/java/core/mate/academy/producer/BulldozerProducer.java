@@ -1,11 +1,12 @@
-package core.mate.academy.service;
+package core.mate.academy.producer;
 
 import core.mate.academy.model.Bulldozer;
+import core.mate.academy.service.MachineProducer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer<Bulldozer>{
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
     public List<Bulldozer> get() {
         Bulldozer bulldozer1 = new Bulldozer();
