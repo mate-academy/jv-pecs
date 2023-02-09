@@ -6,15 +6,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
+
     @Override
     public List<Truck> get() {
-        Truck truck1 = new Truck();
-        Truck truck2 = new Truck();
-        Truck truck3 = new Truck();
+        Truck mercedes = new Truck();
+        mercedes.setName("Mercedes");
+        mercedes.setColor("Blue");
+        mercedes.setCargoType("Dry Van Trailer");
+        mercedes.setMaxLoad(2000);
+        Truck iveco = new Truck();
+        iveco.setName("Iveco");
+        iveco.setColor("White");
+        iveco.setCargoType("Liquid tanker");
+        iveco.setMaxLoad(3000);
         List<Truck> truckList = new ArrayList<>();
-        truckList.add(truck1);
-        truckList.add(truck2);
-        truckList.add(truck3);
+        truckList.add(mercedes);
+        truckList.add(iveco);
         return truckList;
     }
 }

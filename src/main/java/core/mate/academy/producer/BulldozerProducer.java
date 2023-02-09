@@ -8,19 +8,19 @@ import java.util.List;
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
     public List<Bulldozer> get() {
-        Bulldozer bulldozerOne = new Bulldozer();
-        bulldozerOne.setBladeType("S");
-        bulldozerOne.setOperatingWeight(2500);
-        bulldozerOne.setColor("Yellow");
-        bulldozerOne.setName("CAT");
-        Bulldozer bulldozerTwo = new Bulldozer();
-        bulldozerTwo.setBladeType("U");
-        bulldozerTwo.setOperatingWeight(3000);
-        bulldozerTwo.setColor("Red");
-        bulldozerTwo.setName("CAT");
+        Bulldozer caterpillar = new Bulldozer();
+        caterpillar.setBladeType("S");
+        caterpillar.setOperatingWeight(2500);
+        caterpillar.setColor("Yellow");
+        caterpillar.setName("CAT");
+        Bulldozer jansen = new Bulldozer();
+        jansen.setBladeType("U");
+        jansen.setOperatingWeight(3000);
+        jansen.setColor("Red");
+        jansen.setName("Jansen");
         List<Bulldozer> bulldozerList = new ArrayList<>();
-        bulldozerList.add(bulldozerOne);
-        bulldozerList.add(bulldozerTwo);
+        bulldozerList.add(caterpillar);
+        bulldozerList.add(jansen);
         return bulldozerList;
     }
 }
