@@ -20,8 +20,10 @@ public class MachineServiceImpl implements MachineService {
             machines = new ExcavatorProducer().get();
         } else if (type.equals(Truck.class)) {
             machines = new TruckProducer().get();
+        } else {
+            return new ArrayList<>();
         }
-        return machines == null ? new ArrayList<>() : new ArrayList<>(machines);
+        return new ArrayList<>(machines);
     }
 
     @Override

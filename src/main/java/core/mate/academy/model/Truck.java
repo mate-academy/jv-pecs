@@ -3,10 +3,6 @@ package core.mate.academy.model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
     private List<Truck> truckStorage = new ArrayList<>();
 
