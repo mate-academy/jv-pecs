@@ -42,10 +42,10 @@ public class Excavator extends Machine {
     @Override
     public String toString() {
         return "Excavator{" +
-                "Name= " + this.getName() +
-                ", color= " + this.getColor() +
-                ", ladleCount= " + ladleCount +
-                ", vehicleChassisType='" + vehicleChassisType + '\'' +
-                '}';
+                "Name= " + this.getName()
+                + ", color= " + this.getColor()
+                + ", ladleCount= " + ladleCount
+                + ", vehicleChassisType='" + vehicleChassisType + '\''
+                + '}';
     }
 }

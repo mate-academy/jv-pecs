@@ -42,10 +42,10 @@ public class Truck extends Machine {
     @Override
     public String toString() {
         return "Truck{" +
-                "Name= " + this.getName() +
-                ", color= " + this.getColor() +
-                ", enginePower=" + enginePower +
-                ", driverCount=" + driverCount +
-                '}';
+                "Name= " + this.getName()
+                + ", color= " + this.getColor()
+                + ", enginePower=" + enginePower
+                + ", driverCount=" + driverCount
+                + '}';
     }
 }

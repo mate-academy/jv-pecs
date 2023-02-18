@@ -4,7 +4,6 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -12,7 +11,7 @@ import java.util.Random;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineProducer, MachineService {
+public class MachineServiceImpl implements MachineProducer, MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class type) {
