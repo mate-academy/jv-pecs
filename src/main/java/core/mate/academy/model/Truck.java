@@ -41,8 +41,8 @@ public class Truck extends Machine {
 
     @Override
     public String toString() {
-        return "Truck{" +
-                "Name= " + this.getName()
+        return "Truck{"
+                + "Name= " + this.getName()
                 + ", color= " + this.getColor()
                 + ", enginePower=" + enginePower
                 + ", driverCount=" + driverCount

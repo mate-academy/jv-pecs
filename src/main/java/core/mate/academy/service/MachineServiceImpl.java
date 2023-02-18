@@ -11,10 +11,10 @@ import java.util.Random;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineProducer, MachineService<Machine> {
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
-    public List<Machine> getAll(Class type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         List<Machine> machines = new ArrayList();
         int randomSize = new Random().nextInt(100);
         if (type == Truck.class) {
@@ -36,7 +36,7 @@ public class MachineServiceImpl implements MachineProducer, MachineService<Machi
     }
 
     @Override
-    public void fill(List machines, Object value) {
+    public <T> void fill(List<? super T> machines, T value) {
         int size = machines.size();
         for (int i = 0; i < size; i++) {
             machines.set(i, value);
@@ -44,23 +44,10 @@ public class MachineServiceImpl implements MachineProducer, MachineService<Machi
     }
 
     @Override
-    public void startWorking(List list) {
-        List<? extends Machine> items = list;
-        int size = list.size();
-        for (int i = 0; i < size; i++) {
-            items.get(i).doWork();
+    public void startWorking(List<? extends Machine> machines) {
+        int size = machines.size();
+        for (Machine machine : machines) {
+            machine.doWork();
         }
-    }
-
-    @Override
-    public List<Machine> get() {
-        List<Machine> machines = new ArrayList();
-        machines.add(new Truck("SkyTrack", "blue", 200, 2));
-        machines.add(new Bulldozer("LoveDozer", "red", 3, 5));
-        machines.add(new Excavator("Submarine", "yellow", 1, "track"));
-        machines.add(new Truck("GreenpeaceTruck", "green", 150, 1));
-        machines.add(new Bulldozer("DarkKnight", "black", 1, 3));
-        machines.add(new Excavator("GirlMachine", "ping", 2, "wheel"));
-        return machines;
     }
 }

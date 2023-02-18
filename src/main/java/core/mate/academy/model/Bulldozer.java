@@ -41,8 +41,8 @@ public class Bulldozer extends Machine {
 
     @Override
     public String toString() {
-        return "Bulldozer{" +
-                "Name= " + this.getName()
+        return "Bulldozer{"
+                + "Name= " + this.getName()
                 + ", color= " + this.getColor()
                 + ", dumperCount=" + dumperCount
                 + ", engineCapacity=" + engineCapacity
