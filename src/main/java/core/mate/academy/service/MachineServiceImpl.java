@@ -24,19 +24,19 @@ public class MachineServiceImpl implements MachineService<Machine> {
                 for (int i = 0; i < randomSize; i++) {
                     machines.add(new Truck());
                 }
-            break;
+                break;
             case "Bulldozer":
                 for (int i = 0; i < randomSize; i++) {
                     machines.add(new Bulldozer());
                 }
-            break;
+                break;
             case "Excavator":
                 for (int i = 0; i < randomSize; i++) {
                     machines.add(new Excavator());
                 }
-            break;
+                break;
             default:
-            break;
+                break;
         }
         return machines;
     }
