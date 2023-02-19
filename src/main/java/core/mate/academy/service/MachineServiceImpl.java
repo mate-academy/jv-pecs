@@ -16,7 +16,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        List<Machine> machines = new ArrayList<>();
+        List<Machine> machines = new ArrayList();
         int randomSize = new Random().nextInt(MAX_COUNT_GENERATING_MACHINE);
         final String typeSimpleName = type.getSimpleName();
         switch (typeSimpleName) {

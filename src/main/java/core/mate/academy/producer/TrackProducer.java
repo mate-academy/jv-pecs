@@ -9,7 +9,7 @@ public class TrackProducer implements MachineProducer<Truck> {
 
     @Override
     public List<Truck> get() {
-        List<Truck> trucks = new ArrayList<>();
+        List<Truck> trucks = new ArrayList();
         trucks.add(new Truck("SkyTrack", "blue", 200, 2));
         trucks.add(new Truck("GreenpeaceTruck", "green", 150, 1));
         return trucks;
