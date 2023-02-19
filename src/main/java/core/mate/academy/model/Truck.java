@@ -1,9 +1,8 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class Truck extends Machine {
     public Truck() {
     }
@@ -11,5 +10,14 @@ public class Truck extends Machine {
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
+    }
+
+    @Override
+    public List<Truck> get() {
+        List<Truck> listOfTrucks = new ArrayList<>();
+        for (int i = 0; i < COUNT_OF_MACHINES; i++) {
+            listOfTrucks.add(new Truck());
+        }
+        return listOfTrucks;
     }
 }

@@ -1,7 +1,11 @@
 package core.mate.academy.model;
 
-public abstract class Machine implements Workable {
+import core.mate.academy.service.MachineProducer;
+
+public abstract class Machine implements Workable, MachineProducer {
+    protected static final int COUNT_OF_MACHINES = 3;
     private String name;
+
     private String color;
 
     public String getName() {
