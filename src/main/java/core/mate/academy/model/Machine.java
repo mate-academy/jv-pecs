@@ -1,8 +1,16 @@
 package core.mate.academy.model;
 
 public abstract class Machine implements Workable {
-    private String name;
     private String color;
+    private String name;
+
+    public Machine() {
+    }
+
+    protected Machine(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
 
     public String getName() {
         return name;
