@@ -5,10 +5,9 @@ public abstract class Machine implements Workable {
     private String name;
 
     public Machine() {
-
     }
 
-    public Machine(String name, String color) {
+    protected Machine(String name, String color) {
         this.name = name;
         this.color = color;
     }

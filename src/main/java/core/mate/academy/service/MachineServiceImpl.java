@@ -1,19 +1,19 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.BulldozerProducer;
 import core.mate.academy.model.Excavator;
+import core.mate.academy.model.ExcavatorProducer;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
+import core.mate.academy.model.TruckProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl implements MachineService<Machine> {
-    private final MachineProducer<Bulldozer> bulldozerProducer = new Bulldozer();
-    private final MachineProducer<Truck> truckProducer = new Truck();
-    private final MachineProducer<Excavator> excavatorProducer = new Excavator();
+    private final MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
+    private final MachineProducer<Truck> truckProducer = new TruckProducer();
+    private final MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
@@ -31,15 +31,14 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        int size = machines.size();
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-        for (Machine machine: machines) {
+        for (Machine machine : machines) {
             machine.doWork();
         }
     }
