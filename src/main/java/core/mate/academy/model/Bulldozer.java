@@ -3,11 +3,9 @@ package core.mate.academy.model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private static final int COUNT_BULLDOZERS = 3;
+
     public Bulldozer() {
     }
 
@@ -19,9 +17,9 @@ public class Bulldozer extends Machine {
     @Override
     public List<Bulldozer> get() {
         List<Bulldozer> bulldozers = new ArrayList<>();
-        bulldozers.add(new Bulldozer());
-        bulldozers.add(new Bulldozer());
-        bulldozers.add(new Bulldozer());
+        for (int i = 0; i < COUNT_BULLDOZERS; i++) {
+            bulldozers.add(new Bulldozer());
+        }
         return bulldozers;
     }
 }
