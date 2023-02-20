@@ -4,35 +4,38 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
+import core.mate.academy.producer.BulldozerProducer;
+import core.mate.academy.producer.ExcavatorProducer;
+import core.mate.academy.producer.TruckProducer;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
-    private static final int MAX_COUNT_GENERATING_MACHINE = 100;
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<Machine> machines = new ArrayList();
-        int randomSize = new Random().nextInt(MAX_COUNT_GENERATING_MACHINE);
         final String typeSimpleName = type.getSimpleName();
         switch (typeSimpleName) {
             case "Truck":
-                for (int i = 0; i < randomSize; i++) {
-                    machines.add(new Truck());
+                TruckProducer truckProducer = new TruckProducer();
+                for (Truck truck : truckProducer.get()) {
+                    machines.add(truck);
                 }
                 break;
             case "Bulldozer":
-                for (int i = 0; i < randomSize; i++) {
-                    machines.add(new Bulldozer());
+                BulldozerProducer bulldozerProducer = new BulldozerProducer();
+                for (Bulldozer bulldozer : bulldozerProducer.get()) {
+                    machines.add(bulldozer);
                 }
                 break;
             case "Excavator":
-                for (int i = 0; i < randomSize; i++) {
-                    machines.add(new Excavator());
+                ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+                for (Excavator excavator : excavatorProducer.get()) {
+                    machines.add(excavator);
                 }
                 break;
             default:
