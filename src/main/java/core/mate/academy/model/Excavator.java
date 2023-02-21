@@ -1,8 +1,6 @@
 package core.mate.academy.model;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Add some custom fields that could be only in Excavator
@@ -14,14 +12,6 @@ public class Excavator extends Machine {
     private double price;
 
     public Excavator() {
-    }
-
-    public List<Excavator> get() {
-        List<Excavator> excavators = new ArrayList<>();
-        excavators.add(new Excavator());
-        excavators.add(new Excavator());
-        excavators.add(new Excavator());
-        return excavators;
     }
 
     public void setModel(String model) {

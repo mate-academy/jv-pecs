@@ -1,8 +1,6 @@
 package core.mate.academy.model;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Add some custom fields that could be only in Truck
@@ -14,14 +12,6 @@ public class Truck extends Machine {
     private double price;
 
     public Truck() {
-    }
-
-    public List<Truck> get() {
-        List<Truck> trucks = new ArrayList<>();
-        trucks.add(new Truck());
-        trucks.add(new Truck());
-        trucks.add(new Truck());
-        return trucks;
     }
 
     public void setModel(String model) {

@@ -37,7 +37,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
-
     }
 
     @Override
