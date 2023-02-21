@@ -14,4 +14,12 @@ public class Bulldozer extends Machine {
     public void doWork() {
         System.out.println("Bulldozer started to work");
     }
+
+    public int getScoop() {
+        return scoop;
+    }
+
+    public void setScoop(int scoop) {
+        this.scoop = scoop;
+    }
 }

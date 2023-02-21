@@ -14,4 +14,12 @@ public class Excavator extends Machine {
     public void doWork() {
         System.out.println("Excavator started to work");
     }
+
+    public int getExcavatorBoom() {
+        return excavatorBoom;
+    }
+
+    public void setExcavatorBoom(int excavatorBoom) {
+        this.excavatorBoom = excavatorBoom;
+    }
 }
