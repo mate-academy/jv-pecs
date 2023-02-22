@@ -13,16 +13,21 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
+        List<? extends Machine> machines;
         switch (type.getSimpleName()) {
             case "Truck" :
-                return new TruckProducer().get();
+                machines = new TruckProducer().get();
+                break;
             case "Bulldozer" :
-                return new BulldozerProducer().get();
+                machines = new BulldozerProducer().get();
+                break;
             case "Excavator" :
-                return new ExcavatorProducer().get();
+                machines = new ExcavatorProducer().get();
+                break;
             default :
-                return new ArrayList<>();
+                machines = new ArrayList<>();
         }
+        return new ArrayList<>(machines);
     }
 
     @Override
@@ -31,7 +36,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void startWorking(List<? extends Workable> machines) {
+    public void startWorking(List<? extends Machine> machines) {
         for (Workable machine : machines) {
             machine.doWork();
         }
