@@ -5,7 +5,7 @@ import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExcavatorProducer implements MachineProducer {
+public class ExcavatorProducer implements MachineProducer<Excavator> {
     private List<Excavator> excavatorList = new ArrayList<>();
 
     @Override

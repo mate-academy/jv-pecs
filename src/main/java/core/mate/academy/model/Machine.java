@@ -5,7 +5,6 @@ public abstract class Machine implements Workable {
     private String color;
 
     public Machine() {
-
     }
 
     public Machine(String name, String color) {
