@@ -10,36 +10,29 @@ import core.mate.academy.producer.TruckProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl implements MachineService<Machine> {
+    private static final Class TRUCK_CLASS = Truck.class;
+    private static final Class BULLDOZER_CLASS = Bulldozer.class;
+    private static final Class EXCAVATOR_CLASS = Excavator.class;
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<Machine> machines = new ArrayList();
-        final String typeSimpleName = type.getSimpleName();
-        switch (typeSimpleName) {
-            case "Truck":
-                TruckProducer truckProducer = new TruckProducer();
-                for (Truck truck : truckProducer.get()) {
-                    machines.add(truck);
-                }
-                break;
-            case "Bulldozer":
-                BulldozerProducer bulldozerProducer = new BulldozerProducer();
-                for (Bulldozer bulldozer : bulldozerProducer.get()) {
-                    machines.add(bulldozer);
-                }
-                break;
-            case "Excavator":
-                ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-                for (Excavator excavator : excavatorProducer.get()) {
-                    machines.add(excavator);
-                }
-                break;
-            default:
-                break;
+        if (type == TRUCK_CLASS) {
+            TruckProducer truckProducer = new TruckProducer();
+            for (Truck truck : truckProducer.get()) {
+                machines.add(truck);
+            }
+        } else if (type == BULLDOZER_CLASS) {
+            BulldozerProducer bulldozerProducer = new BulldozerProducer();
+            for (Bulldozer bulldozer : bulldozerProducer.get()) {
+                machines.add(bulldozer);
+            }
+        } else if (type == EXCAVATOR_CLASS) {
+            ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+            for (Excavator excavator : excavatorProducer.get()) {
+                machines.add(excavator);
+            }
         }
         return machines;
     }
