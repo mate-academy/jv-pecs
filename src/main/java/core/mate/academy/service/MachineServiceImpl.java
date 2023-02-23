@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private final Bulldozer bulldozer = new Bulldozer();
-    private final Excavator excavator = new Excavator();
-    private final Truck truck = new Truck();
+    private final BulldozerProducer bulldozer = new BulldozerProducer();
+    private final ExcavatorProducer excavator = new ExcavatorProducer();
+    private final TruckProducer truck = new TruckProducer();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
