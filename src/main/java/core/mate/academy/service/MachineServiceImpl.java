@@ -7,11 +7,11 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MachineServiceImpl implements MachineService {
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    public List getAll(Class type) {
+    public List<Machine> getAll(Class<?> type) {
         if (getMachineInstance(type) == null) {
-            return new ArrayList();
+            return new ArrayList<>();
         }
         List<Machine> list = new ArrayList<>();
         list.add(getMachineInstance(type));
@@ -19,7 +19,7 @@ public class MachineServiceImpl implements MachineService {
     }
 
     @Override
-    public void fill(List machines, Object value) {
+    public void fill(List<Object> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, getMachineInstance(value.getClass()));
         }
@@ -29,7 +29,7 @@ public class MachineServiceImpl implements MachineService {
     public void startWorking(List list) {
     }
 
-    private Machine getMachineInstance(Class type) {
+    private Machine getMachineInstance(Class<?> type) {
         if (type.equals(Bulldozer.class)) {
             return new Bulldozer();
         } else if (type.equals(Excavator.class)) {
