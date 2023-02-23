@@ -10,17 +10,16 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        List<? extends Machine> machines = new ArrayList<>();
         if (Truck.class.equals(type)) {
-            machines = new Truck().get();
-        } else if (Bulldozer.class.equals(type)) {
-            machines = new Bulldozer().get();
-        } else if (Excavator.class.equals(type)) {
-            machines = new Excavator().get();
-        } else {
-            machines = new ArrayList<Machine>();
+            return (List<Machine>) new Truck().get();
         }
-        return (List<Machine>) machines;
+        if (Bulldozer.class.equals(type)) {
+            return (List<Machine>) new Bulldozer().get();
+        }
+        if (Excavator.class.equals(type)) {
+            return (List<Machine>) new Excavator().get();
+        }
+        return new ArrayList<>();
     }
 
     @Override
@@ -32,6 +31,11 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-
+        if (machines == null) {
+            throw new RuntimeException("We don`t have machines in the list");
+        }
+        for (Machine m : machines) {
+            m.doWork();
+        }
     }
 }
