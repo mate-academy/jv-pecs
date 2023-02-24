@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
+    public String getClassName() {
+        return Excavator.class.toString();
+    }
+
     @Override
     public List<Excavator> get() {
         List<Excavator> list = new ArrayList<>();

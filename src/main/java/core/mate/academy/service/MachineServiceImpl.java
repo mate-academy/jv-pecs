@@ -1,9 +1,6 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Bulldozer;
-import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
-import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,17 +8,19 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+    private final List<MachineProducer> machineProducers = List.of(new BulldozerProducer(),
+            new ExcavatorProducer(),
+            new TruckProducer());
+
     @Override
     public List<T> getAll(Class<? extends T> type) {
         List<? extends Machine> machines = new ArrayList<>();
-        if (type == Bulldozer.class) {
-            machines = new BulldozerProducer().get();
-        } else if (type == Excavator.class) {
-            machines = new ExcavatorProducer().get();
-        } else if (type == Truck.class) {
-            machines = new TruckProducer().get();
+        for (MachineProducer machineProducer : machineProducers) {
+            if (machineProducer.getClassName().equals(type.toString())) {
+                machines = machineProducer.get();
+            }
         }
-        return new ArrayList(machines);
+        return (List<T>) new ArrayList<>(machines);
     }
 
     @Override
