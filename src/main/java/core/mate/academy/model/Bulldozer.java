@@ -1,8 +1,14 @@
 package core.mate.academy.model;
 
-import core.mate.academy.service.BulldozerProducer;
+/**
+ * Add some custom fields that could be only in Bulldozer
+ * Do not remove no-args constructor
+ */
+public class Bulldozer extends Machine {
+    private int numberOfWheels;
+    private String model;
+    private int power;
 
-public class Bulldozer extends BulldozerProducer {
     public Bulldozer() {
     }
 
