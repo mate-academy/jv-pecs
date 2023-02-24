@@ -4,14 +4,13 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
     @Override
-    public List<T> getAll(Type type) {
+    public List<T> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machines = null;
         if (type.equals(Bulldozer.class)) {
             machines = new BulldozerProducer().get();
@@ -33,7 +32,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
 
     @Override
-    public void fill(List machines, Machine value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         if (value.getClass().equals(Bulldozer.class)) {
             for (int i = 0; i < machines.size(); i++) {
                 machines.set(i, new Bulldozer());
