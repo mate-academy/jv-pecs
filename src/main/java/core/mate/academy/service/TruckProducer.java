@@ -7,7 +7,11 @@ public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Truck> get() {
         Truck truck = new Truck();
-        truck.initalizeStorage();
+        truck.putItemToStorage(new Truck());
+        truck.putItemToStorage(new Truck());
+        truck.putItemToStorage(new Truck());
+        truck.putItemToStorage(new Truck());
+        truck.putItemToStorage(new Truck());
         return truck.readStorage();
     }
 }

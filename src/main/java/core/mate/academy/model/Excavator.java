@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Excavator extends Machine {
+    private static final String EXCAVATOR_UNIQUE_FIELD = "excavator";
     private List<Excavator> excavatorStorage = new ArrayList<>();
 
     public Excavator() {
@@ -13,16 +14,12 @@ public class Excavator extends Machine {
         return excavatorStorage;
     }
 
+    public void putItemToStorage(Excavator excavator) {
+        excavatorStorage.add(excavator);
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
-    }
-
-    public void initalizeStorage() {
-        excavatorStorage.add(new Excavator());
-        excavatorStorage.add(new Excavator());
-        excavatorStorage.add(new Excavator());
-        excavatorStorage.add(new Excavator());
-        excavatorStorage.add(new Excavator());
     }
 }

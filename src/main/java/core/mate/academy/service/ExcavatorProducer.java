@@ -7,7 +7,11 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
     @Override
     public List<Excavator> get() {
         Excavator excavator = new Excavator();
-        excavator.initalizeStorage();
+        excavator.putItemToStorage(new Excavator());
+        excavator.putItemToStorage(new Excavator());
+        excavator.putItemToStorage(new Excavator());
+        excavator.putItemToStorage(new Excavator());
+        excavator.putItemToStorage(new Excavator());
         return excavator.readStorage();
     }
 }
