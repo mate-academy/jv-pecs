@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    public String getClassName() {
-        return Truck.class.toString();
+    public Class<Truck> getClassName() {
+        return Truck.class;
     }
 
     @Override

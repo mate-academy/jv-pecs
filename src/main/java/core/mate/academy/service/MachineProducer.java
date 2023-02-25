@@ -10,7 +10,7 @@ public interface MachineProducer<T extends Machine> {
      * @return - the list of models
      */
 
-    String getClassName();
+    Class<T> getClassName();
 
     List<T> get();
 }

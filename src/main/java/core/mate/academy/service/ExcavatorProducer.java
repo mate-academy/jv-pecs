@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-    public String getClassName() {
-        return Excavator.class.toString();
+    public Class<Excavator> getClassName() {
+        return Excavator.class;
     }
 
     @Override

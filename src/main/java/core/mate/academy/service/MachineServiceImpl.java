@@ -8,15 +8,19 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
-    private final List<MachineProducer> machineProducers = List.of(new BulldozerProducer(),
-            new ExcavatorProducer(),
-            new TruckProducer());
+    private final List<MachineProducer<?>> machineProducers;
+
+    public MachineServiceImpl() {
+        machineProducers = List.of(new BulldozerProducer(),
+                                    new ExcavatorProducer(),
+                                    new TruckProducer());
+    }
 
     @Override
     public List<T> getAll(Class<? extends T> type) {
         List<? extends Machine> machines = new ArrayList<>();
-        for (MachineProducer machineProducer : machineProducers) {
-            if (machineProducer.getClassName().equals(type.toString())) {
+        for (MachineProducer<?> machineProducer : machineProducers) {
+            if (type == machineProducer.getClassName()) {
                 machines = machineProducer.get();
             }
         }

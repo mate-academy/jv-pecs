@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-    public String getClassName() {
-        return Bulldozer.class.toString();
+    public Class<Bulldozer> getClassName() {
+        return Bulldozer.class;
     }
 
     @Override
