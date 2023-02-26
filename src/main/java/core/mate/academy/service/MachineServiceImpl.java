@@ -4,21 +4,32 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final BulldozerProducer bulldozerProducer;
+    private final ExcavatorProducer excavatorProducer;
+    private final TruckProducer truckProducer;
+
+    public MachineServiceImpl() {
+        this.bulldozerProducer = new BulldozerProducer();
+        this.excavatorProducer = new ExcavatorProducer();
+        this.truckProducer = new TruckProducer();
+    }
+
     @Override
     public List getAll(Class<?> type) {
         if (type.equals(Bulldozer.class)) {
-            return new BulldozerProducer().get();
-        } else if (type.equals(Excavator.class)) {
-            return new ExcavatorProducer().get();
-        } else if (type.equals(Truck.class)) {
-            return new TruckProducer().get();
+            return bulldozerProducer.get();
+        }
+        if (type.equals(Excavator.class)) {
+            return excavatorProducer.get();
+        }
+        if (type.equals(Truck.class)) {
+            return truckProducer.get();
         } else {
-            return new ArrayList<>();
+            return Collections.emptyList();
         }
     }
 
