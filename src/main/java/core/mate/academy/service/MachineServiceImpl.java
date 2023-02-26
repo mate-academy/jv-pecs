@@ -7,11 +7,11 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl implements MachineService<Machine> {
     
     @Override
-    public List getAll(Class type) {
-        List<? extends Machine> result;
+    public List<Machine> getAll(Class<? extends Machine> type) {
+        List<Machine> result;
         switch (type.getSimpleName()) {
             case "Bulldozer":
                 BulldozerProducer bulldozerProducer = new BulldozerProducer();
@@ -29,7 +29,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
     
     @Override
-    public void fill(List machines, Machine value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         int size = machines.size();
         for (int i = 0; i < size; i++) {
             machines.set(i, value);
