@@ -3,6 +3,6 @@ package core.mate.academy.service;
 import java.util.List;
 
 public interface MachineProducer<T> {
-
-    List<Object> get();
+    int MACHINE_QUANTITY = 3;
+    List<T> get();
 }
