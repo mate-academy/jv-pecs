@@ -1,6 +1,5 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +9,7 @@ public class TruckProducer implements MachineProducer<Truck> {
     private Random random = new Random();
 
     @Override
-    public List<? extends Machine> get() {
+    public List<Truck> get() {
         Truck truck1 = new Truck(random.nextInt());
         Truck truck2 = new Truck(random.nextInt());
         Truck truck3 = new Truck(random.nextInt());
