@@ -4,12 +4,12 @@ import core.mate.academy.model.Bulldozer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducerImpl<M> implements MachineProducer<M> {
+public class BulldozerProducerImpl implements MachineProducer<Bulldozer> {
     @Override
-    public List<M> get() {
-        List<M> bulldozers = new ArrayList<>();
+    public List<Bulldozer> get() {
+        List<Bulldozer> bulldozers = new ArrayList<>();
         for (int i = 0; i < MACHINE_QUANTITY; i++) {
-            bulldozers.add((M) new Bulldozer());
+            bulldozers.add(new Bulldozer());
         }
         return bulldozers;
     }

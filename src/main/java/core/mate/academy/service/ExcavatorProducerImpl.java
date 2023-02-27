@@ -4,13 +4,13 @@ import core.mate.academy.model.Excavator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExcavatorProducerImpl<M> implements MachineProducer<M> {
+public class ExcavatorProducerImpl implements MachineProducer<Excavator> {
     @Override
-    public List<M> get() {
-        List<M> bulldozers = new ArrayList<>();
+    public List<Excavator> get() {
+        List<Excavator> excavators = new ArrayList<>();
         for (int i = 0; i < MACHINE_QUANTITY; i++) {
-            bulldozers.add((M) new Excavator());
+            excavators.add(new Excavator());
         }
-        return bulldozers;
+        return excavators;
     }
 }

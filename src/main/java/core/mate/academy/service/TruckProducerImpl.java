@@ -4,13 +4,13 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckProducerImpl<M> implements MachineProducer<M> {
+public class TruckProducerImpl implements MachineProducer<Truck> {
     @Override
-    public List<M> get() {
-        List<M> bulldozers = new ArrayList<>();
+    public List<Truck> get() {
+        List<Truck> trucks = new ArrayList<>();
         for (int i = 0; i < MACHINE_QUANTITY; i++) {
-            bulldozers.add((M) new Truck());
+            trucks.add(new Truck());
         }
-        return bulldozers;
+        return trucks;
     }
 }
