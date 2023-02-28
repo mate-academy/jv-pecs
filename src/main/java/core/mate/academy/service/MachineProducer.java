@@ -5,6 +5,5 @@ import java.util.List;
 
 public interface MachineProducer<M extends Machine> {
     int MACHINE_QUANTITY = 3;
-
     List<M> get();
 }
