@@ -15,9 +15,7 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
     }
 
     private void createMachines() {
-        Bulldozer wheelDozer = new Bulldozer("S-type", true);
-        Bulldozer crawlerBulldozer = new Bulldozer("U-type", false);
-        list.add(wheelDozer);
-        list.add(crawlerBulldozer);
+        list.add(new Bulldozer("S-type", true));
+        list.add(new Bulldozer("U-type", false));
     }
 }

@@ -15,9 +15,7 @@ public class TruckProducer implements MachineProducer<Truck> {
     }
 
     private void createMachines() {
-        Truck chillerTruck = new Truck(350, 70);
-        Truck livestockTruck = new Truck(600, 60);
-        list.add(chillerTruck);
-        list.add(livestockTruck);
+        list.add(new Truck(350, 70));
+        list.add(new Truck(600, 60));
     }
 }
