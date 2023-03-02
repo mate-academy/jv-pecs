@@ -1,12 +1,11 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Bulldozer;
-import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
-import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Your implementation of MachineService.
@@ -15,18 +14,15 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-
-        List<? extends Machine> types = new ArrayList<>();
-        if (Bulldozer.class.equals(type)) {
-            types = new BulldozerProducer().get();
+        Map<String, MachineProducer<? extends Machine>> producers = new HashMap<>();
+        producers.put("Bulldozer", new BulldozerProducer());
+        producers.put("Excavator", new ExcavatorProducer());
+        producers.put("Truck", new TruckProducer());
+        String typeKey = type.getSimpleName();
+        if (producers.containsKey(typeKey)) {
+            return new ArrayList<>(producers.get(typeKey).get());
         }
-        if (Excavator.class.equals(type)) {
-            types = new ExcavatorProducer().get();
-        }
-        if (Truck.class.equals(type)) {
-            types = new TruckProducer().get();
-        }
-        return new ArrayList<>(types);
+        return new ArrayList<>();
     }
 
     @Override
