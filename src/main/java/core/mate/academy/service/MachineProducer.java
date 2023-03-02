@@ -11,7 +11,5 @@ public interface MachineProducer<T extends Machine> {
      *
      * @return - the list of models
      */
-    default List<T> get() {
-        return null;
-    }
+    List<T> get();
 }
