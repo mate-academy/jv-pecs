@@ -11,21 +11,27 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
-    private final MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
-    private final MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
-    private final MachineProducer<Truck> truckProducer = new TruckProducer();
+public class MachineServiceImpl implements MachineService<Machine> {
+    private final MachineProducer<Bulldozer> bulldozerProducer;
+    private final MachineProducer<Excavator> excavatorProducer;
+    private final MachineProducer<Truck> truckProducer;
+
+    public MachineServiceImpl() {
+        bulldozerProducer = new BulldozerProducer();
+        excavatorProducer = new ExcavatorProducer();
+        truckProducer = new TruckProducer();
+    }
 
     @Override
-    public List<T> getAll(Class<? extends Machine> type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
-            return (List<T>) new ArrayList<>(bulldozerProducer.get());
+            return new ArrayList<>(bulldozerProducer.get());
         }
         if (type == Excavator.class) {
-            return (List<T>) new ArrayList<>(excavatorProducer.get());
+            return new ArrayList<>(excavatorProducer.get());
         }
         if (type == Truck.class) {
-            return (List<T>) new ArrayList<>(truckProducer.get());
+            return new ArrayList<>(truckProducer.get());
         }
         return Collections.emptyList();
     }
