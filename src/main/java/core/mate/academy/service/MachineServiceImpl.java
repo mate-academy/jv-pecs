@@ -9,7 +9,6 @@ import java.util.Map;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
-
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         Map<String, MachineProducer<? extends Machine>> producers = Map.of(
