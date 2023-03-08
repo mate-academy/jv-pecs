@@ -4,7 +4,9 @@ import core.mate.academy.model.Excavator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExcavatorProducer<T> implements MachineProducer<T> {
+public class ExcavatorProducer implements MachineProducer {
+    private static final int AMOUNT_TO_CREATE = 3;
+
     @Override
     public List<Excavator> get() {
         List<Excavator> list = new ArrayList<>();
