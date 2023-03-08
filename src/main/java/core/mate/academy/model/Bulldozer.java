@@ -1,10 +1,15 @@
 package core.mate.academy.model;
 
 public class Bulldozer extends Machine {
-    private String bulldozerCustomString;
-    private int bulldozerCustomInt;
+    private String model;
+    private int productionYear;
 
     public Bulldozer() {
+    }
+
+    public Bulldozer(String model, int productionYear) {
+        this.model = model;
+        this.productionYear = productionYear;
     }
 
     @Override
@@ -12,19 +17,19 @@ public class Bulldozer extends Machine {
         System.out.println("Bulldozer started to work");
     }
 
-    public String getBulldozerCustomString() {
-        return bulldozerCustomString;
+    public String getModel() {
+        return model;
     }
 
-    public void setBulldozerCustomString(String bulldozerCustomString) {
-        this.bulldozerCustomString = bulldozerCustomString;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    public int getBulldozerCustomInt() {
-        return bulldozerCustomInt;
+    public int getProductionYear() {
+        return productionYear;
     }
 
-    public void setBulldozerCustomInt(int bulldozerCustomInt) {
-        this.bulldozerCustomInt = bulldozerCustomInt;
+    public void setProductionYear(int productionYear) {
+        this.productionYear = productionYear;
     }
 }

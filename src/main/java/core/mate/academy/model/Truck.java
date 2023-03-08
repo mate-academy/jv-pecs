@@ -1,10 +1,15 @@
 package core.mate.academy.model;
 
 public class Truck extends Machine {
-    private String truckCustomString;
-    private int truckCustomInt;
+    private String model;
+    private int productionYear;
 
     public Truck() {
+    }
+
+    public Truck(String model, int productionYear) {
+        this.model = model;
+        this.productionYear = productionYear;
     }
 
     @Override
@@ -12,19 +17,19 @@ public class Truck extends Machine {
         System.out.println("Truck started to work");
     }
 
-    public String getTruckCustomString() {
-        return truckCustomString;
+    public String getModel() {
+        return model;
     }
 
-    public void setTruckCustomString(String truckCustomString) {
-        this.truckCustomString = truckCustomString;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    public int getTruckCustomInt() {
-        return truckCustomInt;
+    public int getProductionYear() {
+        return productionYear;
     }
 
-    public void setTruckCustomInt(int truckCustomInt) {
-        this.truckCustomInt = truckCustomInt;
+    public void setProductionYear(int productionYear) {
+        this.productionYear = productionYear;
     }
 }

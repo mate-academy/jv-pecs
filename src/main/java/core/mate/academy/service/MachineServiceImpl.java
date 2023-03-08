@@ -8,14 +8,12 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
 
     @Override
     public List<T> getAll(Class<? extends T> type) {
-        List<? extends Machine> machines = null;
         for (int i = 0; i < classes.size(); i++) {
             if (classes.get(i) == type) {
-                machines = machineProducers.get(i).get();
-                break;
+                return (List<T>) machineProducers.get(i).get();
             }
         }
-        return machines == null ? Collections.emptyList() : (List<T>) machines;
+        return Collections.emptyList();
     }
 
     @Override

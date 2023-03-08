@@ -1,10 +1,15 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
-    private String excavatorCustomString;
-    private int excavatorCustomInt;
+    private String model;
+    private int productionYear;
 
     public Excavator() {
+    }
+
+    public Excavator(String model, int productionYear) {
+        this.model = model;
+        this.productionYear = productionYear;
     }
 
     @Override
@@ -12,19 +17,19 @@ public class Excavator extends Machine {
         System.out.println("Excavator started to work");
     }
 
-    public String getExcavatorCustomString() {
-        return excavatorCustomString;
+    public String getModel() {
+        return model;
     }
 
-    public void setExcavatorCustomString(String excavatorCustomString) {
-        this.excavatorCustomString = excavatorCustomString;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    public int getExcavatorCustomInt() {
-        return excavatorCustomInt;
+    public int getProductionYear() {
+        return productionYear;
     }
 
-    public void setExcavatorCustomInt(int excavatorCustomInt) {
-        this.excavatorCustomInt = excavatorCustomInt;
+    public void setProductionYear(int productionYear) {
+        this.productionYear = productionYear;
     }
 }
