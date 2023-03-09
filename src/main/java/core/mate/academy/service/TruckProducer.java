@@ -4,7 +4,7 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckProducer implements MachineProducer {
+public class TruckProducer implements MachineProducer<Truck> {
     private static final int AMOUNT_TO_CREATE = 3;
 
     @Override
