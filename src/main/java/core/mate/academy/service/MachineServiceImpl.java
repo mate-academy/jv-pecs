@@ -10,11 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl implements MachineService<Machine> {
-
     private static final Map<Class<? extends Machine>,
             MachineProducer<? extends Machine>> MACHINES_MAP = new HashMap<>();
 
@@ -26,10 +22,10 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        if (MACHINES_MAP.get(type) == null){
+        if (MACHINES_MAP.get(type) == null) {
             return new ArrayList<>();
         }
-        List <? extends Machine> list = MACHINES_MAP.get(type).get();
+        List<? extends Machine> list = MACHINES_MAP.get(type).get();
         return new ArrayList<>(list);
     }
 
