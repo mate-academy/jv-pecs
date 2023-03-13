@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int workTimeHour;
+
     public Bulldozer() {
+    }
+
+    public int getWorkTimeHour() {
+        return workTimeHour;
+    }
+
+    public void setWorkTimeHour(int workTimeHour) {
+        this.workTimeHour = workTimeHour;
     }
 
     @Override
