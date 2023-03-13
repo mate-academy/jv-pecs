@@ -4,7 +4,7 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Machine;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
     public List<Machine> get() {
         return List.of(new Bulldozer());

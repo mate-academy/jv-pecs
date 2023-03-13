@@ -6,9 +6,6 @@ import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.List;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List getAll(Class<? extends Machine> type) {
