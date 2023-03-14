@@ -7,11 +7,12 @@ import core.mate.academy.model.Truck;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private static final BulldozerProducer bulldozers = new BulldozerProducer();
+    private static final TruckProducer trucks = new TruckProducer();
+    private static final ExcavatorProducer excavators = new ExcavatorProducer();
+
     @Override
     public List getAll(Class<? extends Machine> type) {
-        BulldozerProducer bulldozers = new BulldozerProducer();
-        TruckProducer trucks = new TruckProducer();
-        ExcavatorProducer excavators = new ExcavatorProducer();
         return (type == Bulldozer.class ? bulldozers.get() :
                 (type == Excavator.class ? excavators.get() :
                         (type == Truck.class ? trucks.get() :
