@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private double operationalWeight;
+    private double capacity;
+    private String transmissionType;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(double operationalWeight, double capacity, String transmissionType) {
+        this.operationalWeight = operationalWeight;
+        this.capacity = capacity;
+        this.transmissionType = transmissionType;
     }
 
     @Override
