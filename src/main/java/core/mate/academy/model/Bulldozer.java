@@ -18,30 +18,6 @@ public class Bulldozer extends Machine {
         this.transmissionType = transmissionType;
     }
 
-    public double getOperationalWeight() {
-        return operationalWeight;
-    }
-
-    public void setOperationalWeight(double operationalWeight) {
-        this.operationalWeight = operationalWeight;
-    }
-
-    public double getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(double capacity) {
-        this.capacity = capacity;
-    }
-
-    public String getTransmissionType() {
-        return transmissionType;
-    }
-
-    public void setTransmissionType(String transmissionType) {
-        this.transmissionType = transmissionType;
-    }
-
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
