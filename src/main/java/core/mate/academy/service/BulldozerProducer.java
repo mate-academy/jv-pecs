@@ -1,25 +1,24 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Bulldozer;
-import core.mate.academy.model.Machine;
 import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-    private final List<Bulldozer> bulldozerList = new ArrayList<>();
+    private static final List<Bulldozer> BULLDOZER_LIST = createBulldozerList();
 
-    @Override
-    public List<? extends Machine> get() {
-        createBulldozerList();
-        return bulldozerList;
+    public List<Bulldozer> get() {
+        return BULLDOZER_LIST;
     }
 
-    private void createBulldozerList() {
+    private static List<Bulldozer> createBulldozerList() {
+        List<Bulldozer> bulldozers = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             Bulldozer bulldozer = new Bulldozer();
             bulldozer.setColor("Color" + i);
             bulldozer.setName("name" + i);
-            bulldozerList.add(bulldozer);
+            bulldozers.add(bulldozer);
         }
+        return bulldozers;
     }
 }

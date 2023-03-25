@@ -1,6 +1,7 @@
 package core.mate.academy.service;
 
 import static org.junit.Assert.assertEquals;
+
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
