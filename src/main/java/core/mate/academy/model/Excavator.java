@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private String workingSurface;
+
     public Excavator() {
+    }
+
+    public String getWorkingSurface() {
+        return workingSurface;
+    }
+
+    public void setWorkingSurface() {
+        this.workingSurface = workingSurface;
     }
 
     @Override
