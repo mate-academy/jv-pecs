@@ -4,7 +4,6 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +19,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         } else if (type == Bulldozer.class) {
             BulldozerProducer bulldozerProducer = new BulldozerProducer();
             return new ArrayList<>(bulldozerProducer.get());
-        } else if(type == Excavator.class){
+        } else if (type == Excavator.class) {
             ExcavatorProducer excavatorProducer = new ExcavatorProducer();
             return new ArrayList<>(excavatorProducer.get());
         } else {
