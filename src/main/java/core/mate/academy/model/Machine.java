@@ -3,6 +3,15 @@ package core.mate.academy.model;
 public abstract class Machine implements Workable {
     private String name;
     private String color;
+    private int horsePower;
+
+    public int getHorsePower() {
+        return horsePower;
+    }
+
+    public void setHorsePower(int horsePower) {
+        this.horsePower = horsePower;
+    }
 
     public String getName() {
         return name;
