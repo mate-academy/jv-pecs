@@ -9,7 +9,7 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, int horsePower) {
-        super();
+        super(name, color, horsePower);
     }
 
     @Override

@@ -9,7 +9,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String name, String color, int horsePower) {
-        super();
+        super(name, color, horsePower);
     }
 
     @Override
