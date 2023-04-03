@@ -5,13 +5,13 @@ import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckProducer implements MachineProducer {
+public class TruckProducer implements MachineProducer<Truck> {
     @Override
-    public List get() {
+    public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
-        trucks.add(new Truck(12654, 2.95));
-        trucks.add(new Truck(14845, 3.12));
-        trucks.add(new Truck(16000, 3.26));
+        trucks.add(new Truck(14098, "Brown", "Worker7"));
+        trucks.add(new Truck(12758, "White", "Worker8"));
+        trucks.add(new Truck(10368, "Yellow", "Worker9"));
         return trucks;
     }
 }
