@@ -1,22 +1,22 @@
 package core.mate.academy.model;
 
 public abstract class Machine implements Workable {
-    private String mark;
+    private String name;
     private String color;
 
-    public String getMark() {
-        return mark;
+    public String getName() {
+        return name;
     }
 
-    public void setMark(String mark) {
-        this.mark = mark;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getFunction() {
+    public String getColor() {
         return color;
     }
 
-    public void setFunction(String function) {
-        this.color = function;
+    public void setColor(String color) {
+        this.color = color;
     }
 }

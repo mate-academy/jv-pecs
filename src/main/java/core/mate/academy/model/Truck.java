@@ -6,14 +6,14 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     private int weight;
-    private double height;
 
     public Truck() {
     }
 
-    public Truck(int weight, double height) {
+    public Truck(int weight, String color, String name) {
         this.weight = weight;
-        this.height = height;
+        setColor(color);
+        setName(name);
     }
 
     public int getWeight() {
@@ -22,14 +22,6 @@ public class Truck extends Machine {
 
     public void setWeight(int weight) {
         this.weight = weight;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
     }
 
     @Override
