@@ -5,13 +5,13 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    private double littersPerHour;
+    private double litersPerHour;
 
     public Bulldozer() {
     }
 
     public Bulldozer(double littersPerHour, String color, String name) {
-        this.littersPerHour = littersPerHour;
+        this.litersPerHour = littersPerHour;
         setColor(color);
         setName(name);
     }
