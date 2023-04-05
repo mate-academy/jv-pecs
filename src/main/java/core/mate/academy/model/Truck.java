@@ -5,14 +5,14 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    private String name;
-    private int height;
-    private int length;
+    private String brand;
+    private int wheelRadius;
+    private String bodyType;
 
-    public Truck(String truColor, int truHeight, int truLength) {
-        this.name = truColor;
-        this.height = truHeight;
-        this.length = truLength;
+    public Truck(String brand, int wheelRadius, String bodyType) {
+        this.brand = brand;
+        this.wheelRadius = wheelRadius;
+        this.bodyType = bodyType;
     }
 
     public Truck() {
