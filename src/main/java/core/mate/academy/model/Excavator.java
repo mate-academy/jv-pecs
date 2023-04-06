@@ -1,6 +1,8 @@
 package core.mate.academy.model;
 
 public class Excavator extends Machine {
+    private String typeExcavator;
+    private Integer sizeExcavator;
 
     public Excavator() {
     }

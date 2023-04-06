@@ -19,11 +19,9 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type.equals(Bulldozer.class)) {
             machines = bulldozerProducer.get();
         }
-
         if (type.equals(Excavator.class)) {
             machines = excavatorProducer.get();
         }
-
         if (type.equals(Truck.class)) {
             machines = truckProducer.get();
         }
@@ -40,5 +38,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
+        for (Object element : machines) {
+            System.out.println(element);
+        }
     }
 }
