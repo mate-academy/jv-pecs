@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    private Truck firstTruck = new Truck("firstTruck", "blue", 2015);
-    private Truck secondTruck = new Truck("secondTruck", "white", 2009);
-    private Truck thirdTruck = new Truck("thirdTruck", "black", 2018);
+    private final Truck firstTruck = new Truck("firstTruck", "blue", 200);
+    private final Truck secondTruck = new Truck("secondTruck", "white", 340);
+    private final Truck thirdTruck = new Truck("thirdTruck", "black", 360);
 
     @Override
     public List<Truck> get() {

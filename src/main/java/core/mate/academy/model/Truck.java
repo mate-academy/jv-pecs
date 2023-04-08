@@ -5,18 +5,18 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    private int manufactureYear;
+    private int truckSize;
 
-    public Truck(String name, String color, int manufactureYear) {
+    public Truck(String name, String color, int truckSize) {
         super(name, color);
-        this.manufactureYear = manufactureYear;
+        this.truckSize = truckSize;
     }
 
     public Truck() {
     }
 
-    public int getManufactureYear() {
-        return manufactureYear;
+    public int getTruckSize() {
+        return truckSize;
     }
 
     @Override

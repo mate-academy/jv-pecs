@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-    private Excavator firstExcavator = new Excavator("First Excavator", "black", 2000);
-    private Excavator secondExcavator = new Excavator("Second Excavator", "yellow", 2013);
-    private Excavator thirdExcavator = new Excavator("Third Excavator", "white", 2017);
+    private final Excavator firstExcavator = new Excavator("First Excavator", "black", 2000);
+    private final Excavator secondExcavator = new Excavator("Second Excavator", "yellow", 2013);
+    private final Excavator thirdExcavator = new Excavator("Third Excavator", "white", 2017);
 
     @Override
     public List<Excavator> get() {
