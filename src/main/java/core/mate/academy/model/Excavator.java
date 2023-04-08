@@ -5,7 +5,18 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int manufactureYear;
+
+    public Excavator(String name, String color, int manufactureYear) {
+        super(name, color);
+        this.manufactureYear = manufactureYear;
+    }
+
     public Excavator() {
+    }
+
+    public int getManufactureYear() {
+        return manufactureYear;
     }
 
     @Override

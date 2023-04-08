@@ -5,7 +5,18 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int manufactureYear;
+
+    public Bulldozer(String name, String color, int manufactureYear) {
+        super(name, color);
+        this.manufactureYear = manufactureYear;
+    }
+
     public Bulldozer() {
+    }
+
+    public int getManufactureYear() {
+        return manufactureYear;
     }
 
     @Override
