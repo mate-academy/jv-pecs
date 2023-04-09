@@ -1,31 +1,31 @@
 package core.mate.academy.model;
 
 public class Truck extends Machine {
-    private String typeExcavator;
-    private Integer sizeExcavator;
+    private String typeTruck;
+    private Integer priceTruck;
 
-    public Truck(String typeExcavator, Integer sizeExcavator) {
-        this.typeExcavator = typeExcavator;
-        this.sizeExcavator = sizeExcavator;
+    public Truck(String typeTruck, Integer priceTruck) {
+        this.typeTruck = typeTruck;
+        this.priceTruck = priceTruck;
     }
 
     public Truck() {
     }
 
-    public String getTypeExcavator() {
-        return typeExcavator;
+    public String getTypeTruck() {
+        return typeTruck;
     }
 
-    public void setTypeExcavator(String typeExcavator) {
-        this.typeExcavator = typeExcavator;
+    public void setTypeTruck(String typeTruck) {
+        this.typeTruck = typeTruck;
     }
 
-    public Integer getSizeExcavator() {
-        return sizeExcavator;
+    public Integer getPriceTruck() {
+        return priceTruck;
     }
 
-    public void setSizeExcavator(Integer sizeExcavator) {
-        this.sizeExcavator = sizeExcavator;
+    public void setPriceTruck(Integer priceTruck) {
+        this.priceTruck = priceTruck;
     }
 
     @Override

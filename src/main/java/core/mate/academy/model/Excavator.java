@@ -2,11 +2,11 @@ package core.mate.academy.model;
 
 public class Excavator extends Machine {
     private String typeExcavator;
-    private Integer sizeExcavator;
+    private Integer weightExcavator;
 
-    public Excavator(String typeExcavator, Integer sizeExcavator) {
+    public Excavator(String typeExcavator, Integer weightExcavator) {
         this.typeExcavator = typeExcavator;
-        this.sizeExcavator = sizeExcavator;
+        this.weightExcavator = weightExcavator;
     }
 
     public Excavator() {
@@ -20,12 +20,12 @@ public class Excavator extends Machine {
         this.typeExcavator = typeExcavator;
     }
 
-    public Integer getSizeExcavator() {
-        return sizeExcavator;
+    public Integer getWeightExcavator() {
+        return weightExcavator;
     }
 
-    public void setSizeExcavator(Integer sizeExcavator) {
-        this.sizeExcavator = sizeExcavator;
+    public void setWeightExcavator(Integer weightExcavator) {
+        this.weightExcavator = weightExcavator;
     }
 
     @Override
