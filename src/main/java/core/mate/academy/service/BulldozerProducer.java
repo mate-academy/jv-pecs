@@ -7,16 +7,12 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
 
     @Override
     public List<Bulldozer> get() {
-        return listOfBulldozers();
-    }
-
-    private List<Bulldozer> listOfBulldozers() {
-        Bulldozer bulldozerA = new Bulldozer("ferry", 2009);
-        Bulldozer bulldozerB = new Bulldozer("terry", 2010);
-        Bulldozer bulldozerC = new Bulldozer("merry", 2011);
-        bulldozerA.setColor("grey");
-        bulldozerB.setColor("yellow");
-        bulldozerC.setColor("green");
-        return List.of(bulldozerA, bulldozerB, bulldozerC);
+        Bulldozer ferry = new Bulldozer("ferry", 2009);
+        Bulldozer terry = new Bulldozer("terry", 2010);
+        Bulldozer merry = new Bulldozer("merry", 2011);
+        ferry.setColor("grey");
+        terry.setColor("yellow");
+        merry.setColor("green");
+        return List.of(ferry, terry, merry);
     }
 }
