@@ -10,7 +10,9 @@ public class Bulldozer extends Machine {
     private String color;
 
     public Bulldozer() {
-    }    public Bulldozer(String bulldozerBrand, String name, String color) {
+    }
+
+    public Bulldozer(String bulldozerBrand, String name, String color) {
         this.bulldozerBrand = bulldozerBrand;
         this.name = name;
         this.color = color;

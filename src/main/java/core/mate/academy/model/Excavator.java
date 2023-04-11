@@ -8,6 +8,7 @@ public class Excavator extends Machine {
     private String excavatorBrand;
     private String name;
     private String color;
+
     public Excavator() {
     }
 
