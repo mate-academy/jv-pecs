@@ -14,6 +14,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     private final MachineProducer<Truck> truckProducer = new TruckProducer();
     private final MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
     private final MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
+
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type.equals(Truck.class)) {
@@ -40,5 +41,5 @@ public class MachineServiceImpl implements MachineService<Machine> {
         for (Machine mach : machines) {
             mach.doWork();
         }
-    };
+    }
 }

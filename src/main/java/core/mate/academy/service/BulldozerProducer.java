@@ -1,11 +1,10 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Bulldozer;
-
 import java.util.ArrayList;
 import java.util.List;
+import core.mate.academy.model.Bulldozer;
 
-public class BulldozerProducer implements MachineProducer <Bulldozer> {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
     public List<Bulldozer> get() {
         List<Bulldozer> resultBulldozer = new ArrayList<>();
@@ -13,5 +12,5 @@ public class BulldozerProducer implements MachineProducer <Bulldozer> {
         resultBulldozer.add(new Bulldozer("bul2", "b2", "22"));
         resultBulldozer.add(new Bulldozer("bul33", "b3", "33"));
         return resultBulldozer;
-    };
+    }
 }
