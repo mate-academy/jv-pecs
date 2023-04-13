@@ -4,7 +4,6 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +12,7 @@ import java.util.List;
  */
 public class MachineServiceImpl implements MachineService<Machine> {
 
-    private final MachineProducer<Bulldozer> bulldozerMachineProducer =     new BulldozerProducer();
+    private final MachineProducer<Bulldozer> bulldozerMachineProducer = new BulldozerProducer();
     private final MachineProducer<Truck> truckMachineProducer = new TruckProducer();
     private final MachineProducer<Excavator> excavatorMachineProducer = new ExcavatorProducer();
 

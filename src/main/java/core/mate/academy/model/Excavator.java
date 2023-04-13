@@ -17,6 +17,9 @@ public class Excavator extends Machine {
         this.fuelType = fuelType;
     }
 
+    public Excavator() {
+    }
+
     public String getBrand() {
         return brand;
     }

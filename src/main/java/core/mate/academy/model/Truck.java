@@ -17,6 +17,9 @@ public class Truck extends Machine {
         this.fuelType = fuelType;
     }
 
+    public Truck() {
+    }
+
     public String getBrand() {
         return brand;
     }

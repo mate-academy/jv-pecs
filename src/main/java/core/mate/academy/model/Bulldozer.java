@@ -17,6 +17,9 @@ public class Bulldozer extends Machine {
         this.fuelType = fuelType;
     }
 
+    public Bulldozer() {
+    }
+
     public String getBrand() {
         return brand;
     }
