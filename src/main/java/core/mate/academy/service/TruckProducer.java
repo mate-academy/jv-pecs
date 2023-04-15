@@ -4,7 +4,7 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckProducer implements MachineProducer {
+public class TruckProducer implements MachineProducer<Truck> {
     public static final String FIRST_COLOR = "White";
     public static final String SECOND_COLOR = "Yellow";
     public static final String THIRD_COLOR = "Red";
@@ -20,15 +20,15 @@ public class TruckProducer implements MachineProducer {
         truckList.add(produceTruck(THIRD_COLOR, THIRD_NAME));
     }
 
+    @Override
+    public List get() {
+        return truckList;
+    }
+
     private Truck produceTruck(String color, String name) {
         Truck truck = new Truck();
         truck.setColor(color);
         truck.setName(name);
         return truck;
-    }
-
-    @Override
-    public List get() {
-        return truckList;
     }
 }

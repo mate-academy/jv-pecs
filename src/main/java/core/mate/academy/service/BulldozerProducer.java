@@ -4,7 +4,7 @@ import core.mate.academy.model.Bulldozer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer {
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     public static final String FIRST_COLOR = "White";
     public static final String SECOND_COLOR = "Yellow";
     public static final String THIRD_COLOR = "Red";
@@ -20,15 +20,15 @@ public class BulldozerProducer implements MachineProducer {
         bulldozerList.add(produceBulldozer(THIRD_COLOR, THIRD_NAME));
     }
 
+    @Override
+    public List<Bulldozer> get() {
+        return this.bulldozerList;
+    }
+
     private Bulldozer produceBulldozer(String color, String name) {
         Bulldozer bulldozer = new Bulldozer();
         bulldozer.setColor(color);
         bulldozer.setName(name);
         return bulldozer;
-    }
-
-    @Override
-    public List<Bulldozer> get() {
-        return this.bulldozerList;
     }
 }
