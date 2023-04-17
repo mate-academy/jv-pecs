@@ -4,7 +4,7 @@ import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TruckProducer implements MachineProducer<Truck> {
+public class TruckProducer implements MachineProducer {
     @Override
     public List<? extends Machine> get() {
         Truck truck1 = new Truck();
