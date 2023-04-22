@@ -5,7 +5,22 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int bucketSize;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(String name, String color, int bucketSize) {
+        super(name, color);
+        this.bucketSize = bucketSize;
+    }
+
+    public int getBucketSize() {
+        return bucketSize;
+    }
+
+    public void setBucketSize(int bucketSize) {
+        this.bucketSize = bucketSize;
     }
 
     @Override
