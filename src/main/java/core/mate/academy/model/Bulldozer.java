@@ -1,11 +1,19 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private int bladeWidth;
+    private int enginePower;
+    private String fuelType;
+
     public Bulldozer() {
+        super("default_name", "default_color");
+    }
+
+    public Bulldozer(String name, String color, int bladeWidth, int enginePower, String fuelType) {
+        super(name, color);
+        this.bladeWidth = bladeWidth;
+        this.enginePower = enginePower;
+        this.fuelType = fuelType;
     }
 
     @Override
