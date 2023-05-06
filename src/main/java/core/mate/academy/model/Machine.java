@@ -10,7 +10,6 @@ public abstract class Machine implements Workable {
     }
 
     public Machine() {
-
     }
 
     public String getName() {

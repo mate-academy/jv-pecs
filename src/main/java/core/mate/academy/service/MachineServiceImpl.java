@@ -18,9 +18,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machines = new ArrayList<>();
-        if (machines == null) {
-            throw new RuntimeException();
-        }
         if (type == Bulldozer.class) {
             machines = bulldozerProducer.get();
         } else if (type == Truck.class) {
