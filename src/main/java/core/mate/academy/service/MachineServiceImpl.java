@@ -11,20 +11,22 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final BulldozerProducer bulldozerProducer = new BulldozerProducer();
+    private final TruckProducer truckProducer = new TruckProducer();
+    private final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machines = new ArrayList<>();
+        if (machines == null) {
+            throw new RuntimeException();
+        }
         if (type == Bulldozer.class) {
-            machines = new BulldozerProducer().get();
+            machines = bulldozerProducer.get();
         } else if (type == Truck.class) {
-            machines = new TruckProducer().get();
+            machines = truckProducer.get();
         } else if (type == Excavator.class) {
-            machines = new ExcavatorProducer().get();
-        } else {
-            if (machines == null) {
-                throw new RuntimeException();
-            }
+            machines = excavatorProducer.get();
         }
         return new ArrayList<>(machines);
     }
@@ -38,6 +40,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-
+        for (Machine machine : machines) {
+            machine.doWork();
+        }
     }
 }
