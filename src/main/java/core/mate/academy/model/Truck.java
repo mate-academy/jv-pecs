@@ -1,11 +1,18 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
+    private double weightDistributionFrontEmpty;
+    private double weightDistributionFrontLoaded;
+    private int maximumGrossVehicleWeight;
+
     public Truck() {
+    }
+
+    public Truck(double weightDistributionFrontEmpty, double weightDistributionFrontLoaded,
+                 int maximumGrossVehicleWeight) {
+        this.weightDistributionFrontEmpty = weightDistributionFrontEmpty;
+        this.weightDistributionFrontLoaded = weightDistributionFrontLoaded;
+        this.maximumGrossVehicleWeight = maximumGrossVehicleWeight;
     }
 
     @Override
