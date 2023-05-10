@@ -4,22 +4,23 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final Map<Class<? extends Machine>, MachineProducer<? extends Machine>> machines
+            = Map.of(
+            Bulldozer.class,new BulldozerProducer(),
+            Excavator.class,new ExcavatorProducer(),
+            Truck.class, new TruckProducer());
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        if (type == Bulldozer.class) {
-            return new ArrayList<>(new BulldozerProducer().get());
-        } else if (type == Excavator.class) {
-            return new ArrayList<>(new ExcavatorProducer().get());
-        } else if (type == Truck.class) {
-            return new ArrayList<>(new TruckProducer().get());
-        } else {
-            return new ArrayList<>();
+        if (machines.containsKey(type)) {
+            return (List<Machine>) machines.get(type).get();
         }
+        return Collections.emptyList();
     }
 
     @Override
@@ -34,6 +35,5 @@ public class MachineServiceImpl implements MachineService<Machine> {
         for (Machine machine : machines) {
             machine.doWork();
         }
-
     }
 }
