@@ -4,21 +4,11 @@ import core.mate.academy.model.Bulldozer;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-
     @Override
     public List<Bulldozer> get() {
         return List.of(
-                new Bulldozer("bulldozerBig",
-                        "BigBob",
-                        "Black",
-                        3),
-                new Bulldozer("bulldozerMedium",
-                        "DickRay",
-                        "Pink",
-                        2),
-                new Bulldozer("bulldozerMini",
-                        "TinyMate",
-                        "Yellow",
-                        1));
+                new Bulldozer("bulldozerBig", "BigBob", "Black", 3),
+                new Bulldozer("bulldozerMedium", "DickRay", "Pink", 2),
+                new Bulldozer("bulldozerMini", "TinyMate", "Yellow", 1));
     }
 }

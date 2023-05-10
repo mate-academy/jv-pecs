@@ -6,7 +6,7 @@ package core.mate.academy.model;
  */
 public class Excavator extends Machine {
     private String excavatorType;
-    private int numOfAdditionalExcavatorEquipment;
+    private int equipmentCount;
 
     public Excavator() {
         super();
@@ -15,10 +15,10 @@ public class Excavator extends Machine {
     public Excavator(String excavatorType,
                      String excavatorName,
                      String color,
-                     int numOfAdditionalExcavatorEquipment) {
+                     int equipmentCount) {
         super(excavatorName, color);
         this.excavatorType = excavatorType;
-        this.numOfAdditionalExcavatorEquipment = numOfAdditionalExcavatorEquipment;
+        this.equipmentCount = equipmentCount;
     }
 
     @Override
