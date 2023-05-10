@@ -8,8 +8,9 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(double weightDistributionFrontEmpty, double weightDistributionFrontLoaded,
-                 int maximumGrossVehicleWeight) {
+    public Truck(String name, String color, double weightDistributionFrontEmpty,
+                 double weightDistributionFrontLoaded, int maximumGrossVehicleWeight) {
+        super(name, color);
         this.weightDistributionFrontEmpty = weightDistributionFrontEmpty;
         this.weightDistributionFrontLoaded = weightDistributionFrontLoaded;
         this.maximumGrossVehicleWeight = maximumGrossVehicleWeight;

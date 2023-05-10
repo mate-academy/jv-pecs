@@ -7,26 +7,26 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final Map<Class<? extends Machine>, MachineProducer<? extends Machine>>
+            machineProducerMap = Map.of(Bulldozer.class, new BulldozerProducer(),
+                    Excavator.class, new ExcavatorProducer(),
+                    Truck.class, new TruckProducer());
+
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        if (type.equals(Truck.class)) {
-            TruckProducer truckProducer = new TruckProducer();
-            return new ArrayList<>(truckProducer.get());
-        } else if (type.equals(Bulldozer.class)) {
-            BulldozerProducer bulldozerProducer = new BulldozerProducer();
-            return new ArrayList<>(bulldozerProducer.get());
-        } else if (type.equals(Excavator.class)) {
-            ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-            return new ArrayList<>(excavatorProducer.get());
-        }
-        return new ArrayList<>();
+        return machineProducerMap.get(type) != null
+                ? new ArrayList<>(machineProducerMap.get(type).get()) :
+                Collections.emptyList();
     }
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        Collections.fill(machines, value);
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(i, value);
+        }
     }
 
     @Override
