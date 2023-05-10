@@ -1,26 +1,26 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
+import core.mate.academy.model.Truck;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private TruckProducer truckProducer = new TruckProducer();
-    private ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-    private BulldozerProducer bulldozerProducer = new BulldozerProducer();
+    private Map<Class<? extends Machine>, MachineProducer<? extends Machine>> machineServices
+            = Map.of(Truck.class, new TruckProducer(), Excavator.class, new ExcavatorProducer(),
+            Bulldozer.class, new BulldozerProducer());
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        switch (type.getSimpleName()) {
-            case "Truck":
-                return new ArrayList<>(truckProducer.get());
-            case "Excavator":
-                return new ArrayList<>(excavatorProducer.get());
-            case "Bulldozer":
-                return new ArrayList<>(bulldozerProducer.get());
-            default:
-                return new ArrayList<>();
+        MachineProducer<? extends Machine> machineProducer = machineServices.get(type);
+        if (machineProducer == null) {
+            return Collections.EMPTY_LIST;
         }
+        return new ArrayList<>(machineProducer.get());
     }
 
     @Override
