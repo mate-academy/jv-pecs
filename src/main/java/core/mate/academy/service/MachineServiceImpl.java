@@ -22,7 +22,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
                 return new ArrayList<>(TRUCK_PRODUCER.get());
             }
             default:
-                return new ArrayList<>();
+                return Collections.emptyList();
         }
     }
 
