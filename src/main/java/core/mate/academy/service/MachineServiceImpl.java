@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-
     private final Map<Class<? extends Machine>, MachineProducer<? extends Machine>> producerMap;
+
     public MachineServiceImpl() {
         producerMap = new HashMap<>();
         producerMap.put(Bulldozer.class, new BuildozerProducer());
