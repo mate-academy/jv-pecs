@@ -1,5 +1,6 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,6 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
             excavator.setColor(excavatorColors[i]);
             excavators.add(excavator);
         }
-        return excavators;
+        return List.of(excavators.toArray(new Excavator[0]));
     }
 }

@@ -17,6 +17,6 @@ public class BuildozerProducer implements MachineProducer<Bulldozer> {
             bulldozer.setColor(bulldozerColors[i]);
             bulldozers.add(bulldozer);
         }
-        return bulldozers;
+        return List.of(bulldozers.toArray(new Bulldozer[0]));
     }
 }
