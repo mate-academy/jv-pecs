@@ -5,21 +5,21 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl implements MachineService<Machine> {
+    private Map<Class<? extends Machine>, List<Machine>> machines;
+
+    public MachineServiceImpl() {
+        this.machines = Map.of(Bulldozer.class, new BulldozerProducer().get(),
+                Excavator.class, new ExcavatorProducer().get(),
+                Truck.class, new TruckProducer().get());
+    }
+
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        Map<Class<? extends Machine>, List<Machine>> mapMachines = new HashMap<>();
-        mapMachines.put(Bulldozer.class, new BulldozerProducer().get());
-        mapMachines.put(Excavator.class, new ExcavatorProducer().get());
-        mapMachines.put(Truck.class, new TruckProducer().get());
-        return (mapMachines.get(type) != null) ? mapMachines.get(type) : Collections.emptyList();
+        return (machines.get(type) != null) ? machines.get(type) : Collections.emptyList();
     }
 
     @Override
