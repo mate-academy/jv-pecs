@@ -1,11 +1,14 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
-import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Truck;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class MachineServiceImpl implements MachineService<Machine> {
 
@@ -41,4 +44,4 @@ public class MachineServiceImpl implements MachineService<Machine> {
             machine.doWork();
         }
     }
-    }
+}
