@@ -5,15 +5,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BuildozerProducer implements MachineProducer<Bulldozer> {
+    private final String[] bulldozerNames = {"John Deere", "CAT"};
+    private final String[] bulldozerColors = {"Yellow", "Orange"};
+
     @Override
     public List<Bulldozer> get() {
-        Bulldozer firstBulldozer = new Bulldozer();
-        Bulldozer secondBulldozer = new Bulldozer();
-        firstBulldozer.setName("John Deere");
-        firstBulldozer.setColor("Yellow");
-        secondBulldozer.setName("CAT");
-        secondBulldozer.setColor("Orange");
-        return new ArrayList<>(List.of(firstBulldozer, secondBulldozer));
+        List<Bulldozer> bulldozers = new ArrayList<>();
+        for (int i = 0; i < bulldozerNames.length; i++) {
+            Bulldozer bulldozer = new Bulldozer();
+            bulldozer.setName(bulldozerNames[i]);
+            bulldozer.setColor(bulldozerColors[i]);
+            bulldozers.add(bulldozer);
+        }
+        return bulldozers;
     }
 }
-
