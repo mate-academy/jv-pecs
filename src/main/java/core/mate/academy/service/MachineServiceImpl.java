@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private static final Map<Class<? extends Machine>,
+    private final Map<Class<? extends Machine>,
             MachineProducer<? extends Machine>> machines =
             Map.of(Bulldozer.class, new BulldozerProducer(),
                     Excavator.class, new ExcavatorProducer(),
@@ -18,9 +18,10 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        return (machines.get(type) == null)
+        MachineProducer<? extends Machine> machineProducer = machines.get(type);
+        return (machineProducer == null)
                 ? Collections.emptyList()
-                : new ArrayList<>(machines.get(type).get());
+                : new ArrayList<>(machineProducer.get());
     }
 
     @Override
