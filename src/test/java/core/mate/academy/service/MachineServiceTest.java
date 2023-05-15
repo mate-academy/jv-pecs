@@ -94,27 +94,18 @@ public class MachineServiceTest {
         }
     }
 
-    /**
-     * This test will compile in case of proper solution
-     */
     @Test
     public void startWorking_bulldozers() {
         List<Bulldozer> bulldozers = List.of(new Bulldozer());
         machineService.startWorking(bulldozers);
     }
 
-    /**
-     * This test will compile in case of proper solution
-     */
     @Test
     public void startWorking_excavators() {
         List<Excavator> excavators = List.of(new Excavator());
         machineService.startWorking(excavators);
     }
 
-    /**
-     * This test will compile in case of proper solution
-     */
     @Test
     public void startWorking_trucks() {
         List<Truck> trucks = List.of(new Truck());
