@@ -1,11 +1,17 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
 public class Excavator extends Machine {
+    private String bucketType;
+    private int serialNumOfBucket;
+    private int bucketLoading;
+
     public Excavator() {
+    }
+
+    public Excavator(String bucketType, int serialNumOfBucket, int bucketLoading) {
+        this.bucketType = bucketType;
+        this.serialNumOfBucket = serialNumOfBucket;
+        this.bucketLoading = bucketLoading;
     }
 
     @Override
