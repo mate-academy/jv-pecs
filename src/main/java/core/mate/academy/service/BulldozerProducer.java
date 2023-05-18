@@ -11,24 +11,24 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
         Bulldozer bulldozer = new Bulldozer();
         bulldozer.setName("Bulldozer 1");
         bulldozer.setColor("Pink");
-        bulldozer.setMaxPowerHp(300);
-        bulldozer.setSizeBsl("Small");
+        bulldozer.setMaxHorsePower(300);
+        bulldozer.setBulldozerSize("Small");
 
-        Bulldozer bulldozer2 = new Bulldozer();
-        bulldozer2.setName("Bulldozer 2");
-        bulldozer2.setColor("Yellow");
-        bulldozer2.setMaxPowerHp(450);
-        bulldozer2.setSizeBsl("Medium");
+        Bulldozer bulldozerMedium = new Bulldozer();
+        bulldozerMedium.setName("Bulldozer 2");
+        bulldozerMedium.setColor("Yellow");
+        bulldozerMedium.setMaxHorsePower(450);
+        bulldozerMedium.setBulldozerSize("Medium");
 
-        Bulldozer bulldozer3 = new Bulldozer();
-        bulldozer3.setName("Bulldozer 3");
-        bulldozer3.setColor("Orange");
-        bulldozer3.setMaxPowerHp(480);
-        bulldozer3.setSizeBsl("Large");
+        Bulldozer bulldozerLarge = new Bulldozer();
+        bulldozerLarge.setName("Bulldozer 3");
+        bulldozerLarge.setColor("Orange");
+        bulldozerLarge.setMaxHorsePower(480);
+        bulldozerLarge.setBulldozerSize("Large");
 
         bulldozerList.add(bulldozer);
-        bulldozerList.add(bulldozer2);
-        bulldozerList.add(bulldozer3);
+        bulldozerList.add(bulldozerMedium);
+        bulldozerList.add(bulldozerLarge);
         return bulldozerList;
     }
 }

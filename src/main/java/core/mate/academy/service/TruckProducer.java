@@ -8,27 +8,27 @@ public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Truck> get() {
         final List<Truck> truckList = new ArrayList<>();
-        Truck truck = new Truck();
-        truck.setName("first");
-        truck.setColor("White");
-        truck.setMaxSpeed(70);
-        truck.setFuelVolume(300);
+        Truck truckThirst = new Truck();
+        truckThirst.setName("first");
+        truckThirst.setColor("White");
+        truckThirst.setMaxSpeed(70);
+        truckThirst.setFuelVolume(300);
 
-        Truck truck2 = new Truck();
-        truck2.setName("second");
-        truck2.setColor("Blsck");
-        truck2.setMaxSpeed(80);
-        truck2.setFuelVolume(400);
+        Truck truckSecond = new Truck();
+        truckSecond.setName("second");
+        truckSecond.setColor("Blsck");
+        truckSecond.setMaxSpeed(80);
+        truckSecond.setFuelVolume(400);
 
-        Truck truck3 = new Truck();
-        truck3.setName("third");
-        truck3.setColor("Blue");
-        truck3.setMaxSpeed(80);
-        truck3.setFuelVolume(400);
+        Truck truckThird = new Truck();
+        truckThird.setName("third");
+        truckThird.setColor("Blue");
+        truckThird.setMaxSpeed(80);
+        truckThird.setFuelVolume(400);
 
-        truckList.add(truck);
-        truckList.add(truck2);
-        truckList.add(truck3);
+        truckList.add(truckThirst);
+        truckList.add(truckSecond);
+        truckList.add(truckThird);
 
         return truckList;
     }
