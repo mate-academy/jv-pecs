@@ -16,4 +16,3 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
         return bulldozers;
     }
 }
-

@@ -31,12 +31,14 @@ public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
         if (value != null) {
-            Collections.fill(machines,value);
+            Collections.fill(machines, value);
         }
     }
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-
+        for (Machine machine : machines) {
+            machine.doWork();
+        }
     }
 }
