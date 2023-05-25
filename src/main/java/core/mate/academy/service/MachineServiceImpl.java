@@ -39,7 +39,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (Excavator.class.equals(type)) {
             return new ExcavatorProducer();
         } else {
-            return new MachineProducer() {
+            return new MachineProducer<Machine>() {
                 @Override
                 public List<Machine> get() {
                     return new ArrayList<>();
