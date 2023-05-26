@@ -14,7 +14,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machines = getProducer(type).get();
-        return new ArrayList<>(machines);
+        return new ArrayList<Machine>(machines);
     }
 
     @Override
@@ -39,12 +39,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (Excavator.class.equals(type)) {
             return new ExcavatorProducer();
         } else {
-            return new MachineProducer<Machine>() {
-                @Override
-                public List<Machine> get() {
-                    return new ArrayList<>();
-                }
-            };
+            return (MachineProducer<Machine>) () -> new ArrayList<>();
         }
     }
 

@@ -10,6 +10,14 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public int getCargoWeight() {
+        return cargoWeight;
+    }
+
+    public void setCargoWeight(int cargoWeight) {
+        this.cargoWeight = cargoWeight;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

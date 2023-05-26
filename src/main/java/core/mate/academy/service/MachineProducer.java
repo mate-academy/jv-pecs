@@ -1,9 +1,8 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Machine;
 import java.util.List;
 
-public interface MachineProducer<T extends Machine> {
+public interface MachineProducer<T> {
     /**
      * In your implementations - create 2-3 models, add them to the list and return
      * @return - the list of models
@@ -11,5 +10,5 @@ public interface MachineProducer<T extends Machine> {
 
     int NUMBER_MACHINES = 3;
 
-    List<? extends Machine> get();
+    List<T> get();
 }

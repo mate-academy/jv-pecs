@@ -10,6 +10,14 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public int getLadleVolume() {
+        return ladleVolume;
+    }
+
+    public void setLadleVolume(int ladleVolume) {
+        this.ladleVolume = ladleVolume;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
