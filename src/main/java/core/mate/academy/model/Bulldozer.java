@@ -5,7 +5,35 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    String typeOfBuldozer;
+    private String typeOfBuldozer;
+
+    public String getTypeOfBuldozer() {
+        return typeOfBuldozer;
+    }
+
+    public void setTypeOfBuldozer(String typeOfBuldozer) {
+        this.typeOfBuldozer = typeOfBuldozer;
+    }
+
+    public int getWeightOfBuldozer() {
+        return weightOfBuldozer;
+    }
+
+    public void setWeightOfBuldozer(int weightOfBuldozer) {
+        this.weightOfBuldozer = weightOfBuldozer;
+    }
+
+    public int getCapacityOfBuldozer() {
+        return capacityOfBuldozer;
+    }
+
+    public void setCapacityOfBuldozer(int capacityOfBuldozer) {
+        this.capacityOfBuldozer = capacityOfBuldozer;
+    }
+
+    private int weightOfBuldozer;
+    private int capacityOfBuldozer;
+
     public Bulldozer() {
     }
 
