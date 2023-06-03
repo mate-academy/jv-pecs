@@ -6,6 +6,13 @@ package core.mate.academy.model;
  */
 public class Excavator extends Machine {
     private String typeOfExcavator;
+    private int weightOfExcavator;
+    private int capacityOfExcavator;
+    public Excavator(String typeOfExcavator, int weightOfExcavator, int capacityOfExcavator) {
+        this.typeOfExcavator = typeOfExcavator;
+        this.weightOfExcavator = weightOfExcavator;
+        this.capacityOfExcavator = capacityOfExcavator;
+    }
 
     public String getTypeOfExcavator() {
         return typeOfExcavator;
@@ -31,8 +38,6 @@ public class Excavator extends Machine {
         this.capacityOfExcavator = capacityOfExcavator;
     }
 
-    private int weightOfExcavator;
-    private int capacityOfExcavator;
     public Excavator() {
     }
 

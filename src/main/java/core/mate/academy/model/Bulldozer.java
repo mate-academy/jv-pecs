@@ -6,6 +6,14 @@ package core.mate.academy.model;
  */
 public class Bulldozer extends Machine {
     private String typeOfBuldozer;
+    private int weightOfBuldozer;
+    private int capacityOfBuldozer;
+
+    public Bulldozer(String typeOfBuldozer, int weightOfBuldozer, int capacityOfBuldozer) {
+        this.typeOfBuldozer = typeOfBuldozer;
+        this.weightOfBuldozer = weightOfBuldozer;
+        this.capacityOfBuldozer = capacityOfBuldozer;
+    }
 
     public String getTypeOfBuldozer() {
         return typeOfBuldozer;
@@ -30,9 +38,6 @@ public class Bulldozer extends Machine {
     public void setCapacityOfBuldozer(int capacityOfBuldozer) {
         this.capacityOfBuldozer = capacityOfBuldozer;
     }
-
-    private int weightOfBuldozer;
-    private int capacityOfBuldozer;
 
     public Bulldozer() {
     }

@@ -6,6 +6,14 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     private String typeOfTruck;
+    private int weightOfTruck;
+    private int capacityOfTruck;
+
+    public Truck(String typeOfTruck, int weightOfTruck, int capacityOfTruck) {
+        this.typeOfTruck = typeOfTruck;
+        this.weightOfTruck = weightOfTruck;
+        this.capacityOfTruck = capacityOfTruck;
+    }
 
     public String getTypeOfTruck() {
         return typeOfTruck;
@@ -31,8 +39,6 @@ public class Truck extends Machine {
         this.capacityOfTruck = capacityOfTruck;
     }
 
-    private int weightOfTruck;
-    private int capacityOfTruck;
     public Truck() {
     }
 
