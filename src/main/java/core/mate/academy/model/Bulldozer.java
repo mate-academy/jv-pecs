@@ -15,6 +15,9 @@ public class Bulldozer extends Machine {
         this.capacityOfBuldozer = capacityOfBuldozer;
     }
 
+    public Bulldozer() {
+    }
+
     public String getTypeOfBuldozer() {
         return typeOfBuldozer;
     }
@@ -37,9 +40,6 @@ public class Bulldozer extends Machine {
 
     public void setCapacityOfBuldozer(int capacityOfBuldozer) {
         this.capacityOfBuldozer = capacityOfBuldozer;
-    }
-
-    public Bulldozer() {
     }
 
     @Override

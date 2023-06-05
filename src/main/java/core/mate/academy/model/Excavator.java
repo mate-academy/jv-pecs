@@ -8,10 +8,14 @@ public class Excavator extends Machine {
     private String typeOfExcavator;
     private int weightOfExcavator;
     private int capacityOfExcavator;
+
     public Excavator(String typeOfExcavator, int weightOfExcavator, int capacityOfExcavator) {
         this.typeOfExcavator = typeOfExcavator;
         this.weightOfExcavator = weightOfExcavator;
         this.capacityOfExcavator = capacityOfExcavator;
+    }
+
+    public Excavator() {
     }
 
     public String getTypeOfExcavator() {
@@ -36,9 +40,6 @@ public class Excavator extends Machine {
 
     public void setCapacityOfExcavator(int capacityOfExcavator) {
         this.capacityOfExcavator = capacityOfExcavator;
-    }
-
-    public Excavator() {
     }
 
     @Override

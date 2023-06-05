@@ -15,6 +15,9 @@ public class Truck extends Machine {
         this.capacityOfTruck = capacityOfTruck;
     }
 
+    public Truck() {
+    }
+
     public String getTypeOfTruck() {
         return typeOfTruck;
     }
@@ -37,9 +40,6 @@ public class Truck extends Machine {
 
     public void setCapacityOfTruck(int capacityOfTruck) {
         this.capacityOfTruck = capacityOfTruck;
-    }
-
-    public Truck() {
     }
 
     @Override
