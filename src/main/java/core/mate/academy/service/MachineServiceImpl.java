@@ -8,22 +8,24 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl <T extends Machine> implements MachineService <Machine>{
+public class MachineServiceImpl implements MachineService <Machine>{
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-            if (type == null) {
-              throw new NullPointerException("Type of machine's is null");
+            List<? extends Machine> machines;
+            if (type == Bulldozer.class) {
+                machines = new BulldozerProducerImpl().get();
+                return new ArrayList<>(machines);
             }
-        if (type == Bulldozer.class) {
-            new BulldozerProducerImpl().get();
-        }
-        if (type == Excavator.class) {
-            new ExcavatorProducerImpl().get();
-        }
-        if (type == Truck.class) {
-            new TruckProducerImpl().get();
-        }
-        return new ArrayList<>();
+            if (type == Truck.class) {
+                machines = new TruckProducerImpl().get();
+                return new ArrayList<>(machines);
+            }
+            if (type == Excavator.class) {
+                machines = new ExcavatorProducerImpl().get();
+                return new ArrayList<>(machines);
+            } else {
+                return new ArrayList<>();
+            }
     }
 
     @Override
@@ -43,3 +45,4 @@ public class MachineServiceImpl <T extends Machine> implements MachineService <M
         }
     }
 }
+
