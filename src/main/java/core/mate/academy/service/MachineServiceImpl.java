@@ -15,10 +15,12 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         if (type == Bulldozer.class) {
             List<? extends Machine> bulldozers = new BulldozerProducer().get();
             return new ArrayList<>(bulldozers);
-        } else if (type == Excavator.class) {
+        }
+        if (type == Excavator.class) {
             List<? extends Machine> excavators = new ExcavatorProducer().get();
             return new ArrayList<>(excavators);
-        } else if (type == Truck.class) {
+        }
+        if (type == Truck.class) {
             List<? extends Machine> trucks = new TruckProducer().get();
             return new ArrayList<>(trucks);
         }
