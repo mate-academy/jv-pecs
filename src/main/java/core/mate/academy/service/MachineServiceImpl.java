@@ -12,9 +12,9 @@ import java.util.List;
  */
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
-    private final BulldozerProducer bulldozerProducer = new BulldozerProducer();
-    private final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-    private final TruckProducer truckProducer = new TruckProducer();
+    private final MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
+    private final MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
+    private final MachineProducer<Truck> truckProducer = new TruckProducer();
 
     public List<Machine> getAll(Class<? extends T> type) {
         if (type == Bulldozer.class) {
