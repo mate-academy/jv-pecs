@@ -11,7 +11,7 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
-    public List<Machine> getAll(Class<? extends Machine> type) {
+    public List<Machine> getAll(Class<? extends T> type) {
         if (type == Bulldozer.class) {
             List<? extends Machine> bulldozers = new BulldozerProducer().get();
             return new ArrayList<>(bulldozers);
@@ -27,14 +27,14 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         return new ArrayList<>();
     }
 
-    public void fill(List<? super Machine> machines, Machine value) {
+    public void fill(List<? super T> machines, T value) {
         int size = machines.size();
         for (int i = 0; i < size; i++) {
             machines.set(i, value);
         }
     }
 
-    public void startWorking(List<? extends Machine> machines) {
+    public void startWorking(List<? extends T> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }
