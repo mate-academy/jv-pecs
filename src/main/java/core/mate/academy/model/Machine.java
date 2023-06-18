@@ -1,6 +1,9 @@
 package core.mate.academy.model;
 
-public abstract class Machine implements Workable {
+import core.mate.academy.service.MachineProducer;
+import core.mate.academy.service.MachineService;
+
+public abstract class Machine implements Workable{
     private String name;
     private String color;
 
