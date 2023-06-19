@@ -1,37 +1,35 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
+import core.mate.academy.model.Truck;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-    private final BulldozerProducer bulldozerProducer;
-    private final ExcavatorProducer excavatorProducer;
-    private final TruckProducer truckProducer;
+    private final Map<Class<? extends Machine>, MachineProducer<? extends Machine>>
+            producers = new HashMap<>();
 
     public MachineServiceImpl() {
-        bulldozerProducer = new BulldozerProducer();
-        excavatorProducer = new ExcavatorProducer();
-        truckProducer = new TruckProducer();
+        producers.put(Bulldozer.class, new BulldozerProducer());
+        producers.put(Excavator.class, new ExcavatorProducer());
+        producers.put(Truck.class, new TruckProducer());
     }
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        switch (type.getSimpleName()) {
-            case "Bulldozer":
-                return new ArrayList<>(bulldozerProducer.get());
-            case "Excavator":
-                return new ArrayList<>(excavatorProducer.get());
-            case "Truck":
-                return new ArrayList<>(truckProducer.get());
-            default:
-                return List.of();
-        }
+        return producers.containsKey(type)
+                ? new ArrayList<>(producers.get(type).get())
+                : Collections.emptyList();
     }
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        machines.replaceAll(machine -> value);
+        Collections.fill(machines, value);
     }
 
     @Override
