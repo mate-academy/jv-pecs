@@ -9,7 +9,6 @@ public class Bulldozer extends Machine {
     private String color;
 
     public Bulldozer() {
-
     }
 
     public Bulldozer(String name, String color) {
