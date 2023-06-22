@@ -6,17 +6,10 @@ import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
     private static final int INITIAL_SIZE = 5;
-    private final List<Bulldozer> bulldozers;
-
-    public BulldozerProducer() {
-        bulldozers = new ArrayList<>();
-    }
 
     @Override
     public List<Bulldozer> get() {
-        if (!bulldozers.isEmpty()) {
-            bulldozers.clear();
-        }
+        List<Bulldozer> bulldozers = new ArrayList<>();
         for (int i = 0; i < INITIAL_SIZE; i++) {
             bulldozers.add(new Bulldozer());
         }

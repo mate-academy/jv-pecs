@@ -6,17 +6,10 @@ import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
     private static final int INITIAL_SIZE = 5;
-    private final List<Excavator> excavators;
-
-    public ExcavatorProducer() {
-        this.excavators = new ArrayList<>();
-    }
 
     @Override
     public List<Excavator> get() {
-        if (!excavators.isEmpty()) {
-            excavators.clear();
-        }
+        List<Excavator> excavators = new ArrayList<>();
         for (int i = 0; i < INITIAL_SIZE; i++) {
             excavators.add(new Excavator());
         }
