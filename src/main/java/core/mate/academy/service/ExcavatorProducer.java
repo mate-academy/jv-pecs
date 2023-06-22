@@ -14,6 +14,9 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
 
     @Override
     public List<Excavator> get() {
+        if (!excavators.isEmpty()) {
+            excavators.clear();
+        }
         for (int i = 0; i < INITIAL_SIZE; i++) {
             excavators.add(new Excavator());
         }

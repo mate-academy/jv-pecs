@@ -14,6 +14,9 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
 
     @Override
     public List<Bulldozer> get() {
+        if (!bulldozers.isEmpty()) {
+            bulldozers.clear();
+        }
         for (int i = 0; i < INITIAL_SIZE; i++) {
             bulldozers.add(new Bulldozer());
         }

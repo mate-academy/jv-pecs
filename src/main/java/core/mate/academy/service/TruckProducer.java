@@ -14,6 +14,9 @@ public class TruckProducer implements MachineProducer<Truck> {
 
     @Override
     public List<Truck> get() {
+        if (!trucks.isEmpty()) {
+            trucks.clear();
+        }
         for (int i = 0; i < INITIAL_SIZE; i++) {
             trucks.add(new Truck());
         }
