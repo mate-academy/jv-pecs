@@ -14,6 +14,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     private final BulldozerProducer bulldozerProducer = new BulldozerProducer();
     private final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
     private final TruckProducer truckProducer = new TruckProducer();
+
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> result = new ArrayList<>();
@@ -29,10 +30,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        int size = machines.size();
-        machines.clear();
-        for (int i = 0; i < size; i++) {
-            machines.add(value);
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(i, value);
         }
     }
 
