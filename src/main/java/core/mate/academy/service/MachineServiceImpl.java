@@ -22,7 +22,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
         truckProducer = new TruckProducer();
     }
 
-
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
