@@ -17,7 +17,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     private final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
 
     @Override
-    public List<Machine> getAll(Class<? extends Machine> type) {
+    public List<Machine> getAll(Class<? extends T> type) {
         if (type.equals(Truck.class)) {
             return new ArrayList<>(truckProducer.get());
         }
@@ -31,14 +31,14 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
 
     @Override
-    public void fill(List<? super Machine> machines, T value) {
+    public void fill(List<? super T> machines, T value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
-    public void startWorking(List<? extends Machine> machines) {
+    public void startWorking(List<? extends T> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }
