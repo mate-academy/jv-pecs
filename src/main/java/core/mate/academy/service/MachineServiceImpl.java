@@ -22,7 +22,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (map.get(type.getSimpleName()) != null) {
             MachineProducer<? extends Machine> machineProducer = map.get(type.getSimpleName());
-            return new ArrayList<>(machineProducer.get());
+            List<? extends Machine> machines = machineProducer.get();
+            return new ArrayList<>(machines);
         }
         return new ArrayList<>();
     }
