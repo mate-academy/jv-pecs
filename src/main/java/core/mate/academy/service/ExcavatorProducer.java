@@ -8,19 +8,19 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
     public List<Excavator> get() {
         List<Excavator> excavators = new ArrayList<>();
 
-        Excavator firstExcavator = new Excavator();
-        firstExcavator.setName("firstExcavator");
-        firstExcavator.setColor("Yellow");
+        String name1 = "firstExcavator";
+        String color1 = "Yellow";
+        Excavator firstExcavator = new Excavator(name1, color1);
         excavators.add(firstExcavator);
 
-        Excavator secondExcavator = new Excavator();
-        secondExcavator.setName("secondExcavator");
-        secondExcavator.setColor("Blue");
+        String name2 = "secondExcavator";
+        String color2 = "Blue";
+        Excavator secondExcavator = new Excavator(name2, color2);
         excavators.add(secondExcavator);
 
-        Excavator thirdExcavator = new Excavator();
-        thirdExcavator.setName("thirdExcavator");
-        thirdExcavator.setColor("PerfectBlue");
+        String name3 = "thirdExcavator";
+        String color3 = "PerfectBlue";
+        Excavator thirdExcavator = new Excavator(name3, color3);
         excavators.add(thirdExcavator);
 
         return excavators;

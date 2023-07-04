@@ -8,19 +8,19 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
     public List<Bulldozer> get() {
         List<Bulldozer> bulldozers = new ArrayList<>();
 
-        Bulldozer firstBulldozer = new Bulldozer();
-        firstBulldozer.setName("firstBulldozer");
-        firstBulldozer.setColor("Yellow");
+        String name1 = "firstBulldozer";
+        String color1 = "Yellow";
+        Bulldozer firstBulldozer = new Bulldozer(name1, color1);
         bulldozers.add(firstBulldozer);
 
-        Bulldozer secondBulldozer = new Bulldozer();
-        secondBulldozer.setName("secondBulldozer");
-        secondBulldozer.setColor("Blue");
+        String name2 = "secondBulldozer";
+        String color2 = "Blue";
+        Bulldozer secondBulldozer = new Bulldozer(name2, color2);
         bulldozers.add(secondBulldozer);
 
-        Bulldozer thirdBulldozer = new Bulldozer();
-        thirdBulldozer.setName("thirdBulldozer");
-        thirdBulldozer.setColor("PerfectBlue");
+        String name3 = "thirdBulldozer";
+        String color3 = "PerfectBlue";
+        Bulldozer thirdBulldozer = new Bulldozer(name3, color3);
         bulldozers.add(thirdBulldozer);
 
         return bulldozers;

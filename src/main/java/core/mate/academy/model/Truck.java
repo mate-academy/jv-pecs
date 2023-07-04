@@ -3,6 +3,10 @@ package core.mate.academy.model;
 public class Truck extends Machine {
     private String driverQualification;
 
+    public Truck(String name, String color) {
+        super(name, color);
+    }
+
     public Truck() {
     }
 

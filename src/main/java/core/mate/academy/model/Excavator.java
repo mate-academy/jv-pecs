@@ -3,6 +3,10 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
     private int dumpArea;
 
+    public Excavator(String name, String color) {
+        super(name, color);
+    }
+
     public Excavator() {
     }
 
