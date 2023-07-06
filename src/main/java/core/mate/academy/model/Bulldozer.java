@@ -1,11 +1,21 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private int bucketVolume;
+
+    public Bulldozer(String name, String color) {
+        super(name, color);
+    }
+
     public Bulldozer() {
+    }
+
+    public int getBucketVolume() {
+        return bucketVolume;
+    }
+
+    public void setBucketVolume(int bucketVolume) {
+        this.bucketVolume = bucketVolume;
     }
 
     @Override
