@@ -11,7 +11,7 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public Bulldozer(String country, int year) {
+    public Bulldozer(String country, int year,String name,String color) {
         this.country = country;
         this.year = year;
     }

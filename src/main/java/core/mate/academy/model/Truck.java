@@ -11,7 +11,7 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public Truck(String body, int length) {
+    public Truck(String body, int length,String name,String color) {
         this.body = body;
         this.length = length;
     }
