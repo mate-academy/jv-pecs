@@ -11,11 +11,11 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
+    private MachineProducer<? extends Machine> machineProducer;
 
     @Override
     @SuppressWarnings("unchecked")
     public List<Machine> getAll(Class<? extends Machine> type) {
-        MachineProducer<? extends Machine> machineProducer;
         List<? extends Machine> machines;
         if (type == null) {
             throw new NullPointerException("Input machine class can't be null");
@@ -38,17 +38,14 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        int size = machines.size();
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
     public void startWorking(List<? extends Machine> list) {
-        Machine machine;
-        for (Machine value : list) {
-            machine = value;
+        for (Machine machine : list) {
             machine.doWork();
         }
     }
