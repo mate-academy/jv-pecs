@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private double dumpArea;
+
     public Bulldozer() {
+    }
+
+    public double getDumpArea() {
+        return dumpArea;
+    }
+
+    public void setDumpArea(double dumpArea) {
+        this.dumpArea = dumpArea;
     }
 
     @Override
