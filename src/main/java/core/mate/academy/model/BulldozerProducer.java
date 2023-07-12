@@ -3,7 +3,7 @@ package core.mate.academy.model;
 import core.mate.academy.service.MachineProducer;
 import java.util.List;
 
-public class BulldozerProducer extends Bulldozer implements MachineProducer<Machine> {
+public class BulldozerProducer implements MachineProducer<Machine> {
     @Override
     public List<Machine> get() {
         Bulldozer firstBulldozer = new Bulldozer();

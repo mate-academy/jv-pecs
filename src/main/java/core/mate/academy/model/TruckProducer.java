@@ -3,7 +3,7 @@ package core.mate.academy.model;
 import core.mate.academy.service.MachineProducer;
 import java.util.List;
 
-public class TruckProducer extends Truck implements MachineProducer<Machine> {
+public class TruckProducer implements MachineProducer<Machine> {
     @Override
     public List<Machine> get() {
         Truck firstTruck = new Truck();
