@@ -5,8 +5,6 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    public Excavator() {
-    }
 
     @Override
     public void doWork() {
