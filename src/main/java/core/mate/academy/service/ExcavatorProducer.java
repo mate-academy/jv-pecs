@@ -12,6 +12,6 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
                 "Mine","Black");
         final Excavator excavator3 = new Excavator("M317D2",12.2f,
                 "Career","Braun");
-        return List.of(excavator1,excavator2,excavator3);
+        return List.of(excavator1, excavator2, excavator3);
     }
 }

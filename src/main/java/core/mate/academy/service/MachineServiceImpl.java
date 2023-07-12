@@ -40,6 +40,3 @@ public class MachineServiceImpl implements MachineService<Machine> {
         }
     }
 }
-
-
-

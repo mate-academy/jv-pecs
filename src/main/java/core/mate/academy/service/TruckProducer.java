@@ -12,6 +12,6 @@ public class TruckProducer implements MachineProducer<Truck> {
                 "MERCEDES","White");
         final Truck truck3 = new Truck("Trailer",600,
                 "FOTON","Orange");
-        return List.of(truck1,truck2,truck3);
+        return List.of(truck1, truck2, truck3);
     }
 }
