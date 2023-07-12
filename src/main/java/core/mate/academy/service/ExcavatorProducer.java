@@ -5,17 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer {
+    public static final int EXCAVATOR_NUMBER = 3;
     @Override
     public List<Excavator> get() {
-        List<Excavator> newList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            Excavator newExcavator = new Excavator();
-            newExcavator.setMaxReach(14);
-            newExcavator.setMaxDiggingDepth(11);
-            newExcavator.setColor("yellow");
-            newExcavator.setName("Super Excavator");
-            newList.add(newExcavator);
+        List<Excavator> excavatorList = new ArrayList<>();
+        for (int i = 0; i < EXCAVATOR_NUMBER; i++) {
+            excavatorList.add(new Excavator());
         }
-        return newList;
+        return excavatorList;
     }
 }

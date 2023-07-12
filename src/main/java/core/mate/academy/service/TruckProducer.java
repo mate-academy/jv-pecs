@@ -5,18 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer {
+    public static final int TRUCK_NUMBER = 3;
     @Override
     public List<Truck> get() {
-        List<Truck> newList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            Truck newTruck = new Truck();
-            newTruck.setLoadCapacity(100);
-            newTruck.setNumberOfAxles(2);
-            newTruck.setNumberOfWheels(6);
-            newTruck.setColor("yellow");
-            newTruck.setName("Super Truck");
-            newList.add(newTruck);
+        List<Truck> truckList = new ArrayList<>();
+        for (int i = 0; i < TRUCK_NUMBER; i++) {
+            truckList.add(new Truck());
         }
-        return newList;
+        return truckList;
     }
 }
