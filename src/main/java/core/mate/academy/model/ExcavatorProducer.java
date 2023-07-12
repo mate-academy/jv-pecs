@@ -3,9 +3,9 @@ package core.mate.academy.model;
 import core.mate.academy.service.MachineProducer;
 import java.util.List;
 
-public class ExcavatorProducer implements MachineProducer<Machine> {
+public class ExcavatorProducer implements MachineProducer<Excavator> {
     @Override
-    public List<Machine> get() {
+    public List<Excavator> get() {
         Excavator firstExcavator = new Excavator();
         firstExcavator.setName("Doosan");
         firstExcavator.setColor("Green");
@@ -14,7 +14,7 @@ public class ExcavatorProducer implements MachineProducer<Machine> {
         secondExcavator.setName("Hitachi");
         secondExcavator.setColor("Blue");
         secondExcavator.setBucketVolume(2.7);
-        List<Machine> excavatorList = List.of(firstExcavator, secondExcavator);
+        List<Excavator> excavatorList = List.of(firstExcavator, secondExcavator);
         return excavatorList;
     }
 }
