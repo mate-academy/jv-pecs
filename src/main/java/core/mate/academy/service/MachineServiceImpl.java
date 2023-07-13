@@ -10,15 +10,15 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService<Machine>{
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         MachineProducer<? extends Machine> machineProducer = null;
         if (type == Bulldozer.class) {
             machineProducer = new BulldozerProducer();
-        } else if (type == Excavator.class){
+        } else if (type == Excavator.class) {
             machineProducer = new ExcavatorProducer();
-        } else if(type == Truck.class) {
+        } else if (type == Truck.class) {
             machineProducer = new TruckProducer();
         }
         return machineProducer == null ? List.of() : (List<Machine>) machineProducer.get();
