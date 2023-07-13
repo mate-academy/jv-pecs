@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-    Excavator firstExcavator = new Excavator(500, "CESAB");
-    Excavator secondExcavator = new Excavator(700, "Bruder");
+    private Excavator firstExcavator = new Excavator(500, "CESAB");
+    private Excavator secondExcavator = new Excavator(700, "Bruder");
 
     @Override
     public List<Excavator> get() {
