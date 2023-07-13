@@ -15,6 +15,7 @@ public class Excavator extends Machine {
         this.weight = weight;
         this.manufacture = manufacture;
     }
+    
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
