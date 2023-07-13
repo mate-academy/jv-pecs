@@ -7,6 +7,22 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getSeats() {
+        return seats;
+    }
+
+    public void setSeats(int seats) {
+        this.seats = seats;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
