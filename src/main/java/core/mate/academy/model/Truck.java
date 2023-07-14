@@ -20,4 +20,20 @@ public class Truck extends Machine {
     public void doWork() {
         System.out.println("Truck started to work");
     }
+
+    public int getSeats() {
+        return seats;
+    }
+
+    public void setSeats(int seats) {
+        this.seats = seats;
+    }
+
+    public int getEnginePower() {
+        return enginePower;
+    }
+
+    public void setEnginePower(int enginePower) {
+        this.enginePower = enginePower;
+    }
 }
