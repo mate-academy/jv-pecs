@@ -22,7 +22,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         } else if (type == Truck.class) {
             machineProducer = new TruckProducer();
         }
-        return machineProducer == null ? List.of() : (List<Machine>) machineProducer.get();
+        return machineProducer == null ? Collections.emptyList() : (List<Machine>) machineProducer.get();
     }
 
     @Override
