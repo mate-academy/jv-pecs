@@ -4,7 +4,6 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-
 import java.util.Collections;
 import java.util.List;
 
@@ -22,7 +21,9 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
             return (List<T>) new ExcavatorProducer().get();
         } else if (type.equals(Truck.class)) {
             return (List<T>) new TruckProducer().get();
-        } else return Collections.emptyList();
+        } else {
+            return Collections.emptyList();
+        }
     }
 
     @Override
