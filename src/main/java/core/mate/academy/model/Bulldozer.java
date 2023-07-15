@@ -6,8 +6,14 @@ package core.mate.academy.model;
  */
 public class Bulldozer extends Machine {
     private int bulldozerId;
+    private String bulldozerModel;
 
     public Bulldozer() {
+    }
+
+    public Bulldozer(int bulldozerId, String bulldozerModel) {
+        this.bulldozerId = bulldozerId;
+        this.bulldozerModel = bulldozerModel;
     }
 
     @Override
@@ -19,7 +25,15 @@ public class Bulldozer extends Machine {
         return bulldozerId;
     }
 
-    public void setBulldozer_id(int bulldozerId) {
+    public void setBulldozerId(int bulldozerId) {
         this.bulldozerId = bulldozerId;
+    }
+
+    public String getBulldozerModel() {
+        return bulldozerModel;
+    }
+
+    public void setBulldozerModel(String bulldozerModel) {
+        this.bulldozerModel = bulldozerModel;
     }
 }

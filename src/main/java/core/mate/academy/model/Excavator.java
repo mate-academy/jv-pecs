@@ -6,8 +6,14 @@ package core.mate.academy.model;
  */
 public class Excavator extends Machine {
     private int excavatorId;
+    private String excavatorModel;
 
     public Excavator() {
+    }
+
+    public Excavator(int excavatorId, String excavatorModel) {
+        this.excavatorId = excavatorId;
+        this.excavatorModel = excavatorModel;
     }
 
     @Override
@@ -21,5 +27,12 @@ public class Excavator extends Machine {
 
     public void setExcavatorId(int excavatorId) {
         this.excavatorId = excavatorId;
+    }
+    public String getExcavatorModel() {
+        return excavatorModel;
+    }
+
+    public void setExcavatorModel(String excavatorModel) {
+        this.excavatorModel = excavatorModel;
     }
 }
