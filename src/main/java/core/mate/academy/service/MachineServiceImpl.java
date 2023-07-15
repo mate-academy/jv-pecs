@@ -8,11 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Your implementation of MachineService.
- */
-public class MachineServiceImpl implements MachineService<Machine> {
-
+public class MachineServiceImpl<T extends Machine> implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<Machine> machineList = new ArrayList<>();
@@ -27,9 +23,12 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public <T extends Machine> void fill(List<? super T> list, T value) {
-        Collections.fill(list, value);
+    public void fill(List<? super Machine> list, Machine value) {
+        for (int i = 0; i < list.size(); i++) {
+            list.set(i, value);
+        }
     }
+
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
