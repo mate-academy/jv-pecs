@@ -18,7 +18,6 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T>,
         List<Machine> baseMachineList = get();
         List<Machine> requestedListType = new ArrayList<>();
         for (Machine machine : baseMachineList) {
-            // перевірка чи прийнятий класс є наслідником Machine
             if (type.isInstance(machine) && !type.equals(Machine.class)) {
                 requestedListType.add(machine);
             }
