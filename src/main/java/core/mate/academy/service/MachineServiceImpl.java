@@ -23,9 +23,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
 
     @Override
     public void fill(List<? super T> list, T value) {
-        for (int i = 0; i < list.size(); i++) {
-            list.set(i, value);
-        }
+        list.replaceAll(ignored -> value);
     }
 
     @Override
