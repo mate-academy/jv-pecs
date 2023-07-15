@@ -1,24 +1,15 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
     private int truckId;
-    private String truckModel;
+    private String model;
 
     public Truck() {
     }
 
-    public Truck(int truckId, String truckModel) {
+    public Truck(int truckId, String model) {
         this.truckId = truckId;
-        this.truckModel = truckModel;
-    }
-
-    @Override
-    public void doWork() {
-        System.out.println("Truck started to work");
+        this.model = model;
     }
 
     public int getTruckId() {
@@ -29,11 +20,24 @@ public class Truck extends Machine {
         this.truckId = truckId;
     }
 
-    public String getTruckModel() {
-        return truckModel;
+    public String getModel() {
+        return model;
     }
 
-    public void setTruckModel(String truckModel) {
-        this.truckModel = truckModel;
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    @Override
+    public String toString() {
+        return "Truck{"
+                + "truck_id=" + truckId
+                + ", model='" + model
+                + '\'' + '}';
+    }
+
+    @Override
+    public void doWork() {
+        System.out.println("Truck started to work");
     }
 }

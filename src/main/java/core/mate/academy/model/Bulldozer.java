@@ -1,24 +1,15 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
     private int bulldozerId;
-    private String bulldozerModel;
+    private String model;
 
     public Bulldozer() {
     }
 
-    public Bulldozer(int bulldozerId, String bulldozerModel) {
+    public Bulldozer(int bulldozerId, String model) {
         this.bulldozerId = bulldozerId;
-        this.bulldozerModel = bulldozerModel;
-    }
-
-    @Override
-    public void doWork() {
-        System.out.println("Bulldozer started to work");
+        this.model = model;
     }
 
     public int getBulldozerId() {
@@ -29,11 +20,24 @@ public class Bulldozer extends Machine {
         this.bulldozerId = bulldozerId;
     }
 
-    public String getBulldozerModel() {
-        return bulldozerModel;
+    public String getModel() {
+        return model;
     }
 
-    public void setBulldozerModel(String bulldozerModel) {
-        this.bulldozerModel = bulldozerModel;
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    @Override
+    public String toString() {
+        return "Bulldozer{"
+                + "bulldozerId=" + bulldozerId
+                + ", model='" + model
+                + '\'' + '}';
+    }
+
+    @Override
+    public void doWork() {
+        System.out.println("Bulldozer started to work");
     }
 }

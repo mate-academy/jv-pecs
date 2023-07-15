@@ -11,23 +11,24 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T>, MachineProducer {
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        List<Machine> baseMachineList = get();
-        List<Machine> requestedListType = new ArrayList<>();
-        for (Machine machine : baseMachineList) {
-            if (type.isInstance(machine) && !type.equals(Machine.class)) {
-                requestedListType.add(machine);
-            }
+        List<Machine> machineList = new ArrayList<>();
+        if (type.equals(Truck.class)) {
+            machineList = new ArrayList<>(new TruckProducer().get());
+        } else if (type.equals(Bulldozer.class)) {
+            machineList = new ArrayList<>(new BulldozerProducer().get());
+        } else if (type.equals(Excavator.class)) {
+            machineList = new ArrayList<>(new ExcavatorProducer().get());
         }
-        return requestedListType;
+        return machineList;
     }
 
     @Override
-    public void fill(List<Object> unknownList, T value) {
-        Collections.fill(unknownList, value);
+    public <T extends Machine> void fill(List<? super T> list, T value) {
+        Collections.fill(list, value);
     }
 
     @Override
@@ -36,13 +37,4 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T>,
             machine.doWork();
         }
     }
-
-    @Override
-    public List<Machine> get() {
-        Truck truck = new Truck(1, "Excalibur 2018");
-        Bulldozer bulldozer = new Bulldozer(1, "Mounter v2B");
-        Excavator excavator = new Excavator(1, "Mounter v2E");
-        return new ArrayList<>(List.of(truck, bulldozer, excavator));
-    }
 }
-
