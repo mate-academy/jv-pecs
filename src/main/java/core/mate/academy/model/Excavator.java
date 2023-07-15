@@ -28,6 +28,7 @@ public class Excavator extends Machine {
     public void setExcavatorId(int excavatorId) {
         this.excavatorId = excavatorId;
     }
+
     public String getExcavatorModel() {
         return excavatorModel;
     }

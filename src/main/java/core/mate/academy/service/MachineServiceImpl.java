@@ -39,9 +39,9 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T>,
 
     @Override
     public List<Machine> get() {
-        Truck truck = new Truck(0, "Excalibur 2018");
-        Bulldozer bulldozer = new Bulldozer(0, "Mounter v2B");
-        Excavator excavator = new Excavator(0, "Mounter v2E");
+        Truck truck = new Truck(1, "Excalibur 2018");
+        Bulldozer bulldozer = new Bulldozer(1, "Mounter v2B");
+        Excavator excavator = new Excavator(1, "Mounter v2E");
         return new ArrayList<>(List.of(truck, bulldozer, excavator));
     }
 }
