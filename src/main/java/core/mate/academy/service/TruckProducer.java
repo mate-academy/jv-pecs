@@ -9,6 +9,7 @@ public class TruckProducer implements MachineProducer<Truck> {
     public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
         trucks.add(new Truck());
+        trucks.add(new Truck("Sylach", "black", 2018, 30500));
         return trucks;
     }
 }

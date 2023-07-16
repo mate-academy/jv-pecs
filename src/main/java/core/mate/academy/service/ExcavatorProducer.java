@@ -9,6 +9,7 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
     public List<Excavator> get() {
         List<Excavator> excavators = new ArrayList<>();
         excavators.add(new Excavator());
+        excavators.add(new Excavator("Monster", "red", 2001, 3));
         return excavators;
     }
 }
