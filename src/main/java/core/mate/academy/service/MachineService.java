@@ -4,9 +4,9 @@ import core.mate.academy.model.Machine;
 import java.util.List;
 
 public interface MachineService<T extends Machine> {
-    List<T> getAll(Class type);
+    List<T> getAll(Class<? extends T> type);
 
-    void fill(List<Object> machines, T value);
+    void fill(List<? super Machine> machines, T value);
 
-    void startWorking(List<?> machines);
+    void startWorking(List<? extends T> machines);
 }

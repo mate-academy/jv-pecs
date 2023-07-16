@@ -14,7 +14,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
 
     @Override
-    public List<T> getAll(Class type) {
+    public List<T> getAll(Class<? extends T> type) {
         if (type.equals(Bulldozer.class)) {
             return (List<T>) new BulldozerProducer().get();
         } else if (type.equals(Excavator.class)) {
@@ -27,7 +27,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
 
     @Override
-    public void fill(List<Object> machines, T value) {
+    public void fill(List<? super Machine> machines, T value) {
         for (int i = 0; i < machines.size(); i++) {
             if (value.getClass().equals(Bulldozer.class)) {
                 machines.set(i, new Bulldozer());
@@ -40,6 +40,6 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
 
     @Override
-    public void startWorking(List<?> machines) {
+    public void startWorking(List<? extends T> machines) {
     }
 }
