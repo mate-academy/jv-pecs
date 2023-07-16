@@ -5,8 +5,10 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    public Truck() {
-    }
+    private String name;
+    private String color;
+    private int yearOfProduction;
+    private int maximumCargoWeight;
 
     @Override
     public void doWork() {
