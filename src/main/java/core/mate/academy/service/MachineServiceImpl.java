@@ -9,10 +9,6 @@ import java.util.List;
 
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
-    public MachineServiceImpl() {
-        super();
-    }
-
     @Override
     public List<T> getAll(Class<? extends T> type) {
         if (type.equals(Bulldozer.class)) {
@@ -29,17 +25,14 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     @Override
     public void fill(List<? super Machine> machines, T value) {
         for (int i = 0; i < machines.size(); i++) {
-            if (value.getClass().equals(Bulldozer.class)) {
-                machines.set(i, new Bulldozer());
-            } else if (value.getClass().equals(Excavator.class)) {
-                machines.set(i, new Excavator());
-            } else {
-                machines.set(i, new Truck());
-            }
+            machines.set(i, value);
         }
     }
 
     @Override
     public void startWorking(List<? extends T> machines) {
+        for (T machine : machines) {
+            machine.doWork();
+        }
     }
 }

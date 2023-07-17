@@ -30,11 +30,6 @@ public class Bulldozer extends Machine {
     }
 
     @Override
-    public void startWorking() {
-        System.out.println("Bulldozer is working.");
-    }
-
-    @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
     }
