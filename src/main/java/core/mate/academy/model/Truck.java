@@ -1,10 +1,6 @@
 package core.mate.academy.model;
 
 public class Truck extends Machine {
-    private int numberOfAxles;
-    private double loadCapacity;
-    private int numberOfWheels;
-
     public Truck() {
     }
 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    public static final int TRUCK_NUMBER = 3;
+    private static final int TRUCK_NUMBER = 3;
 
     @Override
     public List<Truck> get() {
