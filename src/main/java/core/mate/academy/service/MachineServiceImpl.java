@@ -7,7 +7,6 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -18,15 +17,15 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
 
     @Override
     public List<T> getAll(Class<? extends Machine> type) {
-        List<? extends T> machine = Collections.emptyList();
+        MachineProducer<? extends Machine> machineProducer = null;
         if (type == Bulldozer.class) {
-            machine = (List<T>) bulldozerProducer.get();
+            machineProducer = bulldozerProducer;
         } else if (type.equals(Excavator.class)) {
-            machine = (List<T>) excavatorProducer.get();
+            machineProducer = excavatorProducer;
         } else if (type.equals(Truck.class)) {
-            machine = (List<T>) truckProducer.get();
+            machineProducer = truckProducer;
         }
-        return new ArrayList<>(machine);
+        return machineProducer == null ? Collections.emptyList() : (List<T>) machineProducer.get();
     }
 
     @Override

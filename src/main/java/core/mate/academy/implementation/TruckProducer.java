@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    private static final int NUMBER_OF_CAR = 3;
-
     @Override
     public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
