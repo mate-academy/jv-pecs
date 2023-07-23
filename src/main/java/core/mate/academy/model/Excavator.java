@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private String typeLadle;
+
     public Excavator() {
+    }
+
+    public String getTypeLadle() {
+        return typeLadle;
+    }
+
+    public void setTypeLadle(String typeLadle) {
+        this.typeLadle = typeLadle;
     }
 
     @Override
