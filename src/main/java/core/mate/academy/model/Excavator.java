@@ -11,8 +11,8 @@ public class Excavator extends Machine {
         super();
     }
 
-    public Excavator(String bull1, String red, String chainType) {
-        super(bull1, red);
+    public Excavator(String name, String color, String chainType) {
+        super(name, color);
         this.chainType = chainType;
     }
 

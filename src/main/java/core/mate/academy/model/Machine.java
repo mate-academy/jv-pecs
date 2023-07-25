@@ -7,7 +7,7 @@ public abstract class Machine implements Workable {
     public Machine() {
     }
 
-    public Machine(String bull1, String red) {
+    public Machine(String name, String color) {
     }
 
     public String getName() {
