@@ -6,10 +6,10 @@ import java.util.List;
 
 public class TruckProducer implements MachineProducer {
     @Override
-    public List<Truck> get() {
+    public List get() {
         List<Truck> trucks = new ArrayList<>();
-        trucks.add(new Truck("White", 2009));
-        trucks.add(new Truck("Blue", 2011));
+        trucks.add(new Truck(2009));
+        trucks.add(new Truck(2011));
         return trucks;
     }
 }
