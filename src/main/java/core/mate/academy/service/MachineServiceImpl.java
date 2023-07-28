@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
     @Override
-    public List<Machine> getAll(Class<? extends Machine> type) {
+    public List<Machine> getAll(Class<? extends T> type) {
         if (type == Bulldozer.class) {
             return new ArrayList<>(new BulldozerProducer().get());
         } else if (type == Excavator.class) {
@@ -29,7 +29,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
 
     @Override
-    public void startWorking(List<? extends Machine> machines) {
+    public void startWorking(List<? extends T> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }
