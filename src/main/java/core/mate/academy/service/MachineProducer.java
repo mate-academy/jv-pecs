@@ -3,7 +3,7 @@ package core.mate.academy.service;
 import core.mate.academy.model.Machine;
 import java.util.List;
 
-public interface MachineProducer<Machines> {
+public interface MachineProducer<Machine> {
     /**
      * In your implementations - create 2-3 models, add them to the list and return
      *
