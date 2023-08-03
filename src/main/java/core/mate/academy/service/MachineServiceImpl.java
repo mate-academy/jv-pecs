@@ -1,7 +1,6 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Machine;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,8 +33,10 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
             case "Truck": {
                 return truckProducer;
             }
+            default: {
+                return null;
+            }
         }
-        return null;
     }
 
     @Override
