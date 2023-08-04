@@ -17,8 +17,7 @@ public class Truck extends Machine {
     }
 
     public Truck(String name, String color, int cargoWeight, String typeEngine) {
-        setName(name);
-        setColor(color);
+        super(name, color);
         this.cargoWeight = cargoWeight;
         this.typeEngine = typeEngine;
     }
