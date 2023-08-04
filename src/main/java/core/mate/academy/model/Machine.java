@@ -6,6 +6,7 @@ public abstract class Machine implements Workable {
 
     public Machine() {
     }
+
     public Machine(String name, String color) {
         this.name = name;
         this.color = color;
