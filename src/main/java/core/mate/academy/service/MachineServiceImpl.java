@@ -6,13 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
-    private MachineProducer<Bulldozer> bulldozerMachineProducer = new BulldozerProducer();
-    private MachineProducer<Excavator> excavatorMachineProducer = new ExcavatorProducer();
-    private MachineProducer<Truck> truckMachineProducer = new TruckProducer();
+    private final MachineProducer<Bulldozer> bulldozerMachineProducer = new BulldozerProducer();
+    private final MachineProducer<Excavator> excavatorMachineProducer = new ExcavatorProducer();
+    private final MachineProducer<Truck> truckMachineProducer = new TruckProducer();
 
     @Override
     public List<T> getAll(Class<? extends T> type) {
