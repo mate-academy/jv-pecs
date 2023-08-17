@@ -11,10 +11,6 @@ public abstract class Machine implements Workable {
         this.horsePower = horsePower;
     }
 
-    protected Machine() {
-
-    }
-
     public int getHorsePower() {
         return horsePower;
     }

@@ -2,6 +2,7 @@ package core.mate.academy.model;
 
 public class Bulldozer extends Machine {
     public Bulldozer() {
+        super("", "", 0);
     }
 
     public Bulldozer(String name, String color, int horsePower) {

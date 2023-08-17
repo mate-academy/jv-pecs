@@ -2,6 +2,7 @@ package core.mate.academy.model;
 
 public class Excavator extends Machine {
     public Excavator() {
+        super("", "", 0);
     }
 
     public Excavator(String name, String color, int horsePower) {
