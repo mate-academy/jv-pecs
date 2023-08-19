@@ -1,7 +1,6 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Machine;
-import core.mate.academy.model.Workable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
