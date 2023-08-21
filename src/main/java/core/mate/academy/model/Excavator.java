@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private boolean suitableForMining;
+    private int armLength;
+
     public Excavator() {
+    }
+
+    public Excavator(boolean suitableForMining, int armLength) {
+        this.suitableForMining = suitableForMining;
+        this.armLength = armLength;
     }
 
     @Override
