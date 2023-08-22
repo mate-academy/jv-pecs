@@ -4,14 +4,16 @@ import core.mate.academy.model.Truck;
 import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.IntStream;
 
 public class TruckProducerImpl implements MachineProducer<Truck> {
+    private static final int DEFAULT_TRUCK_NUMBER = 10;
+
     @Override
     public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
-        IntStream.range(1, 10)
-                .forEach(i -> trucks.add(new Truck()));
+        for (int i = 0; i < DEFAULT_TRUCK_NUMBER; i++) {
+            trucks.add(new Truck());
+        }
         return trucks;
     }
 }
