@@ -17,8 +17,8 @@ public class Excavator extends Machine {
         return carrying;
     }
 
-    public void setHeight(int height) {
-        this.carrying = height;
+    public void setHeight(int carrying) {
+        this.carrying = carrying;
     }
 
     public int getRadius() {
