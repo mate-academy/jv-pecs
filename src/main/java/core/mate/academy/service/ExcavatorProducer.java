@@ -3,18 +3,14 @@ package core.mate.academy.service;
 import core.mate.academy.model.Excavator;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-    private static final int MAX_NUMBER = 10;
-    private static final int MIN_NUMBER = 1;
-    private final Random random = new Random();
+    private static final int MAX_NUMBER = 3;
 
     @Override
     public List<Excavator> get() {
-        int number = random.nextInt(MAX_NUMBER) + MIN_NUMBER;
         List<Excavator> list = new ArrayList<>();
-        for (int i = 0; i < number; i++) {
+        for (int i = 0; i < MAX_NUMBER; i++) {
             list.add(new Excavator());
         }
         return list;
