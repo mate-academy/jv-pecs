@@ -1,11 +1,32 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
+    private int maxSpeed;
+    private int wheels;
+
     public Truck() {
+    }
+
+    public Truck(String name, String color, int maxSpeed, int wheels) {
+        super(name, color);
+        this.maxSpeed = maxSpeed;
+        this.wheels = wheels;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public int getWheels() {
+        return wheels;
+    }
+
+    public void setWheels(int wheels) {
+        this.wheels = wheels;
     }
 
     @Override
