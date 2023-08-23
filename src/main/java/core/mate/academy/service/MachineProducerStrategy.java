@@ -7,7 +7,7 @@ import core.mate.academy.model.Truck;
 import core.mate.academy.service.producerimpl.BulldozerProducerImpl;
 import core.mate.academy.service.producerimpl.ExcavatorProducerImpl;
 import core.mate.academy.service.producerimpl.TruckProducerImpl;
-import java.util.List;
+import java.util.ArrayList;
 
 public class MachineProducerStrategy {
     public MachineProducer<? extends Machine> getMachineProducerStrategy(
@@ -19,12 +19,7 @@ public class MachineProducerStrategy {
         } else if (type == Excavator.class) {
             return new ExcavatorProducerImpl();
         } else {
-            return new MachineProducer<Machine>() {
-                @Override
-                public List<Machine> get() {
-                    return List.of();
-                }
-            };
+            return (MachineProducer<Machine>) ArrayList::new;
         }
     }
 }

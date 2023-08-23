@@ -16,15 +16,15 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        return new ArrayList<>(producerStrategy.getMachineProducerStrategy(type).get());
+        MachineProducer<? extends Machine> producer = producerStrategy
+                .getMachineProducerStrategy(type);
+        return new ArrayList<>(producer.get());
     }
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        if (machines != null) {
-            for (int i = 0; i < machines.size(); i++) {
-                machines.set(i, value);
-            }
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(i, value);
         }
     }
 
