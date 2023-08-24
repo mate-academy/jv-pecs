@@ -8,9 +8,9 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
     @Override
     public List<Excavator> get() {
         List<Excavator> excavators = new ArrayList<>();
-        excavators.add(new Excavator());
-        excavators.add(new Excavator());
-        excavators.add(new Excavator());
+        for (int i = 0; i < ENTITIES_NUMBER; i++) {
+            excavators.add(new Excavator());
+        }
         return excavators;
     }
 }
