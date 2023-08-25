@@ -6,6 +6,7 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     private int price;
+
     public Truck() {
     }
 
@@ -20,14 +21,5 @@ public class Truck extends Machine {
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
-    }
-
-    @Override
-    public String toString() {
-        return "Truck{" +
-                "price=" + price +
-                ";color=" + super.getColor() +
-                ";name=" + super.getName() +
-                '}';
     }
 }

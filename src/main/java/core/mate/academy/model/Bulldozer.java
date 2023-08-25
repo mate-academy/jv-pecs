@@ -6,6 +6,7 @@ package core.mate.academy.model;
  */
 public class Bulldozer extends Machine {
     private int power;
+
     public Bulldozer() {
     }
 
@@ -20,14 +21,5 @@ public class Bulldozer extends Machine {
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
-    }
-
-    @Override
-    public String toString() {
-        return "Bulldozer{" +
-                "power=" + power +
-                ";color=" + super.getColor() +
-                ";name=" + super.getName() +
-                '}';
     }
 }
