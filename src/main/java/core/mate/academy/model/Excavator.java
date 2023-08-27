@@ -13,7 +13,8 @@ public class Excavator extends Machine {
     public String getEngine() {
         return engine;
     }
-    public void setEngine(String engine){
+
+    public void setEngine(String engine) {
         this.engine = engine;
     }
 

@@ -6,8 +6,10 @@ package core.mate.academy.model;
  */
 public class Bulldozer extends Machine {
     private int weight;
+
     public Bulldozer() {
     }
+
     public int getWeight() {
         return weight;
     }

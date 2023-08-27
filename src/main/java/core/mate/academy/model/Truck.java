@@ -6,11 +6,14 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     private int power;
+
     public Truck() {
     }
+
     public int getPower() {
         return power;
     }
+
     public void setPower(int power) {
         this.power = power;
     }
