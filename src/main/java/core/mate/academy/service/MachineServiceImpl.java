@@ -14,6 +14,7 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
+    @SuppressWarnings("unchecked")
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machines = new ArrayList<>();
@@ -26,7 +27,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Truck.class) {
             machines = new TruckProducer().get();
         }
-        return new ArrayList<>(machines);
+        return (List<Machine>) machines;
     }
 
     @Override
