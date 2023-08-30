@@ -9,15 +9,19 @@ import java.util.Collections;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final BulldozerProducer bulldozerProducer = new BulldozerProducer();
+    private final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+    private final TruckProducer truckProducer = new TruckProducer();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
+
         if (type.equals(Bulldozer.class)) {
-            return new ArrayList<>(new BulldozerProducer().get());
+            return new ArrayList<>(bulldozerProducer.get());
         } else if (type.equals(Excavator.class)) {
-            return new ArrayList<>(new ExcavatorProducer().get());
+            return new ArrayList<>(excavatorProducer.get());
         } else if (type.equals(Truck.class)) {
-            return new ArrayList<>(new TruckProducer().get());
+            return new ArrayList<>(truckProducer.get());
         } else {
             return Collections.emptyList();
         }
