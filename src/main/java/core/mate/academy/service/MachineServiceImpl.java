@@ -8,19 +8,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final BulldozerProducer bulldozerProducer = new BulldozerProducer();
+    private final TruckProducer truckProducer = new TruckProducer();
+    private final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> list = new ArrayList<>();
         if (type.equals(Bulldozer.class)) {
-            list = new BulldozerProducer().get();
+            list = bulldozerProducer.get();
         }
         if (type.equals(Truck.class)) {
-            list = new TruckProducer().get();
+            list = truckProducer.get();
         }
         if (type.equals(Excavator.class)) {
-            list = new ExcavatorProducer().get();
+            list = excavatorProducer.get();
         }
-        return (List) list;
+        return (List<Machine>) list;
     }
 
     @Override

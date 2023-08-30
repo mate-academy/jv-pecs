@@ -8,7 +8,7 @@ public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
-        for (int i = 0; i < SIZE; i++) {
+        for (int i = 0; i < NUMBER_OF_MACHINES; i++) {
             trucks.add(new Truck());
         }
         return trucks;
