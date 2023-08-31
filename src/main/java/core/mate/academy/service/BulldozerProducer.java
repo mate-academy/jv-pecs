@@ -4,7 +4,7 @@ import core.mate.academy.model.Bulldozer;
 
 import java.util.List;
 
-public class BulldozerProducer implements MachineProducer<Bulldozer>{
+public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
     public List<Bulldozer> get() {
         Bulldozer firstBulldozer = new Bulldozer("Liebherr multishank", "yellow", "ripper");
