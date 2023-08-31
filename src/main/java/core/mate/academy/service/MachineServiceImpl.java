@@ -4,14 +4,13 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-
 import java.util.Collections;
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService<Machine>{
+public class MachineServiceImpl implements MachineService<Machine> {
     private MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
     private MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
     private MachineProducer<Truck> truckProducer = new TruckProducer();
