@@ -5,7 +5,7 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
-    private double bladeWidth = 3.0; // m
+    private double bladeWidth;
 
     public Bulldozer() {
     }
