@@ -9,7 +9,6 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
     public List<Excavator> get() {
         List<Excavator> excavators = new ArrayList<>();
 
-        // Додамо об'єкти Excavator до списку
         Excavator excavator1 = new Excavator();
         Excavator excavator2 = new Excavator();
         excavators.add(excavator1);

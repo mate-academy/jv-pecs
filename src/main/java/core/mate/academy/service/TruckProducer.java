@@ -9,7 +9,6 @@ public class TruckProducer implements MachineProducer<Truck> {
     public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
 
-        // Додамо об'єкти Truck до списку
         Truck truck1 = new Truck();
         Truck truck2 = new Truck();
         trucks.add(truck1);
