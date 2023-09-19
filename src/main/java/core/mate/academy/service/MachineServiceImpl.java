@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T> implements MachineService {
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List getAll(Class type) {
         if (Bulldozer.class.equals(type)) {
@@ -26,7 +26,7 @@ public class MachineServiceImpl<T> implements MachineService {
     }
 
     @Override
-    public void fill(List machines, Object value) {
+    public void fill(List machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Parameterize this service and add its implementation in a separate class.
  */
-public interface MachineService<T> {
+public interface MachineService<T extends Machine> {
 
     /**
      * Return the list of machines.
@@ -35,5 +35,5 @@ public interface MachineService<T> {
      *
      * @param machines - the list of machines
      */
-    void startWorking(List<? extends Machine> machines);
+    void startWorking(List<? extends T> machines);
 }
