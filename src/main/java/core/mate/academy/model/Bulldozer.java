@@ -6,9 +6,8 @@ package core.mate.academy.model;
  */
 public class Bulldozer extends Machine {
     private int height;
-    public Bulldozer(String name, String color, int height) {
-        super(name, color);
-        this.height = height;
+    public Bulldozer() {
+
     }
     public int getHeight() {
         return height;

@@ -6,9 +6,7 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     private int horsePower;
-    public Truck (String name, String color, int horsePower) {
-        super(name, color);
-        this.horsePower = horsePower;
+    public Truck () {
     }
     public int getHorsePower() {
         return horsePower;

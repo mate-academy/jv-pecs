@@ -7,9 +7,8 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
     private int power;
 
-    public Excavator(String name, String color, int power) {
-        super(name, color);
-        this.power = power;
+    public Excavator() {
+
     }
     public int getPower() {
         return power;

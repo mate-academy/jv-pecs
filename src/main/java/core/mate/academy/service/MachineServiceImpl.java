@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService <? extends Machine> {
+public class MachineServiceImpl <T extends Machine> implements MachineService<T> {
     @Override
     public List<? extends Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
@@ -26,7 +26,7 @@ public class MachineServiceImpl implements MachineService <? extends Machine> {
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Machine value) {
+    public void fill(List<? super Class> machines, Class<? extends Machine> value) {
          int size = machines.size();
          for (int i = 0; i < size; i++) {
              machines.set(i, value);
