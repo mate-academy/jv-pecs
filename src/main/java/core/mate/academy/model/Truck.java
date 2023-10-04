@@ -6,15 +6,17 @@ package core.mate.academy.model;
  */
 public class Truck extends Machine {
     private int horsePower;
-    public Truck () {
+
+    public Truck() {
     }
+
     public int getHorsePower() {
         return horsePower;
     }
+
     public void setHorsePower(int power) {
         this.horsePower = horsePower;
     }
-
 
     @Override
     public void doWork() {

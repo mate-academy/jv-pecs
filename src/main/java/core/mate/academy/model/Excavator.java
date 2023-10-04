@@ -10,13 +10,14 @@ public class Excavator extends Machine {
     public Excavator() {
 
     }
+
     public int getPower() {
         return power;
     }
+
     public void setPower(int power) {
         this.power = power;
     }
-
 
     @Override
     public void doWork() {

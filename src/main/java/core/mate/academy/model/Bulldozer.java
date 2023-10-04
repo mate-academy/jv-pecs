@@ -6,12 +6,15 @@ package core.mate.academy.model;
  */
 public class Bulldozer extends Machine {
     private int height;
+
     public Bulldozer() {
 
     }
+
     public int getHeight() {
         return height;
     }
+
     public void setHeight(int height) {
         this.height = height;
     }
