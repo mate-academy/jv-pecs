@@ -3,6 +3,7 @@ package core.mate.academy.model;
 public class Bulldozer extends Machine {
     private int year;
     private int kgOfMaterialCanForce;
+
     public Bulldozer() {
     }
 
