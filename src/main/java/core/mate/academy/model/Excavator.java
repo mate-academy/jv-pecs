@@ -5,11 +5,7 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    private String name;
-    private int horsePower;
     private String covsh;
-    private boolean wheels;
-    private String color;
 
     public Excavator() {
     }

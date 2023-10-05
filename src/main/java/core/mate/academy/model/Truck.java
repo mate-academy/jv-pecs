@@ -5,11 +5,7 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    private String name;
-    private int horsePower;
     private String prechip;
-    private boolean wheels;
-    private String color;
 
     public Truck() {
     }
