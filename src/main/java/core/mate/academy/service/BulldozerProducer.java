@@ -11,7 +11,8 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
     public List<Bulldozer> get() {
         List<Bulldozer> listOfBulldozers = new ArrayList<>();
         for (int i = 0; i < BULLDOZER_COUNT; i++) {
-            listOfBulldozers.add(new Bulldozer());
+            listOfBulldozers.add(new Bulldozer("Bulldozer", "Grey",
+                    55, "Manual"));
         }
         return listOfBulldozers;
     }

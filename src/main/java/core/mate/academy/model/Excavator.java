@@ -11,12 +11,27 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String name, String color, String typeOfFuel, int tankVolume) {
+        super.setName(name);
+        super.setColor(color);
+        this.typeOfFuel = typeOfFuel;
+        this.tankVolume = tankVolume;
+    }
+
     public int getTankVolume() {
         return tankVolume;
     }
 
     public void setTankVolume(int tankVolume) {
         this.tankVolume = tankVolume;
+    }
+
+    public String getTypeOfFuel() {
+        return typeOfFuel;
+    }
+
+    public void setTypeOfFuel(String typeOfFuel) {
+        this.typeOfFuel = typeOfFuel;
     }
 
     @Override

@@ -11,7 +11,7 @@ public class TruckProducer implements MachineProducer<Truck> {
     public List<Truck> get() {
         List<Truck> listOfTrucks = new ArrayList<>();
         for (int i = 0; i < TRUCK_COUNT; i++) {
-            listOfTrucks.add(new Truck());
+            listOfTrucks.add(new Truck("Track", "Red", 8, 110));
         }
         return listOfTrucks;
     }

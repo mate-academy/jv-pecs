@@ -11,6 +11,13 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String name, String color, double fuelConsumption, String typeOfTransmission) {
+        super.setName(name);
+        super.setColor(color);
+        this.fuelConsumption = fuelConsumption;
+        this.typeOfTransmission = typeOfTransmission;
+    }
+
     public double getFuelConsumption() {
         return fuelConsumption;
     }

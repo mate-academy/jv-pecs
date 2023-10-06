@@ -11,7 +11,8 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
     public List<Excavator> get() {
         List<Excavator> listOfExcavators = new ArrayList<>();
         for (int i = 0; i < EXCAVATOR_COUNT; i++) {
-            listOfExcavators.add(new Excavator());
+            listOfExcavators.add(new Excavator("Excavator", "Yellow",
+                    "Diesel", 250));
         }
         return listOfExcavators;
     }

@@ -11,6 +11,13 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String name, String color, int numberOfWheels, int maxSpeed) {
+        super.setName(name);
+        super.setColor(color);
+        this.numberOfWheels = numberOfWheels;
+        this.maxSpeed = maxSpeed;
+    }
+
     public int getNumberOfWheels() {
         return numberOfWheels;
     }
