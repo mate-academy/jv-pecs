@@ -4,6 +4,7 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,9 +35,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-        int size = machines.size();
-        for (int i = 0; i < size; i++) {
-            Machine machine = machines.get(i);
+        for (Machine machine : machines) {
             machine.doWork();
         }
     }
