@@ -10,11 +10,16 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String name, String color, int horsePower) {
+        super(name, color);
+        this.horsePower = horsePower;
+    }
+
     public int getHorsePower() {
         return horsePower;
     }
 
-    public void setHorsePower(int power) {
+    public void setHorsePower(int horsePower) {
         this.horsePower = horsePower;
     }
 
