@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Random;
 
 public class TruckProducer implements MachineProducer<Truck> {
+    private static final int NUMBER_OF_MACHINES = 3;
     private Random random = new Random();
 
     @Override

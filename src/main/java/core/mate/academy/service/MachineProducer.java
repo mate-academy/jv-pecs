@@ -8,6 +8,5 @@ public interface MachineProducer<T extends Machine> {
      * In your implementations - create 2-3 models, add them to the list and return
      * @return - the list of models
      */
-    int NUMBER_OF_MACHINES = 3;
     List<T> get();
 }
