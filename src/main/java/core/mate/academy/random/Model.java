@@ -1,6 +1,6 @@
 package core.mate.academy.random;
 
-public enum Models {
+public enum Model {
     CAT,
     SHANTUI,
     KOMATSU,
