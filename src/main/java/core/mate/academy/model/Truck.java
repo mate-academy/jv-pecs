@@ -1,11 +1,14 @@
 package core.mate.academy.model;
 
+import java.util.Random;
+
 /**
  * Add some custom fields that could be only in Truck
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
     private double trailerVolume;
+    private Random random = new Random();
 
     public Truck() {
     }
@@ -26,5 +29,9 @@ public class Truck extends Machine {
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
+    }
+
+    public double getRandomTrailerVolume() {
+        return random.nextInt(500);
     }
 }

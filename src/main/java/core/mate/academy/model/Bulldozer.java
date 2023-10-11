@@ -1,5 +1,7 @@
 package core.mate.academy.model;
 
+import java.util.Random;
+
 /**
  * Add some custom fields that could be only in Bulldozer
  * Do not remove no-args constructor
@@ -7,6 +9,7 @@ package core.mate.academy.model;
 
 public class Bulldozer extends Machine {
     private int horsePowers;
+    private Random random = new Random();
 
     public Bulldozer() {
     }
@@ -27,5 +30,9 @@ public class Bulldozer extends Machine {
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
+    }
+
+    public int getRandomHorsePowers() {
+        return random.nextInt(500);
     }
 }

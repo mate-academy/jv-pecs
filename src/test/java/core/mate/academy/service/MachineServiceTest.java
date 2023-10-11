@@ -89,7 +89,8 @@ public class MachineServiceTest {
         machineService.fill(machines, new Truck());
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
-            assertEquals("The list should contain elements of type Truck", Truck.class, machine.getClass());
+            assertEquals("The list should contain elements of type Truck",
+                    Truck.class, machine.getClass());
         }
     }
 

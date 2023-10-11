@@ -1,11 +1,14 @@
 package core.mate.academy.model;
 
+import java.util.Random;
+
 /**
  * Add some custom fields that could be only in Excavator
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
     private double bucketVolume;
+    private Random random = new Random();
 
     public Excavator() {
     }
@@ -26,5 +29,9 @@ public class Excavator extends Machine {
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
+    }
+
+    public double getRandomBucketVolume() {
+        return random.nextInt(500);
     }
 }
