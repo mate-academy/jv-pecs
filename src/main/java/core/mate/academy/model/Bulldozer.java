@@ -6,8 +6,8 @@ import java.util.Random;
  * Add some custom fields that could be only in Bulldozer
  * Do not remove no-args constructor
  */
-
 public class Bulldozer extends Machine {
+    private static final int MAX_HORSE_POWERS = 500;
     private int horsePowers;
     private Random random = new Random();
 
@@ -33,6 +33,6 @@ public class Bulldozer extends Machine {
     }
 
     public int getRandomHorsePowers() {
-        return random.nextInt(500);
+        return random.nextInt(MAX_HORSE_POWERS);
     }
 }

@@ -7,6 +7,7 @@ import java.util.Random;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private static final int MAX_TRAILER_VOLUME = 500;
     private double trailerVolume;
     private Random random = new Random();
 
@@ -32,6 +33,6 @@ public class Truck extends Machine {
     }
 
     public double getRandomTrailerVolume() {
-        return random.nextInt(500);
+        return random.nextInt(MAX_TRAILER_VOLUME);
     }
 }

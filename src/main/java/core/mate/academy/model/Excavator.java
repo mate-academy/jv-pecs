@@ -7,6 +7,7 @@ import java.util.Random;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private static final int MAX_BUCKET_VOLUME = 500;
     private double bucketVolume;
     private Random random = new Random();
 
@@ -32,6 +33,6 @@ public class Excavator extends Machine {
     }
 
     public double getRandomBucketVolume() {
-        return random.nextInt(500);
+        return random.nextInt(MAX_BUCKET_VOLUME);
     }
 }
