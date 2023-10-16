@@ -8,14 +8,8 @@ public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Truck> get() {
         List<Truck> machines = new ArrayList<>();
-        Truck truck = new Truck();
-        truck.setName("Big Truck");
-        truck.setColor("Yellow");
-        machines.add(truck);
-        truck = new Truck();
-        truck.setName("Small Truck");
-        truck.setColor("Brown");
-        machines.add(truck);
+        machines.add(new Truck("Big Truck", "Yellow"));
+        machines.add(new Truck("Small Truck", "Brown"));
         return machines;
     }
 }
