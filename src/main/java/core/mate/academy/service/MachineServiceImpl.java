@@ -8,11 +8,18 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final MachineStrategy machineStrategy = new MachineStrategy();
+
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        MachineStrategy machineStrategy = new MachineStrategy();
-        List<? extends Machine> machines = machineStrategy.getMachineProducer(type).get();
-        return new ArrayList<>(machines);
+        MachineProducer<? extends Machine> machineProducer
+                = machineStrategy.getMachineProducer(type);
+        if (machineProducer == null) {
+            return new ArrayList<>();
+        } else {
+            List<? extends Machine> machines = machineProducer.get();
+            return new ArrayList<>(machines);
+        }
     }
 
     @Override

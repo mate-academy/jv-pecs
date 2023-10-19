@@ -13,8 +13,9 @@ public class MachineStrategy {
             return new ExcavatorProducer();
         } else if (type == Truck.class) {
             return new TruckProducer();
+        } else {
+            return null;
         }
-        return new UnknownProducer();
     }
 
 }
