@@ -7,7 +7,7 @@ import java.util.List;
  * Add some custom fields that could be only in Truck
  * Do not remove no-field constructor
  */
-public class Truck extends Machine implements MachineService {
+public class Truck extends Machine {
     private String modelWheels;
     private boolean hasBumper;
 
@@ -21,21 +21,5 @@ public class Truck extends Machine implements MachineService {
 
     @Override
     public void doWork() {
-
-    }
-
-    @Override
-    public List getAll(Class type) {
-        return null;
-    }
-
-    @Override
-    public void fill(List machines, Machine value) {
-
-    }
-
-    @Override
-    public void startWorking(List list) {
-
     }
 }
