@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private double bladeWidth;
+    private int maxLoadCapacity;
+
     public Bulldozer() {
+        super();
+    }
+
+    public Bulldozer(String name, String color, double bladeWidth, int maxLoadCapacity) {
+        super(name, color);
+        this.bladeWidth = bladeWidth;
+        this.maxLoadCapacity = maxLoadCapacity;
     }
 
     @Override
