@@ -5,11 +5,21 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private double bladeWidth;
+
     public Bulldozer() {
     }
 
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
+    }
+
+    public double getBladeWidth() {
+        return bladeWidth;
+    }
+
+    public void setBladeWidth(final double bladeWidth) {
+        this.bladeWidth = bladeWidth;
     }
 }
