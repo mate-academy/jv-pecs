@@ -24,6 +24,7 @@ public class MachineServiceTest {
     @Test
     public void getAll_bulldozerType() {
         List<Machine> actual = machineService.getAll(Bulldozer.class);
+        System.out.println(actual.size());
         assertEquals("The list should contain elements of type Bulldozer",
             Bulldozer.class, actual.get(0).getClass());
     }
