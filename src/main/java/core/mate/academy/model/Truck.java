@@ -5,6 +5,14 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    int model;
+    int year;
+
+    public Truck(int model, int year) {
+        this.model = model;
+        this.year = year;
+    }
+
     public Truck() {
     }
 
