@@ -1,7 +1,6 @@
-package core.mate.academy.service;
+package core.mate.academy.producers;
 
 import core.mate.academy.model.Excavator;
-
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
