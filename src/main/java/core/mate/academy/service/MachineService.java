@@ -6,8 +6,8 @@ import java.util.List;
 /**
  * Parameterize this service and add its implementation in a separate class.
  */
-public interface MachineService<T extends Machine> {
 
+public interface MachineService<T extends Machine> {
     /**
      * Return the list of machines.
      * In the implementation of this method please use your MachineProducer implementations
