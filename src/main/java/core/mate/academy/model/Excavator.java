@@ -32,12 +32,4 @@ public class Excavator extends Machine {
                 + maxDiggingDepth
                 + '}';
     }
-
-    public double getMaxDiggingDepth() {
-        return maxDiggingDepth;
-    }
-
-    public void setMaxDiggingDepth(double maxDiggingDepth) {
-        this.maxDiggingDepth = maxDiggingDepth;
-    }
 }
