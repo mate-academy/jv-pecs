@@ -10,6 +10,10 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(int tankValue) {
+        this.tankValue = tankValue;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
@@ -17,9 +21,5 @@ public class Truck extends Machine {
 
     public int getTankValue() {
         return tankValue;
-    }
-
-    public void setTankValue(int tankValue) {
-        this.tankValue = tankValue;
     }
 }

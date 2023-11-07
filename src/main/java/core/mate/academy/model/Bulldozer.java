@@ -10,6 +10,10 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(int bucketSize) {
+        this.bucketSize = bucketSize;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
@@ -18,8 +22,6 @@ public class Bulldozer extends Machine {
     public int getBucketSize() {
         return bucketSize;
     }
-
-    public void setBucketSize(int bucketSize) {
-        this.bucketSize = bucketSize;
-    }
 }
+
+

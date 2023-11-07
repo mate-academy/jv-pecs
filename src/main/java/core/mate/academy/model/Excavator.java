@@ -10,6 +10,10 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String model) {
+        this.model = model;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
@@ -17,9 +21,5 @@ public class Excavator extends Machine {
 
     public String getModel() {
         return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
     }
 }
