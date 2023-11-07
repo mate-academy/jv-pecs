@@ -5,7 +5,27 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private int loadCapacity;
+
     public Truck() {
+    }
+
+    public Truck(String name, String color, int loadCapacity) {
+        super(name, color);
+        this.loadCapacity = loadCapacity;
+    }
+
+    public int getLoadCapacity() {
+        return loadCapacity;
+    }
+
+    public void setLoadCapacity(int loadCapacity) {
+        this.loadCapacity = loadCapacity;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Load Capacity: " + loadCapacity;
     }
 
     @Override
