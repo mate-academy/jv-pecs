@@ -8,23 +8,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final BulldozerProducer bulldozerProducer = new BulldozerProducer();
+    private final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+    private final TruckProducer truckProducer = new TruckProducer();
+
+
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
-            BulldozerProduce bulldozerProduce = new BulldozerProduce();
-            List<? extends Machine> bulldozers = bulldozerProduce.get();
+            List<? extends Machine> bulldozers = bulldozerProducer.get();
             return new ArrayList<>(bulldozers);
         }
 
         if (type == Excavator.class) {
-            ExcavatorProduce excavatorProduce = new ExcavatorProduce();
-            List<Excavator> excavators = excavatorProduce.get();
+            List<Excavator> excavators = excavatorProducer.get();
             return new ArrayList<>(excavators);
         }
 
         if (type == Truck.class) {
-            TruckProduce truckProduce = new TruckProduce();
-            List<Truck> trucks = truckProduce.get();
+            List<Truck> trucks = truckProducer.get();
             return new ArrayList<>(trucks);
         }
 
@@ -32,9 +34,10 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Object value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         machines.replaceAll(ignored -> (Machine) value);
     }
+
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
