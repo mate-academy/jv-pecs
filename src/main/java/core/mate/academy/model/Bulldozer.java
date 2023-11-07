@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int bladeLength;
+    private String[] optionalEquipment;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(int bladeLength, String[] optionalEquipment) {
+        this.bladeLength = bladeLength;
+        this.optionalEquipment = optionalEquipment;
     }
 
     @Override
