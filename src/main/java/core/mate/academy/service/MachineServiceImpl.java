@@ -12,7 +12,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
     private final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
     private final TruckProducer truckProducer = new TruckProducer();
 
-
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
@@ -37,7 +36,6 @@ public class MachineServiceImpl implements MachineService<Machine> {
     public void fill(List<? super Machine> machines, Machine value) {
         machines.replaceAll(ignored -> (Machine) value);
     }
-
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
