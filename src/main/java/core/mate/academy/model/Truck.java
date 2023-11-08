@@ -7,7 +7,7 @@ import java.util.List;
  * Add some custom fields that could be only in Truck
  * Do not remove no-field constructor
  */
-public class Truck extends Machine implements MachineProducer {
+public class Truck extends Machine implements MachineProducer<Truck> {
     public Truck() {
     }
 

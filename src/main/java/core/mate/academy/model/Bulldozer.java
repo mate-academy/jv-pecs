@@ -7,7 +7,7 @@ import java.util.List;
  * Add some custom fields that could be only in Bulldozer
  * Do not remove no-args constructor
  */
-public class Bulldozer extends Machine implements MachineProducer {
+public class Bulldozer extends Machine implements MachineProducer<Bulldozer> {
     public Bulldozer() {
     }
 
