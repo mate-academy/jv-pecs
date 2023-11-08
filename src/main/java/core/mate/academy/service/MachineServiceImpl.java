@@ -8,7 +8,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
-
     @Override
     public List<T> getAll(Class<? extends T> type) {
         if (type == Bulldozer.class) {
