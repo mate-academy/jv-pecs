@@ -5,8 +5,18 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private boolean hasBlade;
     public Bulldozer() {
     }
+
+    public boolean getHasBlade() {
+        return hasBlade;
+    }
+
+    public void setHasBlade(boolean hasBlade) {
+        this.hasBlade = hasBlade;
+    }
+
 
     @Override
     public void doWork() {
