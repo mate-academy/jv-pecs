@@ -6,13 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-    private static final int OBJECT_COUNT = 3;
 
     @Override
     public List<Bulldozer> get() {
         List<Bulldozer> bulldozers = new ArrayList<>();
         for (int i = 0; i < OBJECT_COUNT; i++) {
-            bulldozers.add(new Bulldozer());
+            bulldozers.add(new Bulldozer("Caterpillar", "yellow", 4.5, true));
         }
         return bulldozers;
     }

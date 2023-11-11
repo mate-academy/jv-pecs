@@ -7,20 +7,18 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String name, String color, double bladeWidth, boolean hasRipper) {
+        super(name, color);
+        this.bladeWidth = bladeWidth;
+        this.hasRipper = hasRipper;
+    }
+
     public double getBladeWidth() {
         return bladeWidth;
     }
 
-    public void setBladeWidth(double bladeWidth) {
-        this.bladeWidth = bladeWidth;
-    }
-
-    public boolean isHasRipper() {
+    public boolean hasRipper() {
         return hasRipper;
-    }
-
-    public void setHasRipper(boolean hasRipper) {
-        this.hasRipper = hasRipper;
     }
 
     @Override

@@ -6,13 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    private static final int OBJECT_COUNT = 3;
 
     @Override
     public List<Truck> get() {
         List<Truck> trucks = new ArrayList<>();
         for (int i = 0; i < OBJECT_COUNT; i++) {
-            trucks.add(new Truck());
+            trucks.add(new Truck("MAN", "black", 5600, true));
         }
         return trucks;
     }

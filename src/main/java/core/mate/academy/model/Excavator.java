@@ -7,20 +7,18 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String name, String color, double diggingDepth, boolean hasBucket) {
+        super(name, color);
+        this.diggingDepth = diggingDepth;
+        this.hasBucket = hasBucket;
+    }
+
     public double getDiggingDepth() {
         return diggingDepth;
     }
 
-    public void setDiggingDepth(double diggingDepth) {
-        this.diggingDepth = diggingDepth;
-    }
-
-    public boolean isHasBucket() {
+    public boolean hasBucket() {
         return hasBucket;
-    }
-
-    public void setHasBucket(boolean hasBucket) {
-        this.hasBucket = hasBucket;
     }
 
     @Override

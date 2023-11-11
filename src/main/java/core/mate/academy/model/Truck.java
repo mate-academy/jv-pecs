@@ -7,20 +7,18 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String name, String color, int cargoCapacity, boolean hasTrailer) {
+        super(name, color);
+        this.cargoCapacity = cargoCapacity;
+        this.hasTrailer = hasTrailer;
+    }
+
     public int getCargoCapacity() {
         return cargoCapacity;
     }
 
-    public void setCargoCapacity(int cargoCapacity) {
-        this.cargoCapacity = cargoCapacity;
-    }
-
-    public boolean isHasTrailer() {
+    public boolean hasTrailer() {
         return hasTrailer;
-    }
-
-    public void setHasTrailer(boolean hasTrailer) {
-        this.hasTrailer = hasTrailer;
     }
 
     @Override

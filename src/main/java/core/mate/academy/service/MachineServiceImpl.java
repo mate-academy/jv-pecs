@@ -16,7 +16,7 @@ import java.util.List;
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
     @Override
-    public List<T> getAll(Class<? extends Machine> type) {
+    public List<T> getAll(Class<? extends T> type) {
         if (type.equals(Bulldozer.class)) {
             BulldozerProducer producer = new BulldozerProducer();
             return (List<T>) producer.get();
@@ -32,16 +32,16 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
 
     @Override
-    public void fill(List<? super Machine> machines, T value) {
+    public void fill(List<? super T> machines, T value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
-    public void startWorking(List<? extends Machine> machines) {
-        for (int i = 0; i < machines.size(); i++) {
-            machines.get(i).doWork();
+    public void startWorking(List<? extends T> machines) {
+        for (Machine machine : machines) {
+            machine.doWork();
         }
     }
 }
