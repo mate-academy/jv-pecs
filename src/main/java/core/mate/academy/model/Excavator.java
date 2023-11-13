@@ -8,8 +8,7 @@ public class Excavator extends Machine {
     private boolean isLadle;
     private String bucketType;
 
-    public boolean getIsLadle() {
-        return isLadle;
+    public Excavator() {
     }
 
     public void setIsLadle(boolean isLadle) {
@@ -23,11 +22,6 @@ public class Excavator extends Machine {
     public void setBucketType(String bucketType) {
         this.bucketType = bucketType;
     }
-
-
-    public Excavator() {
-    }
-
 
     @Override
     public void doWork() {

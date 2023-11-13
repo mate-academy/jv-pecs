@@ -7,6 +7,9 @@ package core.mate.academy.model;
 public class Truck extends Machine {
     private int loadCapacity;
 
+    public Truck() {
+    }
+
     public int getLoadCapacity() {
         return loadCapacity;
     }
@@ -14,11 +17,6 @@ public class Truck extends Machine {
     public void setLoadCapacity(int loadCapacity) {
         this.loadCapacity = loadCapacity;
     }
-
-
-    public Truck() {
-    }
-
 
     @Override
     public void doWork() {
