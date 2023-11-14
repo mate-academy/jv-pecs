@@ -2,8 +2,6 @@ package core.mate.academy.producers;
 
 import core.mate.academy.model.Excavator;
 import core.mate.academy.service.MachineProducer;
-import core.mate.academy.service.MachineService;
-
 import java.util.ArrayList;
 import java.util.List;
 
