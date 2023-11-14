@@ -1,23 +1,26 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Machine;
+
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService {
+public class MachineServiceImpl implements MachineService<Machine> {
+
     @Override
-    public List<Object> getAll(Class type) {
+    public List<? extends Machine> getAll(Class type) {
         return null;
     }
 
     @Override
-    public void fill(List<Object> machines, Object value) {
+    public void fill(List<? extends Machine> machines, Machine value) {
 
     }
 
     @Override
-    public void startWorking(List<Object> machines) {
+    public void startWorking(List<? extends Machine> machines) {
 
     }
 }
