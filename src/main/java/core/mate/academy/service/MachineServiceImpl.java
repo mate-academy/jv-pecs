@@ -7,13 +7,9 @@ import core.mate.academy.model.Truck;
 import core.mate.academy.producers.BulldozerProducer;
 import core.mate.academy.producers.ExcavatorProducer;
 import core.mate.academy.producers.TruckProducer;
-
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
@@ -29,6 +25,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         if (type == Truck.class) {
             return new ArrayList<>(new TruckProducer().get());
         }
+
         return new ArrayList<>();
     }
 
