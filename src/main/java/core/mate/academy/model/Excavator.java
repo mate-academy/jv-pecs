@@ -7,15 +7,15 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
     private String engine;
     private int maxSpeedKmH;
-    private double bucketMaxLoad;
+    private double bucketMaxLoadKg;
 
     public Excavator() {
     }
 
-    public Excavator(String engine, int maxSpeedKmH, double bucketMaxLoad) {
+    public Excavator(String engine, int maxSpeedKmH, double bucketMaxLoadKg) {
         this.engine = engine;
         this.maxSpeedKmH = maxSpeedKmH;
-        this.bucketMaxLoad = bucketMaxLoad;
+        this.bucketMaxLoadKg = bucketMaxLoadKg;
     }
 
     public String getEngine() {
@@ -34,12 +34,12 @@ public class Excavator extends Machine {
         this.maxSpeedKmH = maxSpeedKmH;
     }
 
-    public double getBucketMaxLoad() {
-        return bucketMaxLoad;
+    public double getBucketMaxLoadKg() {
+        return bucketMaxLoadKg;
     }
 
-    public void setBucketMaxLoad(double bucketMaxLoad) {
-        this.bucketMaxLoad = bucketMaxLoad;
+    public void setBucketMaxLoadKg(double bucketMaxLoadKg) {
+        this.bucketMaxLoadKg = bucketMaxLoadKg;
     }
 
     @Override
