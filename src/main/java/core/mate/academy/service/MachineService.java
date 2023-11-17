@@ -10,3 +10,4 @@ public interface MachineService<T> {
 
     void startWorking(List<? extends T> machines);
 }
+

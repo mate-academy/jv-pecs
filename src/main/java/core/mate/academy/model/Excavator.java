@@ -1,9 +1,5 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
 public class Excavator extends Machine {
     public Excavator() {
     }
@@ -13,3 +9,4 @@ public class Excavator extends Machine {
         System.out.println("Excavator started to work");
     }
 }
+

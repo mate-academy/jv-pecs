@@ -6,3 +6,4 @@ public interface MachineProducer<T> {
 
     List<T> get();
 }
+

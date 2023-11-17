@@ -13,3 +13,4 @@ public class ExcavatorProducerImpl implements MachineProducer<Excavator> {
         return excavators;
     }
 }
+

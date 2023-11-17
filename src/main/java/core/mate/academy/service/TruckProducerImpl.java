@@ -13,3 +13,4 @@ public class TruckProducerImpl implements MachineProducer<Truck> {
         return trucks;
     }
 }
+
