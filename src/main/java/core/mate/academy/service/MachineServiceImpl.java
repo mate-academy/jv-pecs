@@ -8,6 +8,7 @@ import core.mate.academy.service.producers.BulldozerProducer;
 import core.mate.academy.service.producers.ExcavatorProducer;
 import core.mate.academy.service.producers.TruckProducer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,34 +28,27 @@ public class MachineServiceImpl implements MachineService<Machine> {
             TruckProducer truckProducer = new TruckProducer();
             truckProducer.get();
         }
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
-    public <T> void fill(List<T> machines, T value) {
-        if (value.getClass() == Bulldozer.class
-                || value.getClass() == Excavator.class
-                || value.getClass() == Truck.class)
-            machines.add(value);
+    public void fill(List<Object> machines, Machine value) {
+        Class type = value.getClass();
+        if (type == Bulldozer.class) {
+            machines.replaceAll(ignored -> new Bulldozer());
+        } else if (type == Excavator.class) {
+            machines.replaceAll(ignored -> new Excavator());
+        } else if (type == Truck.class) {
+            for (int i = 0; i < machines.size(); i++) {
+                machines.replaceAll(ignored -> new Truck());
+            }
+        }
     }
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
         for (Machine machine : machines) {
             machine.doWork();
-
-
-//            Class type = machine.getClass();
-//            if(type == Bulldozer.class) {
-//                Bulldozer bulldozer = (Bulldozer) machine;
-//                bulldozer.doWork();
-//            } else if(type == Excavator.class) {
-//                Excavator excavator = (Excavator) machine;
-//                excavator.doWork();
-//            } else if (type == Truck.class) {
-//                Truck truck = (Truck) machine;
-//                truck.doWork();
-//            }
         }
     }
 }
