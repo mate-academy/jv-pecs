@@ -35,7 +35,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List<Object> machines, Machine value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         Class<? extends Machine> type = value.getClass();
         if (type == Bulldozer.class) {
             machines.replaceAll(ignored -> new Bulldozer());
