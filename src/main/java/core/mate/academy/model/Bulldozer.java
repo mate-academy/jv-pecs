@@ -12,28 +12,24 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public int getYear() {
-        return year;
+    public Bulldozer(String name, String color, int year, double hoursePower, int widthShowel) {
+        super.setName(name);
+        super.setColor(color);
+        this.year = year;
+        this.hoursePower = hoursePower;
+        this.widthShowel = widthShowel;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public int getYear() {
+        return year;
     }
 
     public double getHoursePower() {
         return hoursePower;
     }
 
-    public void setHoursePower(double hoursePower) {
-        this.hoursePower = hoursePower;
-    }
-
     public int getWidthShowel() {
         return widthShowel;
-    }
-
-    public void setWidthShowel(int widthShowel) {
-        this.widthShowel = widthShowel;
     }
 
     @Override

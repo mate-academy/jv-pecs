@@ -1,6 +1,8 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Machine;
+
+import javax.crypto.Mac;
 import java.util.List;
 
 /**
@@ -35,5 +37,5 @@ public interface MachineService<T extends Machine> {
      *
      * @param machines - the list of machines
      */
-    void startWorking(List<? extends Machine> machines);
+    void startWorking(List<? extends T> machines);
 }

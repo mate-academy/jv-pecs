@@ -9,23 +9,21 @@ public class Excavator extends Machine {
     private double hoursePower;
 
     public Excavator() {
+    }
 
+    public Excavator(String name, String color, int year, double hoursePower) {
+        super.setName(name);
+        super.setColor(color);
+        this.year = year;
+        this.hoursePower = hoursePower;
     }
 
     public int getYear() {
         return year;
     }
 
-    public void setYear(int year) {
-        this.year = year;
-    }
-
     public double getHoursePower() {
         return hoursePower;
-    }
-
-    public void setHoursePower(double hoursePower) {
-        this.hoursePower = hoursePower;
     }
 
     @Override

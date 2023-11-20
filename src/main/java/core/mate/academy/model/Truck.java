@@ -9,23 +9,21 @@ public class Truck extends Machine {
     private boolean isCapableToDrive;
 
     public Truck() {
+    }
 
+    public Truck(String name, String color, int hoursePower, boolean isCapableToDrive) {
+        super.setName(name);
+        super.setColor(color);
+        this.hoursePower = hoursePower;
+        this.isCapableToDrive = isCapableToDrive;
     }
 
     public int getHoursePower() {
         return hoursePower;
     }
 
-    public void setHoursePower(int hoursePower) {
-        this.hoursePower = hoursePower;
-    }
-
     public boolean isCapableToDrive() {
         return isCapableToDrive;
-    }
-
-    public void setCapableToDrive(boolean capableToDrive) {
-        isCapableToDrive = capableToDrive;
     }
 
     @Override

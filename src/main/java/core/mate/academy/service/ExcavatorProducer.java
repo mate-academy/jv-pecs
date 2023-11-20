@@ -5,6 +5,8 @@ import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
     public List<Excavator> get() {
-        return List.of(new Excavator(), new Excavator(), new Excavator());
+        return List.of(new Excavator("Kubota", "Yellow", 2008, 280),
+                new Excavator("DongFeng", "Blue", 2018, 250),
+                new Excavator("Izusu", "Blue", 2003, 250));
     }
 }
