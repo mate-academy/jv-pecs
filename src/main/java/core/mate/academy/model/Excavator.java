@@ -18,30 +18,6 @@ public class Excavator extends Machine {
         this.bucketMaxLoadKg = bucketMaxLoadKg;
     }
 
-    public String getEngine() {
-        return engine;
-    }
-
-    public void setEngine(String engine) {
-        this.engine = engine;
-    }
-
-    public int getMaxSpeedKmH() {
-        return maxSpeedKmH;
-    }
-
-    public void setMaxSpeedKmH(int maxSpeedKmH) {
-        this.maxSpeedKmH = maxSpeedKmH;
-    }
-
-    public double getBucketMaxLoadKg() {
-        return bucketMaxLoadKg;
-    }
-
-    public void setBucketMaxLoadKg(double bucketMaxLoadKg) {
-        this.bucketMaxLoadKg = bucketMaxLoadKg;
-    }
-
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

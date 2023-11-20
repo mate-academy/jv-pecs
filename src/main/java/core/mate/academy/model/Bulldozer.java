@@ -18,30 +18,6 @@ public class Bulldozer extends Machine {
         this.isEcoFriendly = isEcoFriendly;
     }
 
-    public String getEngine() {
-        return engine;
-    }
-
-    public void setEngine(String engine) {
-        this.engine = engine;
-    }
-
-    public int getMaxSpeedKmH() {
-        return maxSpeedKmH;
-    }
-
-    public void setMaxSpeedKmH(int maxSpeedKmH) {
-        this.maxSpeedKmH = maxSpeedKmH;
-    }
-
-    public boolean isEcoFriendly() {
-        return isEcoFriendly;
-    }
-
-    public void setEcoFriendly(boolean ecoFriendly) {
-        isEcoFriendly = ecoFriendly;
-    }
-
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");

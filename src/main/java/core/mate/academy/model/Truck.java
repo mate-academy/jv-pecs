@@ -18,30 +18,6 @@ public class Truck extends Machine {
         this.hasBedInCabin = hasBedInCabin;
     }
 
-    public String getEngine() {
-        return engine;
-    }
-
-    public void setEngine(String engine) {
-        this.engine = engine;
-    }
-
-    public int getMaxSpeedKmH() {
-        return maxSpeedKmH;
-    }
-
-    public void setMaxSpeedKmH(int maxSpeedKmH) {
-        this.maxSpeedKmH = maxSpeedKmH;
-    }
-
-    public boolean isHasBedInCabin() {
-        return hasBedInCabin;
-    }
-
-    public void setHasBedInCabin(boolean hasBedInCabin) {
-        this.hasBedInCabin = hasBedInCabin;
-    }
-
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

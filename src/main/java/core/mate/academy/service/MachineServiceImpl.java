@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService<Machine> {
+public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
@@ -35,21 +35,14 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Machine value) {
-        Class<? extends Machine> type = value.getClass();
-        if (type == Bulldozer.class) {
-            machines.replaceAll(ignored -> new Bulldozer());
-        } else if (type == Excavator.class) {
-            machines.replaceAll(ignored -> new Excavator());
-        } else if (type == Truck.class) {
-            for (int i = 0; i < machines.size(); i++) {
-                machines.replaceAll(ignored -> new Truck());
-            }
+    public void fill(List<? super T> machines, T value) {
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(i, value);
         }
     }
 
     @Override
-    public void startWorking(List<? extends Machine> machines) {
+    public void startWorking(List<? extends T> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }
