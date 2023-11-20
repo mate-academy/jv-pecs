@@ -30,14 +30,14 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public <T extends Machine> void fill(List<? super Machine> machines, T value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
-    public void startWorking(List<Machine> machines) {
+    public void startWorking(List<? extends Machine> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }
