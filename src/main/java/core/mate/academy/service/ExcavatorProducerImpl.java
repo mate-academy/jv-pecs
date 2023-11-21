@@ -7,6 +7,7 @@ import java.util.List;
 public class ExcavatorProducerImpl implements MachineProducer<Excavator> {
     private static final int DEFAULT_FUEL_CONSUMPTION = 20;
     private static final int DEFAULT_WEIGHT = 17;
+
     @Override
     public List<Excavator> get() {
         List<Excavator> excavators = new ArrayList<>();
