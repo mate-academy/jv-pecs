@@ -11,8 +11,7 @@ public class Truck extends Machine {
     }
 
     public Truck(String name, String color, double payloadCapacity) {
-        setName(name);
-        setColor(color);
+        super(name, color);
         this.payloadCapacity = payloadCapacity;
     }
 
