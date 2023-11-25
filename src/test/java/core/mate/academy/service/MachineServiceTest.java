@@ -24,7 +24,7 @@ public class MachineServiceTest {
     @Test
     public void getAll_bulldozerType() {
         List<Machine> actual = machineService.getAll(Bulldozer.class);
-        assertEquals("The list should contain elements of type Bulldozer",
+        assertEquals("The list should contain elements of type BulldozerProducer",
             Bulldozer.class, actual.get(0).getClass());
     }
 
@@ -59,7 +59,7 @@ public class MachineServiceTest {
         machineService.fill(machines, new Bulldozer());
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
-            assertEquals("The list should contain elements of type Bulldozer",
+            assertEquals("The list should contain elements of type BulldozerProducer",
                 Bulldozer.class, machine.getClass());
         }
     }

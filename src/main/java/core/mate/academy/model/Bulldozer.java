@@ -1,7 +1,7 @@
 package core.mate.academy.model;
 
 /**
- * Add some custom fields that could be only in Bulldozer
+ * Add some custom fields that could be only in BulldozerProducer
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
@@ -10,6 +10,6 @@ public class Bulldozer extends Machine {
 
     @Override
     public void doWork() {
-        System.out.println("Bulldozer started to work");
+        System.out.println("BulldozerProducer started to work");
     }
 }
