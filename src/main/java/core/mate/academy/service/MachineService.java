@@ -18,7 +18,7 @@ public interface MachineService<T extends Machine> {
      *             Truck.class or BulldozerProducer.class
      * @return the list of machines
      */
-    List<T> getAll(Class<? extends Machine> type);
+    List<T> getAll(Class<? extends T> type);
 
     /**
      * Fill the machines list with passed value

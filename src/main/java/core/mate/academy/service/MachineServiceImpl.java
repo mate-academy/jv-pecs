@@ -19,13 +19,13 @@ public class MachineServiceImpl implements MachineService<Machine> {
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machines = new ArrayList<>();
         if (type == Bulldozer.class) {
-            machines = bulldozerProducer.get();
+            return bulldozerProducer.get();
         } else if (type == Excavator.class) {
-            machines = excavatorProducer.get();
+            return excavatorProducer.get();
         } else if (type == Truck.class) {
-            machines = truckProducer.get();
+            return truckProducer.get();
         }
-        return new ArrayList<>(machines);
+        return new ArrayList<>();
     }
 
     @Override
