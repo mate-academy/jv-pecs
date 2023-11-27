@@ -10,14 +10,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Your implementation of MachineService.
- */
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
     private final MachineStrategy machineStrategy;
 
     public MachineServiceImpl() {
-        Map<Class<? extends Machine>, MachineProducer<? extends Machine>> machineToProducerMap = new HashMap<>();
+        Map<Class<? extends Machine>, MachineProducer<? extends Machine>> machineToProducerMap =
+                new HashMap<>();
         machineToProducerMap.put(Bulldozer.class, new MachineProducerBulldozer());
         machineToProducerMap.put(Excavator.class, new MachineProducerExcavator());
         machineToProducerMap.put(Truck.class, new MachineProducerTruck());
@@ -25,8 +23,9 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     }
 
     @Override
-    public List<T extends Machine> getAll(Class<? extends T> type) {
-       return machineStrategy.get(type);
+    public List<T> getAll(Class<? extends T> type) {
+        MachineProducer<? extends Machine> machineProducer = machineStrategy.get(type);
+        return machineProducer != null ? (List<T>) machineProducer.get() : Collections.emptyList();
     }
 
     @Override
