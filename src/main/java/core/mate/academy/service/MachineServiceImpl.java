@@ -6,23 +6,27 @@ import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import core.mate.academy.model.Workable;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+    private final MachineStrategy machineStrategy;
+
+    public MachineServiceImpl() {
+        Map<Class<? extends Machine>, MachineProducer<? extends Machine>> machineToProducerMap = new HashMap<>();
+        machineToProducerMap.put(Bulldozer.class, new MachineProducerBulldozer());
+        machineToProducerMap.put(Excavator.class, new MachineProducerExcavator());
+        machineToProducerMap.put(Truck.class, new MachineProducerTruck());
+        machineStrategy = new MachineStrategyImpl(machineToProducerMap);
+    }
 
     @Override
-    public List<T> getAll(Class<? extends T> type) {
-        if (Bulldozer.class.equals(type)) {
-            return (List<T>) new MachineProducerBulldozer().get();
-        } else if (Excavator.class.equals(type)) {
-            return (List<T>) new MachineProducerExcavator().get();
-        } else if (Truck.class.equals(type)) {
-            return (List<T>) new MachineProducerTruck().get();
-        }
-        return Collections.EMPTY_LIST;
+    public List<T extends Machine> getAll(Class<? extends T> type) {
+       return machineStrategy.get(type);
     }
 
     @Override
