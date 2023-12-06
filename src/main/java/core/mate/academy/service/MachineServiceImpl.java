@@ -9,16 +9,15 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        MachineProducer<? extends Machine> producer;
+        List<? extends Machine> machines;
         switch (type.getSimpleName()) {
-            case "Bulldozer" -> producer = new BulldozerProducerImpl();
-            case "Excavator" -> producer = new ExcavatorProducerImpl();
-            case "Truck" -> producer = new TruckProducerImpl();
+            case "Bulldozer" -> machines = new BulldozerProducerImpl().get();
+            case "Excavator" -> machines = new ExcavatorProducerImpl().get();
+            case "Truck" -> machines = new TruckProducerImpl().get();
             default -> {
                 return Collections.emptyList();
             }
         }
-        List<? extends Machine> machines = producer.get();
         return new ArrayList<>(machines);
     }
 
