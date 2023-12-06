@@ -7,7 +7,8 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public Bulldozer(Double bladeWidth, Integer cabCapacity) {
+    public Bulldozer(String name, String color, Double bladeWidth, Integer cabCapacity) {
+        super(name, color);
         this.bladeWidth = bladeWidth;
         this.cabCapacity = cabCapacity;
     }
@@ -29,7 +30,7 @@ public class Bulldozer extends Machine {
         return cabCapacity;
     }
 
-    public void setCabCapacity(int cabCapacity) {
+    public void setCabCapacity(Integer cabCapacity) {
         this.cabCapacity = cabCapacity;
     }
 }

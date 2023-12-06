@@ -7,7 +7,8 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public Excavator(Double bucketVolume, Double armReach) {
+    public Excavator(String name, String color, Double bucketVolume, Double armReach) {
+        super(name, color);
         this.bucketVolume = bucketVolume;
         this.armReach = armReach;
     }
