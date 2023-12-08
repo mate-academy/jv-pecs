@@ -8,6 +8,10 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String serialNumber, int strength) {
+        super();
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
