@@ -7,6 +7,8 @@ public class TruckProducer implements MachineProducer<Truck> {
 
     @Override
     public List<Truck> get() {
-        return List.of(new Truck(), new Truck(), new Truck());
+        return List.of(new Truck(900, 8),
+                new Truck(500, 4),
+                new Truck(650, 6));
     }
 }

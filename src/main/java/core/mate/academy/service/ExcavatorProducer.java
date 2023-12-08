@@ -7,6 +7,8 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
 
     @Override
     public List<Excavator> get() {
-        return List.of(new Excavator(), new Excavator(), new Excavator());
+        return List.of(new Excavator(100, "Crawler"),
+                new Excavator(150, "Wheeled"),
+                new Excavator(130, "Wheeled"));
     }
 }
