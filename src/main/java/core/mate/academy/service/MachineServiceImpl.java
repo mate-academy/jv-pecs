@@ -20,7 +20,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
         this.excavatorMachineProducer = new ExcavatorProducer();
         this.truckMachineProducer = new TruckProducer();
     }
-    
+
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machines = new ArrayList<>();
