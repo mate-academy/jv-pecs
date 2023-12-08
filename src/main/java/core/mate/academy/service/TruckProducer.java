@@ -1,11 +1,16 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Truck;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Truck> get() {
-        return List.of(new Truck(), new Truck());
+        ArrayList<Truck> objects = new ArrayList<>();
+        objects.add(new Truck());
+        objects.add(new Truck());
+        objects.add(new Truck());
+        return objects;
     }
 }
