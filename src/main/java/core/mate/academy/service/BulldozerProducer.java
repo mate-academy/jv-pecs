@@ -7,8 +7,10 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
 
     @Override
     public List<Bulldozer> get() {
-        return List.of(new Bulldozer("CAT", 300),
+        return List.of(
+                new Bulldozer("CAT", 300),
                 new Bulldozer("John Deere", 350),
-                new Bulldozer("Komatsu", 267));
+                new Bulldozer("Komatsu", 267)
+        );
     }
 }
