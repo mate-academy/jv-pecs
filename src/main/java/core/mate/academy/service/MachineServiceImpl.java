@@ -1,6 +1,8 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Machine;
+import core.mate.academy.model.Truck;
 
 import java.util.List;
 
@@ -10,8 +12,9 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService {
 
     @Override
-    public List getAll(Class type) {
-        return null;
+    public List<? extends Machine> getAll(Class type) {
+        MachineProducer machineProducer = new Bulldozer();
+        return machineProducer.get();
     }
 
     @Override
@@ -21,6 +24,5 @@ public class MachineServiceImpl implements MachineService {
 
     @Override
     public void startWorking(List list) {
-
     }
 }
