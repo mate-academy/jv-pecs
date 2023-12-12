@@ -1,7 +1,6 @@
 package core.mate.academy.model;
 
 import core.mate.academy.service.MachineProducer;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +11,9 @@ import java.util.List;
 public class Truck extends Machine implements MachineProducer {
     private int liftCapacity;
     private int speed;
+
+    public Truck() {
+    }
 
     public int getLiftCapacity() {
         return liftCapacity;
@@ -27,9 +29,6 @@ public class Truck extends Machine implements MachineProducer {
 
     public void setSpeed(int speed) {
         this.speed = speed;
-    }
-
-    public Truck() {
     }
 
     @Override

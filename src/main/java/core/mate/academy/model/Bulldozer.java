@@ -1,7 +1,6 @@
 package core.mate.academy.model;
 
 import core.mate.academy.service.MachineProducer;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +11,9 @@ import java.util.List;
 public class Bulldozer extends Machine implements MachineProducer {
     private int horsePower;
     private int bucketWidth;
+
+    public Bulldozer() {
+    }
 
     public int getHorsePower() {
         return horsePower;
@@ -27,9 +29,6 @@ public class Bulldozer extends Machine implements MachineProducer {
 
     public void setBucketWidth(int bucketWidth) {
         this.bucketWidth = bucketWidth;
-    }
-
-    public Bulldozer() {
     }
 
     @Override
