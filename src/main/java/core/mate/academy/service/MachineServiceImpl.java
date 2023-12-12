@@ -14,17 +14,14 @@ public class MachineServiceImpl implements MachineService {
 
     @Override
     public List<? extends Machine> getAll(Class type) {
-        String typeMachine = type.getSimpleName();
-        switch (typeMachine) {
-            case "Truck":
-                return new Truck().get();
-            case "Excavator":
-                return new Excavator().get();
-            case "Bulldozer":
-                return new Bulldozer().get();
-            default:
-                return new ArrayList<>();
+        if (type.equals(Truck.class)) {
+            return new Truck().get();
+        } else if (type.equals(Excavator.class)) {
+            return new Excavator().get();
+        } else if (type.equals(Bulldozer.class)) {
+            return new Bulldozer().get();
         }
+        return new ArrayList<>();
     }
 
     @Override
