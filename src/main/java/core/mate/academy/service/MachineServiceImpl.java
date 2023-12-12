@@ -33,11 +33,15 @@ public class MachineServiceImpl implements MachineService {
 
     @Override
     public void startWorking(List list) {
-        if (list.equals(Truck.class)) {
+        if (list.get(0) instanceof Truck) {
             new Truck().doWork();
-        } else if (list.equals(Excavator.class)) {
+            return;
+        }
+        if (list.get(0) instanceof Excavator) {
             new Excavator().doWork();
-        } else if (list.equals(Bulldozer.class)) {
+            return;
+        }
+        if (list.get(0) instanceof Bulldozer) {
             new Bulldozer().doWork();
         }
     }
