@@ -33,5 +33,12 @@ public class MachineServiceImpl implements MachineService {
 
     @Override
     public void startWorking(List list) {
+        if (list.equals(Truck.class)) {
+            new Truck().doWork();
+        } else if (list.equals(Excavator.class)) {
+            new Excavator().doWork();
+        } else if (list.equals(Bulldozer.class)) {
+            new Bulldozer().doWork();
+        }
     }
 }
