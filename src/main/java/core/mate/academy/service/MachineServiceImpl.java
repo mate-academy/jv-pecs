@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl implements MachineService {
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<? extends Machine> getAll(Class type) {
@@ -32,17 +32,9 @@ public class MachineServiceImpl implements MachineService {
     }
 
     @Override
-    public void startWorking(List list) {
-        if (list.get(0) instanceof Truck) {
-            new Truck().doWork();
-            return;
-        }
-        if (list.get(0) instanceof Excavator) {
-            new Excavator().doWork();
-            return;
-        }
-        if (list.get(0) instanceof Bulldozer) {
-            new Bulldozer().doWork();
+    public void startWorking(List<? extends Machine> list) {
+        for (Machine l: list) {
+            l.doWork();
         }
     }
 }
