@@ -1,7 +1,8 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Machine;
 import java.util.List;
 
 public interface MachineProducer<T> {
-    List<Machine> get(Class<? extends Machine> type);
+    List<T> get(Class<? extends Machine> type);
 }
