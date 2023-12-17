@@ -6,8 +6,10 @@ package core.mate.academy.model;
  */
 public class Bulldozer extends Machine {
     private int bladeSize;
+
     public Bulldozer() {
     }
+
     public void setBladeSize(int bladeSize) {
         this.bladeSize = bladeSize;
     }
