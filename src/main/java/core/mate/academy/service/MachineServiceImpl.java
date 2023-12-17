@@ -8,7 +8,7 @@ import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Truck.class) {
@@ -20,7 +20,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         if (type == Excavator.class) {
             return new ExcavatorProducerImpl().get();
         } else {
-            return new MachineProducerImpl().get();
+            return new ArrayList<>();
         }
     }
 

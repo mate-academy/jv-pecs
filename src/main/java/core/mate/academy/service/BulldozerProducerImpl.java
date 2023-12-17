@@ -8,6 +8,14 @@ import java.util.List;
 public class BulldozerProducerImpl implements MachineProducer<Machine> {
     @Override
     public List<Machine> get() {
-        return List.of(new Bulldozer(),new Bulldozer());
+        Bulldozer bulldozerOne = new Bulldozer();
+        bulldozerOne.setBladeSize(10);
+        bulldozerOne.setColor("blue");
+        bulldozerOne.setName("JohnDeer");
+        Bulldozer bulldozerTwo = new Bulldozer();
+        bulldozerTwo.setBladeSize(20);
+        bulldozerTwo.setColor("blue");
+        bulldozerTwo.setName("CAT");
+        return List.of(bulldozerOne,bulldozerTwo);
     }
 }
