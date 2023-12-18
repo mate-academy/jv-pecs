@@ -1,11 +1,18 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
 public class Excavator extends Machine {
+    private int diggingDepth;
+
     public Excavator() {
+
+    }
+
+    public int getDiggingDepth() {
+        return diggingDepth;
+    }
+
+    public void setDiggingDepth(int diggingDepth) {
+        this.diggingDepth = diggingDepth;
     }
 
     @Override
