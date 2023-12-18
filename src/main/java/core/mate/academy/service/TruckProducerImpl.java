@@ -1,13 +1,12 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.List;
 
-public class TruckProducerImpl implements MachineProducer<Machine> {
+public class TruckProducerImpl implements MachineProducer<Truck> {
 
     @Override
-    public List<Machine> get() {
+    public List<Truck> get() {
         Truck truckOne = new Truck();
         truckOne.setHaveTrailer(true);
         truckOne.setColor("white");

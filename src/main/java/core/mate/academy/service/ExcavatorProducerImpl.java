@@ -1,12 +1,11 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Excavator;
-import core.mate.academy.model.Machine;
 import java.util.List;
 
-public class ExcavatorProducerImpl implements MachineProducer<Machine> {
+public class ExcavatorProducerImpl implements MachineProducer<Excavator> {
     @Override
-    public List<Machine> get() {
+    public List<Excavator> get() {
         Excavator excavatorOne = new Excavator();
         excavatorOne.setDiggingDepth(50);
         excavatorOne.setColor("black");
