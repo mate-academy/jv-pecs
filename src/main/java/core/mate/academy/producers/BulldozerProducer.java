@@ -2,7 +2,6 @@ package core.mate.academy.producers;
 
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.service.MachineProducer;
-import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
@@ -12,10 +11,6 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
 
     @Override
     public List<Bulldozer> get() {
-        List<Bulldozer> bulldozers = new ArrayList<>();
-        bulldozers.add(bulldozerOne);
-        bulldozers.add(bulldozerTwo);
-        bulldozers.add(bulldozerThree);
-        return bulldozers;
+        return List.of(bulldozerOne, bulldozerTwo, bulldozerThree);
     }
 }
