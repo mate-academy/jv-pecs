@@ -11,6 +11,22 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public double getDumpWidth() {
+        return dumpWidth;
+    }
+
+    public void setDumpWidth(double dumpWidth) {
+        this.dumpWidth = dumpWidth;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
