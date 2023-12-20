@@ -5,7 +5,21 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private String size;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(String size) {
+        this.size = size;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 
     @Override
