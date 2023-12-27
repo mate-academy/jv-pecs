@@ -5,30 +5,35 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    private int weight;
-    private int year;
+    private String name;
+    private int fuelConsumption;
 
     public Excavator() {
     }
 
-    public int getWeight() {
-        return weight;
+    public Excavator(String name, int fuelConsumption) {
+        this.name = name;
+        this.fuelConsumption = fuelConsumption;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
+    public String getName() {
+        return name;
     }
 
-    public int getYear() {
-        return year;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public double getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
     }
 
     @Override
     public void doWork() {
-        System.out.println("Excavator started to work");
+        System.out.println("Excavator started working.");
     }
 }

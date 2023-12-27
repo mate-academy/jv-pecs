@@ -1,22 +1,22 @@
 package core.mate.academy.model;
 
 public abstract class Machine implements Workable {
-    private String name;
-    private String color;
+    private double weight;
+    private String model;
 
-    public String getName() {
-        return name;
+    public double getWeight() {
+        return weight;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
-    public String getColor() {
-        return color;
+    public String getModel() {
+        return model;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setModel(String model) {
+        this.model = model;
     }
 }

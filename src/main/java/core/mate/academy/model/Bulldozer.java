@@ -1,34 +1,36 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
-    private double dumpWidth;
-    private String color;
+    private double fromZeroToOneHundred;
+    private String productionRegion;
 
     public Bulldozer() {
+
     }
 
-    public double getDumpWidth() {
-        return dumpWidth;
+    public Bulldozer(double fromZeroToOneHundred, String productionRegion) {
+        this.fromZeroToOneHundred = fromZeroToOneHundred;
+        this.productionRegion = productionRegion;
     }
 
-    public void setDumpWidth(double dumpWidth) {
-        this.dumpWidth = dumpWidth;
+    public double getFromZeroToOneHundred() {
+        return fromZeroToOneHundred;
     }
 
-    public String getColor() {
-        return color;
+    public void setFromZeroToOneHundred(double fromZeroToOneHundred) {
+        this.fromZeroToOneHundred = fromZeroToOneHundred;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public String getProductionRegion() {
+        return productionRegion;
+    }
+
+    public void setProductionRegion(String productionRegion) {
+        this.productionRegion = productionRegion;
     }
 
     @Override
     public void doWork() {
-        System.out.println("Bulldozer started to work");
+        System.out.println("Bulldozer started working...");
     }
 }

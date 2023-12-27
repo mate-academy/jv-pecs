@@ -11,6 +11,11 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(int seats, int length) {
+        this.seats = seats;
+        this.length = length;
+    }
+
     public int getSeats() {
         return seats;
     }
