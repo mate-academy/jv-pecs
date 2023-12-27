@@ -8,7 +8,7 @@ public class Bulldozer extends Machine {
     private int bladeSize;
 
     public Bulldozer() {
-        super("", "");
+
     }
 
     public int getBladeSize() {

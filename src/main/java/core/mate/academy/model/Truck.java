@@ -8,7 +8,7 @@ public class Truck extends Machine {
     private int loadCapacity;
 
     public Truck() {
-        super("", "");
+
     }
 
     public int getLoadCapacity() {
