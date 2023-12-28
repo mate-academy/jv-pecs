@@ -5,31 +5,32 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
+    private final MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
+    private final MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
+    private final MachineProducer<Truck> truckProducer = new TruckProducer();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
-            MachineProducer<Bulldozer> producer = new BulldozerProducer();
-            List<Bulldozer> bulldozerList = producer.get();
+            List<Bulldozer> bulldozerList = bulldozerProducer.get();
             return new ArrayList<>(bulldozerList);
         }
         if (type == Excavator.class) {
-            MachineProducer<Excavator> producer = new ExcavatorProducer();
-            List<Excavator> excavatorList = producer.get();
+            List<Excavator> excavatorList = excavatorProducer.get();
             return new ArrayList<>(excavatorList);
         }
         if (type == Truck.class) {
-            MachineProducer<Truck> producer = new TruckProducer();
-            List<Truck> truckList = producer.get();
+            List<Truck> truckList = truckProducer.get();
             return new ArrayList<>(truckList);
         }
-        return List.of();
+        return Collections.emptyList();
     }
 
     @Override
