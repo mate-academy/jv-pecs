@@ -11,6 +11,11 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(int enginePower, int weight) {
+        this.enginePower = enginePower;
+        this.weight = weight;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
@@ -20,17 +25,15 @@ public class Bulldozer extends Machine {
         return enginePower;
     }
 
-    public Bulldozer setEnginePower(int enginePower) {
+    public void setEnginePower(int enginePower) {
         this.enginePower = enginePower;
-        return this;
     }
 
     public int getWeight() {
         return weight;
     }
 
-    public Bulldozer setWeight(int weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
-        return this;
     }
 }

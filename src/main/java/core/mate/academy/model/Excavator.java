@@ -7,9 +7,15 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
 
     private int bucketRange;
+
     private int bucketVolume;
 
     public Excavator() {
+    }
+
+    public Excavator(int bucketRange, int bucketVolume) {
+        this.bucketRange = bucketRange;
+        this.bucketVolume = bucketVolume;
     }
 
     @Override
@@ -21,17 +27,15 @@ public class Excavator extends Machine {
         return bucketRange;
     }
 
-    public Excavator setBucketRange(int bucketRange) {
+    public void setBucketRange(int bucketRange) {
         this.bucketRange = bucketRange;
-        return this;
     }
 
     public int getBucketVolume() {
         return bucketVolume;
     }
 
-    public Excavator setBucketVolume(int bucketVolume) {
+    public void setBucketVolume(int bucketVolume) {
         this.bucketVolume = bucketVolume;
-        return this;
     }
 }

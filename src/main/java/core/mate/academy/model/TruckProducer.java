@@ -8,9 +8,9 @@ public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Truck> get() {
         List<Truck> truckList = new ArrayList<>();
-        truckList.add(new Truck().setMaxPermissibleWeight(1000).setMaxPermissibleVolume(500));
-        truckList.add(new Truck().setMaxPermissibleWeight(2000).setMaxPermissibleVolume(1000));
-        truckList.add(new Truck().setMaxPermissibleWeight(2500).setMaxPermissibleVolume(1500));
+        truckList.add(new Truck(1000, 200));
+        truckList.add(new Truck(10000, 2300));
+        truckList.add(new Truck(2000, 1200));
         return truckList;
     }
 }

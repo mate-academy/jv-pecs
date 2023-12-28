@@ -12,6 +12,11 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(int maxPermissibleWeight, int maxPermissibleVolume) {
+        this.maxPermissibleWeight = maxPermissibleWeight;
+        this.maxPermissibleVolume = maxPermissibleVolume;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
@@ -21,18 +26,16 @@ public class Truck extends Machine {
         return maxPermissibleWeight;
     }
 
-    public Truck setMaxPermissibleWeight(int maxPermissibleWeight) {
+    public void setMaxPermissibleWeight(int maxPermissibleWeight) {
         this.maxPermissibleWeight = maxPermissibleWeight;
-        return this;
     }
 
     public int getMaxPermissibleVolume() {
         return maxPermissibleVolume;
     }
 
-    public Truck setMaxPermissibleVolume(int maxPermissibleVolume) {
+    public void setMaxPermissibleVolume(int maxPermissibleVolume) {
         this.maxPermissibleVolume = maxPermissibleVolume;
-        return this;
     }
 
 }
