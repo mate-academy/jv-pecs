@@ -1,7 +1,6 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Excavator;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
@@ -10,13 +9,11 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
     private Excavator kharkivExcavator = new Excavator();
     private Excavator johnDeerExcavator = new Excavator();
 
-    private List<Excavator> excavatorList = new ArrayList<>();
+    private List<Excavator> excavatorList = List.of(dniproExcavator,
+             kharkivExcavator, johnDeerExcavator);
 
     @Override
     public List<Excavator> get() {
-        excavatorList.add(dniproExcavator);
-        excavatorList.add(johnDeerExcavator);
-        excavatorList.add(kharkivExcavator);
         return excavatorList;
     }
 }

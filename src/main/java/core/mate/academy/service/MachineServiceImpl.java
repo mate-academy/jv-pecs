@@ -10,36 +10,35 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
-            BulldozerProducer bulldozerProducer = new BulldozerProducer();
-            List<? extends Machine> machines = bulldozerProducer.get();
-            return new ArrayList<>(machines);
+            return new ArrayList<>(new BulldozerProducer().get());
         } else if (type == Truck.class) {
-            TruckProducer truckProducer = new TruckProducer();
-            List<? extends Machine> machines = truckProducer.get();
-            return new ArrayList<>(machines);
+            return new ArrayList<>(new TruckProducer().get());
         } else if (type == Excavator.class) {
-            ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-            List<? extends Machine> machines = excavatorProducer.get();
-            return new ArrayList<>(machines);
+            return new ArrayList<>(new ExcavatorProducer().get());
         } else {
             return new ArrayList<>();
         }
     }
 
     @Override
-    public void fill(List<? super Machine> machines, T value) {
-        int size = machines.size();
-        for (int i = 0; i < size; i++) {
+    public void fill(List<? super Machine> machines, Machine value) {
+        for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-
+        if (machines.get(0).getClass() == Bulldozer.class) {
+            new Bulldozer().doWork();
+        } else if (machines.get(0).getClass() == Excavator.class) {
+            new Excavator().doWork();
+        } else {
+            new Truck().doWork();
+        }
     }
 }
