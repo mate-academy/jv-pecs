@@ -12,22 +12,6 @@ public class Excavator extends Machine {
         this.version = version;
     }
 
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
-    public boolean isBackBucket() {
-        return isBackBucket;
-    }
-
-    public void setBackBucket(boolean backBucket) {
-        isBackBucket = backBucket;
-    }
-
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
