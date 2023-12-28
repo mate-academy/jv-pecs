@@ -1,0 +1,20 @@
+package core.mate.academy.service;
+
+import core.mate.academy.model.Truck;
+import java.util.ArrayList;
+import java.util.List;
+
+public class TruckProducer implements MachineProducer<Truck> {
+
+    private Truck volvoTruck = new Truck();
+    private Truck mercedesTruck = new Truck();
+
+    private List<Truck> truckList = new ArrayList<>();
+
+    @Override
+    public List<Truck> get() {
+        truckList.add(volvoTruck);
+        truckList.add(mercedesTruck);
+        return truckList;
+    }
+}
