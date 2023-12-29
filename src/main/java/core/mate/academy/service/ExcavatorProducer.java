@@ -5,15 +5,12 @@ import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
 
-    private Excavator dniproExcavator = new Excavator();
-    private Excavator kharkivExcavator = new Excavator();
-    private Excavator johnDeerExcavator = new Excavator();
-
-    private List<Excavator> excavatorList = List.of(dniproExcavator,
-             kharkivExcavator, johnDeerExcavator);
-
     @Override
     public List<Excavator> get() {
-        return excavatorList;
+        Excavator dniproExcavator = new Excavator(5_000);
+        Excavator kharkivExcavator = new Excavator(10_000);
+        Excavator johnDeerExcavator = new Excavator(3_000);
+        return List.of(dniproExcavator,
+                kharkivExcavator, johnDeerExcavator);
     }
 }
