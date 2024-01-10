@@ -14,41 +14,31 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        List<Machine> machinesList = new ArrayList<>();
-        List<? extends Machine> subMachine = new ArrayList<>();
         if (type.equals(Bulldozer.class)) {
-            subMachine = new BulldozerProducer().get();
+            return new ArrayList<>(new BulldozerProducer().get());
         } else if (type.equals(Truck.class)) {
-            subMachine = new TruckProducer().get();
+            return new ArrayList<>(new TruckProducer().get());
         } else if (type.equals(Excavator.class)) {
-            subMachine = new ExcavatorProducer().get();
+            return new ArrayList<>(new ExcavatorProducer().get());
         }
-        for (int i = 0; i < subMachine.size(); i++) {
-            machinesList.add(subMachine.get(i));
-        }
-        return machinesList;
+        return new ArrayList<>();
     }
 
+    @Override
+    public void fill(List<? super Machine> machines, Machine value) {
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(i, value);
+        }
+    }
+
+    /*
     @Override
     public void fill(List<? super Bulldozer> machines, Bulldozer value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
-
-    @Override
-    public void fill(List<? super Excavator> machines, Excavator value) {
-        for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, value);
-        }
-    }
-
-    @Override
-    public void fill(List<? super Truck> machines, Truck value) {
-        for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, value);
-        }
-    }
+    */
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
