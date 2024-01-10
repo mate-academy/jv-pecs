@@ -1,11 +1,13 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Machine;
+
 import java.util.List;
 
 /**
  * Parameterize this service and add its implementation in a separate class.
  */
-public interface MachineService<M> {
+public interface MachineService<M extends Machine> {
     /**
      * Return the list of machines.
      * In the implementation of this method please use your MachineProducer implementations
@@ -26,12 +28,6 @@ public interface MachineService<M> {
      * @param value    - any object of machine sub class
      */
     void fill(List<? super M> machines, M value);
-
-    /*
-    void fill(List<? super Excavator> machines, Excavator value);
-
-    void fill(List<? super Truck> machines, Truck value);
-    */
 
     /**
      * Call the method doWork() from each machine.

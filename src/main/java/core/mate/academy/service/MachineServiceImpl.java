@@ -26,19 +26,8 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, value);
-        }
+        machines.replaceAll(ignored -> value);
     }
-
-    /*
-    @Override
-    public void fill(List<? super Bulldozer> machines, Bulldozer value) {
-        for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, value);
-        }
-    }
-    */
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
