@@ -10,7 +10,11 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Your implementation of MachineService.
+ * ARE THE INITIAL getALL TESTS FOR LISTS FAULTY????
+ *?
+ * ?
+ *  ?
+ *   ?
  */
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
