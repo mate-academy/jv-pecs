@@ -1,12 +1,12 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Bulldozer;
-import core.mate.academy.model.BulldozerProducer;
 import core.mate.academy.model.Excavator;
-import core.mate.academy.model.ExcavatorProducer;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import core.mate.academy.model.TruckProducer;
+import core.mate.academy.producers.BulldozerProducer;
+import core.mate.academy.producers.ExcavatorProducer;
+import core.mate.academy.producers.TruckProducer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,7 +14,6 @@ import java.util.List;
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
         public List<Machine> getAll(Class<? extends Machine> type) {
-
         if (type == Bulldozer.class) {
             return new ArrayList<>(new BulldozerProducer().get());
         }
