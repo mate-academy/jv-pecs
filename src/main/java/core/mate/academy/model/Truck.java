@@ -23,28 +23,4 @@ public class Truck extends Machine {
     public void doWork() {
         System.out.println("Truck started to work");
     }
-
-    public int getMaxCargoWeight() {
-        return maxCargoWeight;
-    }
-
-    public void setMaxCargoWeight(int maxCargoWeight) {
-        this.maxCargoWeight = maxCargoWeight;
-    }
-
-    public String getBodyType() {
-        return bodyType;
-    }
-
-    public void setBodyType(String bodyType) {
-        this.bodyType = bodyType;
-    }
-
-    public int getNumberOfAxles() {
-        return numberOfAxles;
-    }
-
-    public void setNumberOfAxles(int numberOfAxles) {
-        this.numberOfAxles = numberOfAxles;
-    }
 }

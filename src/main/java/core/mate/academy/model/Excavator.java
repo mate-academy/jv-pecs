@@ -23,28 +23,4 @@ public class Excavator extends Machine {
     public void doWork() {
         System.out.println("Excavator started to work");
     }
-
-    public double getBoomLength() {
-        return boomLength;
-    }
-
-    public void setBoomLength(double boomLength) {
-        this.boomLength = boomLength;
-    }
-
-    public double getBucketCapacity() {
-        return bucketCapacity;
-    }
-
-    public void setBucketCapacity(double bucketCapacity) {
-        this.bucketCapacity = bucketCapacity;
-    }
-
-    public String getExcavatorType() {
-        return excavatorType;
-    }
-
-    public void setExcavatorType(String excavatorType) {
-        this.excavatorType = excavatorType;
-    }
 }

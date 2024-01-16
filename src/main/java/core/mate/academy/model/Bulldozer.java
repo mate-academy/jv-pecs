@@ -23,28 +23,4 @@ public class Bulldozer extends Machine {
     public void doWork() {
         System.out.println("Bulldozer started to work");
     }
-
-    public String getWorkEquipmentType() {
-        return workEquipmentType;
-    }
-
-    public void setWorkEquipmentType(String workEquipmentType) {
-        this.workEquipmentType = workEquipmentType;
-    }
-
-    public String getControlSystem() {
-        return controlSystem;
-    }
-
-    public void setControlSystem(String controlSystem) {
-        this.controlSystem = controlSystem;
-    }
-
-    public String getSpecialFeatures() {
-        return specialFeatures;
-    }
-
-    public void setSpecialFeatures(String specialFeatures) {
-        this.specialFeatures = specialFeatures;
-    }
 }
