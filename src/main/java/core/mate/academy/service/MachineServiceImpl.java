@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
+    private static final BulldozerProducer bulldozerProducer = new BulldozerProducer();
+    private static final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+    private static final TruckProducer truckProducer = new TruckProducer();
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
