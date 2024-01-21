@@ -1,7 +1,9 @@
 package core.mate.academy.service;
 
+import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
-import java.lang.reflect.InvocationTargetException;
+import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -9,35 +11,27 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
-    private enum TypeEnum {
-        TRUCK,
-        BULLDOZER,
-        EXCAVATOR,
-        MACHINE
-    }
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
-        TypeEnum typeEnum = TypeEnum.valueOf(type.getSimpleName().toUpperCase());
-        switch (typeEnum) {
-            case EXCAVATOR:
-                ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-                return new ArrayList<>(excavatorProducer.get());
-            case BULLDOZER:
+        if (!Truck.class.equals(type)) {
+            if (!Excavator.class.equals(type)) {
+                if (!Bulldozer.class.equals(type)) {
+                    return Collections.emptyList();
+                }
                 BulldozerProducer bulldozerProducer = new BulldozerProducer();
                 return new ArrayList<>(bulldozerProducer.get());
-            case TRUCK:
-                TruckProducer truckProducer = new TruckProducer();
-                return new ArrayList<>(truckProducer.get());
-            case MACHINE:
-            default:
-                return Collections.emptyList();
+            }
+            ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+            return new ArrayList<>(excavatorProducer.get());
         }
+        TruckProducer truckProducer = new TruckProducer();
+        return new ArrayList<>(truckProducer.get());
     }
 
     @Override
-    public void fill(List<? super T> machines, T value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
@@ -45,12 +39,8 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
 
     @Override
     public void startWorking(List<? extends Machine> machines) {
-        for (int i = 0; i < machines.size(); i++) {
-            try {
-                machines.get(i).getClass().getMethod("doWork").invoke(machines.get(i));
-            } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
-                System.out.println("The method isn't found");
-            }
+        for (Machine machine : machines) {
+            machine.doWork();
         }
     }
 }
