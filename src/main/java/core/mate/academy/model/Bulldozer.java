@@ -41,7 +41,7 @@ public class Bulldozer extends Machine {
 
     @Override
     public String toString() {
-        return "Bulldozer[name= " + getName() + ", color= " + getColor()
+        return "Bulldozer [name= " + getName() + ", color= " + getColor()
                 + ", dump type= " + getDumpType() + ", dump capacity= " + getDumpCapacity() + "]";
     }
 }

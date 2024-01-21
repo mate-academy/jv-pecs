@@ -41,7 +41,7 @@ public class Excavator extends Machine {
 
     @Override
     public String toString() {
-        return "Excavator[name= " + getName() + ", color= " + getColor()
+        return "Excavator [name= " + getName() + ", color= " + getColor()
                 + ", digging depth= " + getDiggingDepth()
                 + ", bucket capacity= " + getBucketCapacity() + "]";
     }

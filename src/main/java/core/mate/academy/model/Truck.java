@@ -41,7 +41,7 @@ public class Truck extends Machine {
 
     @Override
     public String toString() {
-        return "Truck[name= " + getName() + ", color= " + getColor()
+        return "Truck [name= " + getName() + ", color= " + getColor()
                 + ", payload= " + getPayload() + ", option= " + getOption() + "]";
     }
 }
