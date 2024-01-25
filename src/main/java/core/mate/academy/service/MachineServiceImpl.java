@@ -16,17 +16,17 @@ import java.util.Map;
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
     public List<Machine> getAll(Class type) {
-        Map<String, Machine> allMachines = new HashMap<>();
+        Map<String, MachineProducer<? extends Machine>> allMachines = new HashMap<>();
         allMachines.put("Truck", new Truck());
         allMachines.put("Excavator", new Excavator());
         allMachines.put("Bulldozer", new Bulldozer());
-        List<Machine> machines = null;
+        List<? extends Machine> machines = null;
         for (String key : allMachines.keySet()) {
             if (key.equals(type.getSimpleName())) {
                 machines = allMachines.get(key).get();
             }
         }
-        return machines != null ? machines : new ArrayList<>();
+        return machines != null ? (List<Machine>) machines : new ArrayList<>();
     }
 
     @Override

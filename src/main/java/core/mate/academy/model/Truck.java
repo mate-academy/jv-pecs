@@ -1,5 +1,6 @@
 package core.mate.academy.model;
 
+import core.mate.academy.service.MachineProducer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
  * Add some custom fields that could be only in Truck
  * Do not remove no-field constructor
  */
-public class Truck extends Machine {
+public class Truck extends Machine implements MachineProducer<Truck> {
     private int maxLoad;
     private int maxSpeed;
 
@@ -25,8 +26,8 @@ public class Truck extends Machine {
     }
 
     @Override
-    public List<Machine> get() {
-        List<Machine> trucks = new ArrayList<>();
+    public List<Truck> get() {
+        List<Truck> trucks = new ArrayList<>();
         trucks.add(new Truck(20, 90));
         trucks.add(new Truck(15, 100));
         return trucks;
