@@ -1,9 +1,6 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Bulldozer;
-import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
-import core.mate.academy.model.Truck;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -15,11 +12,11 @@ import java.util.Map;
  */
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    public List<Machine> getAll(Class type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         Map<String, MachineProducer<? extends Machine>> allMachines = new HashMap<>();
-        allMachines.put("Truck", new Truck());
-        allMachines.put("Excavator", new Excavator());
-        allMachines.put("Bulldozer", new Bulldozer());
+        allMachines.put("Truck", new TruckProducer());
+        allMachines.put("Excavator", new ExcavatorProducer());
+        allMachines.put("Bulldozer", new BulldozerProducer());
         List<? extends Machine> machines = null;
         for (String key : allMachines.keySet()) {
             if (key.equals(type.getSimpleName())) {
