@@ -15,8 +15,8 @@ public class Excavator extends Machine {
     public Excavator(int weight, int liftCapacity, String name, String color) {
         this.weight = weight;
         this.liftCapacity = liftCapacity;
-        this.setName(name);
-        this.setColor(color);
+        setName(name);
+        setColor(color);
     }
 
     @Override

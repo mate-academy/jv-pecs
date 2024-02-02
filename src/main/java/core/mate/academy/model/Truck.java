@@ -14,8 +14,8 @@ public class Truck extends Machine {
     public Truck(int length, int numberOfCylinders, String name, String color) {
         this.length = length;
         this.numberOfCylinders = numberOfCylinders;
-        this.setName(name);
-        this.setColor(color);
+        setName(name);
+        setColor(color);
     }
 
     @Override
