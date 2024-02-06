@@ -14,15 +14,19 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
+    private static final BulldozerProducer bulldozerProducer = new BulldozerProducer();
+    private static final ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+    private static final TruckProducer truckProducer = new TruckProducer();
+
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         List<? extends Machine> machineList = List.of();
         if (Bulldozer.class == type) {
-            machineList = new BulldozerProducer().get();
+            machineList = bulldozerProducer.get();
         } else if (Truck.class == type) {
-            machineList = new TruckProducer().get();
+            machineList = truckProducer.get();
         } else if (Excavator.class == type) {
-            machineList = new ExcavatorProducer().get();
+            machineList = excavatorProducer.get();
         }
         return new ArrayList<>(machineList);
     }
