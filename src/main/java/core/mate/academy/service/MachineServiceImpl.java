@@ -10,23 +10,23 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    public List<T> getAll(Class<? extends Machine> type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
 
         if (type == Bulldozer.class) {
             BulldozerProducer bulldozer = new BulldozerProducer();
-            return (List<T>) new ArrayList<>(bulldozer.get());
+            return new ArrayList<>(bulldozer.get());
         }
 
         if (type == Truck.class) {
             TruckProducer truck = new TruckProducer();
-            return (List<T>) new ArrayList<>(truck.get());
+            return new ArrayList<>(truck.get());
         }
 
         if (type == Excavator.class) {
             ExcavatorProducer excavator = new ExcavatorProducer();
-            return (List<T>) new ArrayList<>(excavator.get());
+            return new ArrayList<>(excavator.get());
         }
 
         return new ArrayList<>();
