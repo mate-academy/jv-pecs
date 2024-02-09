@@ -4,40 +4,40 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl implements MachineService<Machine> {
-
     @Override
-    public List<? extends Machine> getAll(Class<Machine> type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         // Determine the appropriate MachineProducer based on the class type
         MachineProducer<? extends Machine> producer;
-        if (type.equals(Bulldozer.class)) {
+        if (type == Bulldozer.class) {
             producer = new BulldozerProducer();
-        } else if (type.equals(Excavator.class)) {
+        } else if (type == Excavator.class) {
             producer = new ExcavatorProducer();
-        } else if (type.equals(Truck.class)) {
+        } else if (type == Truck.class) {
             producer = new TruckProducer();
         } else {
-            throw new IllegalArgumentException("Unsupported machine type");
+            return new ArrayList<>();
         }
         return producer.get();
     }
 
     @Override
-    public void fill(List<Machine> machines, Machine value) {
-        // Fill the machines list with the passed value
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
+
     }
 
     @Override
-    public void startWorking(List<Machine> machines) {
+    public void startWorking(List<? extends Machine> machines) {
         // Call doWork() on each machine
         for (Machine machine : machines) {
             machine.doWork();
         }
+
     }
 }
