@@ -11,7 +11,6 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
-
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
         MachineProducer<? extends Machine> producer;
@@ -39,6 +38,5 @@ public class MachineServiceImpl implements MachineService<Machine> {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
-
     }
 }
