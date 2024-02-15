@@ -18,7 +18,7 @@ public interface MachineService<T extends Machine> {
      * @return the list of machines
      *
      */
-    List<Machine> getAll(Class type);
+    List<T> getAll(Class type);
 
     /**
      * Fill the machines list with passed value
