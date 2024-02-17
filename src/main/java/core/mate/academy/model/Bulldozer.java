@@ -1,14 +1,10 @@
 package core.mate.academy.model;
 
-import core.mate.academy.service.MachineProducer;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Add some custom fields that could be only in Bulldozer
  * Do not remove no-args constructor
  */
-public class Bulldozer extends Machine implements MachineProducer<Bulldozer> {
+public class Bulldozer extends Machine {
     private String model;
 
     public Bulldozer() {
@@ -19,16 +15,17 @@ public class Bulldozer extends Machine implements MachineProducer<Bulldozer> {
         System.out.println("Bulldozer started to work");
     }
 
-    @Override
-    public List<Bulldozer> get() {
-        List<Bulldozer> bulldozerList = new ArrayList<>();
-        for (int i = 0; i < MODELS_NUMBER; i++) {
-            bulldozerList.add(createModel());
-        }
-        return bulldozerList;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    private Bulldozer createModel() {
-        return new Bulldozer();
+    @Override
+    public void setName(String name) {
+        super.setName(name);
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
     }
 }

@@ -1,9 +1,12 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.BulldozerProducer;
 import core.mate.academy.model.Excavator;
+import core.mate.academy.model.ExcavatorProducer;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
+import core.mate.academy.model.TruckProducer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,28 +14,28 @@ import java.util.List;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
-    private Bulldozer bulldozer = new Bulldozer();
-    private Excavator excavator = new Excavator();
-    private Truck truck = new Truck();
+    private BulldozerProducer bulldozerProducer = new BulldozerProducer();
+    private ExcavatorProducer excavatorProducer = new ExcavatorProducer();
+    private TruckProducer truckProducer = new TruckProducer();
 
     public MachineServiceImpl() {
     }
 
     @Override
-    public List<? extends Machine> getAll(Class type) {
-        List<? extends Machine> resultList = new ArrayList<>();
+    public List<Machine> getAll(Class<? extends Machine> type) {
+        List<Machine> resultList = new ArrayList<>();
         if (type == Bulldozer.class) {
-            resultList = bulldozer.get();
+            resultList = bulldozerProducer.get();
         }
         if (type == Excavator.class) {
-            resultList = excavator.get();
+            resultList = excavatorProducer.get();
         }
         if (type == Truck.class) {
-            resultList = truck.get();
+            resultList = truckProducer.get();
         }
-        if (type == Bulldozer.class
-                && type == Excavator.class
-                && type == Truck.class) {
+        if (type != Bulldozer.class
+                && type != Excavator.class
+                && type != Truck.class) {
             resultList = new ArrayList<>();
         }
         return resultList;
@@ -47,15 +50,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
 
     public void startWorking(List<? extends Machine> machines) {
         for (Machine machine : machines) {
-            if (machine instanceof Bulldozer) {
-                bulldozer.doWork();
-            }
-            if (machine instanceof Excavator) {
-                excavator.doWork();
-            }
-            if (machine instanceof Truck) {
-                truck.doWork();
-            }
+            machine.doWork();
         }
     }
 }

@@ -1,14 +1,10 @@
 package core.mate.academy.model;
 
-import core.mate.academy.service.MachineProducer;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Add some custom fields that could be only in Truck
  * Do not remove no-field constructor
  */
-public class Truck extends Machine implements MachineProducer<Truck> {
+public class Truck extends Machine {
     private int height;
 
     public Truck() {
@@ -19,16 +15,17 @@ public class Truck extends Machine implements MachineProducer<Truck> {
         System.out.println("Truck started to work");
     }
 
-    @Override
-    public List<Truck> get() {
-        List<Truck> truckList = new ArrayList<>();
-        for (int i = 0; i < MODELS_NUMBER; i++) {
-            truckList.add((createModel()));
-        }
-        return truckList;
+    public void setHeight(int height) {
+        this.height = height;
     }
 
-    private Truck createModel() {
-        return new Truck();
+    @Override
+    public void setName(String name) {
+        super.setName(name);
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
     }
 }
