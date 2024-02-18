@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
     @Override
-    public List<? extends Excavator> get() {
+    public List<Excavator> get() {
         return List.of(new Excavator(3000),
                 new Excavator(2000),
                 new Excavator(1000));

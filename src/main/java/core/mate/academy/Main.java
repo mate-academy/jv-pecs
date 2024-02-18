@@ -20,4 +20,5 @@ public class Main {
         bulldozers = machineService.getAll(Bulldozer.class);
         System.out.println(bulldozers);
     }
+
 }
