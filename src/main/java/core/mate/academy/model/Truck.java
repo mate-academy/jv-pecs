@@ -4,6 +4,11 @@ public class Truck extends Machine {
     private int numberAxles;
 
     public Truck() {
+        this.numberAxles = 2;
+    }
+
+    public Truck(int numberAxles) {
+        this.numberAxles = numberAxles;
     }
 
     @Override

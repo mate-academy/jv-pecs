@@ -4,6 +4,11 @@ public class Excavator extends Machine {
     private int bucketCapacity;
 
     public Excavator() {
+        this.bucketCapacity = 1000;
+    }
+
+    public Excavator(int bucketCapacity) {
+        this.bucketCapacity = bucketCapacity;
     }
 
     @Override
