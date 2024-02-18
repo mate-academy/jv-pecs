@@ -10,9 +10,5 @@ public interface MachineService<T extends Machine> {
 
     void fill(List<? super T> machines, T value);
 
-    default void startWorking(List<? extends Workable> machines) {
-        for (int i = 0; i < machines.size(); i++) {
-            machines.get(i).doWork();
-        }
-    }
+    void startWorking(List<? extends Workable> machines);
 }

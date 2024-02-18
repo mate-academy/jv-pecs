@@ -1,36 +1,40 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.BulldozerProducer;
 import core.mate.academy.model.Excavator;
+import core.mate.academy.model.ExcavatorProducer;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-import java.util.ArrayList;
+import core.mate.academy.model.TruckProducer;
+import core.mate.academy.model.Workable;
 import java.util.List;
 
-public class MachineServiceImpl<T extends Machine> implements MachineService {
+public class MachineServiceImpl<T extends Machine> implements MachineService<Machine> {
 
     @Override
-    public List<T> getAll(Class obj) {
-        List<? extends Machine> list = new ArrayList<>();
+    public List getAll(Class obj) {
         if (obj == Bulldozer.class) {
-            return (List<T>) new Bulldozer().get();
+            return new BulldozerProducer().get();
         } else if (obj == Excavator.class) {
-            return (List<T>) new Excavator().get();
+            return new ExcavatorProducer().get();
         } else if (obj == Truck.class) {
-            return (List<T>) new Truck().get();
+            return new TruckProducer().get();
         }
         return List.of();
     }
 
     @Override
-    public void fill(List machines, Machine value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
 
     @Override
-    public void startWorking(List machines) {
-        MachineService.super.startWorking(machines);
+    public void startWorking(List<? extends Workable> machines) {
+        for (int i = 0; i < machines.size(); i++) {
+            machines.get(i).doWork();
+        }
     }
 }
