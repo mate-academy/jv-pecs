@@ -7,7 +7,19 @@ package core.mate.academy.model;
 public class Excavator extends Machine {
     private int power;
 
+    public Excavator(int power) {
+        this.power = power;
+    }
+
     public Excavator() {
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
     }
 
     @Override
