@@ -7,7 +7,6 @@ import core.mate.academy.model.ExcavatorProducer;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import core.mate.academy.model.TruckProducer;
-import core.mate.academy.model.Workable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +35,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<Mac
     }
 
     @Override
-    public void startWorking(List<? extends Workable> machines) {
+    public void startWorking(List<? extends Machine> machines) {
         for (int i = 0; i < machines.size(); i++) {
             machines.get(i).doWork();
         }
