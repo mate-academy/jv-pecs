@@ -31,7 +31,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Object value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         machines.replaceAll(ignored -> (Machine) value);
     }
 
