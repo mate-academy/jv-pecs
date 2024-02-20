@@ -8,6 +8,8 @@ import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import core.mate.academy.model.TruckProducer;
 import core.mate.academy.model.Workable;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl<T extends Machine> implements MachineService<Machine> {
@@ -15,11 +17,14 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<Mac
     @Override
     public List getAll(Class obj) {
         if (obj == Bulldozer.class) {
-            return new BulldozerProducer().get();
+            List<? extends Machine> machines = new BulldozerProducer().get();
+            return new ArrayList<>(machines);
         } else if (obj == Excavator.class) {
-            return new ExcavatorProducer().get();
+            List<? extends Machine> machines = new ExcavatorProducer().get();
+            return new ArrayList<>(machines);
         } else if (obj == Truck.class) {
-            return new TruckProducer().get();
+            List<? extends Machine> machines = new TruckProducer().get();
+            return new ArrayList<>(machines);
         }
         return List.of();
     }
