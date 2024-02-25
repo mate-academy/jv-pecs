@@ -11,7 +11,7 @@ public class TruckProducer implements MachineProducer<Truck> {
     @Override
     public List<Truck> get() {
         fillListOfExcavator();
-        return new ArrayList<>(trucks);
+        return trucks;
     }
 
     private void fillListOfExcavator() {

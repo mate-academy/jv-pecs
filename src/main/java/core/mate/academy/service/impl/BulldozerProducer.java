@@ -11,7 +11,7 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
     @Override
     public List<Bulldozer> get() {
         fillTheListOfBulldozers();
-        return new ArrayList<>(bulldozers);
+        return bulldozers;
     }
 
     private void fillTheListOfBulldozers() {

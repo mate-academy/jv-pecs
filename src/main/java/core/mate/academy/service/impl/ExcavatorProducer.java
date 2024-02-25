@@ -11,7 +11,7 @@ public class ExcavatorProducer implements MachineProducer<Excavator> {
     @Override
     public List<Excavator> get() {
         fillListOfExcavator();
-        return new ArrayList<>(excavators);
+        return excavators;
     }
 
     private void fillListOfExcavator() {
