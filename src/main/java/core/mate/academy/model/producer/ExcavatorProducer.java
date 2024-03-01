@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-    private static final int AMOUNT_TO_GET = 3;
 
     @Override
     public List<Excavator> get() {

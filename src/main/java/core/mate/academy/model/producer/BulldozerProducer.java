@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-    private static final int AMOUNT_TO_GET = 3;
 
     @Override
     public List<Bulldozer> get() {
