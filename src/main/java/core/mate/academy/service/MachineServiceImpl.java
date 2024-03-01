@@ -18,7 +18,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
             case EXCAVATOR -> producer = new ExcavatorProducer();
             case TRUCK -> producer = new TruckProducer();
             default -> {
-                return new ArrayList<>();
+                return Collections.emptyList();
             }
         }
         return new ArrayList<>(producer.get());

@@ -5,17 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
-    private int whiles;
+    private int wheels;
 
     public Truck() {
     }
 
-    public int getWhiles() {
-        return whiles;
+    public int getWheels() {
+        return wheels;
     }
 
-    public void setWhiles(int whiles) {
-        this.whiles = whiles;
+    public void setWheels(int wheels) {
+        this.wheels = wheels;
     }
 
     @Override

@@ -12,7 +12,7 @@ public class TruckProducer implements MachineProducer<Truck> {
         List<Truck> result = new ArrayList<>();
         for (int i = 0; i < NUMBER_OF_TRUCK; i++) {
             Truck truck = new Truck();
-            truck.setWhiles(i);
+            truck.setWheels(i);
             result.add(truck);
         }
         return result;
