@@ -23,17 +23,12 @@ public class MachineServiceImpl implements MachineService<Machine> {
         } else if (type == Excavator.class) {
             machines = new ExcavatorProducer().get();
         }
-
-        if (machines != null) {
-            return new ArrayList<>(machines);
-        } else {
-            return new ArrayList<>();
-        }
+        return machines != null ? new ArrayList<>(machines) : new ArrayList<>();
     }
 
     @Override
     public void fill(List<? super Machine> machines, Machine value) {
-        Collections.fill(machines,value);
+        Collections.fill(machines, value);
     }
 
     @Override

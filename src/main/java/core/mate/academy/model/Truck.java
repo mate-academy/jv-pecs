@@ -22,28 +22,4 @@ public class Truck extends Machine {
     public void doWork() {
         System.out.println("Truck started to work");
     }
-
-    public String getCargoType() {
-        return cargoType;
-    }
-
-    public void setCargoType(String cargoType) {
-        this.cargoType = cargoType;
-    }
-
-    public double getCargoCapacity() {
-        return cargoCapacity;
-    }
-
-    public void setCargoCapacity(double cargoCapacity) {
-        this.cargoCapacity = cargoCapacity;
-    }
-
-    public int getNumberOfAxles() {
-        return numberOfAxles;
-    }
-
-    public void setNumberOfAxles(int numberOfAxles) {
-        this.numberOfAxles = numberOfAxles;
-    }
 }
