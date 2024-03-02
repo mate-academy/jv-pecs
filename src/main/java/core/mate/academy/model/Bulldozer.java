@@ -5,7 +5,18 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int scoopSize;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(String name, String color, int scoopSize) {
+        super(name, color);
+        this.scoopSize = scoopSize;
+    }
+
+    public int getScoopSize() {
+        return scoopSize;
     }
 
     @Override
