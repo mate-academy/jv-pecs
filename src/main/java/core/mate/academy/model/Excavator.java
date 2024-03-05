@@ -1,15 +1,19 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
 public class Excavator extends Machine {
+    private int diggingDepth;
+
+    public Excavator(String name, String color, int diggingDepth) {
+        super(name, color);
+        this.diggingDepth = diggingDepth;
+    }
+
     public Excavator() {
+        super("Excavator", "Black");
     }
 
     @Override
     public void doWork() {
-        System.out.println("Excavator started to work");
+        System.out.println("Excavator " + getName() + " started to work");
     }
 }
