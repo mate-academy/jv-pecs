@@ -5,7 +5,13 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private double speed;
+
     public Excavator() {
+    }
+
+    public Excavator(double speed) {
+        this.speed = speed;
     }
 
     @Override
