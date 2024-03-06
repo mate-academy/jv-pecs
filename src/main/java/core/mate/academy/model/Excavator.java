@@ -12,8 +12,7 @@ public class Excavator extends Machine {
     }
 
     public Excavator(String color, String name, boolean hasHummer) {
-        setColor(color);
-        setName(name);
+        super(name, color);
         this.hasHummer = hasHummer;
     }
 

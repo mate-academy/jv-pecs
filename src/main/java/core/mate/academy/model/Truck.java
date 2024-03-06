@@ -13,8 +13,7 @@ public class Truck extends Machine {
     }
 
     public Truck(String color, String name, int bodyVolume, boolean hasTrailer) {
-        setColor(color);
-        setName(name);
+        super(name, color);
         this.bodyVolume = bodyVolume;
         this.hasTrailer = hasTrailer;
     }
