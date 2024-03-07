@@ -8,10 +8,11 @@ public class Bulldozer extends Machine {
     private int ordinalNumber;
 
     public Bulldozer() {
+        ordinalNumber = RANDOM.nextInt(1, 50);
     }
 
-    public Bulldozer(int maxSpeed) {
-        this.ordinalNumber = maxSpeed;
+    public Bulldozer(int ordinalNumber) {
+        this.ordinalNumber = ordinalNumber;
     }
 
     public int getOrdinalNumber() {

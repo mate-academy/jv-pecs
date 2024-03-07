@@ -8,6 +8,7 @@ public class Truck extends Machine {
     private int maxSpeed;
 
     public Truck() {
+        maxSpeed = RANDOM.nextInt(70, 96);
     }
 
     public Truck(int maxSpeed) {

@@ -1,6 +1,9 @@
 package core.mate.academy.model;
 
+import java.util.Random;
+
 public abstract class Machine implements Workable {
+    protected static final Random RANDOM = new Random();
     private String name;
     private String color;
 
