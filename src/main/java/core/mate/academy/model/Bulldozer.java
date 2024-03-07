@@ -5,7 +5,21 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int ordinalNumber;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(int maxSpeed) {
+        this.ordinalNumber = maxSpeed;
+    }
+
+    public int getOrdinalNumber() {
+        return ordinalNumber;
+    }
+
+    public void setOrdinalNumber(int ordinalNumber) {
+        this.ordinalNumber = ordinalNumber;
     }
 
     @Override
