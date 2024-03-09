@@ -5,7 +5,26 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private String dumpType;
+    private double dumpWeight;
+
     public Bulldozer() {
+    }
+
+    public void setDumpType(String dumpType) {
+        this.dumpType = dumpType;
+    }
+
+    public void setDumpWeight(double dumpWeight) {
+        this.dumpWeight = dumpWeight;
+    }
+
+    public String getDumpType() {
+        return dumpType;
+    }
+
+    public double getDumpWeight() {
+        return dumpWeight;
     }
 
     @Override
