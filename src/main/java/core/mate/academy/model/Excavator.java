@@ -8,7 +8,6 @@ public class Excavator extends Machine {
     private int maxPower;
 
     public Excavator() {
-        maxPower = RANDOM.nextInt(30,60);
     }
 
     public Excavator(int maxPower) {

@@ -8,7 +8,6 @@ public class Bulldozer extends Machine {
     private int ordinalNumber;
 
     public Bulldozer() {
-        ordinalNumber = RANDOM.nextInt(1, 50);
     }
 
     public Bulldozer(int ordinalNumber) {
