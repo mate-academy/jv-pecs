@@ -5,14 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
-    private final List<Bulldozer> bulldozers;
-
-    public BulldozerProducer() {
-        this.bulldozers = new ArrayList<>();
-    }
+    private List<Bulldozer> bulldozers;
 
     @Override
     public List<Bulldozer> get() {
+        this.bulldozers = new ArrayList<>();
+
         Bulldozer model1 = new Bulldozer();
         model1.setName("Bulldozer 1");
         model1.setColor("red");

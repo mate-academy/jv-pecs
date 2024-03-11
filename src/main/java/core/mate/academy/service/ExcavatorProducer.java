@@ -5,14 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExcavatorProducer implements MachineProducer<Excavator> {
-    private final List<Excavator> excavators;
-
-    public ExcavatorProducer() {
-        this.excavators = new ArrayList<>();
-    }
+    private List<Excavator> excavators;
 
     @Override
     public List<Excavator> get() {
+        this.excavators = new ArrayList<>();
+
         Excavator model1 = new Excavator();
         model1.setName("Excavator 1");
         model1.setColor("red");

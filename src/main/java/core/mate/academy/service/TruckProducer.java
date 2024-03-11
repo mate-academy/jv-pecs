@@ -5,14 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
-    private final List<Truck> trucks;
-
-    public TruckProducer() {
-        this.trucks = new ArrayList<>();
-    }
+    private List<Truck> trucks;
 
     @Override
     public List<Truck> get() {
+        this.trucks = new ArrayList<>();
+
         Truck model1 = new Truck();
         model1.setName("Truck 1");
         model1.setColor("red");
