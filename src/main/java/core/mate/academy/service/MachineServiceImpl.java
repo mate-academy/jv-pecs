@@ -11,17 +11,20 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     @SuppressWarnings("unchecked")
     @Override
     public List<T> getAll(Class<? extends T> type) {
+        List<? extends Machine> machines;
         if (type == Bulldozer.class) {
             MachineProducer<Bulldozer> producer = new BulldozerProducer();
-            return (List<T>) producer.get();
+            machines = producer.get();
         } else if (type == Excavator.class) {
             MachineProducer<Excavator> producer = new ExcavatorProducer();
-            return (List<T>) producer.get();
+            machines = producer.get();
         } else if (type == Truck.class) {
             MachineProducer<Truck> producer = new TruckProducer();
-            return (List<T>) producer.get();
+            machines = producer.get();
+        } else {
+            machines = new ArrayList<>();
         }
-        return new ArrayList<>();
+        return new ArrayList<>((List<T>) machines);
     }
 
     @Override
