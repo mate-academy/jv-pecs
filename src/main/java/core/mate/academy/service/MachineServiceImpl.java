@@ -8,27 +8,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+
     @SuppressWarnings("unchecked")
     @Override
-    public List<T> getAll(Class<? extends T> type) {
-        List<? extends Machine> machines;
-        if (type == Bulldozer.class) {
-            MachineProducer<Bulldozer> producer = new BulldozerProducer();
-            machines = producer.get();
-        } else if (type == Excavator.class) {
-            MachineProducer<Excavator> producer = new ExcavatorProducer();
-            machines = producer.get();
-        } else if (type == Truck.class) {
-            MachineProducer<Truck> producer = new TruckProducer();
-            machines = producer.get();
-        } else {
-            machines = new ArrayList<>();
-        }
+    public List<T> getAll(Class<? extends Machine> type) {
+        List<? extends Machine> machines = switch (type.getSimpleName()) {
+            case "Bulldozer" -> {
+                MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
+                yield bulldozerProducer.get();
+            }
+            case "Excavator" -> {
+                MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
+                yield excavatorProducer.get();
+            }
+            case "Truck" -> {
+                MachineProducer<Truck> truckProducer = new TruckProducer();
+                yield truckProducer.get();
+            }
+            default -> new ArrayList<>();
+        };
         return new ArrayList<>((List<T>) machines);
     }
 
     @Override
-    public void fill(List<? super T> machines, T value) {
+    public void fill(List<? super Machine> machines, T value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
