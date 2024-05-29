@@ -11,9 +11,8 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer(String name, String color, String trackType) {
+        super(name, color);
         this.trackType = trackType;
-        setColor(color);
-        setName(name);
     }
 
     @Override

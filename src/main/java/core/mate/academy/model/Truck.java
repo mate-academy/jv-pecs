@@ -11,9 +11,8 @@ public class Truck extends Machine {
     }
 
     public Truck(String name, String color, int maxCargoCapacity) {
+        super(name, color);
         this.maxCargoCapacity = maxCargoCapacity;
-        setColor(color);
-        setName(name);
     }
 
     @Override
