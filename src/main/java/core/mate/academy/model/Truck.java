@@ -55,9 +55,13 @@ public class Truck extends Machine {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Truck truck = (Truck) o;
-        return cargoCapacity == truck.cargoCapacity && fuelEfficiency == truck.fuelEfficiency && numberOfWheels == truck.numberOfWheels;
+        return cargoCapacity == truck.cargoCapacity
+                && fuelEfficiency == truck.fuelEfficiency
+                && numberOfWheels == truck.numberOfWheels;
     }
 
     @Override

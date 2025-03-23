@@ -54,9 +54,13 @@ public class Excavator extends Machine {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Excavator excavator = (Excavator) o;
-        return diggingDepth == excavator.diggingDepth && armLength == excavator.armLength && bucketCapacity == excavator.bucketCapacity;
+        return diggingDepth == excavator.diggingDepth
+                && armLength == excavator.armLength
+                && bucketCapacity == excavator.bucketCapacity;
     }
 
     @Override

@@ -54,9 +54,13 @@ public class Bulldozer extends Machine {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Bulldozer bulldozer = (Bulldozer) o;
-        return bladeWidth == bulldozer.bladeWidth && enginePower == bulldozer.enginePower && Objects.equals(trackType, bulldozer.trackType);
+        return bladeWidth == bulldozer.bladeWidth
+                && enginePower == bulldozer.enginePower
+                && Objects.equals(trackType, bulldozer.trackType);
     }
 
     @Override
