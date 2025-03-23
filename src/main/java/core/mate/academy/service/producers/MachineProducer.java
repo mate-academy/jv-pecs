@@ -1,4 +1,4 @@
-package core.mate.academy.service;
+package core.mate.academy.service.producers;
 
 import core.mate.academy.model.Machine;
 import java.util.List;
