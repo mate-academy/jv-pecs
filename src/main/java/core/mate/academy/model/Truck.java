@@ -46,11 +46,11 @@ public class Truck extends Machine {
 
     @Override
     public String toString() {
-        return "Truck{" +
-                "cargoCapacity=" + cargoCapacity +
-                ", fuelEfficiency=" + fuelEfficiency +
-                ", numberOfWheels=" + numberOfWheels +
-                '}';
+        return "Truck{"
+                + "cargoCapacity=" + cargoCapacity
+                + ", fuelEfficiency=" + fuelEfficiency
+                + ", numberOfWheels=" + numberOfWheels
+                + '}';
     }
 
     @Override

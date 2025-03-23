@@ -45,11 +45,11 @@ public class Bulldozer extends Machine {
 
     @Override
     public String toString() {
-        return "Bulldozer{" +
-                "bladeWidth=" + bladeWidth +
-                ", enginePower=" + enginePower +
-                ", trackType='" + trackType + '\'' +
-                '}';
+        return "Bulldozer{"
+                + "bladeWidth=" + bladeWidth
+                + ", enginePower=" + enginePower
+                + ", trackType='" + trackType + '\''
+                + '}';
     }
 
     @Override

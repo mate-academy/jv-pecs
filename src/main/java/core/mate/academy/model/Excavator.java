@@ -45,11 +45,11 @@ public class Excavator extends Machine {
 
     @Override
     public String toString() {
-        return "Excavator{" +
-                "diggingDepth=" + diggingDepth +
-                ", armLength=" + armLength +
-                ", bucketCapacity=" + bucketCapacity +
-                '}';
+        return "Excavator{"
+                + "diggingDepth=" + diggingDepth
+                + ", armLength=" + armLength
+                + ", bucketCapacity=" + bucketCapacity
+                + '}';
     }
 
     @Override
