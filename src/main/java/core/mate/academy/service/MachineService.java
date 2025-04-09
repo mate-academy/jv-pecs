@@ -10,6 +10,6 @@ import java.util.List;
 public interface MachineService <T extends Machine> {
 
     List<T> getAll(Class<? extends Machine> type);
-    void fill(List<Object> machines, Object value);
+    void fill(List<? super Machine> machines, Object value);
     void startWorking(List<? extends Machine> machines);
 }
