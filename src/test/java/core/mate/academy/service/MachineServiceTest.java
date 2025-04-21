@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Random;
 
 public class MachineServiceTest {
-    private static MachineService<Machine> machineService;
+    private static MachineService machineService;
 
     @BeforeClass
     public static void beforeClass() {
@@ -56,7 +56,7 @@ public class MachineServiceTest {
         for (int i = 0; i < randomSize; i++) {
             machines.add(new Object());
         }
-        machineService.fill(machines, new Bulldozer());
+        machineService.fill(machines, new Bulldozer("A", "B", "C", "D", 1));
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
             assertEquals("The list should contain elements of type Bulldozer",
@@ -71,7 +71,7 @@ public class MachineServiceTest {
         for (int i = 0; i < randomSize; i++) {
             machines.add(new Object());
         }
-        machineService.fill(machines, new Excavator());
+        machineService.fill(machines, new Excavator("A", "B", "C", "D", 0));
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
             assertEquals("The list should contain elements of type Excavator",
@@ -86,7 +86,7 @@ public class MachineServiceTest {
         for (int i = 0; i < randomSize; i++) {
             machines.add(new Object());
         }
-        machineService.fill(machines, new Truck());
+        machineService.fill(machines, new Truck("A", "B", "C", "D", 1));
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
             assertEquals("The list should contain elements of type Truck",
@@ -99,8 +99,8 @@ public class MachineServiceTest {
      */
     @Test
     public void startWorking_bulldozers() {
-        List<Bulldozer> bulldozers = List.of(new Bulldozer());
-        machineService.startWorking(bulldozers);
+        List<Bulldozer> bulldozers = List.of(new Bulldozer("a", "b", "c", "d", 5));
+        machineService.startWorking(Collections.singletonList(bulldozers));
     }
 
     /**
@@ -108,8 +108,8 @@ public class MachineServiceTest {
      */
     @Test
     public void startWorking_excavators() {
-        List<Excavator> excavators = List.of(new Excavator());
-        machineService.startWorking(excavators);
+        List<Excavator> excavators = List.of(new Excavator("A", "B", "C", "D", 7));
+        machineService.startWorking(Collections.singletonList(excavators));
     }
 
     /**
@@ -117,7 +117,7 @@ public class MachineServiceTest {
      */
     @Test
     public void startWorking_trucks() {
-        List<Truck> trucks = List.of(new Truck());
-        machineService.startWorking(trucks);
+        List<Truck> trucks = List.of(new Truck("A", "B", "C", "D", 3));
+        machineService.startWorking(Collections.singletonList(trucks));
     }
 }
