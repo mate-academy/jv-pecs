@@ -51,10 +51,10 @@ public class MachineServiceTest {
 
     @Test
     public void fill_bulldozerValue() {
-        List<Object> machines = new ArrayList<>();
+        List<Machine> machines = new ArrayList<>();
         int randomSize = new Random().nextInt(100);
         for (int i = 0; i < randomSize; i++) {
-            machines.add(new Object());
+            machines.add(new Bulldozer());
         }
         machineService.fill(machines, new Bulldozer());
         assertEquals("The list size shouldn't change", randomSize, machines.size());
@@ -66,10 +66,10 @@ public class MachineServiceTest {
 
     @Test
     public void fill_excavatorValue() {
-        List<Object> machines = new ArrayList<>();
+        List<Machine> machines = new ArrayList<>();
         int randomSize = new Random().nextInt(100);
         for (int i = 0; i < randomSize; i++) {
-            machines.add(new Object());
+            machines.add(new Excavator());
         }
         machineService.fill(machines, new Excavator());
         assertEquals("The list size shouldn't change", randomSize, machines.size());
@@ -81,10 +81,10 @@ public class MachineServiceTest {
 
     @Test
     public void fill_truckValueRandomSize() {
-        List<Object> machines = new ArrayList<>();
+        List<Machine> machines = new ArrayList<>();
         int randomSize = new Random().nextInt(100);
         for (int i = 0; i < randomSize; i++) {
-            machines.add(new Object());
+            machines.add(new Truck());
         }
         machineService.fill(machines, new Truck());
         assertEquals("The list size shouldn't change", randomSize, machines.size());
