@@ -5,7 +5,26 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private double bucketCapacity;
+    private boolean isWheeled;
+
     public Excavator() {
+    }
+
+    public double getBucketCapacity() {
+        return bucketCapacity;
+    }
+
+    public void setBucketCapacity(double bucketCapacity) {
+        this.bucketCapacity = bucketCapacity;
+    }
+
+    public boolean isWheeled() {
+        return isWheeled;
+    }
+
+    public void setWheeled(boolean wheeled) {
+        isWheeled = wheeled;
     }
 
     @Override
