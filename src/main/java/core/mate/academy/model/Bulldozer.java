@@ -5,6 +5,9 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private static final String BULLDOZER_TYPE = "Crawler Bulldozer";
+    private String bulldozerBlades = "S-Blade";
+
     public Bulldozer() {
     }
 
