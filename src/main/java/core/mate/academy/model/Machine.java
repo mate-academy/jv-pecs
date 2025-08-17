@@ -4,6 +4,14 @@ public abstract class Machine implements Workable {
     private String name;
     private String color;
 
+    public Machine() {
+    }
+
+    public Machine(String color, String name) {
+        this.color = color;
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
