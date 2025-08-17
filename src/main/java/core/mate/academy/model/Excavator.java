@@ -1,11 +1,17 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
 public class Excavator extends Machine {
+    private int dipperCapacity;
+
     public Excavator() {
+    }
+
+    public int getDipperCapacity() {
+        return dipperCapacity;
+    }
+
+    public void setDipperCapacity(int dipperCapacity) {
+        this.dipperCapacity = dipperCapacity;
     }
 
     @Override
