@@ -1,22 +1,18 @@
 package core.mate.academy.model;
 
 public abstract class Machine implements Workable {
+    private static final String DEFAULT_NAME = "Pussy_waggon";
+    private static final String DEFAULT_COLOUR = "White";
     private String name;
     private String color;
 
-    public String getName() {
-        return name;
+    Machine() {
+        this.name = DEFAULT_NAME;
+        this.color = DEFAULT_COLOUR;
     }
 
-    public void setName(String name) {
+    Machine(String name, String color) {
         this.name = name;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
         this.color = color;
     }
 }
