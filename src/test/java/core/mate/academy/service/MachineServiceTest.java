@@ -4,8 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
-import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
+import core.mate.academy.model.Machine;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import java.util.ArrayList;
