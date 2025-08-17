@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private double speed;
+    private String type;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(double speed, String type) {
+        this.speed = speed;
+        this.type = type;
     }
 
     @Override
