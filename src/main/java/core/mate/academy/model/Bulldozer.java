@@ -1,11 +1,21 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private int loadCarryDistance;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(int loadCarryDistance) {
+        this.loadCarryDistance = loadCarryDistance;
+    }
+
+    public int getLoadCarryDistance() {
+        return loadCarryDistance;
+    }
+
+    public void setLoadCarryDistance(int loadCarryDistance) {
+        this.loadCarryDistance = loadCarryDistance;
     }
 
     @Override
