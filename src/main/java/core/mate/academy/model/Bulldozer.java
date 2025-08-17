@@ -5,7 +5,22 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int maximumShearWeight;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(String name, String color, int maximumShearWeight) {
+        super(name, color);
+        this.maximumShearWeight = maximumShearWeight;
+    }
+
+    public int getMaximumShearWeight() {
+        return maximumShearWeight;
+    }
+
+    public void setMaximumShearWeight(int maximumShearWeight) {
+        this.maximumShearWeight = maximumShearWeight;
     }
 
     @Override
