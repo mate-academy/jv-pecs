@@ -5,11 +5,21 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private boolean hasRipper;
+
     public Bulldozer() {
     }
 
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
+    }
+
+    public boolean hasRipper() {
+        return hasRipper;
+    }
+
+    public void setHasRipper(boolean hasRipper) {
+        this.hasRipper = hasRipper;
     }
 }
