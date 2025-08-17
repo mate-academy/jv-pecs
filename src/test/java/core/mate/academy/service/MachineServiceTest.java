@@ -18,7 +18,7 @@ public class MachineServiceTest {
 
     @BeforeClass
     public static void beforeClass() {
-        machineService = new MachineServiceImpl();
+        machineService = (MachineService<Machine>) new MachineServiceImpl();
     }
 
     @Test
