@@ -5,7 +5,31 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int maxHorsePower;
+    private String bulldozerSize;
+
+    public Bulldozer(int maxPowerHp, String sizeBsl) {
+        this.maxHorsePower = maxPowerHp;
+        this.bulldozerSize = sizeBsl;
+    }
+
     public Bulldozer() {
+    }
+
+    public int getMaxHorsePower() {
+        return maxHorsePower;
+    }
+
+    public void setMaxHorsePower(int maxHorsePower) {
+        this.maxHorsePower = maxHorsePower;
+    }
+
+    public String getBulldozerSize() {
+        return bulldozerSize;
+    }
+
+    public void setBulldozerSize(String bulldozerSize) {
+        this.bulldozerSize = bulldozerSize;
     }
 
     @Override
