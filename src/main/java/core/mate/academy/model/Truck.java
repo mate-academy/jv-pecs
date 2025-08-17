@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private String dumpBoxType;
+
     public Truck() {
+    }
+
+    public String getDumpBoxType() {
+        return dumpBoxType;
+    }
+
+    public void setDumpBoxType(String dumpBoxType) {
+        this.dumpBoxType = dumpBoxType;
     }
 
     @Override
