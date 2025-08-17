@@ -5,6 +5,14 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private Boolean bucket;
+    private int maxRearRange;
+
+    public Bulldozer(Boolean bucket, int maxRearRange) {
+        this.bucket = bucket;
+        this.maxRearRange = maxRearRange;
+    }
+
     public Bulldozer() {
     }
 
@@ -12,4 +20,5 @@ public class Bulldozer extends Machine {
     public void doWork() {
         System.out.println("Bulldozer started to work");
     }
+
 }
