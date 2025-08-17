@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private boolean isTracked;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(String name, String color, boolean isTracked) {
+        this.isTracked = isTracked;
+        setName(name);
+        setColor(color);
     }
 
     @Override
