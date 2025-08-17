@@ -5,6 +5,10 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int flywheelPower; //kW
+    private double bucketCapacity; //m3
+    private int maxDrawbarPull; //kN
+
     public Excavator() {
     }
 
