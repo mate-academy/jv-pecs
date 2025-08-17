@@ -1,11 +1,25 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
+    private double price;
+    private double engineVolume;
+    private String owner;
+
+    public Truck(double price, double engineVolume, String owner) {
+        this.price = price;
+        this.engineVolume = engineVolume;
+        this.owner = owner;
+    }
+
     public Truck() {
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     @Override
