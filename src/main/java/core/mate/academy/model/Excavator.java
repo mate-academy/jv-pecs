@@ -5,11 +5,41 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int bucketVolume;
+    private int cargoLiftHeight;
+    private String drivetrainType;
+    private String groundType;
+
+    public Excavator(int bucketVolume, int cargoLiftHeight,
+                     String drivetrainType, String groundType) {
+        this.bucketVolume = bucketVolume;
+        this.cargoLiftHeight = cargoLiftHeight;
+        this.drivetrainType = drivetrainType;
+        this.groundType = groundType;
+    }
+
     public Excavator() {
+    }
+
+    public int getBucketVolume() {
+        return bucketVolume;
+    }
+
+    public int getCargoLiftHeight() {
+        return cargoLiftHeight;
+    }
+
+    public String getDrivetrainType() {
+        return drivetrainType;
+    }
+
+    public String getGroundType() {
+        return groundType;
     }
 
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
     }
+
 }
