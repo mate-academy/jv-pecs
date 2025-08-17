@@ -5,6 +5,12 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int maxDiggingDepth;
+
+    public Excavator(int maxDiggingDepth) {
+        this.maxDiggingDepth = maxDiggingDepth;
+    }
+
     public Excavator() {
     }
 
