@@ -5,7 +5,26 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private double fuelTankCap;
+    private int boomLength;
+
     public Excavator() {
+    }
+
+    public double getFuelTankCap() {
+        return fuelTankCap;
+    }
+
+    public void setFuelTankCap(double fuelTankCap) {
+        this.fuelTankCap = fuelTankCap;
+    }
+
+    public int getBoomLength() {
+        return boomLength;
+    }
+
+    public void setBoomLength(int boomLength) {
+        this.boomLength = boomLength;
     }
 
     @Override
