@@ -1,9 +1,11 @@
 # jv-pecs
 
-1. You have the abstract class `Machine` and three sub-classes: `Bulldozer`, `Excavator`, and `Truck`. Feel free to add some type-specific fields to these classes.
+1. You have the abstract class `Machine` and three sub-classes: `Bulldozer`, `Excavator`, and `Truck`.
+2. Feel free to add some type-specific fields to these classes.
 1. Each machine has the ability to start working.
 1. There is a MachineProducer interface created.
-The goal of the implementation of this interface is to create a list of specific machines (`Bulldozer`, `Excavator`, and `Truck`). 
+The goal of the implementation of this interface is to create a list of specific machines
+2. (`Bulldozer`, `Excavator`, and `Truck`). 
 You should have at least 3 implementations: `BulldozerProducer`, `ExcavatorProducer`, `TruckProducer`;
 Please parameterize your `MachineProducer` and replace `Object` in `get()` with the suitable option.
     ```java
@@ -40,7 +42,8 @@ Allow:
 1. Use the created class `MachineServiceImpl` implementing MachineService and realize these methods:
 - `getAll(Class type)`- based on the input class type, choose the right MachineProducer implementation and call its `get()` method.
 
-For example: `if (type == Bulldozer.class)` - we should call the `get()` method from the right implementation of MachineProducer (the one that will return `List<Bulldozer>`) and return these machines.
+For example: `if (type == Bulldozer.class)` - we should call the `get()` method from the right implementation of MachineProducer
+(the one that will return `List<Bulldozer>`) and return these machines.
 
 - `fill(List<Object> machines, Object value)` - update to the passed value (**which can be of any Machine subtype**) all elements in the `machines` list.
 
