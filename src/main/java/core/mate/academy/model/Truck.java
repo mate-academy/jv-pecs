@@ -5,7 +5,32 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private boolean haveTank;
+    private int liftingCapacity;
+
     public Truck() {
+    }
+
+    public Truck(String name, String color, boolean haveTank, int liftingCapacity) {
+        super(name, color);
+        this.haveTank = haveTank;
+        this.liftingCapacity = liftingCapacity;
+    }
+
+    public boolean isHaveTank() {
+        return haveTank;
+    }
+
+    public void setHaveTank(boolean haveTank) {
+        this.haveTank = haveTank;
+    }
+
+    public int getLiftingCapacity() {
+        return liftingCapacity;
+    }
+
+    public void setLiftingCapacity(int liftingCapacity) {
+        this.liftingCapacity = liftingCapacity;
     }
 
     @Override
