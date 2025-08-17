@@ -5,7 +5,21 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int maxPower;
+
     public Excavator() {
+    }
+
+    public Excavator(int maxPower) {
+        this.maxPower = maxPower;
+    }
+
+    public int getMaxPower() {
+        return maxPower;
+    }
+
+    public void setMaxPower(int maxPower) {
+        this.maxPower = maxPower;
     }
 
     @Override
