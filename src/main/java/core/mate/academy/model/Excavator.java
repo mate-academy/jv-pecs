@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private String scale;
+    
     public Excavator() {
+    }
+    
+    public String getScale() {
+        return scale;
+    }
+    
+    public void setScale(String scale) {
+        this.scale = scale;
     }
 
     @Override
