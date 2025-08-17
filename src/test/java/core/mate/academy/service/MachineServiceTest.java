@@ -45,7 +45,7 @@ public class MachineServiceTest {
     @Test
     public void getAll_invalidType() {
         List<Machine> actual = machineService.getAll(Machine.class);
-        assertEquals("For the unknown class you should return empty list",
+         assertEquals("For the unknown class you should return empty list",
             Collections.emptyList(), actual);
     }
 
