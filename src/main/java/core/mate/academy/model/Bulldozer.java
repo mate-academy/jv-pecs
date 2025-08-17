@@ -8,6 +8,10 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String serialNumber, int power) {
+        super();
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
