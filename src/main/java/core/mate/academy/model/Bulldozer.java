@@ -1,15 +1,25 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private String brand;
+    private int horsePower;
+    private boolean isWorking;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(String brand, int horsePower) {
+        this.brand = brand;
+        this.horsePower = horsePower;
     }
 
     @Override
     public void doWork() {
-        System.out.println("Bulldozer started to work");
+        isWorking = true;
+        if (brand != null) {
+            System.out.println("Bulldozer " + brand + " started to work");
+        } else {
+            System.out.println("Bulldozer started to work");
+        }
     }
 }
