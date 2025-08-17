@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private String model;
+    private int horsePower;
+
     public Truck() {
+    }
+
+    public Truck(String model, int horsePower) {
+        this.model = model;
+        this.horsePower = horsePower;
     }
 
     @Override
