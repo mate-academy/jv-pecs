@@ -1,11 +1,17 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private String ripperType;
+    private int serialNumOfRipper;
+    private int penetrationForce;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(String ripperType, int serialNumOfRipper, int penetrationForce) {
+        this.ripperType = ripperType;
+        this.serialNumOfRipper = serialNumOfRipper;
+        this.penetrationForce = penetrationForce;
     }
 
     @Override
