@@ -121,3 +121,4 @@ public class MachineServiceTest {
         machineService.startWorking(trucks);
     }
 }
+
