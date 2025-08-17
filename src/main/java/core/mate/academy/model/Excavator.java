@@ -5,7 +5,42 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+
+    private double radiusOfTurning;
+    private double bucketCapacity;
+    private String typeOfMobilePlatform;
+
     public Excavator() {
+    }
+
+    private Excavator(double radiusOfTurning, double bucketCapacity, String typeOfMobilePlatform) {
+        this.radiusOfTurning = radiusOfTurning;
+        this.bucketCapacity = bucketCapacity;
+        this.typeOfMobilePlatform = typeOfMobilePlatform;
+    }
+
+    public double getRadiusOfTurning() {
+        return radiusOfTurning;
+    }
+
+    public void setRadiusOfTurning(double radiusOfTurning) {
+        this.radiusOfTurning = radiusOfTurning;
+    }
+
+    public double getBucketCapacity() {
+        return bucketCapacity;
+    }
+
+    public void setBucketCapacity(double bucketCapacity) {
+        this.bucketCapacity = bucketCapacity;
+    }
+
+    public String getTypeOfMobilePlatform() {
+        return typeOfMobilePlatform;
+    }
+
+    public void setTypeOfMobilePlatform(String typeOfMobilePlatform) {
+        this.typeOfMobilePlatform = typeOfMobilePlatform;
     }
 
     @Override
