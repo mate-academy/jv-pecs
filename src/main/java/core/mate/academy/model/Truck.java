@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private String model;
+    private int maxLoadCapacity;
+    private boolean hasTrailer;
+
     public Truck() {
+    }
+
+    public Truck(String model, int maxLoadCapacity, boolean hasTrailer) {
+        this.model = model;
+        this.maxLoadCapacity = maxLoadCapacity;
+        this.hasTrailer = hasTrailer;
     }
 
     @Override
