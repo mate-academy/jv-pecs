@@ -1,7 +1,35 @@
 package core.mate.academy.service;
 
-/**
- * Your implementation of MachineService.
- */
-public class MachineServiceImpl {
+import core.mate.academy.model.Machine;
+import core.mate.academy.model.Workable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class MachineServiceImpl implements MachineService<Machine> {
+    @Override
+    public List<Machine> getAll(Class<? extends Machine> type) {
+        List<? extends Machine> machines;
+        switch (type.getSimpleName()) {
+            case "Bulldozer" -> machines = new BulldozerProducerImpl().get();
+            case "Excavator" -> machines = new ExcavatorProducerImpl().get();
+            case "Truck" -> machines = new TruckProducerImpl().get();
+            default -> {
+                return Collections.emptyList();
+            }
+        }
+        return new ArrayList<>(machines);
+    }
+
+    @Override
+    public void fill(List<? super Machine> machines, Machine value) {
+        for (int i = 0; i < machines.size(); i++) {
+            machines.set(i, value);
+        }
+    }
+
+    @Override
+    public void startWorking(List<? extends Machine> machines) {
+        machines.forEach(Workable::doWork);
+    }
 }
