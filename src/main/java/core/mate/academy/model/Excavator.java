@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int ladleVolume;
+
     public Excavator() {
+    }
+
+    public int getLadleVolume() {
+        return ladleVolume;
+    }
+
+    public void setLadleVolume(int ladleVolume) {
+        this.ladleVolume = ladleVolume;
     }
 
     @Override
