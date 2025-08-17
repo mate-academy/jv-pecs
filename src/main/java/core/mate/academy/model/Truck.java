@@ -5,7 +5,32 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private int value;
+    private String type;
+
     public Truck() {
+    }
+
+    public Truck(String name, String color,int value, String type) {
+        super(name, color);
+        this.value = value;
+        this.type = type;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
