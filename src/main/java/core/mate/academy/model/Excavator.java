@@ -5,7 +5,22 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int digDepth;
+
+    public Excavator(String name, String color, int trackGauge) {
+        super(name, color);
+        this.digDepth = digDepth;
+    }
+
     public Excavator() {
+    }
+
+    public int getDigDepth() {
+        return digDepth;
+    }
+
+    public void setDigDepth(int digDepth) {
+        this.digDepth = digDepth;
     }
 
     @Override
