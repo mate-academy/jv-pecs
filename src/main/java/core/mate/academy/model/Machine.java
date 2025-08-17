@@ -4,6 +4,15 @@ public abstract class Machine implements Workable {
     private String name;
     private String color;
 
+    public Machine() {
+
+    }
+
+    public Machine(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
+
     public String getName() {
         return name;
     }
@@ -18,5 +27,13 @@ public abstract class Machine implements Workable {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Machine{"
+                + "name='" + name + '\''
+                + ", color='" + color + '\''
+                + '}';
     }
 }
