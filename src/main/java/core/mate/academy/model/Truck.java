@@ -5,11 +5,20 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private double payloadCapacity;
+
     public Truck() {
+    }
+
+    public Truck(String name, String color, double payloadCapacity) {
+        super(name, color);
+        this.payloadCapacity = payloadCapacity;
     }
 
     @Override
     public void doWork() {
-        System.out.println("Truck started to work");
+        System.out.println(getColor() + " truck "
+                + getName() + " started to work. Payload capacity is "
+                + payloadCapacity + " tons.");
     }
 }
