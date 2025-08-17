@@ -56,7 +56,7 @@ public class MachineServiceTest {
         for (int i = 0; i < randomSize; i++) {
             machines.add(new Object());
         }
-        machineService.fill(machines, new Bulldozer());
+        machineService.fill(machines, new Bulldozer("wheeled bulldozer"));
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
             assertEquals("The list should contain elements of type Bulldozer",
@@ -99,7 +99,7 @@ public class MachineServiceTest {
      */
     @Test
     public void startWorking_bulldozers() {
-        List<Bulldozer> bulldozers = List.of(new Bulldozer());
+        List<Bulldozer> bulldozers = List.of(new Bulldozer("wheeled bulldozer"));
         machineService.startWorking(bulldozers);
     }
 
