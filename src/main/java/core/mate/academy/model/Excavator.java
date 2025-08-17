@@ -5,7 +5,17 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private Double bucketVolume;
+
     public Excavator() {
+    }
+
+    public Double getBucketVolume() {
+        return bucketVolume;
+    }
+
+    public void setBucketVolume(Double bucketVolume) {
+        this.bucketVolume = bucketVolume;
     }
 
     @Override
