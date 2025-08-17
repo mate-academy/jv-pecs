@@ -5,6 +5,13 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private String manufacturer;
+
+    public Bulldozer(String name, String color, String manufacturer) {
+        super(name, color);
+        this.manufacturer = manufacturer;
+    }
+
     public Bulldozer() {
     }
 
@@ -12,4 +19,13 @@ public class Bulldozer extends Machine {
     public void doWork() {
         System.out.println("Bulldozer started to work");
     }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
 }
