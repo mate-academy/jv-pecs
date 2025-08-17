@@ -1,11 +1,31 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private String walkingMode;
+    private String bladeType;
+
     public Bulldozer() {
+    }
+
+    public Bulldozer(String walkingMode, String bladeType) {
+        this.walkingMode = walkingMode;
+        this.bladeType = bladeType;
+    }
+
+    public String getWalkingMode() {
+        return walkingMode;
+    }
+
+    public void setWalkingMode(String walkingMode) {
+        this.walkingMode = walkingMode;
+    }
+
+    public String getBladeType() {
+        return bladeType;
+    }
+
+    public void setBladeType(String bladeType) {
+        this.bladeType = bladeType;
     }
 
     @Override
