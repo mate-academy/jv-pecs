@@ -5,7 +5,16 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Bulldozer extends Machine {
+    private int weight;
+    private boolean caterpillars;
+
     public Bulldozer() {
+
+    }
+
+    public Bulldozer(int weight, boolean caterpillars) {
+        this.weight = weight;
+        this.caterpillars = caterpillars;
     }
 
     @Override
