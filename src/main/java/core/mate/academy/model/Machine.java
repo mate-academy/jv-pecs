@@ -2,7 +2,12 @@ package core.mate.academy.model;
 
 public abstract class Machine implements Workable {
     private String name;
-    private String color;
+    private int year;
+
+    public Machine(String name, int year) {
+        this.name = name;
+        this.year = year;
+    }
 
     public String getName() {
         return name;
@@ -12,11 +17,11 @@ public abstract class Machine implements Workable {
         this.name = name;
     }
 
-    public String getColor() {
-        return color;
+    public int getYear() {
+        return year;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setYear(int year) {
+        this.year = year;
     }
 }
