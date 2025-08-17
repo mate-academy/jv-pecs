@@ -1,11 +1,24 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
 public class Excavator extends Machine {
+
+    private double boomLength;
+
+    public Excavator(String name, String color, double boomLength) {
+        super(name, color);
+        this.boomLength = boomLength;
+    }
+
     public Excavator() {
+        super();
+    }
+
+    public double getBoomLength() {
+        return boomLength;
+    }
+
+    public void setBoomLength(double boomLength) {
+        this.boomLength = boomLength;
     }
 
     @Override
