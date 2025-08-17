@@ -1,11 +1,14 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Bulldozer
- * Do not remove no-args constructor
- */
 public class Bulldozer extends Machine {
+    private BulldozerType type;
+
     public Bulldozer() {
+        this.type = BulldozerType.HYBRID_BULLDOZER;
+    }
+
+    public Bulldozer(BulldozerType type) {
+        this.type = type;
     }
 
     @Override
