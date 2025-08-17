@@ -5,7 +5,15 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private boolean hasTracks;
+    private boolean isRotating;
+
     public Excavator() {
+    }
+
+    public Excavator(boolean hasTracks, boolean isRotating) {
+        this.hasTracks = hasTracks;
+        this.isRotating = isRotating;
     }
 
     @Override
