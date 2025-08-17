@@ -23,6 +23,7 @@ public class MachineServiceTest {
 
     @Test
     public void getAll_bulldozerType() {
+
         List<Machine> actual = machineService.getAll(Bulldozer.class);
         assertEquals("The list should contain elements of type Bulldozer",
             Bulldozer.class, actual.get(0).getClass());
@@ -86,7 +87,7 @@ public class MachineServiceTest {
         for (int i = 0; i < randomSize; i++) {
             machines.add(new Object());
         }
-        machineService.fill(machines, new Truck());
+        machineService.fill(machines, new Truck("truck", "yeloww", 12000));
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
             assertEquals("The list should contain elements of type Truck",
@@ -117,7 +118,7 @@ public class MachineServiceTest {
      */
     @Test
     public void startWorking_trucks() {
-        List<Truck> trucks = List.of(new Truck());
+        List<Truck> trucks = List.of(new Truck("truck", "yeloww", 12000));
         machineService.startWorking(trucks);
     }
 }
