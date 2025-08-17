@@ -5,11 +5,23 @@ package core.mate.academy.model;
  * Do not remove no-field constructor
  */
 public class Truck extends Machine {
+    private int maxWeight = 4500;
+
     public Truck() {
+    }
+
+    public Truck(String name, String color, int maxWeight) {
+        this.setName(name);
+        this.setColor(color);
+        this.maxWeight = maxWeight;
     }
 
     @Override
     public void doWork() {
         System.out.println("Truck started to work");
+    }
+
+    public void setMaxWeight(int maxWeight) {
+        this.maxWeight = maxWeight;
     }
 }
