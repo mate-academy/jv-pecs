@@ -14,7 +14,7 @@ public class BulldozerProducer implements MachineProducer<Bulldozer> {
             Bulldozer bulldozer = new Bulldozer();
             bulldozer.setName("Bulldozer nr " + i);
             bulldozer.setColor("Pink");
-            bulldozer.setBulldozingLevel(i + 1 );
+            bulldozer.setBulldozingLevel(i + 1);
             bulldozers.add(bulldozer);
         }
         return bulldozers;

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
     @Override
     public List<Machine> getAll(Class<? extends Machine> type) {
