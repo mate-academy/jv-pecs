@@ -100,7 +100,7 @@ public class MachineServiceTest {
     @Test
     public void startWorking_bulldozers() {
         List<Bulldozer> bulldozers = List.of(new Bulldozer());
-        machineService.startWorking(bulldozers);
+        machineService.startWorking((List<? extends Machine>) Collections.singletonList(bulldozers));
     }
 
     /**
