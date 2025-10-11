@@ -6,7 +6,8 @@ public class Excavator extends Machine implements Workable {
     private double diggingDepth;
     private int operatingWeight;
 
-    public Excavator() {}
+    public Excavator() {
+    }
 
     public Excavator(String manufacturer, double bucketCapacity,
                      double diggingDepth, int operatingWeight) {
