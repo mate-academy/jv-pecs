@@ -6,8 +6,7 @@ public class Truck extends Machine implements Workable {
     private int numberOfAxles;
     private String fuelType;
 
-    public Truck() {
-    }
+    public Truck() {}
 
     public Truck(String brand, double payloadCapacity, int numberOfAxles, String fuelType) {
         this.brand = brand;
