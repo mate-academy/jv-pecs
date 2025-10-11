@@ -7,7 +7,6 @@ public class Bulldozer extends Machine implements Workable {
     private boolean hasRipper;
 
     public Bulldozer() {
-
     }
 
     public Bulldozer(String model, double bladeWidth, int horsePower, boolean hasRipper) {
