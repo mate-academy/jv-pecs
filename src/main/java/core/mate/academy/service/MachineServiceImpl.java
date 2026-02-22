@@ -4,14 +4,13 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-
 import java.util.Collections;
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl <M extends Machine> implements MachineService<M> {
+public class MachineServiceImpl<M extends Machine> implements MachineService<M> {
     @Override
     public List<M> getAll(Class<? extends M> type) {
 
@@ -42,7 +41,9 @@ public class MachineServiceImpl <M extends Machine> implements MachineService<M>
         for (Machine machine : machines) {
             machine.doWork();
         }
-    };
+    }
+
+    ;
 }
 
 
