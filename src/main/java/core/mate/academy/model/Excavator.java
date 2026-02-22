@@ -5,7 +5,18 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
+    private int maximumFloorNumbers;
+
     public Excavator() {
+        maximumFloorNumbers = 2;
+    }
+
+    public int getMaximumFloorNumbers() {
+        return maximumFloorNumbers;
+    }
+
+    public void setMaximumFloorNumbers(int maximumFloorNumbers) {
+        this.maximumFloorNumbers = maximumFloorNumbers;
     }
 
     @Override
