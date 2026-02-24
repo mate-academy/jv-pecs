@@ -6,7 +6,6 @@ package core.mate.academy.model;
  */
 public class Bulldozer extends Machine {
     public Bulldozer() {
-
     }
 
     @Override
