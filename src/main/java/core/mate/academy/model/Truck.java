@@ -18,6 +18,30 @@ public class Truck extends Machine {
         this.fuelConsumption = fuelConsumption;
     }
 
+    public double getMaxWeight() {
+        return maxWeight;
+    }
+
+    public void setMaxWeight(double maxWeight) {
+        this.maxWeight = maxWeight;
+    }
+
+    public double getBrand() {
+        return brand;
+    }
+
+    public void setBrand(double brand) {
+        this.brand = brand;
+    }
+
+    public double getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(double fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

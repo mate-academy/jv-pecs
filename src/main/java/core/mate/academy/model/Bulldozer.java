@@ -16,6 +16,22 @@ public class Bulldozer extends Machine {
         this.bucketDiameter = bucketDiameter;
     }
 
+    public double getDiameterOfPusherBlade() {
+        return diameterOfPusherBlade;
+    }
+
+    public void setDiameterOfPusherBlade(double diameterOfPusherBlade) {
+        this.diameterOfPusherBlade = diameterOfPusherBlade;
+    }
+
+    public double getBucketDiameter() {
+        return bucketDiameter;
+    }
+
+    public void setBucketDiameter(double bucketDiameter) {
+        this.bucketDiameter = bucketDiameter;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
