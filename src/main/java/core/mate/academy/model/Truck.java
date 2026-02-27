@@ -7,12 +7,12 @@ package core.mate.academy.model;
 public class Truck extends Machine {
     private double maxWeight;
     private double fuelConsumption;
-    private double brand;
+    private String brand;
 
     public Truck() {
     }
 
-    public Truck(double maxWeight, double brand, double fuelConsumption) {
+    public Truck(double maxWeight, String brand, double fuelConsumption) {
         this.maxWeight = maxWeight;
         this.brand = brand;
         this.fuelConsumption = fuelConsumption;
@@ -26,11 +26,11 @@ public class Truck extends Machine {
         this.maxWeight = maxWeight;
     }
 
-    public double getBrand() {
+    public String getBrand() {
         return brand;
     }
 
-    public void setBrand(double brand) {
+    public void setBrand(String brand) {
         this.brand = brand;
     }
 
