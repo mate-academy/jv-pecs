@@ -4,14 +4,12 @@ import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
-
 import java.util.Collections;
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
-
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
     @Override
     @SuppressWarnings("unchecked")
