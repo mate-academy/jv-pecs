@@ -12,6 +12,12 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
+    public Excavator(String name, String color, double bucketCapacity) {
+        this.name = name;
+        this.color = color;
+        this.bucketCapacity = bucketCapacity;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");

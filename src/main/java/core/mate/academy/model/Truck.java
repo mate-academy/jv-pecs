@@ -12,6 +12,12 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public Truck(String name, String color, int payloadCapacity) {
+        this.name = name;
+        this.color = color;
+        this.payloadCapacity = payloadCapacity;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

@@ -12,6 +12,12 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public Bulldozer(String name, String color, double bladeWidth) {
+        this.name = name;
+        this.color = color;
+        this.bladeWidth = bladeWidth;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
