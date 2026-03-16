@@ -8,14 +8,16 @@ import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl <T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
     @Override
-    public List<T> getAll(Class<T> type) {
+    public List<T> getAll(Class<? extends T> type) {
+        List<T> listEmpty = new ArrayList<>();
         if (type == Bulldozer.class) {
             return (List<T>) new BulldozerProducer().get();
         }
@@ -25,7 +27,7 @@ public class MachineServiceImpl <T extends Machine> implements MachineService<T>
         if (type == Truck.class) {
             return (List<T>) new TruckProducer().get();
         }
-        throw new RuntimeException("Unsupported machine type");
+        return listEmpty;
     }
 
     @Override

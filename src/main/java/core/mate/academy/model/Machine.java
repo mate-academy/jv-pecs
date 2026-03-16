@@ -20,7 +20,7 @@ public abstract class Machine implements Workable {
         this.color = color;
     }
 
+    @Override
     public abstract void doWork();
-
-    }
+}
 
