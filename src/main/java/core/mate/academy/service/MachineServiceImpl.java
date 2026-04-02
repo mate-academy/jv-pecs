@@ -1,7 +1,9 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Bulldozer;
+import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
+import core.mate.academy.model.Truck;
 
 import java.util.List;
 
@@ -10,8 +12,19 @@ import java.util.List;
  */
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    public List<Machine> getAll(Class<Machine> type) {
-        return List.of();
+    public List<? extends Machine> getAll(Class<? extends Machine> type) {
+        if (type == Bulldozer.class) {
+            MachineProducer<Bulldozer> producer = new BulldozerProducer();
+            return producer.get();
+        } else if (type == Excavator.class) {
+            MachineProducer<Excavator> producer = new ExcavatorProducer();
+            return producer.get();
+        } else if (type == Truck.class) {
+            MachineProducer<Truck> producer = new TruckProducer();
+            return producer.get();
+        }
+
+        throw new IllegalArgumentException("Unknown type: " + type);
     }
 
     @Override
@@ -24,7 +37,7 @@ public class MachineServiceImpl implements MachineService<Machine> {
     }
 
     @Override
-    public void startWorking(List<Machine> machines) {
+    public void startWorking(List<? extends Machine> machines) {
         for (Machine machine : machines) {
             machine.doWork();
         }
