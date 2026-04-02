@@ -1,7 +1,6 @@
 package core.mate.academy.service;
 
 import core.mate.academy.model.Machine;
-
 import java.util.List;
 
 /**
@@ -17,7 +16,7 @@ public interface MachineService<T extends Machine> {
      * @param type - any class of Machine sub class. For example: Truck.class or Bulldozer.class
      * @return the list of machines
      */
-    List<? extends T> getAll(Class<? extends T> type);
+    <R extends T> List<R> getAll(Class<R> type);
 
     /**
      * Fill the machines list with passed value
