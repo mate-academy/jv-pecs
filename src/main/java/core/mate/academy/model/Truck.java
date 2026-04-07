@@ -18,6 +18,18 @@ public class Truck extends Machine {
     public Truck() {
     }
 
+    public int getLiftingCapacity() {
+        return liftingCapacity;
+    }
+
+    public String getNameCapacity() {
+        return nameCapacity;
+    }
+
+    public int getBodyLength() {
+        return bodyLength;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

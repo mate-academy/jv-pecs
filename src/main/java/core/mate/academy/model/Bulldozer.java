@@ -18,6 +18,18 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
+    public int getBucketSize() {
+        return bucketSize;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public int getTrackWidth() {
+        return trackWidth;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");

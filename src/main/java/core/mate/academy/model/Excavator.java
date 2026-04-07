@@ -21,6 +21,18 @@ public class Excavator extends Machine {
         this.namePooridge = "noname";
     }
 
+    public int getArrowLenght() {
+        return arrowLenght;
+    }
+
+    public int getVelumeOfThePorridge() {
+        return velumeOfThePorridge;
+    }
+
+    public String getNamePooridge() {
+        return namePooridge;
+    }
+
     @Override
     public void doWork() {
         System.out.println("Excavator started to work");
