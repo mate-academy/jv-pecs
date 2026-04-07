@@ -1,11 +1,15 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Excavator
- * Do not remove no-args constructor
- */
 public class Excavator extends Machine {
-    public Excavator() {
+    private final int maxWorkingHours;
+
+    public Excavator(String model, String color, int maxWorkingHours) {
+        super(model, color);
+        this.maxWorkingHours = maxWorkingHours;
+    }
+
+    public int getMaxWorkingHours() {
+        return maxWorkingHours;
     }
 
     @Override
