@@ -1,11 +1,26 @@
 package core.mate.academy.model;
 
-/**
- * Add some custom fields that could be only in Truck
- * Do not remove no-field constructor
- */
 public class Truck extends Machine {
+    private int dumpBoxVolume;
+    private int numberOfWheels;
+
     public Truck() {
+    }
+
+    public int getDumpBoxVolume() {
+        return dumpBoxVolume;
+    }
+
+    public void setDumpBoxVolume(int dumpBoxVolume) {
+        this.dumpBoxVolume = dumpBoxVolume;
+    }
+
+    public int getNumberOfWheels() {
+        return numberOfWheels;
+    }
+
+    public void setNumberOfWheels(int numberOfWheels) {
+        this.numberOfWheels = numberOfWheels;
     }
 
     @Override
