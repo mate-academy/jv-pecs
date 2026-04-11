@@ -12,7 +12,6 @@ public class Bulldozer extends Machine {
     }
 
     public Bulldozer() {
-
     }
 
     @Override
