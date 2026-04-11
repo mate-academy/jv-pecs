@@ -4,9 +4,9 @@ import core.mate.academy.model.Excavator;
 import java.util.LinkedList;
 import java.util.List;
 
-public interface ExcavatorProducer extends MachineProducer<Excavator> {
+public class ExcavatorProducer implements MachineProducer<Excavator> {
     @Override
-    default List<Excavator> get() {
+    public List<Excavator> get() {
         List<Excavator> lsExcavator = new LinkedList<>();
         Excavator excavator1 = new Excavator();
         Excavator excavator2 = new Excavator();
