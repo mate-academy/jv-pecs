@@ -15,7 +15,7 @@ public interface MachineProducer<T extends Machine> {
      */
     class TruckProducer implements MachineProducer<Truck> {
 
-        public List<Truck> produce() {
+        public List<Truck> get() {
             List<Truck> trucks = new ArrayList<>();
 
             trucks.add(new Truck(10.5, "стройматериалы", 30.0));
@@ -28,7 +28,7 @@ public interface MachineProducer<T extends Machine> {
 
     class BulldozerProducer implements MachineProducer<Bulldozer> {
 
-        public List<Bulldozer> produce() {
+        public List<Bulldozer> get() {
             List<Bulldozer> bulldozers = new ArrayList<>();
 
             bulldozers.add(new Bulldozer(3.5, "гусеницы", 200));
@@ -38,7 +38,7 @@ public interface MachineProducer<T extends Machine> {
     }
 
     class ExcavatorProducer implements MachineProducer<Excavator> {
-        public List<Excavator> produce() {
+        public List<Excavator> get() {
             List<Excavator> excavators = new ArrayList<>();
 
             excavators.add(new Excavator(1.25, 7,"стандартный"));
