@@ -1,13 +1,12 @@
 package core.mate.academy.service;
 
-import core.mate.academy.model.Machine;
 import core.mate.academy.model.Truck;
 import java.util.LinkedList;
 import java.util.List;
 
-public interface TruckProducer extends MachineProducer {
+public interface TruckProducer extends MachineProducer<Truck> {
     @Override
-    default List<? extends Machine> get() {
+    default List<Truck> get() {
         List<Truck> lsTruck = new LinkedList<>();
         Truck truck1 = new Truck();
         Truck truck2 = new Truck();

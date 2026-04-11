@@ -10,10 +10,10 @@ import java.util.List;
 /**
  * Your implementation of MachineService.
  */
-public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
+public class MachineServiceImpl implements MachineService<Machine> {
 
     @Override
-    public <S extends T> List<T> getAll(Class<S> type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         MachineProducer<? extends Machine> p = null;
         if (type.equals(Bulldozer.class)) {
             p = new BulldozerProducer() {
@@ -30,13 +30,12 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
             return new ArrayList<>(); // Повертаємо порожній список
         }
 
-        @SuppressWarnings("unchecked")
-        List<S> res = (List<S>) p.get();
+        List<? extends Machine> res = p.get();
         return new ArrayList<>(res);
     }
 
     @Override
-    public void fill(List<? super T> machines, T value) {
+    public void fill(List<? super Machine> machines, Machine value) {
         for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
