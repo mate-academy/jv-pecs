@@ -16,8 +16,7 @@ public abstract class Machine implements Workable {
         return color;
     }
 
-    public void setColor(String color)
-    {
+    public void setColor(String color) {
         this.color = color;
     }
 }
