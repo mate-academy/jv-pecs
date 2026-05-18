@@ -6,13 +6,14 @@ import java.util.List;
 
 public class BulldozerProducer implements MachineProducer<Bulldozer> {
 
-    private List<Bulldozer> bulldozers = new ArrayList<>();
+
 
     @Override
     public List<Bulldozer> get() {
+        List<Bulldozer> bulldozers = new ArrayList<>();
         bulldozers.add(new Bulldozer());
         bulldozers.add(new Bulldozer());
         bulldozers.add(new Bulldozer());
-        return new ArrayList<>(bulldozers); // kopia
+        return bulldozers;
     }
 }
