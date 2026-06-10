@@ -27,11 +27,12 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         return result;
     }
 
-         public void fill(List<? super T> machines, T value) {
-        for (int i =0; i < machines.size(); i++) {
+    public void fill(List<? super T> machines, T value) {
+        for (int i = 0; i < machines.size(); i++) {
             machines.set(i, value);
         }
     }
+
     public void startWorking(List<? extends Machine> machines) {
         for (Machine machine : machines) {
             machine.doWork();
