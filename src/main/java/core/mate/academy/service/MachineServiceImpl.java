@@ -13,7 +13,7 @@ import java.util.List;
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
     @SuppressWarnings("unchecked")
-    public List<T> getAll(Class<T> type) {
+    public List<T> getAll(Class<? extends T> type) {
         List<T> result;
         if (type == Bulldozer.class) {
             result = (List<T>) new BulldozerProducer().get();
