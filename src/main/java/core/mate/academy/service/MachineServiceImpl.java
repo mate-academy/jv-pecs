@@ -12,19 +12,22 @@ import java.util.List;
  */
 public class MachineServiceImpl<T extends Machine> implements MachineService<T> {
 
-    public List<T> getAll(Class<? extends T> type) {
+    @SuppressWarnings("unchecked")
+    public List<T> getAll(Class<T> type) {
+        List<T> result;
         if (type == Bulldozer.class) {
-            return (List<T>) new BulldozerProducer().get();
+            result = (List<T>) new BulldozerProducer().get();
+        } else if (type == Truck.class) {
+            result = (List<T>) new TruckProducer().get();
+        } else if (type == Excavator.class) {
+            result = (List<T>) new ExcavatorProducer().get();
+        } else {
+            result = new ArrayList<>();
         }
-        if (type == Truck.class) {
-            return (List<T>) new TruckProducer().get();
-        }
-        if (type == Excavator.class) {
-            return (List<T>) new ExcavatorProducer().get();
-        }
-        return ArrayList<>();
+        return result;
     }
-    public void fill(List<? super T> machines, T value) {
+
+         public void fill(List<? super T> machines, T value) {
         for (int i =0; i < machines.size(); i++) {
             machines.set(i, value);
         }
