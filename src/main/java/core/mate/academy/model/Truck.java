@@ -15,9 +15,6 @@ public class Truck extends Machine {
         this.loadCapacity = loadCapacity;
     }
 
-    public Truck() {
-    }
-
     @Override
     public void doWork() {
         System.out.println("Truck started to work");

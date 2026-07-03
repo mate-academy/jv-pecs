@@ -24,9 +24,6 @@ public class Bulldozer extends Machine {
         this.cost = cost;
     }
 
-    public Bulldozer() {
-    }
-
     @Override
     public void doWork() {
         System.out.println("Bulldozer started to work");
