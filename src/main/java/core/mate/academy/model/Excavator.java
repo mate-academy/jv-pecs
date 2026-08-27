@@ -5,9 +5,9 @@ package core.mate.academy.model;
  * Do not remove no-args constructor
  */
 public class Excavator extends Machine {
-    protected int stickLength;
-    protected int bucketWidth;
-    protected int swingTorque;
+    private int stickLength;
+    private int bucketWidth;
+    private int swingTorque;
 
     public Excavator() {
     }

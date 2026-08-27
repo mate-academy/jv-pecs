@@ -6,9 +6,9 @@ package core.mate.academy.model;
  */
 
 public class Truck extends Machine {
-    protected int wheelbase;
-    protected int tireSize;
-    protected int loadingHeight;
+    private int wheelbase;
+    private int tireSize;
+    private int loadingHeight;
 
     public Truck() {
     }

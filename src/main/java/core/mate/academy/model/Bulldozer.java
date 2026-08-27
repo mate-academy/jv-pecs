@@ -6,9 +6,9 @@ package core.mate.academy.model;
  */
 
 public class Bulldozer extends Machine {
-    protected int trackGauge;
-    protected int grouserHeight;
-    protected int trackPitch;
+    private int trackGauge;
+    private int grouserHeight;
+    private int trackPitch;
 
     public Bulldozer() {
     }
