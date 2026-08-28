@@ -22,4 +22,34 @@ public class Excavator extends Machine {
     public void doWork() {
         System.out.println("Excavator started to work");
     }
+
+    /**
+     * stickLength;
+     * bucketWidth;
+     * swingTorque;
+     */
+
+    public int getStickLength() {
+        return this.stickLength;
+    }
+
+    public int getBucketWidth() {
+        return this.bucketWidth;
+    }
+
+    public int getSwingTorque() {
+        return this.swingTorque;
+    }
+
+    public void setStickLength(int stickLength) {
+        this.stickLength = stickLength;
+    }
+
+    public void setBucketWidth(int bucketWidth) {
+        this.bucketWidth = bucketWidth;
+    }
+
+    public void setSwingTorque(int swingTorque) {
+        this.swingTorque = swingTorque;
+    }
 }

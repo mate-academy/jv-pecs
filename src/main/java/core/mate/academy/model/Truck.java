@@ -23,4 +23,34 @@ public class Truck extends Machine {
     public void doWork() {
         System.out.println("Truck started to work");
     }
+
+    /**
+     * wheelbase
+     * tireSize
+     * loadingHeight
+     */
+
+    public int getLoadingHeight() {
+        return loadingHeight;
+    }
+
+    public void setLoadingHeight(int loadingHeight) {
+        this.loadingHeight = loadingHeight;
+    }
+
+    public int getTireSize() {
+        return tireSize;
+    }
+
+    public void setTireSize(int tireSize) {
+        this.tireSize = tireSize;
+    }
+
+    public int getWheelbase() {
+        return wheelbase;
+    }
+
+    public void setWheelbase(int wheelbase) {
+        this.wheelbase = wheelbase;
+    }
 }

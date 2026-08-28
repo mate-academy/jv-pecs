@@ -23,4 +23,28 @@ public class Bulldozer extends Machine {
     public void doWork() {
         System.out.println("Bulldozer started to work");
     }
+
+    public int getTrackGauge() {
+        return this.trackGauge;
+    }
+
+    public int getGrouserHeight() {
+        return this.grouserHeight;
+    }
+
+    public int getTrackPitch() {
+        return this.trackPitch;
+    }
+
+    public void setTrackGauge(int trackGauge) {
+        this.trackGauge = trackGauge;
+    }
+
+    public void setGrouserHeight(int grouserHeight) {
+        this.grouserHeight = grouserHeight;
+    }
+
+    public void setTrackPitch(int trackPitch) {
+        this.trackPitch = trackPitch;
+    }
 }
