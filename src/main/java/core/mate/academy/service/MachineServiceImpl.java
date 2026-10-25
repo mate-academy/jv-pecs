@@ -19,16 +19,17 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
 
     @Override
     public List<T> getAll(Class<? extends T> type) {
+        List<T> list = List.of();
         if (type == null) {
             throw new RuntimeException("Type can't be null");
         } else if (type == Bulldozer.class) {
-            return (List<T>) bulldozerProducer.get();
+            list = (List<T>) bulldozerProducer.get();
         } else if (type == Excavator.class) {
-            return (List<T>) excavatorProducer.get();
+            list = (List<T>) excavatorProducer.get();
         } else if (type == Truck.class) {
-            return (List<T>) truckProducer.get();
+            list = (List<T>) truckProducer.get();
         }
-        return List.of();
+        return list;
     }
 
     @Override
