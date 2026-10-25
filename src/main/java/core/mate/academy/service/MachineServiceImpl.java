@@ -18,9 +18,9 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     private final TruckProducer truckProducer = new TruckProducer();
 
     @Override
-    public List<T> getAll(Class<T> type) {
+    public List<T> getAll(Class<? extends T> type) {
         if (type == null) {
-            throw new RuntimeException("Type is null");
+            throw new RuntimeException("Type can't be null");
         } else if (type == Bulldozer.class) {
             return (List<T>) bulldozerProducer.get();
         } else if (type == Excavator.class) {
